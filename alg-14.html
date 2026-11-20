@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>§ 14. Разложение на множители</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Unbounded:wght@500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=4">
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <a class="brand" href="index.html"><span class="logo">x</span><span class="txt">Математика · 7 класс<small>II четверть</small></span></a>
+  <nav class="tnav" aria-label="Разделы сайта"><a href="index.html">Главная</a><a class="alg" href="index.html#algebra">Алгебра</a><a class="geo" href="index.html#geometry">Геометрия</a></nav>
+</div></header>
+
+<main class="wrap">
+<div class="page-head">
+  <div class="crumbs"><a href="index.html">Главная</a> › <a href="index.html#algebra">Алгебра</a> › § 14</div>
+  <div class="eyebrow">Алгебра · 7 класс · § 14 · уроки 44–47</div>
+  <h1>Разложение многочлена на множители</h1>
+  <p class="lede">Разложить многочлен на множители — значит записать его в виде произведения. Это действие, обратное умножению. Есть три способа: вынесение общего множителя, группировка и формулы.</p>
+  <nav class="toc" aria-label="Разделы темы"><a href="#obshiy">Общий множитель</a><a href="#gruppirovka">Группировка</a><a href="#formuly">Формулы</a><a href="#plan">План</a><a href="#test">Тест</a><a href="#trenazher">Тренажёр</a><a href="#zadachi">Задачи</a></nav>
+</div>
+
+<section>
+  <div class="panel" style="flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 18px;font-family:var(--f-math);font-size:1.15rem">
+    <span class="m">3x(2x − 1)</span><span style="font-family:var(--f-body);font-size:.85rem;color:var(--ink-2)">— умножение →</span><span class="m">6x^2 − 3x</span><span style="font-family:var(--f-body);font-size:.85rem;color:var(--ink-2)">— разложение →</span><span class="m">3x(2x − 1)</span>
+  </div>
+</section>
+
+<section id="obshiy">
+  <h2>1. Вынесение общего множителя за скобки</h2>
+  <div class="rule"><span class="tag">ПРАВИЛО</span>
+    <p>Чтобы вынести общий множитель за скобки, нужно:</p>
+    <ol>
+      <li><b>1)</b><span>найти НОД коэффициентов всех членов;</span></li>
+      <li><b>2)</b><span>взять буквы, которые есть во <u>всех</u> членах, с <u>наименьшими</u> показателями;</span></li>
+      <li><b>3)</b><span>разделить каждый член на найденный общий множитель и записать частные в скобках.</span></li>
+    </ol>
+    <div class="scheme"><span class="m">12a^2b − 8ab^2 = 4ab(3a − 2b)</span></div>
+  </div>
+  <div class="tabs" id="tG" role="group" aria-label="Примеры"></div>
+  <div id="bG"></div>
+</section>
+
+<section id="gruppirovka">
+  <h2>2. Способ группировки</h2>
+  <div class="rule"><span class="tag">ПРАВИЛО</span>
+    <p>Чтобы разложить многочлен на множители способом группировки, нужно:</p>
+    <ol>
+      <li><b>1)</b><span>объединить члены в группы так, чтобы в каждой был общий множитель;</span></li>
+      <li><b>2)</b><span>вынести общий множитель в каждой группе;</span></li>
+      <li><b>3)</b><span>вынести за скобки получившуюся одинаковую скобку.</span></li>
+    </ol>
+  </div>
+  <div class="tabs" id="tR" role="group" aria-label="Примеры"></div>
+  <div id="bR"></div>
+</section>
+
+<section id="formuly">
+  <h2>3. Применение формул</h2>
+  <div class="aside">
+    <div class="rule"><span class="tag">РАЗНОСТЬ КВАДРАТОВ</span><div class="formula" style="font-size:1.2rem"><span class="m">a^2 − b^2 = (a − b)(a + b)</span></div></div>
+    <div class="rule"><span class="tag">КВАДРАТ СУММЫ И РАЗНОСТИ</span><div class="formula" style="font-size:1.2rem"><span class="m">a^2 ± 2ab + b^2 = (a ± b)^2</span></div></div>
+  </div>
+  <div class="tabs" id="tF" role="group" aria-label="Примеры"></div>
+  <div id="bF"></div>
+</section>
+
+<section id="plan">
+  <h2>План: в каком порядке пробовать</h2>
+  <div class="rule"><span class="tag">ПОРЯДОК</span>
+    <ol>
+      <li><b>1)</b><span>Есть общий множитель? Вынеси его.</span></li>
+      <li><b>2)</b><span>Два члена — проверь разность квадратов. Три члена — квадрат суммы или разности.</span></li>
+      <li><b>3)</b><span>Четыре члена — попробуй группировку.</span></li>
+      <li><b>4)</b><span>Посмотри на каждую скобку: может, её тоже можно разложить.</span></li>
+    </ol>
+  </div>
+  <div class="panel">
+    <p>Пример, где нужны два способа: <span class="m">3x^3 − 12x</span>.</p>
+    <div class="sol" style="margin:0">
+      <div><span class="st">Шаг 1.</span>Общий множитель <span class="m">3x</span>: <span class="m">3x^3 − 12x = 3x(x^2 − 4)</span></div>
+      <div><span class="st">Шаг 2.</span>В скобке разность квадратов: <span class="m">x^2 − 4 = x^2 − 2^2 = (x − 2)(x + 2)</span></div>
+      <div class="ans">Ответ: <span class="m">3x(x − 2)(x + 2)</span>.</div>
+    </div>
+  </div>
+</section>
+
+<section id="test">
+  <h2>Тест: какой способ подходит</h2>
+  <div id="quiz"></div>
+</section>
+
+<section id="trenazher">
+  <h2>Тренажёр</h2>
+  <p>Разложи многочлен на множители. Ответ пиши произведением, скобки — кнопками «(» и «)».</p>
+  <div id="trainer"></div>
+</section>
+
+<section id="zadachi">
+  <h2>Задачи посложнее</h2>
+  <div class="tasks">
+    <div class="hard"><div class="q"><b>1</b><span>Разложите на множители: <span class="m">5a^3 − 20a</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Общий множитель <span class="m">5a</span>: <span class="m">5a(a^2 − 4)</span></div>
+        <div><span class="st">Шаг 2.</span><span class="m">a^2 − 4 = (a − 2)(a + 2)</span></div>
+        <div class="ans">Ответ: <span class="m">5a(a − 2)(a + 2)</span>.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>2</b><span>Решите уравнение <span class="m">x^2 − 9x = 0</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span><span class="m">x(x − 9) = 0</span></div>
+        <div><span class="st">Шаг 2.</span>Произведение равно нулю, если хотя бы один множитель равен нулю.</div>
+        <div><span class="st">Шаг 3.</span><span class="m">x = 0</span> или <span class="m">x − 9 = 0</span>, то есть <span class="m">x = 9</span>.</div>
+        <div class="ans">Ответ: 0; 9.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>3</b><span>Вычислите удобным способом: <span class="m">87 · 13 + 13 · 13</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Общий множитель 13: <span class="m">13 · (87 + 13)</span></div>
+        <div><span class="st">Шаг 2.</span><span class="m">87 + 13 = 100</span></div>
+        <div><span class="st">Шаг 3.</span><span class="m">13 · 100 = 1300</span></div>
+        <div class="ans">Ответ: 1300.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>4</b><span>Разложите на множители: <span class="m">x^3 − 3x^2 − 4x + 12</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Группы: <span class="m">(x^3 − 3x^2) + (−4x + 12)</span></div>
+        <div><span class="st">Шаг 2.</span><span class="m">x^3 − 3x^2 = x^2(x − 3)</span>; <span class="m">−4x + 12 = −4(x − 3)</span></div>
+        <div><span class="st">Шаг 3.</span><span class="m">x^2(x − 3) − 4(x − 3) = (x − 3)(x^2 − 4)</span></div>
+        <div><span class="st">Шаг 4.</span><span class="m">x^2 − 4 = (x − 2)(x + 2)</span></div>
+        <div class="ans">Ответ: <span class="m">(x − 3)(x − 2)(x + 2)</span>.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>5</b><span>Докажите, что <span class="m">7^5 − 7^4</span> делится на 6.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Общий множитель <span class="m">7^4</span>: <span class="m">7^5 − 7^4 = 7^4(7 − 1)</span></div>
+        <div><span class="st">Шаг 2.</span><span class="m">7 − 1 = 6</span>, значит выражение равно <span class="m">6 · 7^4</span>.</div>
+        <div class="ans">Один из множителей равен 6, поэтому выражение делится на 6.</div>
+      </div></details></div>
+  </div>
+</section>
+
+<nav class="pager" aria-label="Соседние темы"><a href="alg-13.html"><small>← Предыдущая тема</small>§ 13. Разность квадратов</a></nav>
+<footer class="foot">Алгебра, 7 класс, § 14. Примеры составлены по образцу заданий учебника.</footer>
+</main>
+
+<script src="assets/core.js?v=4"></script>
+<script>
+(function(){
+const {T,T1,mono,mmul,mdiv,pgcd,pmul,pcomb,psort,canon,sameC,polyH,mh,mp,body,sq,OP,ri,pick,sgn,gcd} = S;
+const fac = m => (Math.abs(m.c)===1 && !Object.keys(m.v).length) ? (m.c<0?'−':'') : mh(m);
+/* группировка */
+function stepsGroup(P){
+  const G1=[P[0],P[1]], G2=[P[2],P[3]];
+  let g1=pgcd(G1); if(P[0].c<0) g1=mono(-g1.c,g1.v);
+  const Q1=G1.map(t=>mdiv(t,g1));
+  let g2=pgcd(G2), Q2=G2.map(t=>mdiv(t,g2));
+  if(!sameC(canon(Q2),canon(Q1))){ g2=mono(-g2.c,g2.v); Q2=G2.map(t=>mdiv(t,g2)); }
+  const main='<div class="bl main">'+polyH(P)+'</div>';
+  const grp='<div class="bl"><span class="eq">=</span><span class="ul k0">('+polyH(G1)+')</span>'+OP('+')+'<span class="ul k1">('+polyH(G2)+')</span></div>';
+  const g2s = g2.c<0 ? OP('−')+fac(mono(-g2.c,g2.v)) : OP('+')+fac(g2);
+  const fct='<div class="bl"><span class="eq">=</span><span class="k0 kt">'+fac(g1)+'</span><span class="hlk k2">('+polyH(Q1)+')</span>'+'<span class="k1 kt">'+g2s+'</span><span class="hlk k2">('+polyH(Q2)+')</span></div>';
+  const res='<div class="bl res"><span class="eq">=</span><span class="hlk k2">('+polyH(Q1)+')</span>(<span class="k0 kt">'+(fac(g1)||'1')+'</span><span class="k1 kt">'+(g2.c<0?OP('−')+(fac(mono(-g2.c,g2.v))||'1'):OP('+')+(fac(g2)||'1'))+'</span>)</div>';
+  return [
+    {html:main, note:'<p>Четыре члена, общего множителя у всех нет. Попробуем сгруппировать их по два.</p>'},
+    {html:main+grp, note:'<div class="dhead">Группируем</div><p>Первые два члена и последние два. В каждой группе есть свой общий множитель.</p>', label:'Шаг 1 из 3'},
+    {html:main+grp+fct, note:'<div class="dhead">Выносим общий множитель в каждой группе</div><p><span class="math k0 kt">'+polyH(G1)+' = '+fac(g1)+'('+polyH(Q1)+')</span></p><p><span class="math k1 kt">'+polyH(G2)+' = '+(g2.c<0?'−'+fac(mono(-g2.c,g2.v)):fac(g2))+'('+polyH(Q2)+')</span></p><p class="note">Получились одинаковые скобки — значит, группировка выбрана верно.</p>', label:'Шаг 2 из 3'},
+    {html:main+grp+fct+res, note:'<div class="dhead">Выносим одинаковую скобку</div><p>Скобка <span class="math hlk k2">('+polyH(Q1)+')</span> — общий множитель. Во вторую скобку собираем то, что стояло перед ней.</p>', label:'Шаг 3 из 3'},
+    {html:main+grp+fct+res, note:'<div class="deq"><b>Ответ:</b> <span class="math">('+polyH(Q1)+')('+(fac(g1)||'1')+(g2.c<0?' − '+(fac(mono(-g2.c,g2.v))||'1'):' + '+(fac(g2)||'1'))+')</span></div>'}
+  ];
+}
+/* формулы */
+function stepsFDiff(a,b){
+  const A2=mmul(a,a), B2=mmul(b,b), main='<div class="bl main">'+mh(A2)+OP('−')+body(B2)+'</div>';
+  const l1='<div class="bl"><span class="eq">=</span><span class="k0 kt">'+sq(a)+'</span>'+OP('−')+'<span class="k1 kt">'+sq(b)+'</span></div>';
+  const l2='<div class="bl res"><span class="eq">=</span>(<span class="k0 kt">'+mh(a)+'</span>'+OP('−')+'<span class="k1 kt">'+mh(b)+'</span>)(<span class="k0 kt">'+mh(a)+'</span>'+OP('+')+'<span class="k1 kt">'+mh(b)+'</span>)</div>';
+  return [
+    {html:main, note:'<p>Два члена со знаком «−» между ними. Проверим, не квадраты ли это.</p>'},
+    {html:main+l1, note:'<div class="dhead">Ищем квадраты</div><p><span class="math">'+mh(A2)+' = '+sq(a)+'</span>; <span class="math">'+mh(B2)+' = '+sq(b)+'</span>. Это разность квадратов.</p>', label:'Шаг 1 из 2'},
+    {html:main+l1+l2, note:'<div class="dhead">По формуле</div><p>Разность квадратов равна произведению разности и суммы.</p>', label:'Шаг 2 из 2'},
+    {html:main+l1+l2, note:'<div class="deq"><b>Ответ:</b> <span class="math">('+mh(a)+' − '+mh(b)+')('+mh(a)+' + '+mh(b)+')</span></div>'}
+  ];
+}
+function stepsFSq(a,b,s){
+  const A2=mmul(a,a), B2=mmul(b,b), M=mmul(mono(2*s,{}),mmul(a,b));
+  const main='<div class="bl main">'+polyH([A2,M,B2])+'</div>';
+  const l1='<div class="bl"><span class="eq">=</span><span class="k0 kt">'+sq(a)+'</span>'+OP(s>0?'+':'−')+'<span class="k2 kt">2 · '+mp(a)+' · '+mp(b)+'</span>'+OP('+')+'<span class="k1 kt">'+sq(b)+'</span></div>';
+  const l2='<div class="bl res"><span class="eq">=</span>(<span class="k0 kt">'+mh(a)+'</span>'+OP(s>0?'+':'−')+'<span class="k1 kt">'+mh(b)+'</span>)<sup>2</sup></div>';
+  return [
+    {html:main, note:'<p>Три члена. Проверим, не квадрат ли это суммы или разности.</p>'},
+    {html:main+l1, note:'<div class="dhead">Проверяем</div><p>Крайние члены — квадраты: <span class="math">'+mh(A2)+' = '+sq(a)+'</span>, <span class="math">'+mh(B2)+' = '+sq(b)+'</span>.</p><p>Средний член — удвоенное произведение: <span class="math">2 · '+mp(a)+' · '+mp(b)+' = '+mh(mmul(mono(2,{}),mmul(a,b)))+'</span> ✓</p>', label:'Шаг 1 из 2'},
+    {html:main+l1+l2, note:'<div class="dhead">По формуле</div><p>Перед удвоенным произведением «'+(s>0?'+':'−')+'», значит это квадрат '+(s>0?'суммы':'разности')+'.</p>', label:'Шаг 2 из 2'},
+    {html:main+l1+l2, note:'<div class="deq"><b>Ответ:</b> <span class="math">('+mh(a)+(s>0?' + ':' − ')+mh(b)+')<sup>2</sup></span></div>'}
+  ];
+}
+
+S.tabsBoard(S.$('tG'),S.$('bG'),['6x^3-9x^2','12a^2b-8ab^2+4ab','-10m^4+15m^3-5m^2'].map(T),S.stepsGcd,polyH);
+S.tabsBoard(S.$('tR'),S.$('bR'),['ab+3a+2b+6','x^3+2x^2+3x+6','ab-5a+2b-10'].map(T),stepsGroup,polyH);
+const FX=[{k:'d',a:T1('5x'),b:T1('4')},{k:'s',a:T1('x'),b:T1('5'),s:-1},{k:'s',a:T1('2a'),b:T1('3b'),s:1}];
+S.tabsBoard(S.$('tF'),S.$('bF'),FX,f=>f.k==='d'?stepsFDiff(f.a,f.b):stepsFSq(f.a,f.b,f.s),f=>f.k==='d'?polyH([mmul(f.a,f.a),mono(-mmul(f.b,f.b).c,mmul(f.b,f.b).v)]):polyH([mmul(f.a,f.a),mmul(mono(2*f.s,{}),mmul(f.a,f.b)),mmul(f.b,f.b)]));
+
+S.quiz(S.$('quiz'),[
+  {q:'Каким способом удобнее разложить <span class="m">8x^3 − 12x^2</span>?', opts:['вынести общий множитель','группировкой','по формуле разности квадратов','по формуле квадрата разности'], ok:0, why:'Общий множитель <span class="m">4x^2</span>: <span class="m">4x^2(2x − 3)</span>.'},
+  {q:'Каким способом удобнее разложить <span class="m">m^2 − 64</span>?', opts:['вынести общий множитель','группировкой','по формуле разности квадратов','по формуле квадрата суммы'], ok:2, why:'<span class="m">m^2 − 8^2 = (m − 8)(m + 8)</span>.'},
+  {q:'Каким способом удобнее разложить <span class="m">ax + ay + 3x + 3y</span>?', opts:['вынести общий множитель','группировкой','по формуле разности квадратов','никаким'], ok:1, why:'<span class="m">a(x + y) + 3(x + y) = (x + y)(a + 3)</span>.'},
+  {q:'Чему равно <span class="m">y^2 + 12y + 36</span>?', opts:['<span class="m">(y + 6)^2</span>','<span class="m">(y + 12)^2</span>','<span class="m">(y − 6)(y + 6)</span>','<span class="m">y(y + 12) + 36</span>'], ok:0, why:'<span class="m">36 = 6^2</span>, <span class="m">12y = 2 · y · 6</span>.'},
+  {q:'Какое разложение доведено до конца?', opts:['<span class="m">2x^2 − 8 = 2(x^2 − 4)</span>','<span class="m">2x^2 − 8 = 2(x − 2)(x + 2)</span>','<span class="m">2x^2 − 8 = (2x − 4)(x + 2)</span>','<span class="m">2x^2 − 8 = x(2x) − 8</span>'], ok:1, why:'В <span class="m">2(x^2 − 4)</span> скобку ещё можно разложить, а в <span class="m">(2x − 4)</span> остался общий множитель 2.'}
+]);
+
+const SETS=[['x'],['a'],['y'],['x','y'],['a','b'],['m','n']];
+function genGcd(){
+  const L=pick(SETS);
+  for(let t=0;t<60;t++){
+    const v={}; L.forEach(l=>v[l]=ri(0,2)); if(!Object.values(v).some(Boolean)) v[L[0]]=1;
+    const F=mono(ri(2,6),v);
+    const Q=S.rpoly(L,ri(2,3),7,2,2);
+    const g=pgcd(Q); if(g.c!==1||Object.keys(g.v).length) continue;
+    const orig=psort(Q.map(q=>mmul(q,F)));
+    return {q:'<span class="ask">Вынеси общий множитель:</span>'+polyH(orig)+' = ?', spec:{orig,mono:F,n:1}, steps:S.stepsGcd(orig), letters:L};
+  }
+}
+function genFormula(){
+  const L=pick([['x'],['a'],['y'],['m'],['x','y'],['a','b']]);
+  for(let t=0;t<60;t++){
+    const a=mono(ri(1,5),{[L[0]]:Math.random()<0.25?2:1});
+    const b=L.length>1?mono(ri(1,5),{[L[1]]:1}):mono(ri(1,9),{});
+    if(gcd(a.c,b.c)!==1) continue;
+    if(Math.random()<0.5){ const orig=[mmul(a,a),mono(-mmul(b,b).c,mmul(b,b).v)];
+      return {q:'<span class="ask">Разложи по формуле:</span>'+polyH(orig)+' = ?', spec:{orig,mono:mono(1,{}),n:2}, steps:stepsFDiff(a,b), letters:L}; }
+    const s=sgn(0.5), orig=[mmul(a,a),mmul(mono(2*s,{}),mmul(a,b)),mmul(b,b)];
+    return {q:'<span class="ask">Разложи по формуле:</span>'+polyH(orig)+' = ?', spec:{orig,mono:mono(1,{}),n:2}, steps:stepsFSq(a,b,s), letters:L};
+  }
+}
+function genGroup(){
+  const p=ri(1,7)*sgn(0.5); let q; do{ q=ri(1,7)*sgn(0.5); }while(q<0 && [1,4].includes(-q));
+  let orig, L;
+  if(Math.random()<0.5){ L=pick([['a','b'],['x','y'],['m','n']]); const [u,w]=L; orig=[mono(1,{[u]:1,[w]:1}),mono(q,{[u]:1}),mono(p,{[w]:1}),mono(p*q,{})]; }
+  else { L=[pick(['x','a','y'])]; const u=L[0]; orig=[mono(1,{[u]:3}),mono(p,{[u]:2}),mono(q,{[u]:1}),mono(p*q,{})]; }
+  return {q:'<span class="ask">Разложи группировкой:</span>'+polyH(orig)+' = ?', spec:{orig,mono:mono(1,{}),n:2}, steps:stepsGroup(orig), letters:L};
+}
+S.trainer(S.$('trainer'),{kind:'product', modes:[['mix','Вперемешку'],['g','Общий множитель'],['f','Формулы'],['r','Группировка']], gen(mode){
+  const m = mode==='mix' ? pick(['g','g','f','r']) : mode;
+  return m==='g'?genGcd():(m==='f'?genFormula():genGroup());
+}});
+})();
+</script>
+<script src="assets/nav.js?v=4"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>§ 7. Перпендикулярные прямые</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Unbounded:wght@500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=4">
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <a class="brand" href="index.html"><span class="logo">x</span><span class="txt">Математика · 7 класс<small>I четверть</small></span></a>
+  <nav class="tnav" aria-label="Разделы сайта"><a href="index.html">Главная</a><a class="alg" href="index.html#algebra">Алгебра</a><a class="geo" href="index.html#geometry">Геометрия</a></nav>
+</div></header>
+
+<main class="wrap">
+<div class="page-head">
+  <div class="crumbs"><a href="index.html">Главная</a> › <a href="index.html#geometry">Геометрия</a> › § 7</div>
+  <div class="eyebrow">Геометрия · 7 класс · § 7 · урок 8</div>
+  <h1>Перпендикулярные прямые</h1>
+  <p class="lede">Прямые, которые пересекаются под прямым углом. Докажем, что из точки на прямую можно опустить только один перпендикуляр, и узнаем, что две прямые, перпендикулярные третьей, не пересекаются.</p>
+  <nav class="toc" aria-label="Разделы темы"><a href="#opredelenie">Определения</a><a href="#opyt">Опыт</a><a href="#teorema">Теорема</a><a href="#tretya">Две прямые ⊥ третьей</a><a href="#test">Тест</a><a href="#zadachi">Задачи</a></nav>
+</div>
+
+<section id="opredelenie">
+  <h2>Определения</h2>
+  <div class="rule"><span class="tag">ОПРЕДЕЛЕНИЯ</span>
+    <p>Две прямые называются <b>перпендикулярными</b>, если они пересекаются под прямым углом: <span class="m">m ⊥ n</span>. При этом образуются четыре прямых угла. Отрезки и лучи перпендикулярны, если лежат на перпендикулярных прямых.</p>
+    <p><b>Перпендикуляр к прямой</b> <i>a</i> — отрезок <i>AH</i> прямой, перпендикулярной <i>a</i>, с концом <i>H</i> на прямой <i>a</i>. Точка <i>H</i> — <b>основание перпендикуляра</b>, её также называют <b>проекцией</b> точки <i>A</i> на прямую <i>a</i>.</p>
+  </div>
+</section>
+
+<section id="opyt">
+  <h2>Опыт: перпендикуляр из точки</h2>
+  <p>Двигай точку <i>A</i>. Перпендикуляр к прямой <i>a</i> «следует» за ней, а его основание <i>H</i> скользит по прямой.</p>
+  <div id="exp"></div>
+</section>
+
+<section id="teorema">
+  <h2>Теорема о перпендикуляре</h2>
+  <div class="thm"><span class="tag red">ТЕОРЕМА</span><p>Через точку, не лежащую на прямой, можно провести прямую, перпендикулярную данной, и притом только одну.</p></div>
+  <p>В доказательстве мы мысленно <b>перегибаем</b> лист по прямой <i>a</i> — смотри, как верхняя половина плоскости ложится на нижнюю.</p>
+  <div id="proof"></div>
+  <div class="fact"><h3>Если точка лежит на прямой</h3><p>Через точку прямой тоже проходит ровно одна перпендикулярная ей прямая: от луча можно отложить угол 90° в данную полуплоскость только одним способом (аксиома откладывания углов). Итак, через <b>любую</b> точку плоскости проходит единственная прямая, перпендикулярная данной.</p></div>
+</section>
+
+<section id="tretya">
+  <h2>Две прямые, перпендикулярные третьей</h2>
+  <div class="thm"><span class="tag red">ТЕОРЕМА</span><p>Две прямые, перпендикулярные третьей, не пересекаются (параллельны).</p></div>
+  <div class="vs">
+    <div class="gfig" id="fig3"></div>
+    <div class="panel"><p><b>Доказательство.</b> Пусть <span class="m">a ⊥ c</span> и <span class="m">b ⊥ c</span>. Предположим, что <i>a</i> и <i>b</i> пересекаются в точке <i>M</i>. Тогда через <i>M</i> проходят две прямые, перпендикулярные <i>c</i>. Но по доказанной теореме такая прямая только одна. Противоречие. Значит, <i>a</i> и <i>b</i> не пересекаются: <span class="m">a ∥ b</span>.</p></div>
+  </div>
+</section>
+
+<section id="test">
+  <h2>Тест</h2>
+  <div id="quiz"></div>
+</section>
+
+<section id="zadachi">
+  <h2>Задачи с решениями</h2>
+  <div class="tasks">
+    <div class="hard"><div class="q"><b>1</b><span>Прямые <i>AB</i> и <i>CD</i> перпендикулярны и пересекаются в точке <i>O</i>. Луч <i>OK</i> лежит внутри угла <i>COB</i>, <span class="m">∠KOB = 48°</span>. Найдите ∠<i>COK</i> и ∠<i>KOA</i>.</span><div class="qfig" id="f1" style="max-width:260px"></div></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span><span class="m">AB ⊥ CD</span>, значит <span class="m">∠COB = 90°</span>.</div>
+        <div><span class="st">Шаг 2.</span>Луч <i>OK</i> внутри ∠<i>COB</i>: <span class="m">∠COK = 90° − 48° = 42°</span>.</div>
+        <div><span class="st">Шаг 3.</span>∠<i>KOA</i> и ∠<i>KOB</i> смежные: <span class="m">∠KOA = 180° − 48° = 132°</span>.</div>
+        <div class="ans">Ответ: 42° и 132°.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>2</b><span>Прямые <i>a</i> и <i>b</i> перпендикулярны. Через точку их пересечения проведена прямая <i>c</i>, образующая с <i>a</i> угол 35°. Найдите угол между <i>b</i> и <i>c</i>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Прямая <i>c</i> проходит внутри одного из прямых углов между <i>a</i> и <i>b</i> и делит его на две части.</div>
+        <div><span class="st">Шаг 2.</span>Одна часть 35°, другая: <span class="m">90° − 35° = 55°</span>.</div>
+        <div class="ans">Ответ: 55°.</div>
+      </div></details></div>
+  </div>
+</section>
+
+<nav class="pager" aria-label="Соседние темы"><a href="geo-06.html"><small>← Предыдущая тема</small>§ 6. Смежные и вертикальные углы</a><a class="next" href="geo-kr1.html"><small>Следующая тема →</small>Подготовка к КР № 1</a></nav>
+<footer class="foot">Геометрия, 7 класс, § 7. Задачи составлены по образцу заданий учебника.</footer>
+</main>
+
+<script src="assets/core.js?v=4"></script>
+<script src="assets/geo.js?v=4"></script>
+<script>
+(function(){
+const {P,seg,line,dot,lbl,right,wedge,angText,dist,foot,tf,tf0,add,mul,unit,sub} = G;
+
+/* опыт */
+const ya=180;
+G.drag(S.$('exp'),{vb:[400,230], pts:{A:P(150,60)}, label:'Точка A и прямая a',
+  constrain:(n,p)=>P(p.x,Math.min(p.y,ya-20)),
+  draw:p=>{ const A=p.A, H=P(A.x,ya);
+    return seg(P(0,ya),P(400,ya),'thick')+lbl(P(388,ya-14),'a')+'<g class="kr">'+seg(A,H,'c thick')+'</g>'+right(H,P(400,ya),A,11,'')+dot(A)+'<g class="kr">'+dot(H,'c')+'</g>'+lbl(P(A.x+14,A.y-10),'A')+lbl(P(H.x+14,H.y+16),'H'); },
+  info:p=>'<div>Длина перпендикуляра <i>AH</i> = '+G.n(G.cm(ya-p.A.y),'2.4em')+' см. Угол <i>AHa</i> всегда 90°.</div>'});
+
+/* доказательство с перегибанием */
+(function(){ const y=140, A=P(170,45), H=P(170,y), B=P(170,2*y-45), D=P(250,y), L=P(10,y), R=P(390,y);
+  const half='<rect x="0" y="0" width="400" height="'+y+'" style="fill:color-mix(in srgb,var(--c0) 10%,transparent)"/>';
+  G.proof(S.$('proof'),{vb:[400,250],given:'<b>ДАНО</b> прямая <i>a</i>, точка <i>A</i> ∉ <i>a</i>. <b>ДОКАЗАТЬ</b> через <i>A</i> проходит прямая ⊥ <i>a</i>, и только одна.',
+    items:[
+      {s:0,h:line(L,R,'thick')+lbl(P(385,y+16),'a')},
+      {s:0,mv:'f',h:half+'<g class="k0">'+dot(A,'c')+'</g>'},
+      {s:0,h:dot(A)+lbl(P(A.x+14,A.y-6),'A')},
+      {s:2,h:dot(B)+lbl(P(B.x+14,B.y+6),'B')},
+      {s:3,h:'<g class="kr">'+seg(A,B,'c thick')+'</g>'+lbl(P(H.x-12,H.y-12),'H')},
+      {s:3,e:5,h:'<g class="k1">'+wedge(H,R,A,22,'strong')+angText(H,R,A,34,'1')+'</g><g class="k3">'+wedge(H,R,B,22,'strong')+angText(H,R,B,34,'2')+'</g>'},
+      {s:5,h:'<g class="k3">'+seg(A,D,'c')+'</g>'+dot(D)+lbl(P(D.x+12,D.y-12),'D')},
+      {s:5,mv:'g',h:'<g class="k2">'+wedge(D,L,A,20,'strong')+angText(D,L,A,32,'3')+seg(A,D,'c dash')+'</g>'},
+      {s:7,h:'<g class="kr">'+seg(D,B,'c thick')+'</g>'+G.ms(P(300,215),'две прямые через A и B?!')}],
+    moves:{f:{0:tf0(H),1:tf(H,R,H,R,true),2:tf0(H)}, g:{0:tf0(D),6:tf(D,R,D,R,true)}},
+    steps:[
+      'Прямая <i>a</i> и точка <i>A</i> вне её. Верхняя полуплоскость окрашена.',
+      'Перегнём лист по прямой <i>a</i>: верхняя полуплоскость ложится на нижнюю. Точка <i>A</i> займёт какое-то положение.',
+      'Вернём лист обратно и отметим, куда попала <i>A</i>, — точка <i>B</i>.',
+      'Проведём прямую <i>AB</i>, она пересекает <i>a</i> в точке <i>H</i>. При перегибании ∠1 совпал с ∠2, значит ∠1 = ∠2.',
+      '∠1 и ∠2 смежные: ∠1 + ∠2 = 180°, значит каждый равен 90°. Итак, <i>AB</i> ⊥ <i>a</i> — перпендикуляр существует.',
+      'Единственность. Пусть есть ещё прямая <i>AD</i> ⊥ <i>a</i>, тогда ∠3 = 90°.',
+      'Перегнём лист снова. ∠3 совпадёт с углом при точке <i>D</i> между <i>DB</i> и <i>a</i> — он тоже 90°.',
+      'Тогда ∠<i>ADB</i> = 90° + 90° = 180° — развёрнутый, и точки <i>A</i>, <i>D</i>, <i>B</i> лежат на одной прямой. Получаем две разные прямые через <i>A</i> и <i>B</i> — это невозможно по аксиоме прямой. Значит, перпендикуляр единственный. Теорема доказана.']});
+})();
+
+/* две прямые ⊥ третьей */
+S.$('fig3').innerHTML=G.svg([300,190],seg(P(10,150),P(290,150),'thick')+lbl(P(282,166),'c')+'<g class="k0">'+seg(P(90,10),P(90,180),'c thick')+lbl(P(78,20),'a',0,0,'c')+'</g><g class="k1">'+seg(P(200,10),P(200,180),'c thick')+lbl(P(212,20),'b',0,0,'c')+'</g>'+right(P(90,150),P(290,150),P(90,10),10,'')+right(P(200,150),P(290,150),P(200,10),10,''),'Прямые a и b перпендикулярны прямой c');
+
+/* рисунок к задаче */
+(function(){ const O=P(120,100); S.$('f1').innerHTML=G.svg([240,200],seg(P(10,100),P(230,100),'')+seg(P(120,10),P(120,190),'')+'<g class="k3">'+seg(O,P(120+90*Math.cos(-48*Math.PI/180),100+90*Math.sin(-48*Math.PI/180)),'c')+'</g>'+right(O,P(230,100),P(120,10),9,'')+lbl(P(14,88),'A')+lbl(P(226,88),'B')+lbl(P(132,16),'C')+lbl(P(132,186),'D')+lbl(P(110,114),'O')+lbl(P(190,26),'K')); })();
+
+S.quiz(S.$('quiz'),[
+  {q:'Сколько прямых углов образуется при пересечении перпендикулярных прямых?', opts:['1','2','4','0'], ok:2},
+  {q:'Сколько перпендикуляров можно опустить из точки на прямую?', opts:['ни одного','один','два','бесконечно много'], ok:1},
+  {q:'<span class="m">a ⊥ c</span>, <span class="m">b ⊥ c</span>. Тогда прямые <i>a</i> и <i>b</i>', opts:['пересекаются','перпендикулярны','не пересекаются','совпадают всегда'], ok:2, why:'Две прямые, перпендикулярные третьей, не пересекаются.'},
+  {q:'Основание перпендикуляра <i>AH</i> к прямой <i>a</i> — это точка', opts:['<i>A</i>','<i>H</i>','любая точка <i>a</i>','середина <i>AH</i>'], ok:1},
+  {q:'Прямые пересекаются, один из углов 90°. Прямые', opts:['перпендикулярны','параллельны','совпадают','ничего сказать нельзя'], ok:0}
+]);
+})();
+</script>
+<script src="assets/nav.js?v=4"></script>
+</body>
+</html>

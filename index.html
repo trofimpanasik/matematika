@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Темы алгебры и геометрии 7 класса: разборы по шагам, анимации, тренажёры и тесты.">
+<title>Математика 7 класс</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Unbounded:wght@500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=4">
+<style>
+.hero{display:flex;flex-direction:column;gap:14px;padding-top:8px}
+.hero h1{font-size:clamp(1.7rem,6vw,2.7rem);max-width:18ch}
+.now{display:flex;flex-wrap:wrap;gap:10px}
+.now a{display:flex;flex-direction:column;gap:2px;text-decoration:none;color:var(--ink);background:var(--surface);border:1.5px solid var(--kc);border-radius:12px;padding:10px 14px;min-width:0;flex:1 1 260px}
+.now a small{color:var(--kc);font-weight:600;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase}
+.subjects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;align-items:start}
+.subj{display:flex;flex-direction:column;gap:12px;scroll-margin-top:72px;min-width:0}
+.subj-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;border-bottom:2px solid var(--kc);padding-bottom:8px}
+.subj-head h2{color:var(--kc)}
+.subj-head span{font-size:.85rem;color:var(--ink-2)}
+.cards{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.card{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 14px;text-decoration:none;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;transition:border-color .2s}
+.card:hover{border-color:var(--kc)}
+.card .num{grid-row:1/4;font-family:var(--f-display);font-weight:600;font-size:1.05rem;color:var(--kc);min-width:2.6em;padding-top:1px}
+.card .t{font-weight:600;line-height:1.35}
+.card .d{font-size:.9rem;color:var(--ink-2)}
+.card .meta{display:flex;gap:6px;flex-wrap:wrap;align-items:center;font-size:.8rem;color:var(--ink-2)}
+.tag2{border:1px solid var(--line);border-radius:999px;padding:0 8px;white-space:nowrap}
+.card.is-now{border-color:var(--kc);box-shadow:0 0 0 1px var(--kc)}
+.card.just{animation:just 1.6s ease-out}
+@keyframes just{0%,35%{box-shadow:0 0 0 3px var(--kc)}100%{box-shadow:0 0 0 0 transparent}}
+.card.kr{background:transparent;border-style:dashed}
+.nowchip{background:var(--kc);color:var(--surface);border-radius:999px;padding:0 8px;font-weight:600}
+.how{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.how div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:.93rem;display:flex;flex-direction:column;gap:4px}
+.how b{font-family:var(--f-display);font-weight:500;font-size:.88rem}
+@media (max-width:760px){ .subjects,.how{grid-template-columns:minmax(0,1fr)} }
+.subj.alg{--kc:var(--alg)} .subj.geo{--kc:var(--geo)}
+</style>
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <a class="brand" href="index.html"><span class="logo">x</span><span class="txt">Математика · 7 класс<small>I и II четверти</small></span></a>
+  <nav class="tnav" aria-label="Разделы сайта"><a href="index.html">Главная</a><a class="alg" href="#algebra">Алгебра</a><a class="geo" href="#geometry">Геометрия</a></nav>
+</div></header>
+
+<div class="wrap" style="max-width:880px">
+  <section class="hero">
+    <div class="eyebrow">7 класс · I и II четверти</div>
+    <h1>Темы уроков с разбором и примерами</h1>
+    <p class="lede">Каждая тема — это правило, разбор по шагам, чертежи с анимацией и задачи с решениями. Темы идут в том же порядке, что и на уроках. Пропустил урок или не понял — открой тему и пройди её по шагам.</p>
+    <div class="now" id="now" hidden></div>
+  </section>
+
+  <div class="subjects">
+    <section class="subj alg" id="algebra">
+      <div class="subj-head"><h2>Алгебра</h2><span>Главы 1–2 · § 1–14</span></div>
+      <div class="quarter">I четверть</div>
+      <ol class="cards">
+        <li><a class="card" href="alg-01.html" data-from="2026-09-01" data-to="2026-09-08"><span class="num">§ 1</span><span class="t">Степень с натуральным показателем</span><span class="d">Определение, знак степени и пять свойств. Модель из плиток.</span><span class="meta"><span>уроки 1–4 · 01.09–08.09</span><span class="tag2">тренажёр</span></span></a></li>
+        <li><a class="card" href="alg-02.html" data-from="2026-09-09" data-to="2026-09-22"><span class="num">§ 2</span><span class="t">Степень с целым показателем</span><span class="d">Нулевая и отрицательная степень. Лестница степеней.</span><span class="meta"><span>уроки 5–10 · 09.09–22.09</span><span class="tag2">тренажёр</span></span></a></li>
+        <li><a class="card" href="alg-03.html" data-from="2026-09-23" data-to="2026-09-29"><span class="num">§ 3</span><span class="t">Стандартный вид числа</span><span class="d">Двигаем запятую: <i>a</i> · 10<sup><i>n</i></sup>, порядок числа.</span><span class="meta"><span>уроки 11–13 · 23.09–29.09</span><span class="tag2">тренажёр</span></span></a></li>
+        <li><a class="card kr" href="alg-kr1.html" data-from="2026-09-30" data-to="2026-10-08"><span class="num">КР 1</span><span class="t">Подготовка к контрольной «Степень с натуральным и целым показателями»</span><span class="d">Шпаргалка по главе, тест и типовые задания.</span><span class="meta"><span>уроки 14–17 · КР 07.10</span><span class="tag2">тест</span></span></a></li>
+        <li><a class="card" href="alg-04.html" data-from="2026-10-09" data-to="2026-10-13"><span class="num">§ 4</span><span class="t">Числовые выражения и выражения с переменными</span><span class="d">Порядок действий, подстановка, область определения.</span><span class="meta"><span>уроки 18–19 · 09.10, 13.10</span><span class="tag2">тренажёр</span></span></a></li>
+        <li><a class="card" href="alg-05.html" data-from="2026-10-14" data-to="2026-10-19"><span class="num">§ 5</span><span class="t">Тождество</span><span class="d">Тождественно равные выражения и как доказать тождество.</span><span class="meta"><span>уроки 20–21 · 14.10, 16.10</span><span class="tag2">тренажёр</span></span></a></li>
+        <li><a class="card" href="alg-06.html" data-from="2026-10-20" data-to="2026-10-22"><span class="num">§ 6</span><span class="t">Одночлен</span><span class="d">Стандартный вид, коэффициент и степень одночлена.</span><span class="meta"><span>уроки 22–23 · 20.10, 21.10</span><span class="tag2">тренажёр</span></span></a></li>
+        <li><a class="card" href="alg-07.html" data-from="2026-10-23" data-to="2026-10-29"><span class="num">§ 7</span><span class="t">Действия с одночленами</span><span class="d">Умножение, деление, степень, подобные одночлены.</span><span class="meta"><span>уроки 24–26 · 23.10–28.10</span><span class="tag2">тренажёр</span></span></a></li>
+      </ol>
+      <div class="quarter">II четверть</div>
+      <ol class="cards">
+        <li><a class="card" href="alg-08.html" data-from="2026-10-30" data-to="2026-11-10"><span class="num">§ 8</span><span class="t">Многочлен</span><span class="d">Члены многочлена, подобные слагаемые, стандартный вид, степень.</span><span class="meta"><span>уроки 27–28 · 30.10, 10.11</span><span class="tag2">тренажёр</span></span></a></li>
+        <li><a class="card" href="alg-09.html" data-from="2026-11-11" data-to="2026-11-13"><span class="num">§ 9</span><span class="t">Сложение и вычитание многочленов</span><span class="d">Как раскрывать скобки с плюсом и с минусом перед ними.</span><span class="meta"><span>уроки 29–30 · 11.11, 13.11</span><span class="tag2">тренажёр</span></span></a></li>
+        <li><a class="card" href="alg-10.html" data-from="2026-11-17" data-to="2026-11-18"><span class="num">§ 10</span><span class="t">Умножение и деление многочлена на одночлен</span><span class="d">Одночлен по очереди встречается с каждым членом многочлена.</span><span class="meta"><span>уроки 31–32 · 17.11, 18.11</span><span class="tag2">тренажёр</span></span></a></li>
+        <li><a class="card" href="alg-11.html" data-from="2026-11-19" data-to="2026-11-25"><span class="num">§ 11</span><span class="t">Умножение многочленов</span><span class="d">Каждый член на каждый: стрелки, модель из плиток, подобные.</span><span class="meta"><span>уроки 33–35 · 20.11–25.11</span><span class="tag2">тренажёр</span></span></a></li>
+        <li><a class="card" href="alg-12.html" data-from="2026-11-26" data-to="2026-12-04"><span class="num">§ 12</span><span class="t">Квадрат суммы и квадрат разности</span><span class="d">Формулы и их доказательство на квадрате.</span><span class="meta"><span>уроки 36–39 · 27.11–04.12</span><span class="tag2">анимация</span><span class="tag2">тренажёр</span></span></a></li>
+        <li><a class="card" href="alg-13.html" data-from="2026-12-05" data-to="2026-12-15"><span class="num">§ 13</span><span class="t">Произведение суммы и разности</span><span class="d">Разность квадратов: формула, чертёж и быстрый счёт.</span><span class="meta"><span>уроки 40–43 · 08.12–15.12</span><span class="tag2">анимация</span><span class="tag2">тренажёр</span></span></a></li>
+        <li><a class="card" href="alg-14.html" data-from="2026-12-16" data-to="2026-12-27"><span class="num">§ 14</span><span class="t">Разложение многочлена на множители</span><span class="d">Общий множитель, группировка, формулы.</span><span class="meta"><span>уроки 44–47 · 16.12–23.12</span><span class="tag2">тренажёр</span></span></a></li>
+      </ol>
+    </section>
+
+    <section class="subj geo" id="geometry">
+      <div class="subj-head"><h2>Геометрия</h2><span>Главы 1–3 · § 1–16</span></div>
+      <div class="quarter">I четверть</div>
+      <ol class="cards">
+        <li><a class="card" href="geo-01.html" data-from="2026-09-01" data-to="2026-09-09"><span class="num">§ 1–2</span><span class="t">Повторение и предмет геометрии</span><span class="d">Фигуры 5–6 классов, равные фигуры, аксиомы и теоремы.</span><span class="meta"><span>уроки 1–2 · 03.09, 07.09</span><span class="tag2">анимация</span><span class="tag2">тест</span></span></a></li>
+        <li><a class="card" href="geo-03.html" data-from="2026-09-10" data-to="2026-09-16"><span class="num">§ 3</span><span class="t">Прямая. Луч. Отрезок. Ломаная</span><span class="d">Аксиома прямой, длина отрезка, периметр.</span><span class="meta"><span>уроки 3–4 · 10.09, 14.09</span><span class="tag2">анимации</span><span class="tag2">тест</span></span></a></li>
+        <li><a class="card" href="geo-04.html" data-from="2026-09-17" data-to="2026-09-20"><span class="num">§ 4</span><span class="t">Окружность и круг</span><span class="d">Радиус, хорда, диаметр, сектор и сегмент.</span><span class="meta"><span>урок 5 · 17.09</span><span class="tag2">анимации</span><span class="tag2">тест</span></span></a></li>
+        <li><a class="card" href="geo-05.html" data-from="2026-09-21" data-to="2026-09-23"><span class="num">§ 5</span><span class="t">Угол. Виды углов</span><span class="d">Транспортир, градусы, биссектриса угла.</span><span class="meta"><span>урок 6 · 21.09</span><span class="tag2">анимации</span><span class="tag2">тест</span></span></a></li>
+        <li><a class="card" href="geo-06.html" data-from="2026-09-24" data-to="2026-09-27"><span class="num">§ 6</span><span class="t">Смежные и вертикальные углы</span><span class="d">Сумма смежных — 180°, вертикальные равны.</span><span class="meta"><span>урок 7 · 24.09</span><span class="tag2">анимации</span><span class="tag2">тест</span></span></a></li>
+        <li><a class="card" href="geo-07.html" data-from="2026-09-28" data-to="2026-09-30"><span class="num">§ 7</span><span class="t">Перпендикулярные прямые</span><span class="d">Единственный перпендикуляр: доказательство перегибанием.</span><span class="meta"><span>урок 8 · 28.09</span><span class="tag2">анимации</span><span class="tag2">тест</span></span></a></li>
+        <li><a class="card kr" href="geo-kr1.html" data-from="2026-10-01" data-to="2026-10-07"><span class="num">КР 1</span><span class="t">Подготовка к контрольной «Начальные понятия геометрии»</span><span class="d">Шпаргалка по главе I, тест и типовые задачи.</span><span class="meta"><span>уроки 9–10 · КР 01.10</span><span class="tag2">тест</span></span></a></li>
+        <li><a class="card" href="geo-08.html" data-from="2026-10-08" data-to="2026-10-11"><span class="num">§ 8</span><span class="t">Треугольники</span><span class="d">Элементы, виды по сторонам и углам, равные треугольники.</span><span class="meta"><span>урок 11 · 08.10</span><span class="tag2">анимации</span><span class="tag2">тест</span></span></a></li>
+        <li><a class="card" href="geo-09.html" data-from="2026-10-12" data-to="2026-10-18"><span class="num">§ 9</span><span class="t">Первый и второй признаки равенства</span><span class="d">Доказательства наложением и оформление решений.</span><span class="meta"><span>уроки 12–13 · 12.10, 15.10</span><span class="tag2">анимации</span><span class="tag2">тест</span></span></a></li>
+        <li><a class="card" href="geo-10.html" data-from="2026-10-19" data-to="2026-10-25"><span class="num">§ 10</span><span class="t">Высота, медиана и биссектриса</span><span class="d">Подвижный треугольник: чем они отличаются.</span><span class="meta"><span>уроки 14–15 · 19.10, 22.10</span><span class="tag2">анимации</span><span class="tag2">тест</span></span></a></li>
+        <li><a class="card" href="geo-11.html" data-from="2026-10-26" data-to="2026-11-08"><span class="num">§ 11</span><span class="t">Равнобедренный треугольник</span><span class="d">Углы при основании, биссектриса к основанию, обратная теорема.</span><span class="meta"><span>уроки 16–17 · 26.10, 29.10</span><span class="tag2">анимации</span><span class="tag2">тест</span></span></a></li>
+      </ol>
+      <div class="quarter">II четверть</div>
+      <ol class="cards">
+        <li><a class="card" href="geo-12.html" data-from="2026-11-09" data-to="2026-11-12"><span class="num">§ 12</span><span class="t">Признаки равнобедренного треугольника</span><span class="d">Когда высота, медиана и биссектриса совпадают.</span><span class="meta"><span>уроки 18–19 · 09.11, 12.11</span><span class="tag2">анимации</span><span class="tag2">тест</span></span></a></li>
+        <li><a class="card" href="geo-13.html" data-from="2026-11-16" data-to="2026-11-19"><span class="num">§ 13</span><span class="t">Третий признак равенства треугольников</span><span class="d">По трём сторонам. Почему треугольник жёсткий.</span><span class="meta"><span>уроки 20–21 · 16.11, 19.11</span><span class="tag2">анимации</span><span class="tag2">тест</span></span></a></li>
+        <li><a class="card" href="geo-14.html" data-from="2026-11-20" data-to="2026-11-26"><span class="num">§ 14</span><span class="t">Серединный перпендикуляр к отрезку</span><span class="d">Точки, равноудалённые от концов отрезка.</span><span class="meta"><span>уроки 22–23 · 23.11, 26.11</span><span class="tag2">анимации</span><span class="tag2">тест</span></span></a></li>
+        <li><a class="card kr" href="geo-kr2.html" data-from="2026-11-27" data-to="2026-12-07"><span class="num">КР 2</span><span class="t">Подготовка к контрольной «Признаки равенства треугольников»</span><span class="d">Все признаки на одной странице, тест и типовые задачи.</span><span class="meta"><span>уроки 24–26 · 30.11, КР 03.12</span><span class="tag2">тест</span></span></a></li>
+        <li><a class="card" href="geo-15.html" data-from="2026-12-08" data-to="2026-12-21"><span class="num">§ 15</span><span class="t">Признаки параллельности прямых</span><span class="d">Накрест лежащие, соответственные и односторонние углы.</span><span class="meta"><span>уроки 27–30 · 10.12–21.12</span><span class="tag2">анимации</span><span class="tag2">тест</span></span></a></li>
+        <li><a class="card" href="geo-16.html" data-from="2026-12-22" data-to="2027-01-11"><span class="num">§ 16</span><span class="t">Аксиома параллельных прямых</span><span class="d">Единственная параллельная и доказательство от противного.</span><span class="meta"><span>уроки 31–32 · 24.12, 11.01</span><span class="tag2">анимации</span></span></a></li>
+      </ol>
+    </section>
+  </div>
+
+  <section>
+    <h2>Как заниматься по теме</h2>
+    <div class="how">
+      <div><b>1. Правило</b>Прочитай правило в рамке. Его же мы записывали в тетрадь.</div>
+      <div><b>2. Разбор</b>Нажимай «Дальше» и смотри, как решение строится по шагам.</div>
+      <div><b>3. Проверь себя</b>Реши примеры в тренажёре или тесте. Задачи посложнее — с решениями под спойлером.</div>
+    </div>
+  </section>
+  <footer class="foot">Алгебра — учебник для 7 класса, главы 2, § 8–14. Геометрия — учебник для 7 класса, главы 2–3, § 12–16. Примеры на сайте составлены по образцу заданий учебников.</footer>
+</div>
+<script>
+(function(){
+  const today=new Date(); const d0=new Date(today.getFullYear(),today.getMonth(),today.getDate());
+  const box=document.getElementById('now'); let html='';
+  document.querySelectorAll('.card[data-from]').forEach(c=>{
+    const a=new Date(c.dataset.from+'T00:00:00'), b=new Date(c.dataset.to+'T23:59:59');
+    if(d0>=a && d0<=b){
+      c.classList.add('is-now');
+      const meta=c.querySelector('.meta'); const s=document.createElement('span'); s.className='nowchip'; s.textContent='сейчас'; meta.prepend(s);
+      const geo=c.closest('.geo');
+      html+='<a href="'+c.getAttribute('href')+'" style="--kc:var('+(geo?'--geo':'--alg')+')"><small>Сейчас по '+(geo?'геометрии':'алгебре')+'</small><span>'+c.querySelector('.num').textContent+'. '+c.querySelector('.t').textContent+'</span></a>';
+    }
+  });
+  if(html){ box.innerHTML=html; box.hidden=false; }
+})();
+</script>
+<script src="assets/nav.js?v=4"></script>
+</body>
+</html>

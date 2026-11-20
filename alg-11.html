@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>§ 11. Умножение многочленов</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Unbounded:wght@500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=4">
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <a class="brand" href="index.html"><span class="logo">x</span><span class="txt">Математика · 7 класс<small>II четверть</small></span></a>
+  <nav class="tnav" aria-label="Разделы сайта"><a href="index.html">Главная</a><a class="alg" href="index.html#algebra">Алгебра</a><a class="geo" href="index.html#geometry">Геометрия</a></nav>
+</div></header>
+
+<main class="wrap">
+<div class="page-head">
+  <div class="crumbs"><a href="index.html">Главная</a> › <a href="index.html#algebra">Алгебра</a> › § 11</div>
+  <div class="eyebrow">Алгебра · 7 класс · § 11 · уроки 33–35</div>
+  <h1>Умножение многочленов</h1>
+  <p class="lede">Каждый член первого многочлена умножаем на каждый член второго, а потом приводим подобные. Стрелки помогут ничего не пропустить.</p>
+  <nav class="toc" aria-label="Разделы темы"><a href="#pravilo">Правило</a><a href="#razbor">Разбор</a><a href="#plitki">Модель из плиток</a><a href="#oshibki">Ошибки</a><a href="#trenazher">Тренажёр</a><a href="#zadachi">Задачи</a></nav>
+</div>
+
+<section id="pravilo">
+  <h2>Правило</h2>
+  <div class="rule"><span class="tag">ПРАВИЛО</span>
+    <p>Чтобы умножить многочлен на многочлен, нужно:</p>
+    <ol><li><b>1)</b><span>умножить <u>каждый</u> член одного многочлена на <u>каждый</u> член другого многочлена;</span></li><li><b>2)</b><span>полученные произведения сложить.</span></li></ol>
+    <div class="scheme"><span class="m">(a + b)(c + d) = ac + ad + bc + bd</span></div>
+  </div>
+  <p>Откуда это правило? Обозначим вторую скобку одной буквой и дважды применим распределительный закон: <span class="m">(a + b)(c + d) = a(c + d) + b(c + d) = ac + ad + bc + bd</span>.</p>
+  <div class="aside">
+    <div class="fact"><h3>Сколько произведений?</h3><p>Если в первом многочлене <i>m</i> членов, а во втором <i>n</i>, то до приведения подобных получится <i>m</i> · <i>n</i> произведений. Для двух двучленов — 4.</p></div>
+    <div class="fact"><h3>Порядок обхода</h3><p>Берём первый член первой скобки и по очереди умножаем на все члены второй. Потом второй член — и снова на все.</p></div>
+  </div>
+</section>
+
+<section id="razbor">
+  <h2>Разбор по шагам</h2>
+  <p>Стрелки первого члена идут сверху, второго — снизу. Цвет произведения совпадает с цветом члена первой скобки.</p>
+  <div class="tabs" id="tEx" role="group" aria-label="Примеры"></div>
+  <div id="bEx"></div>
+</section>
+
+<section id="plitki">
+  <h2>Модель из плиток</h2>
+  <p>Прямоугольник со сторонами <span class="m">x + a</span> и <span class="m">x + b</span> складывается из плиток: большой квадрат <span class="m">x^2</span>, полоски площадью <span class="m">x</span> и единичные квадратики. Сторона <i>x</i> нарочно не целая: это буква, её длину мы не знаем.</p>
+  <div class="panel">
+    <div class="svgbox" style="max-width:360px;margin:0 auto;width:100%"><svg id="tiles" viewBox="0 0 310 310" role="img" aria-label="Прямоугольник из плиток"></svg></div>
+    <div class="sliders s2">
+      <label for="ta">добавка к ширине <span><b>a</b> = <span id="vta">3</span></span><input type="range" id="ta" min="1" max="5" value="3"></label>
+      <label for="tb">добавка к высоте <span><b>b</b> = <span id="vtb">2</span></span><input type="range" id="tb" min="1" max="5" value="2"></label>
+    </div>
+    <div class="out" id="tilesOut"></div>
+  </div>
+</section>
+
+<section id="oshibki">
+  <h2>Частые ошибки</h2>
+  <div class="mist">
+    <div class="mrow"><div class="what">Перемножили только первые и последние члены.</div><div class="bad"><span class="mark">✗</span><span class="m">(x + 3)(x + 2) = x^2 + 6</span></div><div class="good"><span class="mark">✓</span><span class="m">x^2 + 2x + 3x + 6 = x^2 + 5x + 6</span></div></div>
+    <div class="mrow"><div class="what">Ошиблись в знаке при подобных.</div><div class="bad"><span class="mark">✗</span><span class="m">(x − 3)(x + 2) = x^2 + x − 6</span></div><div class="good"><span class="mark">✓</span><span class="m">x^2 + 2x − 3x − 6 = x^2 − x − 6</span></div></div>
+    <div class="mrow"><div class="what">Пропустили одно из произведений с трёхчленом.</div><div class="bad"><span class="mark">✗</span><span class="m">(a + 1)(a^2 − a + 1) = a^3 + 1 − a</span></div><div class="good"><span class="mark">✓</span>6 произведений: <span class="m">a^3 − a^2 + a + a^2 − a + 1 = a^3 + 1</span></div></div>
+  </div>
+</section>
+
+<section id="trenazher">
+  <h2>Тренажёр</h2>
+  <p>Перемножь многочлены и приведи подобные. Ответ — многочлен стандартного вида.</p>
+  <div id="trainer"></div>
+</section>
+
+<section id="zadachi">
+  <h2>Задачи посложнее</h2>
+  <div class="tasks">
+    <div class="hard"><div class="q"><b>1</b><span>Упростите выражение <span class="m">(x + 4)(x − 1) − x(x + 3)</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span><span class="m">(x + 4)(x − 1) = x^2 − x + 4x − 4</span></div>
+        <div><span class="st">Шаг 2.</span><span class="m">−x + 4x = 3x</span>, получаем <span class="m">x^2 + 3x − 4</span></div>
+        <div><span class="st">Шаг 3.</span><span class="m">x(x + 3) = x^2 + 3x</span></div>
+        <div><span class="st">Шаг 4.</span><span class="m">x^2 + 3x − 4 − x^2 − 3x</span></div>
+        <div><span class="st">Шаг 5.</span><span class="m">x^2 − x^2 = 0</span>; <span class="m">3x − 3x = 0</span>; остаётся −4.</div>
+        <div class="ans">Ответ: −4.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>2</b><span>Решите уравнение <span class="m">(x + 2)(x + 5) − x^2 = 24</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span><span class="m">(x + 2)(x + 5) = x^2 + 5x + 2x + 10 = x^2 + 7x + 10</span></div>
+        <div><span class="st">Шаг 2.</span><span class="m">x^2 + 7x + 10 − x^2 = 24</span></div>
+        <div><span class="st">Шаг 3.</span><span class="m">7x + 10 = 24</span></div>
+        <div><span class="st">Шаг 4.</span><span class="m">7x = 14</span></div>
+        <div><span class="st">Шаг 5.</span><span class="m">x = 2</span></div>
+        <div class="ans">Ответ: <span class="m">x = 2</span>.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>3</b><span>Докажите тождество <span class="m">(a − 1)(a^2 + a + 1) = a^3 − 1</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span><span class="m">a · a^2 = a^3</span>; <span class="m">a · a = a^2</span>; <span class="m">a · 1 = a</span></div>
+        <div><span class="st">Шаг 2.</span><span class="m">−1 · a^2 = −a^2</span>; <span class="m">−1 · a = −a</span>; <span class="m">−1 · 1 = −1</span></div>
+        <div><span class="st">Шаг 3.</span><span class="m">a^3 + a^2 + a − a^2 − a − 1</span></div>
+        <div><span class="st">Шаг 4.</span><span class="m">a^2 − a^2 = 0</span>; <span class="m">a − a = 0</span></div>
+        <div class="ans">Левая часть равна <span class="m">a^3 − 1</span>, тождество доказано.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>4</b><span>Длина прямоугольника на 3 см больше ширины. Если ширину увеличить на 2 см, а длину на 1 см, площадь увеличится на 26 см². Найдите стороны прямоугольника.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Ширина <i>x</i> см, длина <span class="m">x + 3</span> см. Площадь <span class="m">x(x + 3) = x^2 + 3x</span>.</div>
+        <div><span class="st">Шаг 2.</span>Новые стороны <span class="m">x + 2</span> и <span class="m">x + 4</span>. Площадь <span class="m">(x + 2)(x + 4) = x^2 + 4x + 2x + 8 = x^2 + 6x + 8</span>.</div>
+        <div><span class="st">Шаг 3.</span>Разность площадей: <span class="m">x^2 + 6x + 8 − x^2 − 3x = 3x + 8</span>.</div>
+        <div><span class="st">Шаг 4.</span><span class="m">3x + 8 = 26</span>, <span class="m">3x = 18</span>, <span class="m">x = 6</span>.</div>
+        <div><span class="st">Шаг 5.</span>Длина <span class="m">6 + 3 = 9</span>.</div>
+        <div class="ans">Ответ: 6 см и 9 см.</div>
+      </div></details></div>
+  </div>
+</section>
+
+<nav class="pager" aria-label="Соседние темы"><a href="alg-10.html"><small>← Предыдущая тема</small>§ 10. Многочлен и одночлен</a><a class="next" href="alg-12.html"><small>Следующая тема →</small>§ 12. Квадрат суммы и разности</a></nav>
+<footer class="foot">Алгебра, 7 класс, § 11. Примеры составлены по образцу заданий учебника.</footer>
+</main>
+
+<script src="assets/core.js?v=4"></script>
+<script>
+(function(){
+const {T,mono,pmul,pcomb,psort,polyH,ri,pick,sgn} = S;
+const EX=[['x+3','x-5'],['2a-b','a+3b'],['x-2','x^2+2x+4'],['3m+1','2m^2-m+4']].map(e=>e.map(T));
+S.tabsBoard(S.$('tEx'),S.$('bEx'),EX,e=>S.stepsPolyPoly(e[0],e[1]),e=>'('+polyH(e[0])+')('+polyH(e[1])+')');
+
+function tiles(){
+  const a=+S.$('ta').value, b=+S.$('tb').value; S.$('vta').textContent=a; S.$('vtb').textContent=b;
+  const u=24, X=4.4*u, ox=36, oy=36; let o='';
+  const R=(x,y,w,h,k,t)=>'<g class="'+k+'"><rect class="blk" x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="2"/>'+(t?'<text class="svin" x="'+(x+w/2)+'" y="'+(y+h/2+5)+'">'+t+'</text>':'')+'</g>';
+  o+=R(ox,oy,X,X,'k0','x²');
+  for(let i=0;i<a;i++) o+=R(ox+X+i*u,oy,u,X,'k1','x');
+  for(let j=0;j<b;j++) o+=R(ox,oy+X+j*u,X,u,'k2','x');
+  for(let i=0;i<a;i++) for(let j=0;j<b;j++) o+=R(ox+X+i*u,oy+X+j*u,u,u,'k3','1');
+  o+='<text class="svlbl" x="'+(ox+X/2)+'" y="'+(oy-12)+'">x</text><text class="svlbl k1" x="'+(ox+X+a*u/2)+'" y="'+(oy-12)+'" style="fill:var(--c1)">'+a+'</text>';
+  o+='<text class="svlbl" x="'+(ox-14)+'" y="'+(oy+X/2+5)+'">x</text><text class="svlbl" x="'+(ox-14)+'" y="'+(oy+X+b*u/2+5)+'" style="fill:var(--c2)">'+b+'</text>';
+  S.$('tiles').innerHTML=o;
+  const K=(i,t)=>'<span class="k'+i+' kt">'+t+'</span>';
+  S.$('tilesOut').innerHTML='<div><span class="cap2">Произведение</span>(<i>x</i> + '+a+')(<i>x</i> + '+b+')</div>'+
+    '<div><span class="cap2">Плитки по цветам</span>= '+K(0,'<i>x</i><sup>2</sup>')+' + '+K(1,a+'<i>x</i>')+' + '+K(2,b+'<i>x</i>')+' + '+K(3,a*b)+'</div>'+
+    '<div><span class="cap2">Приводим подобные</span>= <i>x</i><sup>2</sup> + '+(a+b)+'<i>x</i> + '+(a*b)+'</div>';
+}
+['ta','tb'].forEach(id=>S.$(id).addEventListener('input',tiles)); tiles();
+
+function lin(L){ // двучлен вида ax + b или ax + by
+  for(let t=0;t<50;t++){ const a=ri(1,5)*sgn(0.2), b=ri(1,9)*sgn(0.45);
+    const P = L.length>1 ? [mono(a,{[L[0]]:1}),mono(b,{[L[1]]:1})] : [mono(a,{[L[0]]:1}),mono(b,{})];
+    if(Math.abs(a)!==0) return P; }
+}
+S.trainer(S.$('trainer'),{kind:'poly', modes:[['bb','Двучлен × двучлен'],['bt','Двучлен × трёхчлен']], gen(mode){
+  const L=pick([['x'],['a'],['y'],['m'],['x','y'],['a','b']]);
+  let A,B;
+  if(mode==='bb'){ A=lin(L); B=lin(L); }
+  else { A=lin([L[0]]); const l=L[0]; B=[mono(ri(1,4),{[l]:2}),mono(ri(1,6)*sgn(0.5),{[l]:1}),mono(ri(1,9)*sgn(0.5),{})]; }
+  const ans=psort(pcomb(pmul(A,B)));
+  return {q:'('+polyH(A)+')('+polyH(B)+') = ?', answer:ans, steps:S.stepsPolyPoly(A,B), letters:L};
+}});
+})();
+</script>
+<script src="assets/nav.js?v=4"></script>
+</body>
+</html>

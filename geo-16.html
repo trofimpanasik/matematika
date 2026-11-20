@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>§ 16. Аксиома параллельных прямых</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Unbounded:wght@500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=4">
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <a class="brand" href="index.html"><span class="logo">x</span><span class="txt">Математика · 7 класс<small>II четверть</small></span></a>
+  <nav class="tnav" aria-label="Разделы сайта"><a href="index.html">Главная</a><a class="alg" href="index.html#algebra">Алгебра</a><a class="geo" href="index.html#geometry">Геометрия</a></nav>
+</div></header>
+
+<main class="wrap">
+<div class="page-head">
+  <div class="crumbs"><a href="index.html">Главная</a> › <a href="index.html#geometry">Геометрия</a> › § 16</div>
+  <div class="eyebrow">Геометрия · 7 класс · § 16 · уроки 31–32</div>
+  <h1>Аксиома параллельных прямых</h1>
+  <p class="lede">Через точку вне прямой можно провести параллельную ей прямую. Аксиома говорит, что такая прямая только одна.</p>
+  <nav class="toc" aria-label="Разделы темы"><a href="#aksioma">Аксиома</a><a href="#opyt">Опыт</a><a href="#teorema">Теорема</a><a href="#ot-protivnogo">От противного</a><a href="#test">Тест</a><a href="#zadachi">Задачи</a></nav>
+</div>
+
+<section id="aksioma">
+  <h2>Аксиома</h2>
+  <div class="thm"><span class="tag red">АКСИОМА ПАРАЛЛЕЛЬНЫХ ПРЯМЫХ</span><p>Через точку, не лежащую на данной прямой, проходит только одна прямая, параллельная данной.</p></div>
+  <div class="fact"><h3>Почему аксиома, а не теорема</h3><p>Это утверждение восходит к пятому постулату Евклида. Две тысячи лет математики пытались его доказать. Николай Иванович Лобачевский (1792–1856) выяснил, что доказать его нельзя, и построил другую геометрию — геометрию Лобачевского.</p></div>
+</section>
+
+<section id="opyt">
+  <h2>Опыт: поворачиваем прямую через точку M</h2>
+  <p>Двигай красную точку — прямая будет поворачиваться вокруг <i>M</i>. Чем ближе она к параллельной, тем дальше точка пересечения с прямой <i>a</i>. Не пересекает <i>a</i> только одно положение.</p>
+  <div id="exp"></div>
+</section>
+
+<section id="teorema">
+  <h2>Две прямые, параллельные третьей</h2>
+  <div class="thm"><span class="tag red">ТЕОРЕМА</span><p>Если две прямые параллельны третьей прямой, то они параллельны.</p></div>
+  <div id="proof"></div>
+</section>
+
+<section id="ot-protivnogo">
+  <h2>Метод доказательства от противного</h2>
+  <div class="rule"><span class="tag">КАК ДОКАЗЫВАТЬ</span>
+    <ol>
+      <li><b>1)</b><span>Предполагаем, что верно противоположное тому, что нужно доказать.</span></li>
+      <li><b>2)</b><span>Рассуждаем и приходим к противоречию с условием, аксиомой или доказанной теоремой.</span></li>
+      <li><b>3)</b><span>Делаем вывод: предположение неверно, значит верно то, что требовалось доказать.</span></li>
+    </ol>
+  </div>
+  <p>Так мы доказали теорему выше: предположили, что <i>a</i> и <i>b</i> пересекаются, и пришли к противоречию с аксиомой параллельных.</p>
+</section>
+
+<section id="test">
+  <h2>Тест</h2>
+  <div id="quiz"></div>
+</section>
+
+<section id="zadachi">
+  <h2>Задачи с решениями</h2>
+  <div class="tasks">
+    <div class="hard"><div class="q"><b>1</b><span>Прямые <i>a</i> и <i>b</i> параллельны. Прямая <i>d</i> пересекает прямую <i>a</i>. Докажите, что <i>d</i> пересекает и прямую <i>b</i>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Пусть <i>d</i> пересекает <i>a</i> в точке <i>M</i>. Предположим противное: <i>d</i> не пересекает <i>b</i>, то есть <i>d</i> ∥ <i>b</i>.</div>
+        <div><span class="st">Шаг 2.</span>Тогда через точку <i>M</i> проходят две прямые, <i>a</i> и <i>d</i>, параллельные прямой <i>b</i>.</div>
+        <div><span class="st">Шаг 3.</span>Это противоречит аксиоме параллельных прямых.</div>
+        <div class="ans">Значит, предположение неверно: <i>d</i> пересекает <i>b</i>.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>2</b><span>Сколько прямых, параллельных прямой <i>a</i>, можно провести через точку, которая лежит на прямой <i>a</i>?</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Любая прямая, проходящая через точку на <i>a</i>, имеет с <i>a</i> общую точку.</div>
+        <div><span class="st">Шаг 2.</span>Параллельные прямые общих точек не имеют.</div>
+        <div class="ans">Ответ: ни одной.</div>
+      </div></details></div>
+  </div>
+</section>
+
+<nav class="pager" aria-label="Соседние темы"><a href="geo-15.html"><small>← Предыдущая тема</small>§ 15. Признаки параллельности</a></nav>
+<footer class="foot">Геометрия, 7 класс, § 16. Задачи составлены по образцу заданий учебника.</footer>
+</main>
+
+<script src="assets/core.js?v=4"></script>
+<script src="assets/geo.js?v=4"></script>
+<script>
+(function(){
+const {P,add,sub,mul,unit,seg,line,lbl,dot,right,inter,rot} = G;
+
+/* ---------- опыт ---------- */
+const M=P(200,90), ya=210, R=110, F=P(200,ya);
+const ang=H=>{ let t=Math.atan2(H.y-M.y,H.x-M.x)*180/Math.PI; if(t>90) t-=180; if(t<-90) t+=180; return t; };
+G.drag(S.$('exp'),{vb:[400,250],pts:{H:add(M,mul(unit(P(1,0.35)),R))},label:'Прямая через точку M',
+  constrain:(n,p)=>{ let u=unit(sub(p,M)); if(u.x<0) u=mul(u,-1); let t=Math.atan2(u.y,u.x); if(Math.abs(t)<1.6*Math.PI/180) t=0; return add(M,P(R*Math.cos(t),R*Math.sin(t))); },
+  draw:p=>{ const H=p.H, t=ang(H), par=Math.abs(t)<1e-9; let o='';
+    o+=line(P(0,ya),P(1,ya),'')+lbl(P(385,ya-12),'a')+seg(M,F,'dash')+right(F,P(400,ya),M,9,'');
+    o+='<g class="'+(par?'k1':'kr')+'">'+line(M,H,'c'+(par?' thick':''))+'</g>';
+    if(!par){ const X=inter(M,H,P(0,ya),P(1,ya)); if(X && X.x>8 && X.x<392) o+='<g class="kr">'+dot(X,'c')+lbl(P(X.x,X.y+18),'X',0,0,'c')+'</g>';
+      else if(X){ const left=X.x<0; o+='<g class="kr">'+G.ms(P(left?90:310,ya+24),(left?'← ':'')+'пересечение за краем'+(left?'':' →'))+'</g>'; } }
+    o+=dot(M)+lbl(P(M.x-14,M.y-10),'M');
+    return o; },
+  info:p=>{ const t=ang(p.H), par=Math.abs(t)<1e-9; let ds='—';
+    if(!par){ const X=inter(M,p.H,P(0,ya),P(1,ya)), d=Math.abs(X.x-F.x); ds=d>9000?'&gt; 300':G.cm(d); }
+    const a=par?'0':Math.abs(Math.round(t*10)/10).toString().replace('.',',');
+    return '<div>Угол с прямой <i>a</i>: '+G.n(a,'2.4em')+'°</div><div>'+G.swap([
+      'Расстояние до точки <i>X</i>: '+G.n(ds,'2.7em')+' см',
+      '<span class="chip okc">Прямая параллельна a: общих точек нет</span>'],par?1:0)+'</div>'; },
+  hint:'При почти горизонтальном положении прямая «прилипает» к параллельному.'});
+
+/* ---------- доказательство от противного ---------- */
+(function(){
+  const yc=230, ya0=70, yb0=150, Mx=P(200,110);
+  const ta=P(Math.cos(0.18),Math.sin(0.18)), tb=P(Math.cos(-0.22),Math.sin(-0.22));
+  const cross=(C,s)=>'<path class="ln c thick" d="M'+(C.x-s)+' '+(C.y-s)+'L'+(C.x+s)+' '+(C.y+s)+'M'+(C.x+s)+' '+(C.y-s)+'L'+(C.x-s)+' '+(C.y+s)+'"/>';
+  G.proof(S.$('proof'),{vb:[400,250],given:'<b>ДАНО</b> <i>a</i> ∥ <i>c</i>, <i>b</i> ∥ <i>c</i>. <b>ДОКАЗАТЬ</b> <i>a</i> ∥ <i>b</i>.',
+    items:[
+      {s:0,h:line(P(0,yc),P(1,yc),'thick')+lbl(P(385,yc-12),'c')},
+      {s:0,e:1,h:line(P(0,ya0),P(1,ya0),'')+line(P(0,yb0),P(1,yb0),'')+lbl(P(385,ya0-12),'a')+lbl(P(385,yb0-12),'b')+lbl(P(200,ya0+60),'?',0,-20,'up')},
+      {s:1,e:4,h:'<g class="kr">'+line(Mx,add(Mx,ta),'c')+line(Mx,add(Mx,tb),'c')+'</g>'+dot(Mx)+lbl(P(Mx.x,Mx.y-16),'M')+lbl(add(Mx,mul(ta,170)),'a',0,-12)+lbl(add(Mx,mul(tb,170)),'b',0,-12)},
+      {s:2,e:4,h:'<g class="kr">'+G.ms(P(200,170),'обе «параллельны» c и проходят через M')+'</g>'},
+      {s:3,e:4,h:'<g class="kr">'+cross(Mx,16)+'</g>'},
+      {s:4,h:'<g class="k1">'+line(P(0,ya0),P(1,ya0),'c thick')+line(P(0,yb0),P(1,yb0),'c thick')+'</g>'+lbl(P(385,ya0-12),'a')+lbl(P(385,yb0-12),'b')}],
+    steps:['Прямые <i>a</i> и <i>b</i> параллельны прямой <i>c</i>. Докажем, что <i>a</i> ∥ <i>b</i>.',
+      'Предположим противное: прямые <i>a</i> и <i>b</i> не параллельны, то есть пересекаются в некоторой точке <i>M</i>.',
+      'Тогда через точку <i>M</i> проходят две прямые, <i>a</i> и <i>b</i>, параллельные прямой <i>c</i>.',
+      'Это противоречит аксиоме параллельных прямых: через точку проходит только одна прямая, параллельная данной.',
+      'Значит, предположение неверно, и <i>a</i> ∥ <i>b</i>. Теорема доказана.']});
+})();
+
+S.quiz(S.$('quiz'),[
+  {q:'Сколько прямых, параллельных прямой <i>a</i>, можно провести через точку <i>M</i>, не лежащую на <i>a</i>?', opts:['ни одной','одну','две','бесконечно много'], ok:1, why:'Это аксиома параллельных прямых.'},
+  {q:'<i>a</i> ∥ <i>b</i> и <i>b</i> ∥ <i>c</i>. Что можно сказать о прямых <i>a</i> и <i>c</i>?', opts:['<i>a</i> ∥ <i>c</i>','<i>a</i> ⊥ <i>c</i>','они пересекаются','ничего'], ok:0, why:'Две прямые, параллельные третьей, параллельны.'},
+  {q:'<i>a</i> ∥ <i>b</i>, прямая <i>d</i> пересекает <i>a</i>. Пересекает ли <i>d</i> прямую <i>b</i>?', opts:['да','нет','не всегда'], ok:0, why:'Иначе через точку пересечения <i>d</i> и <i>a</i> прошли бы две прямые, параллельные <i>b</i>.'},
+  {q:'С чего начинается доказательство от противного?', opts:['с чертежа','с предположения, что верно противоположное','с проверки на примере','с определения'], ok:1, why:'Сначала предполагаем противоположное, потом ищем противоречие.'}
+]);
+})();
+</script>
+<script src="assets/nav.js?v=4"></script>
+</body>
+</html>

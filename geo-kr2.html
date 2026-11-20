@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Подготовка к КР № 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Unbounded:wght@500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=4">
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <a class="brand" href="index.html"><span class="logo">x</span><span class="txt">Математика · 7 класс<small>II четверть</small></span></a>
+  <nav class="tnav" aria-label="Разделы сайта"><a href="index.html">Главная</a><a class="alg" href="index.html#algebra">Алгебра</a><a class="geo" href="index.html#geometry">Геометрия</a></nav>
+</div></header>
+
+<main class="wrap">
+<div class="page-head">
+  <div class="crumbs"><a href="index.html">Главная</a> › <a href="index.html#geometry">Геометрия</a> › Подготовка к КР № 2</div>
+  <div class="eyebrow">Геометрия · 7 класс · урок 24 · КР 03.12</div>
+  <h1>Подготовка к контрольной «Признаки равенства треугольников»</h1>
+  <p class="lede">Вся теория главы 2 на одной странице, образец оформления доказательства, тест и типовые задачи.</p>
+  <nav class="toc" aria-label="Разделы"><a href="#priznaki">Признаки</a><a href="#ravnobedr">Равнобедренный</a><a href="#oformlenie">Оформление</a><a href="#test">Тест</a><a href="#zadachi">Задачи</a></nav>
+</div>
+
+<section id="priznaki">
+  <h2>Три признака равенства треугольников</h2>
+  <div class="grid3" id="cards"></div>
+  <div class="fact"><h3>Что дают равные треугольники</h3><p>В равных треугольниках против равных сторон лежат равные углы, а против равных углов — равные стороны. Так из равенства треугольников получают равенство отрезков и углов.</p></div>
+</section>
+
+<section id="ravnobedr">
+  <h2>Равнобедренный треугольник и серединный перпендикуляр</h2>
+  <div class="aside">
+    <div class="fact"><h3>Свойства равнобедренного</h3><ul class="plain"><li>Углы при основании равны.</li><li>Биссектриса, проведённая к основанию, является медианой и высотой.</li></ul></div>
+    <div class="fact"><h3>Признаки равнобедренного</h3><ul class="plain"><li>Два угла равны.</li><li>Из одной вершины совпадают два из трёх отрезков: высота, медиана, биссектриса.</li></ul></div>
+    <div class="fact"><h3>Серединный перпендикуляр</h3><p>Прямая через середину отрезка, перпендикулярная ему. Его точки и только они равноудалены от концов отрезка.</p></div>
+    <div class="fact"><h3>Не путай</h3><p>Медиана делит <b>сторону</b> пополам. Биссектриса делит <b>угол</b> пополам. Высота <b>перпендикулярна</b> стороне.</p></div>
+  </div>
+</section>
+
+<section id="oformlenie">
+  <h2>Как оформить доказательство</h2>
+  <p>Задача: отрезки <i>AB</i> и <i>CD</i> пересекаются в точке <i>O</i>, <i>AO</i> = <i>OB</i>, <i>CO</i> = <i>OD</i>. Докажите, что <i>AC</i> = <i>BD</i>. Нажимай «Дальше» — запись появляется так же, как в тетради.</p>
+  <div id="proof"></div>
+  <div class="rule"><span class="tag">ШАБЛОН</span>
+    <ol>
+      <li><b>1)</b><span><b>Дано</b>, <b>доказать</b>, чертёж с отметками равных элементов.</span></li>
+      <li><b>2)</b><span>«Рассмотрим △… и △…». Три пары равных элементов, у каждой — почему они равны.</span></li>
+      <li><b>3)</b><span>«Значит, △… = △… по … признаку».</span></li>
+      <li><b>4)</b><span>«Следовательно, … как соответственные элементы равных треугольников».</span></li>
+    </ol>
+  </div>
+</section>
+
+<section id="test">
+  <h2>Тест</h2>
+  <div id="quiz"></div>
+</section>
+
+<section id="zadachi">
+  <h2>Типовые задачи</h2>
+  <div class="tasks">
+    <div class="hard"><div class="q"><b>1</b><div><span>На рисунке ∠1 = ∠2 и ∠3 = ∠4. Докажите, что <i>AB</i> = <i>CB</i>.</span><div class="qfig" id="f2" style="max-width:280px"></div></div></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Рассмотрим △<i>ABD</i> и △<i>CBD</i>.</div>
+        <div><span class="st">Шаг 2.</span><i>BD</i> — общая сторона; ∠1 = ∠2 и ∠3 = ∠4 по условию. Это углы, прилежащие к <i>BD</i>.</div>
+        <div><span class="st">Шаг 3.</span>△<i>ABD</i> = △<i>CBD</i> по стороне и двум прилежащим углам (II признак).</div>
+        <div><span class="st">Шаг 4.</span>Против равных углов 3 и 4 лежат стороны <i>AB</i> и <i>CB</i>.</div>
+        <div class="ans">Следовательно, <i>AB</i> = <i>CB</i>.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>2</b><span>В равнобедренном треугольнике <i>ABC</i> с основанием <i>AC</i> на основании отмечены точки <i>D</i> и <i>E</i> так, что <i>AD</i> = <i>CE</i>. Докажите, что <i>BD</i> = <i>BE</i>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Рассмотрим △<i>ABD</i> и △<i>CBE</i>.</div>
+        <div><span class="st">Шаг 2.</span><i>AB</i> = <i>CB</i> — боковые стороны; ∠<i>A</i> = ∠<i>C</i> — углы при основании; <i>AD</i> = <i>CE</i> по условию.</div>
+        <div><span class="st">Шаг 3.</span>△<i>ABD</i> = △<i>CBE</i> по двум сторонам и углу между ними (I признак).</div>
+        <div class="ans">Следовательно, <i>BD</i> = <i>BE</i>.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>3</b><span>В равнобедренном треугольнике <i>ABC</i> (<i>AB</i> = <i>BC</i>) проведена медиана <i>BM</i>, ∠<i>ABC</i> = 70°. Найдите ∠<i>ABM</i> и ∠<i>BMC</i>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Медиана к основанию равнобедренного треугольника является биссектрисой и высотой.</div>
+        <div><span class="st">Шаг 2.</span>Биссектриса: ∠<i>ABM</i> = 70° : 2 = 35°.</div>
+        <div><span class="st">Шаг 3.</span>Высота: ∠<i>BMC</i> = 90°.</div>
+        <div class="ans">Ответ: 35°; 90°.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>4</b><span>Периметр равнобедренного треугольника 50 см, боковая сторона на 7 см больше основания. Найдите стороны.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Пусть основание <i>x</i> см, тогда каждая боковая сторона <i>x</i> + 7.</div>
+        <div><span class="st">Шаг 2.</span><i>x</i> + (<i>x</i> + 7) + (<i>x</i> + 7) = 50, то есть 3<i>x</i> + 14 = 50.</div>
+        <div><span class="st">Шаг 3.</span>3<i>x</i> = 36, <i>x</i> = 12.</div>
+        <div><span class="st">Шаг 4.</span>Боковые стороны: 12 + 7 = 19.</div>
+        <div class="ans">Ответ: 12 см, 19 см, 19 см.</div>
+      </div></details></div>
+  </div>
+</section>
+
+<nav class="pager" aria-label="Соседние темы"><a href="geo-14.html"><small>← Предыдущая тема</small>§ 14. Серединный перпендикуляр</a><a class="next" href="geo-15.html"><small>Следующая тема →</small>§ 15. Признаки параллельности</a></nav>
+<footer class="foot">Геометрия, 7 класс, глава 2. Задачи составлены по образцу заданий учебника.</footer>
+</main>
+
+<script src="assets/core.js?v=4"></script>
+<script src="assets/geo.js?v=4"></script>
+<script>
+(function(){
+const {P,seg,path,poly,lbl,away,ticks,arc,centroid,tf,tf0,dot} = G;
+function pair(spec){
+  const T1=[P(25,115),P(75,25),P(150,115)], T2=[P(305,115),P(255,25),P(180,115)];
+  const one=(T,names)=>{ const O=centroid(...T); let o='<g class="k0">'+poly(T,'')+'</g>'+path(T,'',true);
+    (spec.s||[]).forEach(([i,j,n])=>{ o+='<g class="'+['','kr','k0','k2'][n]+'">'+ticks(T[i],T[j],n,'')+'</g>'; });
+    (spec.a||[]).forEach(([v,n])=>{ o+='<g class="'+['','k3','k1'][n]+'">'+arc(T[v],T[(v+1)%3],T[(v+2)%3],18,n,'')+'</g>'; });
+    T.forEach((p,i)=>{ o+=away(p,O,names[i],14); }); return o; };
+  return G.svg([330,140],one(T1,['A','B','C'])+one(T2,['A₁','B₁','C₁']),'Два треугольника');
+}
+const I={s:[[0,1,1],[0,2,2]],a:[[0,1]]}, II={s:[[0,2,1]],a:[[0,1],[2,2]]}, III={s:[[0,1,1],[1,2,2],[0,2,3]]};
+S.$('cards').innerHTML=
+  '<div class="mini">'+pair(I)+'<h3>I признак</h3><p>Две стороны и угол <b>между ними</b>.</p></div>'+
+  '<div class="mini">'+pair(II)+'<h3>II признак</h3><p>Сторона и два <b>прилежащих</b> к ней угла.</p></div>'+
+  '<div class="mini">'+pair(III)+'<h3>III признак</h3><p>Три стороны.</p></div>';
+
+(function(){ const O=P(180,120),A=P(60,60),B=P(300,180),C=P(90,195),D=P(270,45);
+  G.proof(S.$('proof'),{vb:[360,240],given:'<b>ДАНО</b> <i>AB</i> ∩ <i>CD</i> = <i>O</i>, <i>AO</i> = <i>OB</i>, <i>CO</i> = <i>OD</i>. <b>ДОКАЗАТЬ</b> <i>AC</i> = <i>BD</i>.',
+    items:[
+      {s:0,h:seg(A,B,'')+seg(C,D,'')+seg(A,C,'')+seg(B,D,'')+dot(O)+lbl(P(A.x-12,A.y-8),'A')+lbl(P(B.x+12,B.y+8),'B')+lbl(P(C.x-12,C.y+8),'C')+lbl(P(D.x+12,D.y-8),'D')+lbl(P(O.x+16,O.y+4),'O')},
+      {s:1,h:'<g class="k1">'+poly([B,O,D],'')+'</g>'},
+      {s:1,mv:'r',h:'<g class="k0">'+poly([A,O,C],'strong')+'</g>'},
+      {s:2,h:'<g class="kr">'+ticks(A,O,1,'')+ticks(O,B,1,'')+'</g>'},
+      {s:3,h:'<g class="k2">'+ticks(C,O,2,'')+ticks(O,D,2,'')+'</g>'},
+      {s:4,h:'<g class="k3">'+arc(O,A,C,18,1,'')+arc(O,B,D,18,1,'')+'</g>'},
+      {s:6,h:'<g class="kp">'+seg(A,C,'c thick')+seg(B,D,'c thick')+'</g>'}],
+    moves:{r:{0:tf0(O),5:tf(A,C,B,D,false)}},
+    steps:['Чертёж с отметками.','Рассмотрим △<i>AOC</i> и △<i>BOD</i>.','1) <i>AO</i> = <i>OB</i> — по условию.','2) <i>CO</i> = <i>OD</i> — по условию.','3) ∠<i>AOC</i> = ∠<i>BOD</i> — как вертикальные.','Значит, △<i>AOC</i> = △<i>BOD</i> по двум сторонам и углу между ними (I признак). Поворот вокруг <i>O</i> совмещает их.','Следовательно, <i>AC</i> = <i>BD</i> как соответственные стороны равных треугольников.']});
+})();
+
+(function(){ const A=P(30,100),B=P(140,20),C=P(250,100),D=P(140,170),O=P(140,95);
+  S.$('f2').innerHTML=G.svg([280,190],path([A,B,C,D],'',true)+seg(B,D,'')+'<g class="k3">'+arc(B,A,D,26,1,'')+arc(B,D,C,30,1,'')+'</g>'+G.angText(B,A,D,40,'1','k3')+G.angText(B,D,C,44,'2','k3')+'<g class="k1">'+arc(D,A,B,24,2,'')+arc(D,B,C,24,2,'')+'</g>'+G.angText(D,A,B,44,'3','k1')+G.angText(D,B,C,44,'4','k1')+away(A,O,'A')+away(B,O,'B')+away(C,O,'C')+away(D,O,'D'));
+})();
+
+const opts=['I признак','II признак','III признак','данных недостаточно'];
+S.quiz(S.$('quiz'),[
+  {fig:pair(I), q:'По какому признаку равны треугольники?', opts, ok:0, why:'Две стороны и угол между ними.'},
+  {fig:pair(III), q:'По какому признаку равны треугольники?', opts, ok:2, why:'Три пары равных сторон.'},
+  {fig:pair(II), q:'По какому признаку равны треугольники?', opts, ok:1, why:'Сторона и два прилежащих угла.'},
+  {fig:pair({s:[[0,1,1]],a:[[0,1],[1,2]]}), q:'По какому признаку равны треугольники?', opts, ok:1, why:'Сторона <i>AB</i> и прилежащие к ней углы <i>A</i> и <i>B</i>.'},
+  {q:'В равнобедренном треугольнике <i>ABC</i> (<i>AB</i> = <i>BC</i>) медиана <i>BM</i>, ∠<i>ABC</i> = 70°. Найдите ∠<i>ABM</i>.', opts:['35°','70°','90°','140°'], ok:0, why:'Медиана к основанию — ещё и биссектриса: 70° : 2.'},
+  {q:'Какое утверждение верно?', opts:['любая медиана является высотой','если медиана является высотой, треугольник равнобедренный','биссектриса делит сторону пополам','высота всегда лежит внутри треугольника'], ok:1, why:'Это признак равнобедренного треугольника (§ 12).'},
+  {q:'<i>KA</i> = <i>KB</i> = 4 см, <i>AB</i> = 6 см. Где лежит точка <i>K</i>?', opts:['на отрезке <i>AB</i>','на серединном перпендикуляре к <i>AB</i>','на продолжении <i>AB</i>','где угодно'], ok:1, why:'Точка, равноудалённая от концов отрезка, лежит на серединном перпендикуляре.'},
+  {q:'△<i>ABC</i> = △<i>MNK</i>, <i>AB</i> = 5 см, ∠<i>B</i> = 40°. Найдите <i>MN</i> и ∠<i>N</i>.', opts:['5 см и 40°','5 см и 50°','нельзя найти','10 см и 40°'], ok:0, why:'Соответственные элементы равных треугольников равны: <i>MN</i> = <i>AB</i>, ∠<i>N</i> = ∠<i>B</i>.'}
+]);
+})();
+</script>
+<script src="assets/nav.js?v=4"></script>
+</body>
+</html>

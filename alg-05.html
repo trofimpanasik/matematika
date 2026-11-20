@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>§ 5. Тождество</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Unbounded:wght@500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=4">
+<style>
+.cmp{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.cmp>div{border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-family:var(--f-math);font-size:clamp(1.05rem,4vw,1.3rem);background:var(--paper)}
+.cmp small{display:block;font-family:var(--f-body);font-size:.78rem;color:var(--ink-2)}
+.vt{border-collapse:collapse;font-family:var(--f-math);font-size:1rem;width:100%;table-layout:fixed}
+.vt td,.vt th{border:1px solid var(--line);padding:4px 2px;text-align:center}
+.vt th{font-family:var(--f-body);font-size:.8rem;color:var(--ink-2);font-weight:600}
+.vt td.ne{color:var(--bad);font-weight:700;background:color-mix(in srgb,var(--bad) 10%,transparent)}
+.vt td.eq{color:var(--ok)}
+.vtw{overflow-x:auto}
+</style>
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <a class="brand" href="index.html"><span class="logo">x</span><span class="txt">Математика · 7 класс<small>I четверть</small></span></a>
+  <nav class="tnav" aria-label="Разделы сайта"><a href="index.html">Главная</a><a class="alg" href="index.html#algebra">Алгебра</a><a class="geo" href="index.html#geometry">Геометрия</a></nav>
+</div></header>
+
+<main class="wrap">
+<div class="page-head">
+  <div class="crumbs"><a href="index.html">Главная</a> › <a href="index.html#algebra">Алгебра</a> › § 5</div>
+  <div class="eyebrow">Алгебра · 7 класс · § 5 · уроки 20–21</div>
+  <h1>Тождество</h1>
+  <p class="lede">Два разных на вид выражения могут быть «одним и тем же» — принимать равные значения при любых значениях переменных. Такие выражения называют тождественно равными, а равенство между ними — тождеством.</p>
+  <nav class="toc" aria-label="Разделы темы"><a href="#sravnenie">Сравним выражения</a><a href="#opredelenie">Определения</a><a href="#preobrazovaniya">Преобразования</a><a href="#dokazatelstvo">Как доказать</a><a href="#test">Тест</a><a href="#trenazher">Тренажёр</a><a href="#zadachi">Задачи</a></nav>
+</div>
+
+<section id="sravnenie">
+  <h2>Сравним выражения</h2>
+  <p>Выбери пару выражений и меняй <i>x</i>. Затем нажми «Проверить при x от −5 до 5» — таблица покажет, всегда ли значения совпадают.</p>
+  <div class="panel">
+    <div class="tabs" id="tPair" role="group" aria-label="Пара выражений"></div>
+    <div class="sliders s2"><label for="sx">значение <i>x</i> <b id="vx">1</b><input type="range" id="sx" min="-5" max="5" value="1"></label></div>
+    <div class="cmp" id="cmp" aria-live="polite"></div>
+    <div id="chip"></div>
+    <div><button type="button" class="btn ghost" id="bTable">Проверить при x от −5 до 5</button></div>
+    <div class="vtw" id="table"></div>
+  </div>
+</section>
+
+<section id="opredelenie">
+  <h2>Определения</h2>
+  <div class="rule"><span class="tag">ОПРЕДЕЛЕНИЕ</span>
+    <p>Два выражения называются <b>тождественно равными</b>, если они принимают одинаковые значения при всех значениях переменных из их общей области определения.</p>
+  </div>
+  <div class="rule"><span class="tag">ОПРЕДЕЛЕНИЕ</span>
+    <p><b>Тождеством</b> называют равенство двух тождественно равных выражений.</p>
+    <div class="scheme"><span class="m">a + 3 = 3 + a</span>; &nbsp;<span class="m">3(b + c) = 3b + 3c</span>; &nbsp;<span class="m">m^4 = m · m · m · m</span></div>
+  </div>
+  <div class="warn"><h3>Одного совпадения мало</h3><p>При <span class="m">x = 2</span> выражения <span class="m">x^2</span> и <span class="m">2x</span> равны (4 и 4), но при <span class="m">x = 3</span> — уже нет (9 и 6). Значит, <span class="m">x^2 = 2x</span> — не тождество. Чтобы показать, что равенство не тождество, достаточно <b>одного</b> значения, при котором значения различны.</p></div>
+</section>
+
+<section id="preobrazovaniya">
+  <h2>Тождественные преобразования</h2>
+  <div class="rule"><span class="tag">ОПРЕДЕЛЕНИЕ</span>
+    <p><b>Тождественным преобразованием</b> выражения называется замена одного выражения другим, тождественно равным ему.</p>
+  </div>
+  <div class="aside">
+    <div class="fact"><h3>На основе законов действий</h3><p>Распределительный: <span class="m">a(b − c + d) = ab − ac + ad</span>.<br>Приведение подобных: <span class="m">3x + 2x = 5x</span>.</p></div>
+    <div class="fact"><h3>На основе свойств степени</h3><p><span class="m">3 · x^2 · x^4 = 3x^6</span>.<br><span class="m">x^8 · x^−10 = x^−2</span>.</p></div>
+  </div>
+  <p>Пример: упростим выражение, раскрыв скобки и приведя подобные.</p>
+  <div class="tabs" id="tSimp" role="group" aria-label="Примеры"></div>
+  <div id="bSimp"></div>
+</section>
+
+<section id="dokazatelstvo">
+  <h2>Как доказать тождество</h2>
+  <div class="rule"><span class="tag">СПОСОБЫ</span>
+    <ol>
+      <li><b>1)</b><span>Преобразовать левую часть и получить правую.</span></li>
+      <li><b>2)</b><span>Преобразовать правую часть и получить левую.</span></li>
+      <li><b>3)</b><span>Преобразовать обе части и получить одно и то же выражение.</span></li>
+    </ol>
+  </div>
+  <div id="bProof"></div>
+</section>
+
+<section id="test">
+  <h2>Тест</h2>
+  <div id="quiz"></div>
+</section>
+
+<section id="trenazher">
+  <h2>Тренажёр: упрости выражение</h2>
+  <p>Раскрой скобки и приведи подобные. Ответ набирай кнопками.</p>
+  <div id="trainer"></div>
+</section>
+
+<section id="zadachi">
+  <h2>Задачи посложнее</h2>
+  <p>Сначала реши в тетради, потом открой решение и сверься.</p>
+  <div class="tasks">
+    <div class="hard"><div class="q"><b>1</b><span>Докажите тождество: <span class="m">5(2a − 3) − 4(a − 4) = 6a + 1</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Преобразуем левую часть. Раскроем первые скобки: <span class="m">5(2a − 3) = 10a − 15</span>.</div>
+        <div><span class="st">Шаг 2.</span>Вторые скобки, перед ними «−4»: <span class="m">−4(a − 4) = −4a + 16</span>.</div>
+        <div><span class="st">Шаг 3.</span><span class="m">10a − 15 − 4a + 16</span>.</div>
+        <div><span class="st">Шаг 4.</span>Подобные: <span class="m">10a − 4a = 6a</span>, <span class="m">−15 + 16 = 1</span>.</div>
+        <div><span class="st">Шаг 5.</span>Левая часть равна <span class="m">6a + 1</span> — это правая часть.</div>
+        <div class="ans">Тождество доказано.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>2</b><span>Является ли тождеством равенство <span class="m">(a + b)^2 = a^2 + b^2</span>?</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Попробуем <span class="m">a = 1</span>, <span class="m">b = 1</span>.</div>
+        <div><span class="st">Шаг 2.</span>Левая часть: <span class="m">(1 + 1)^2 = 2^2 = 4</span>.</div>
+        <div><span class="st">Шаг 3.</span>Правая часть: <span class="m">1^2 + 1^2 = 2</span>.</div>
+        <div><span class="st">Шаг 4.</span>4 ≠ 2 — нашли значения, при которых части не равны.</div>
+        <div class="ans">Ответ: нет, не тождество.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>3</b><span>Докажите, что значение выражения <span class="m">3(x − 2) − 3x + 10</span> не зависит от <i>x</i>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span><span class="m">3(x − 2) = 3x − 6</span>.</div>
+        <div><span class="st">Шаг 2.</span><span class="m">3x − 6 − 3x + 10</span>.</div>
+        <div><span class="st">Шаг 3.</span><span class="m">3x − 3x = 0</span>, <span class="m">−6 + 10 = 4</span>.</div>
+        <div><span class="st">Шаг 4.</span>Выражение тождественно равно 4 — числу без <i>x</i>.</div>
+        <div class="ans">Значение равно 4 при любом <i>x</i>.</div>
+      </div></details></div>
+  </div>
+</section>
+
+<nav class="pager" aria-label="Соседние темы"><a href="alg-04.html"><small>← Предыдущая тема</small>§ 4. Выражения</a><a class="next" href="alg-06.html"><small>Следующая тема →</small>§ 6. Одночлен</a></nav>
+<footer class="foot">Алгебра, 7 класс, § 5. Примеры составлены по образцу заданий учебника.</footer>
+</main>
+
+<script src="assets/core.js?v=4"></script>
+<script src="assets/drill.js?v=4"></script>
+<script>
+(function(){
+const {tx,pn,ri,pick,mono,polyH,T} = S;
+const sg=n=>String(n).replace('-','−');
+
+/* сравнение пар */
+const PAIRS=[
+  {a:'7x + 2x', b:'9x', fa:x=>7*x+2*x, fb:x=>9*x},
+  {a:'2(x − 3)', b:'2x − 6', fa:x=>2*(x-3), fb:x=>2*x-6},
+  {a:'2(x − 3)', b:'2x − 3', fa:x=>2*(x-3), fb:x=>2*x-3},
+  {a:'x^2', b:'2x', fa:x=>x*x, fb:x=>2*x},
+  {a:'x^3 · x^2', b:'x^5', fa:x=>Math.pow(x,5), fb:x=>Math.pow(x,5)},
+  {a:'(x + 1)^2', b:'x^2 + 1', fa:x=>(x+1)*(x+1), fb:x=>x*x+1}
+];
+let pr=PAIRS[0];
+function cmp(){ const x=+S.$('sx').value; S.$('vx').textContent=sg(x);
+  const A=pr.fa(x), B=pr.fb(x);
+  S.$('cmp').innerHTML='<div><small>первое выражение</small>'+tx(pr.a)+' = <b>'+sg(A)+'</b></div><div><small>второе выражение</small>'+tx(pr.b)+' = <b>'+sg(B)+'</b></div>';
+  S.$('chip').innerHTML=G.swap(['<span class="chip okc">При x = '+sg(x)+' значения равны</span>','<span class="chip" style="--kc:var(--red)">При x = '+sg(x)+' значения разные</span>'],A===B?0:1);
+}
+const G={swap:(l,i)=>'<span class="swap">'+l.map((h,k)=>'<span'+(k===i?' class="on"':' aria-hidden="true"')+'>'+h+'</span>').join('')+'</span>'};
+function table(){ let h='<table class="vt"><tr><th><i>x</i></th>', r1='<tr><th>'+tx(pr.a)+'</th>', r2='<tr><th>'+tx(pr.b)+'</th>'; let bad=0;
+  for(let x=-5;x<=5;x++){ const A=pr.fa(x), B=pr.fb(x); const c=A===B?'eq':'ne'; if(A!==B) bad++; h+='<th>'+sg(x)+'</th>'; r1+='<td class="'+c+'">'+sg(A)+'</td>'; r2+='<td class="'+c+'">'+sg(B)+'</td>'; }
+  S.$('table').innerHTML=h+'</tr>'+r1+'</tr>'+r2+'</tr></table><p style="margin-top:8px">'+(bad?'<b class="redc">Значения различаются при '+bad+' из 11 значений x — это не тождественно равные выражения.</b>':'<b style="color:var(--ok)">Значения совпали везде.</b> И это не случайность: одно выражение получается из другого по законам действий. Выражения тождественно равны.')+'</p>';
+}
+PAIRS.forEach((p,i)=>{ const b=document.createElement('button'); b.type='button'; b.className='tab'; b.innerHTML=tx(p.a)+' и '+tx(p.b); b.setAttribute('aria-pressed',i===0); b.addEventListener('click',()=>{ S.$('tPair').querySelectorAll('.tab').forEach(t=>t.setAttribute('aria-pressed','false')); b.setAttribute('aria-pressed','true'); pr=p; S.$('table').innerHTML=''; cmp(); }); S.$('tPair').appendChild(b); });
+S.$('sx').addEventListener('input',cmp); S.$('bTable').addEventListener('click',table); cmp();
+
+/* упрощение по шагам */
+const SIMP=[
+  {t:'4(x + 3) − x', s:[{h:tx('4(x + 3) − x'), n:'Раскрываем скобки: 4 умножаем на каждое слагаемое.'},{h:'= '+tx('4x + 12 − x'), n:'4 · x = 4x, 4 · 3 = 12.'},{h:'= '+tx('3x + 12'), n:'Подобные: 4x − x = 3x.'}]},
+  {t:'2(a − 5) + 3(a + 1)', s:[{h:tx('2(a − 5) + 3(a + 1)'), n:'Раскрываем обе скобки.'},{h:'= '+tx('2a − 10 + 3a + 3'), n:'2 · (−5) = −10; 3 · 1 = 3.'},{h:'= '+tx('5a − 7'), n:'2a + 3a = 5a; −10 + 3 = −7.'}]},
+  {t:'7 − 2(b − 4)', s:[{h:tx('7 − 2(b − 4)'), n:'Перед скобкой −2: умножаем на −2 каждое слагаемое, знаки меняются.'},{h:'= '+tx('7 − 2b + 8'), n:'−2 · b = −2b; −2 · (−4) = 8.'},{h:'= '+tx('15 − 2b'), n:'7 + 8 = 15.'}]}
+];
+S.tabsBoard(S.$('tSimp'),S.$('bSimp'),SIMP,e=>S.lines(e.s),e=>tx(e.t));
+
+/* доказательство */
+S.board(S.$('bProof')).load(S.lines([
+  {h:'Докажем: '+tx('3(x + 2) − x = 2(x + 3)'), n:'Преобразуем обе части (способ 3).', l:'Задача'},
+  {h:'Левая: '+tx('3(x + 2) − x = 3x + 6 − x'), n:'Раскрыли скобки.'},
+  {h:'= '+tx('2x + 6'), n:'3x − x = 2x.'},
+  {h:'Правая: '+tx('2(x + 3) = 2x + 6'), n:'Раскрыли скобки в правой части.'},
+  {h:tx('2x + 6 = 2x + 6'), n:'Обе части тождественно равны одному и тому же выражению. Тождество доказано.', l:'Вывод'}
+]));
+
+/* тест */
+S.quiz(S.$('quiz'),[
+  {q:'Какое равенство — тождество?', opts:['<span class="m">2(a + 4) = 2a + 4</span>','<span class="m">a · a = 2a</span>','<span class="m">5(a − 1) = 5a − 5</span>','<span class="m">a + a = a^2</span>'], ok:2, why:'По распределительному закону <span class="m">5(a − 1) = 5a − 5</span> при любом <i>a</i>.'},
+  {q:'Выражения <span class="m">x^2</span> и <span class="m">3x</span> равны при <span class="m">x = 3</span>. Значит ли это, что они тождественно равны?', opts:['да','нет'], ok:1, why:'При <span class="m">x = 1</span>: 1 и 3 — значения разные.'},
+  {q:'Сколько значений переменной достаточно найти, чтобы доказать, что равенство НЕ тождество?', opts:['одно','два','десять','все'], ok:0, why:'Одного значения, при котором части не равны, достаточно.'},
+  {q:'Упростите: <span class="m">6(x − 2) + 12</span>', opts:['<span class="m">6x</span>','<span class="m">6x + 10</span>','<span class="m">6x − 24</span>','<span class="m">x</span>'], ok:0, why:'6x − 12 + 12 = 6x.'},
+  {q:'Тождественно равны выражения <span class="m">a^5 : a^3</span> и …', opts:['<span class="m">a^8</span>','<span class="m">a^2</span>','<span class="m">a^15</span>','<span class="m">2a</span>'], ok:1, why:'По свойству степени (при <span class="m">a ≠ 0</span>).'}
+]);
+
+/* тренажёр */
+const nz=(a,b)=>{ let v=0; while(v===0) v=ri(a,b); return v; };
+const cl=(c,l)=>(c===1?'':c===-1?'−':sg(c))+l;
+const term=(c,first,letter)=>{ const s=c<0?'−':(first?'':'+'); const a=Math.abs(c); return (first?s:' '+s+' ')+(letter?(a===1?'':a)+letter:a); };
+S.trainer(S.$('trainer'),{kind:'poly', gen(){
+  const l=pick(['x','a','b','y']);
+  for(;;){
+    const k=nz(-5,5), a=ri(1,4), b=nz(-9,9), c=nz(-9,9), d=ri(-9,9);
+    const A=k*a+c, B=k*b+d; if(A===0 || Math.abs(k)===1) continue;
+    const inner=(a===1?'':a)+l+' '+(b<0?'− '+(-b):'+ '+b);
+    const e1=(k<0?'−'+(-k):k)+'('+inner+')'+term(c,false,l)+(d?term(d,false,''):'');
+    const e2=term(k*a,true,l)+term(k*b,false,'')+term(c,false,l)+(d?term(d,false,''):'');
+    const e3=term(A,true,l)+(B?term(B,false,''):'');
+    const ans=[mono(A,{[l]:1})].concat(B?[mono(B,{})]:[]);
+    return {q:'<span class="ask">Упрости выражение:</span>'+tx(e1)+' = ?', answer:ans, letters:[l], steps:S.lines([
+      {h:tx(e1), n:'Раскрываем скобки: умножаем '+sg(k)+' на каждое слагаемое в скобках.'+(k<0?' Множитель отрицательный — знаки в скобках меняются.':'')},
+      {h:'= '+tx(e2), n:sg(k)+' · '+(a===1?'':a)+l+' = '+cl(k*a,l)+'; '+sg(k)+' · '+pn(b)+' = '+sg(k*b)+'.'},
+      {h:'= '+tx(e3), n:'Приводим подобные: '+cl(k*a,l)+' и '+cl(c,l)+' дают '+cl(A,l)+(d?'; числа '+sg(k*b)+' и '+sg(d)+' дают '+sg(B)+'.':'.')}])};
+  }
+}});
+})();
+</script>
+<script src="assets/nav.js?v=4"></script>
+</body>
+</html>

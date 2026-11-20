@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>§ 4. Числовые выражения и выражения с переменными</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Unbounded:wght@500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=4">
+<style>
+.ord{position:relative;display:inline-block}
+.ord::before{content:attr(data-o);position:absolute;top:-1.05em;left:50%;transform:translateX(-50%);font-family:var(--f-body);font-size:.55em;font-weight:700;color:var(--red)}
+.big{font-family:var(--f-math);font-size:clamp(1.2rem,4.6vw,1.6rem)}
+.nl svg{width:100%;height:auto;display:block}
+.nl .tk{stroke:var(--ink-2);stroke-width:1.2}
+.nl .tx{font-family:var(--f-math);font-size:12px;fill:var(--ink-2);text-anchor:middle}
+.nl .ax{stroke:var(--ink);stroke-width:2}
+.nl .hole{fill:var(--surface);stroke:var(--red);stroke-width:2.5}
+.nl .cur{fill:var(--pen)}
+</style>
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <a class="brand" href="index.html"><span class="logo">x</span><span class="txt">Математика · 7 класс<small>I четверть</small></span></a>
+  <nav class="tnav" aria-label="Разделы сайта"><a href="index.html">Главная</a><a class="alg" href="index.html#algebra">Алгебра</a><a class="geo" href="index.html#geometry">Геометрия</a></nav>
+</div></header>
+
+<main class="wrap">
+<div class="page-head">
+  <div class="crumbs"><a href="index.html">Главная</a> › <a href="index.html#algebra">Алгебра</a> › § 4</div>
+  <div class="eyebrow">Алгебра · 7 класс · § 4 · уроки 18–19</div>
+  <h1>Числовые выражения и выражения с переменными</h1>
+  <p class="lede">Выражение — это запись решения задачи. В числовом выражении только числа, в выражении с переменными есть ещё буквы. Научимся находить значения выражений и выяснять, при каких значениях букв выражение имеет смысл.</p>
+  <nav class="toc" aria-label="Разделы темы"><a href="#chislovye">Числовые</a><a href="#peremennye">С переменными</a><a href="#oblast">Область определения</a><a href="#oshibki">Ошибки</a><a href="#test">Тест</a><a href="#trenazher">Тренажёр</a><a href="#zadachi">Задачи</a></nav>
+</div>
+
+<section id="chislovye">
+  <h2>Числовые выражения</h2>
+  <div class="rule"><span class="tag">ОПРЕДЕЛЕНИЯ</span>
+    <p><b>Числовое выражение</b> — это запись, составленная из чисел, знаков действий и скобок.</p>
+    <p><b>Значение числового выражения</b> — это число, полученное в результате выполнения указанных в выражении действий.</p>
+  </div>
+  <p>Задача: автобус шёл 3 ч со скоростью 56 км/ч, а потом 4 ч со скоростью на 6 км/ч больше. Какова длина маршрута? Выражение: <span class="m">56 · 3 + (56 + 6) · 4</span>. Порядок действий: сначала скобки, потом умножение и деление, потом сложение и вычитание. Нажимай «Дальше».</p>
+  <div id="bOrder"></div>
+</section>
+
+<section id="peremennye">
+  <h2>Выражения с переменными</h2>
+  <div class="rule"><span class="tag">ОПРЕДЕЛЕНИЕ</span>
+    <p><b>Выражение с переменными</b> — это запись, содержащая числа, знаки действий, скобки и переменные, обозначенные буквами. Если вместо переменных подставить числа, получится числовое выражение; его значение — <b>значение выражения с переменными</b> при этих значениях переменных.</p>
+  </div>
+  <p>Килограмм груш стоит 5 р., килограмм яблок — <i>y</i> р. Сколько стоят 2 кг груш и 3 кг яблок? Выражение: <span class="m">2 · 5 + 3y</span>. Двигай ползунок — меняй цену яблок.</p>
+  <div class="panel">
+    <div class="sliders s2"><label for="sy">цена яблок <b id="vy">4</b><input type="range" id="sy" min="1" max="12" value="4"></label></div>
+    <div class="big" id="yOut" aria-live="polite"></div>
+  </div>
+  <div class="warn"><h3>Отрицательное число подставляй в скобках</h3><p>При <span class="m">x = −3</span>: <span class="m">x^2 = (−3)^2 = 9</span>, а не <span class="m">−3^2 = −9</span>. И <span class="m">5 − x = 5 − (−3) = 8</span>.</p></div>
+  <div class="tabs" id="tSub" role="group" aria-label="Примеры"></div>
+  <div id="bSub"></div>
+</section>
+
+<section id="oblast">
+  <h2>Область определения выражения</h2>
+  <div class="rule"><span class="tag">ОПРЕДЕЛЕНИЕ</span>
+    <p><b>Область определения выражения</b> с переменной — все значения переменной, при которых выражение имеет смысл (его значение можно найти).</p>
+  </div>
+  <p>Выражение <span class="m">(4 + x) · 3x^3 + 2</span> имеет смысл при любом <i>x</i>: сложение, умножение и степень выполнимы всегда. А в выражении <span class="m">(4 + x) : (2 − x)</span> есть деление на выражение с переменной. Двигай <i>x</i> и следи, что происходит при <span class="m">x = 2</span>.</p>
+  <div class="panel">
+    <div class="sliders s2"><label for="sx">значение <i>x</i> <b id="vx">−1</b><input type="range" id="sx" min="-4" max="6" value="-1"></label></div>
+    <div class="big" id="xOut" aria-live="polite"></div>
+    <div class="nl" id="nl"></div>
+    <div id="xChip"></div>
+  </div>
+  <div class="fact"><h3>Вывод</h3><p>Делитель <span class="m">2 − x</span> обращается в ноль при <span class="m">x = 2</span>, а на ноль делить нельзя. Область определения выражения <span class="m">(4 + x) : (2 − x)</span> — <b>все числа, кроме 2</b>. На числовой прямой это прямая с «выколотой» точкой 2.</p></div>
+</section>
+
+<section id="oshibki">
+  <h2>Частые ошибки</h2>
+  <div class="mist">
+    <div class="mrow"><div class="what">Сложили раньше, чем умножили.</div><div class="bad"><span class="mark">✗</span><span class="m">2 + 3 · 4 = 20</span></div><div class="good"><span class="mark">✓</span><span class="m">2 + 3 · 4 = 14</span></div></div>
+    <div class="mrow"><div class="what">Подставили отрицательное число без скобок.</div><div class="bad"><span class="mark">✗</span><span class="m">x = −2: x^2 = −4</span></div><div class="good"><span class="mark">✓</span><span class="m">(−2)^2 = 4</span></div></div>
+    <div class="mrow"><div class="what">Решили, что ноль не может быть значением переменной. Нельзя только делить на ноль.</div><div class="bad"><span class="mark">✗</span><span class="m">5x</span> не имеет смысла при <span class="m">x = 0</span></div><div class="good"><span class="mark">✓</span><span class="m">5 · 0 = 0</span>, смысл есть</div></div>
+    <div class="mrow"><div class="what">Искали запрещённые значения в делимом, а не в делителе.</div><div class="bad"><span class="mark">✗</span><span class="m">(x − 3) : (x + 1)</span>: кроме 3</div><div class="good"><span class="mark">✓</span>все числа, кроме −1</div></div>
+  </div>
+</section>
+
+<section id="test">
+  <h2>Тест</h2>
+  <div id="quiz"></div>
+</section>
+
+<section id="trenazher">
+  <h2>Тренажёр</h2>
+  <p>Подставь число и найди значение выражения или найди число, при котором выражение не имеет смысла.</p>
+  <div id="trainer"></div>
+</section>
+
+<section id="zadachi">
+  <h2>Задачи посложнее</h2>
+  <p>Сначала реши в тетради, потом открой решение и сверься.</p>
+  <div class="tasks">
+    <div class="hard"><div class="q"><b>1</b><span>Найдите значение выражения <span class="m">2a^2 − ab^2 − 3</span> при <span class="m">a = 4</span>, <span class="m">b = −2</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Подставляем: <span class="m">2 · 4^2 − 4 · (−2)^2 − 3</span>.</div>
+        <div><span class="st">Шаг 2.</span>Степени: <span class="m">4^2 = 16</span>, <span class="m">(−2)^2 = 4</span>.</div>
+        <div><span class="st">Шаг 3.</span>Умножение: <span class="m">2 · 16 = 32</span>, <span class="m">4 · 4 = 16</span>.</div>
+        <div><span class="st">Шаг 4.</span><span class="m">32 − 16 − 3 = 13</span>.</div>
+        <div class="ans">Ответ: 13.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>2</b><span>Найдите область определения выражения <span class="m">7 : (x^2 − 9)</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Выражение не имеет смысла, когда делитель равен нулю: <span class="m">x^2 − 9 = 0</span>.</div>
+        <div><span class="st">Шаг 2.</span><span class="m">x^2 = 9</span>.</div>
+        <div><span class="st">Шаг 3.</span>Это верно при <span class="m">x = 3</span> и при <span class="m">x = −3</span>, ведь <span class="m">(−3)^2 = 9</span>.</div>
+        <div class="ans">Ответ: все числа, кроме 3 и −3.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>3</b><span>Составьте выражение: тетрадь стоит <i>a</i> р., а ручка на 3 р. дороже. Сколько стоят 5 тетрадей и 2 ручки? Найдите значение при <span class="m">a = 1,5</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Ручка стоит <span class="m">a + 3</span> р.</div>
+        <div><span class="st">Шаг 2.</span>Покупка: <span class="m">5a + 2(a + 3)</span> р.</div>
+        <div><span class="st">Шаг 3.</span>При <span class="m">a = 1,5</span>: <span class="m">5 · 1,5 + 2 · (1,5 + 3) = 7,5 + 2 · 4,5</span>.</div>
+        <div><span class="st">Шаг 4.</span><span class="m">7,5 + 9 = 16,5</span>.</div>
+        <div class="ans">Ответ: <span class="m">5a + 2(a + 3)</span>; 16,5 р.</div>
+      </div></details></div>
+  </div>
+</section>
+
+<nav class="pager" aria-label="Соседние темы"><a href="alg-kr1.html"><small>← Предыдущая тема</small>Подготовка к КР № 1</a><a class="next" href="alg-05.html"><small>Следующая тема →</small>§ 5. Тождество</a></nav>
+<footer class="foot">Алгебра, 7 класс, § 4. Примеры составлены по образцу заданий учебника.</footer>
+</main>
+
+<script src="assets/core.js?v=4"></script>
+<script src="assets/drill.js?v=4"></script>
+<script>
+(function(){
+const {tx,fmt,pn,ri,pick} = S;
+const O=(t,o,k)=>'<span class="ord'+(k?' on k'+k:'')+'" data-o="'+o+'">'+t+'</span>';
+/* порядок действий */
+S.board(S.$('bOrder')).load([
+  {html:'<div class="bl main">56 · 3 + (56 + 6) · 4</div>', note:'<p>Расставим порядок: скобки — первое действие, два умножения — второе и третье, сложение — последнее.</p>', label:'Выражение'},
+  {html:'<div class="bl main" style="padding-top:.6em">56 '+O('·','2')+' 3 '+O('+','4')+' (56 '+O('+','1')+' 6) '+O('·','3')+' 4</div>', note:'<p>Красные цифры над знаками — порядок действий.</p>', label:'Порядок'},
+  {html:'<div class="bl main">56 · 3 + <span class="tm k0 on">(56 + 6)</span> · 4</div><div class="bl">= 56 · 3 + <span class="kt k0">62</span> · 4</div>', note:'<p>1) 56 + 6 = 62.</p>'},
+  {html:'<div class="bl main">56 · 3 + (56 + 6) · 4</div><div class="bl">= <span class="tm k1 on">56 · 3</span> + 62 · 4</div><div class="bl">= <span class="kt k1">168</span> + 62 · 4</div>', note:'<p>2) 56 · 3 = 168.</p>'},
+  {html:'<div class="bl main">56 · 3 + (56 + 6) · 4</div><div class="bl">= 168 + <span class="tm k2 on">62 · 4</span></div><div class="bl">= 168 + <span class="kt k2">248</span></div>', note:'<p>3) 62 · 4 = 248.</p>'},
+  {html:'<div class="bl main">56 · 3 + (56 + 6) · 4</div><div class="bl">= 168 + 248</div><div class="bl res">= 416</div>', note:'<p>4) 168 + 248 = 416. Значение выражения 416 — длина маршрута 416 км.</p>', label:'Ответ'}
+]);
+
+/* цена яблок */
+function apples(){ const y=+S.$('sy').value; S.$('vy').textContent=y;
+  S.$('yOut').innerHTML='2 · 5 + 3 · <span class="kt kr"><b>'+y+'</b></span> = 10 + '+(3*y)+' = <b>'+(10+3*y)+'</b> р.'; }
+S.$('sy').addEventListener('input',apples); apples();
+
+/* подстановка */
+const SUB=[
+  {t:'1050 − 7m, m = 105', s:[{h:tx('1050 − 7m'), n:'Подставляем 105 вместо <i>m</i>.'},{h:'= 1050 − 7 · 105', n:'Сначала умножение: 7 · 105 = 735.'},{h:'= 1050 − 735', n:'Потом вычитание.'},{h:'= 315'}]},
+  {t:'x² − 2x, x = −3', s:[{h:tx('x^2 − 2x'), n:'Подставляем −3 вместо <i>x</i>, обязательно в скобках.'},{h:'= (−3)<sup>2</sup> − 2 · (−3)', n:'(−3)<sup>2</sup> = 9; 2 · (−3) = −6.'},{h:'= 9 − (−6)', n:'Вычесть −6 — значит прибавить 6.'},{h:'= 15'}]},
+  {t:'(a + b) · a, a = 0,5, b = 1,5', s:[{h:tx('(a + b) · a'), n:'Подставляем оба числа.'},{h:'= (0,5 + 1,5) · 0,5', n:'Скобки: 0,5 + 1,5 = 2.'},{h:'= 2 · 0,5'},{h:'= 1'}]}
+];
+S.tabsBoard(S.$('tSub'),S.$('bSub'),SUB,e=>S.lines(e.s),e=>e.t);
+
+/* область определения */
+function dom(){
+  const x=+S.$('sx').value; S.$('vx').textContent=String(x).replace('-','−');
+  const xs=pn(x), den=2-x;
+  S.$('xOut').innerHTML='(4 + '+xs+') : (2 − '+xs+') = '+(4+x)+' : '+String(den).replace('-','−')+(den===0?' = <span class="redc">?</span>':' = '+fmt(Math.round((4+x)/den*1000)/1000)+(Number.isInteger((4+x)/den)?'':' …'));
+  S.$('xChip').innerHTML=G0(den===0?'<span class="chip" style="--kc:var(--red)">На ноль делить нельзя — при x = 2 выражение не имеет смысла</span>':'<span class="chip okc">Выражение имеет смысл</span>');
+  // числовая прямая
+  const X=v=>40+(v+4)*32; let s='<line class="ax" x1="20" y1="30" x2="380" y2="30"/>';
+  for(let v=-4;v<=6;v++){ s+='<line class="tk" x1="'+X(v)+'" y1="24" x2="'+X(v)+'" y2="36"/><text class="tx" x="'+X(v)+'" y="54">'+String(v).replace('-','−')+'</text>'; }
+  s+='<circle class="cur" cx="'+X(x)+'" cy="30" r="6"/><circle class="hole" cx="'+X(2)+'" cy="30" r="6"/>';
+  S.$('nl').innerHTML='<svg viewBox="0 0 400 64" role="img" aria-label="Числовая прямая, точка 2 выколота">'+s+'</svg>';
+}
+const G0=x=>x;
+S.$('sx').addEventListener('input',dom); dom();
+
+/* тест */
+S.quiz(S.$('quiz'),[
+  {q:'Значение выражения <span class="m">18 − 6 : 3 · 2</span> равно', opts:['8','14','2','6'], ok:1, why:'6 : 3 = 2, 2 · 2 = 4, 18 − 4 = 14.'},
+  {q:'Значение <span class="m">3x − x^2</span> при <span class="m">x = −2</span> равно', opts:['−10','−2','2','10'], ok:0, why:'3 · (−2) − (−2)<sup>2</sup> = −6 − 4 = −10.'},
+  {q:'Какое выражение — числовое?', opts:['<span class="m">2a + 5</span>','<span class="m">(7 − 2) · 3</span>','<span class="m">x : 4</span>','<span class="m">ab</span>'], ok:1, why:'В нём нет переменных — только числа, знаки и скобки.'},
+  {q:'При каком <i>x</i> не имеет смысла выражение <span class="m">10 : (x + 5)</span>?', opts:['при 5','при −5','при 0','при 10'], ok:1, why:'Делитель <span class="m">x + 5 = 0</span> при <span class="m">x = −5</span>.'},
+  {q:'Область определения выражения <span class="m">4x^2 − 3x + 1</span>:', opts:['все числа','все числа, кроме 0','все числа, кроме 1','только положительные'], ok:0, why:'Деления на выражение с переменной нет — выражение имеет смысл при любом <i>x</i>.'}
+]);
+
+/* тренажёр */
+const sg=n=>String(n).replace('-','−');
+S.drill(S.$('trainer'),{modes:[['val','значение'],['dom','не имеет смысла при…']], gen(mode){
+  if(mode==='val'){
+    const x=pick([-4,-3,-2,-1,2,3,4,5]), a=ri(2,6), b=ri(1,9), c=ri(1,5);
+    const F=[
+      {e:'a·x² − b', f:()=>a*x*x-b, st:()=>[[a+' · '+pn(x)+'<sup>2</sup> − '+b,'Подставляем '+sg(x)+' в скобках.'],[a+' · '+(x*x)+' − '+b,pn(x)+'<sup>2</sup> = '+(x*x)+'.'],[sg(a*x*x)+' − '+b,'Умножение.']]},
+      {e:'b − a·x', f:()=>b-a*x, st:()=>[[b+' − '+a+' · '+pn(x),'Подставляем.'],[b+' − '+pn(a*x),a+' · '+pn(x)+' = '+sg(a*x)+'.']]},
+      {e:'(x − c)(x + b)', f:()=>(x-c)*(x+b), st:()=>[['('+pn(x)+' − '+c+')('+pn(x)+' + '+b+')','Подставляем.'],[pn(x-c)+' · '+pn(x+b),'Считаем в скобках.']]},
+      {e:'x³ + c·x', f:()=>x*x*x+c*x, st:()=>[[pn(x)+'<sup>3</sup> + '+c+' · '+pn(x),'Подставляем.'],[sg(x*x*x)+' + '+pn(c*x),pn(x)+'<sup>3</sup> = '+sg(x*x*x)+', '+c+' · '+pn(x)+' = '+sg(c*x)+'.']]}
+    ];
+    const F0=pick(F), v=F0.f();
+    const ex=F0.e.replace('a',a).replace(/b/g,b).replace(/c/g,c).replace('·x','x').replace('²','^2').replace('³','^3');
+    const lines=[{h:tx(ex), n:'При <i>x</i> = '+sg(x)+'.'}].concat(F0.st().map(([h,n])=>({h:'= '+h, n}))).concat([{h:'= '+sg(v)}]);
+    return {q:'<span class="ask">Найди значение выражения при <i>x</i> = '+sg(x)+':</span>', tpl:tx(ex)+' = {n}', ans:[v],
+      diag:u=>Math.abs(u[0]+v)<1e-9?'Проверь знак. Отрицательное число подставляй в скобках.':null, steps:S.lines(lines)};
+  }
+  const a=pick([-7,-5,-4,-3,-2,2,3,4,5,6,8]), k=ri(1,9), kind=ri(0,2);
+  let ex, why;
+  if(kind===0){ ex=k+' : (x '+(a<0?'+ '+(-a):'− '+a)+')'; why='x '+(a<0?'+ '+(-a):'− '+a)+' = 0'; }
+  else if(kind===1){ ex='(x + '+k+') : ('+(a<0?'x + '+(-a):'x − '+a)+')'; why=(a<0?'x + '+(-a):'x − '+a)+' = 0'; }
+  else { const m=ri(2,4); ex='5 : ('+m+'x '+(a<0?'+ '+(-a*m):'− '+(a*m))+')'; why=m+'x '+(a<0?'+ '+(-a*m):'− '+(a*m))+' = 0, '+m+'x = '+sg(a*m); }
+  return {q:'<span class="ask">При каком значении <i>x</i> выражение не имеет смысла?</span>', tpl:tx(ex)+' &nbsp;<span class="note">не имеет смысла при</span> <i>x</i> = {n}', ans:[a],
+    diag:u=>u[0]===-a?'Проверь знак: подставь своё число в делитель — должен получиться ноль.':(u[0]===-k||u[0]===k?'Смотри на делитель — в скобках после знака «:».':null),
+    steps:S.lines([{h:tx(ex), n:'Выражение не имеет смысла, когда делитель равен нулю.'},{h:tx(why), n:'Решаем: ищем, при каком <i>x</i> делитель равен нулю.'},{h:'<i>x</i> = '+sg(a), n:'Проверка: подставь '+sg(a)+' в делитель — получится 0.'}])};
+}});
+})();
+</script>
+<script src="assets/nav.js?v=4"></script>
+</body>
+</html>

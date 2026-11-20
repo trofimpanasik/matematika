@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>§ 2. Степень с целым показателем</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Unbounded:wght@500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=4">
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <a class="brand" href="index.html"><span class="logo">x</span><span class="txt">Математика · 7 класс<small>I четверть</small></span></a>
+  <nav class="tnav" aria-label="Разделы сайта"><a href="index.html">Главная</a><a class="alg" href="index.html#algebra">Алгебра</a><a class="geo" href="index.html#geometry">Геометрия</a></nav>
+</div></header>
+
+<main class="wrap">
+<div class="page-head">
+  <div class="crumbs"><a href="index.html">Главная</a> › <a href="index.html#algebra">Алгебра</a> › § 2</div>
+  <div class="eyebrow">Алгебра · 7 класс · § 2 · уроки 5–10</div>
+  <h1>Степень с целым показателем и её свойства</h1>
+  <p class="lede">Что значат <span class="m">5^0</span> и <span class="m">5^−3</span>? Показатель может быть нулём и отрицательным числом. Разберём, откуда берутся такие степени и как их вычислять.</p>
+  <nav class="toc" aria-label="Разделы темы"><a href="#lestnica">Лестница степеней</a><a href="#opredelenie">Определения</a><a href="#vychislenie">Как вычислять</a><a href="#svoistva">Свойства</a><a href="#oshibki">Ошибки</a><a href="#test">Тест</a><a href="#trenazher">Тренажёр</a><a href="#zadachi">Задачи</a></nav>
+</div>
+
+<section id="lestnica">
+  <h2>Лестница степеней</h2>
+  <p>Спускайся по лестнице: при уменьшении показателя на 1 значение делится на основание. Что будет, если пройти ниже показателя 1?</p>
+  <div class="panel">
+    <div class="tabs" id="tBase" role="group" aria-label="Основание"><button type="button" class="tab" data-b="2" aria-pressed="true">основание 2</button><button type="button" class="tab" data-b="3" aria-pressed="false">основание 3</button><button type="button" class="tab" data-b="10" aria-pressed="false">основание 10</button></div>
+    <div class="sliders s2"><label for="sl">показатель <b id="vl">3</b><input type="range" id="sl" min="-4" max="4" value="3"></label></div>
+    <div class="ladder" id="ladder" aria-live="polite"></div>
+  </div>
+  <p>Получается, что <span class="m">2^0 = 1</span>, <span class="m">2^−1</span> = <span class="math">1/2</span>, <span class="m">2^−2</span> = <span class="math">1/4</span>. Именно так и определяют степени с нулевым и отрицательным показателем.</p>
+</section>
+
+<section id="opredelenie">
+  <h2>Определения</h2>
+  <div class="rule"><span class="tag">ОПРЕДЕЛЕНИЕ</span>
+    <p>Любое число <i>a</i>, не равное нулю, в нулевой степени равно единице: <span class="m">a^0 = 1</span>, <span class="m">a ≠ 0</span>.</p>
+  </div>
+  <div class="rule"><span class="tag">ОПРЕДЕЛЕНИЕ</span>
+    <p><b>Степенью числа с целым отрицательным показателем</b> называется число, обратное степени с тем же основанием и противоположным показателем:</p>
+    <div class="scheme"><span class="math"><i>a</i><sup>−<i>n</i></sup> = <span class="fr"><span>1</span><span><i>a</i><sup><i>n</i></sup></span></span></span>, &nbsp;<span class="m">a ≠ 0</span>.</div>
+  </div>
+  <div class="aside">
+    <div class="fact"><h3>Отрицательный показатель — не отрицательное число</h3><p><span class="math">2<sup>−3</sup> = <span class="fr"><span>1</span><span>8</span></span></span> — это положительное число. Минус в показателе «переворачивает» число, а не меняет знак.</p></div>
+    <div class="fact"><h3>Дробь в отрицательной степени</h3><p>Дробь переворачиваем, а показатель меняем на противоположный: <span class="math">(<span class="fr"><span>2</span><span>3</span></span>)<sup>−2</sup> = (<span class="fr"><span>3</span><span>2</span></span>)<sup>2</sup> = <span class="fr"><span>9</span><span>4</span></span></span>.</p></div>
+  </div>
+</section>
+
+<section id="vychislenie">
+  <h2>Как вычислить степень с отрицательным показателем</h2>
+  <div class="rule"><span class="tag">АЛГОРИТМ</span>
+    <ol>
+      <li><b>1)</b><span>Назвать основание степени.</span></li>
+      <li><b>2)</b><span>Записать число, ему обратное, — это новое основание.</span></li>
+      <li><b>3)</b><span>Назвать показатель степени.</span></li>
+      <li><b>4)</b><span>Записать противоположное ему число — новый показатель.</span></li>
+      <li><b>5)</b><span>Найти значение степени с натуральным показателем.</span></li>
+    </ol>
+  </div>
+  <div class="tabs" id="tEx" role="group" aria-label="Примеры"></div>
+  <div id="bEx"></div>
+</section>
+
+<section id="svoistva">
+  <h2>Свойства степени с целым показателем</h2>
+  <p>Все пять свойств из § 1 верны и для целых показателей (основания не равны нулю). Только теперь показатели могут быть отрицательными — следи за знаками при сложении и вычитании.</p>
+  <div class="rule"><span class="tag">СВОЙСТВА</span>
+    <div class="scheme"><span class="m">a^m · a^n = a^{m+n}</span>; &nbsp; <span class="m">a^m : a^n = a^{m−n}</span>; &nbsp; <span class="m">(a^m)^n = a^{mn}</span>; &nbsp; <span class="m">(ab)^n = a^nb^n</span>; &nbsp; <span class="m">(a : b)^n = a^n : b^n</span></div>
+  </div>
+  <div class="tabs" id="tProp" role="group" aria-label="Примеры"></div>
+  <div id="bProp"></div>
+</section>
+
+<section id="oshibki">
+  <h2>Частые ошибки</h2>
+  <div class="mist">
+    <div class="mrow"><div class="what">Отрицательный показатель сделал число отрицательным.</div><div class="bad"><span class="mark">✗</span><span class="math">2<sup>−3</sup> = −8</span></div><div class="good"><span class="mark">✓</span><span class="math">2<sup>−3</sup> = <span class="fr"><span>1</span><span>8</span></span></span></div></div>
+    <div class="mrow"><div class="what">Нулевая степень — это не ноль.</div><div class="bad"><span class="mark">✗</span><span class="m">7^0 = 0</span></div><div class="good"><span class="mark">✓</span><span class="m">7^0 = 1</span></div></div>
+    <div class="mrow"><div class="what">Ошиблись в знаке при сложении показателей.</div><div class="bad"><span class="mark">✗</span><span class="m">a^−2 · a^−3 = a^5</span></div><div class="good"><span class="mark">✓</span><span class="m">a^−2 · a^−3 = a^−5</span></div></div>
+    <div class="mrow"><div class="what">Вычитание отрицательного числа: минус на минус даёт плюс.</div><div class="bad"><span class="mark">✗</span><span class="m">b^4 : b^−2 = b^2</span></div><div class="good"><span class="mark">✓</span><span class="m">b^4 : b^−2 = b^6</span></div></div>
+    <div class="mrow"><div class="what">Не перевернули дробь.</div><div class="bad"><span class="mark">✗</span><span class="math">(<span class="fr"><span>1</span><span>3</span></span>)<sup>−2</sup> = <span class="fr"><span>1</span><span>9</span></span></span></div><div class="good"><span class="mark">✓</span><span class="math">(<span class="fr"><span>1</span><span>3</span></span>)<sup>−2</sup> = 3<sup>2</sup> = 9</span></div></div>
+  </div>
+</section>
+
+<section id="test">
+  <h2>Тест</h2>
+  <div id="quiz"></div>
+</section>
+
+<section id="trenazher">
+  <h2>Тренажёр</h2>
+  <p>Если ответ — дробь, впиши числитель в верхнее окошко, а знаменатель в нижнее. Минус ставь в числитель. Дробь должна быть несократимой.</p>
+  <div id="trainer"></div>
+</section>
+
+<section id="zadachi">
+  <h2>Задачи посложнее</h2>
+  <p>Сначала реши в тетради, потом открой решение и сверься.</p>
+  <div class="tasks">
+    <div class="hard"><div class="q"><b>1</b><span>Вычислите: <span class="m">2^−3 + 4^0 − 3^−2</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span><span class="math">2<sup>−3</sup> = <span class="fr"><span>1</span><span>2<sup>3</sup></span></span> = <span class="fr"><span>1</span><span>8</span></span></span></div>
+        <div><span class="st">Шаг 2.</span><span class="m">4^0 = 1</span></div>
+        <div><span class="st">Шаг 3.</span><span class="math">3<sup>−2</sup> = <span class="fr"><span>1</span><span>3<sup>2</sup></span></span> = <span class="fr"><span>1</span><span>9</span></span></span></div>
+        <div><span class="st">Шаг 4.</span>Общий знаменатель 72: <span class="math"><span class="fr"><span>9</span><span>72</span></span> + <span class="fr"><span>72</span><span>72</span></span> − <span class="fr"><span>8</span><span>72</span></span> = <span class="fr"><span>73</span><span>72</span></span> = 1<span class="fr"><span>1</span><span>72</span></span></span></div>
+        <div class="ans">Ответ: <span class="math">1<span class="fr"><span>1</span><span>72</span></span></span>.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>2</b><span>Упростите: <span class="m">a^−4 · a^7 : a^−2</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Умножение: <span class="m">a^−4 · a^7 = a^{−4 + 7} = a^3</span>.</div>
+        <div><span class="st">Шаг 2.</span>Деление: <span class="m">a^3 : a^−2 = a^{3 − (−2)}</span>.</div>
+        <div><span class="st">Шаг 3.</span><span class="m">3 − (−2) = 3 + 2 = 5</span>.</div>
+        <div class="ans">Ответ: <span class="m">a^5</span>.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>3</b><span>Вычислите: <span class="m">9^−3 · 27^3</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Приведём к основанию 3: <span class="m">9 = 3^2</span>, <span class="m">27 = 3^3</span>.</div>
+        <div><span class="st">Шаг 2.</span><span class="m">9^−3 = (3^2)^−3 = 3^−6</span>.</div>
+        <div><span class="st">Шаг 3.</span><span class="m">27^3 = (3^3)^3 = 3^9</span>.</div>
+        <div><span class="st">Шаг 4.</span><span class="m">3^−6 · 3^9 = 3^{−6 + 9} = 3^3 = 27</span>.</div>
+        <div class="ans">Ответ: 27.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>4</b><span>Сравните <span class="m">(−2)^−3</span> и <span class="m">(−2)^−4</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span><span class="math">(−2)<sup>−3</sup> = <span class="fr"><span>1</span><span>(−2)<sup>3</sup></span></span> = <span class="fr"><span>1</span><span>−8</span></span> = −<span class="fr"><span>1</span><span>8</span></span></span> — отрицательное число.</div>
+        <div><span class="st">Шаг 2.</span><span class="math">(−2)<sup>−4</sup> = <span class="fr"><span>1</span><span>(−2)<sup>4</sup></span></span> = <span class="fr"><span>1</span><span>16</span></span></span> — положительное число.</div>
+        <div><span class="st">Шаг 3.</span>Отрицательное число меньше положительного.</div>
+        <div class="ans">Ответ: <span class="m">(−2)^−3 < (−2)^−4</span>.</div>
+      </div></details></div>
+  </div>
+</section>
+
+<nav class="pager" aria-label="Соседние темы"><a href="alg-01.html"><small>← Предыдущая тема</small>§ 1. Степень с натуральным показателем</a><a class="next" href="alg-03.html"><small>Следующая тема →</small>§ 3. Стандартный вид числа</a></nav>
+<footer class="foot">Алгебра, 7 класс, § 2. Примеры составлены по образцу заданий учебника.</footer>
+</main>
+
+<script src="assets/core.js?v=4"></script>
+<script src="assets/drill.js?v=4"></script>
+<script>
+(function(){
+const {tx,fmt,fr,frs,ri,pick,gcdn} = S;
+
+/* лестница */
+let base=2;
+function ladder(){
+  const k=+S.$('sl').value; S.$('vl').textContent=String(k).replace('-','−');
+  let h='';
+  for(let n=4;n>=-4;n--){
+    const v = n>=0 ? fmt(Math.pow(base,n)) : fr(1,Math.pow(base,-n));
+    const pw = base+'<sup>'+String(n).replace('-','−')+'</sup>';
+    h+='<div class="lr'+(n===k?' cur':(n<k?' dim':''))+'"><span>'+pw+'</span><span>= '+v+'</span><span class="st2">'+(n>-4?'↓ : '+base:'')+'</span></div>';
+  }
+  S.$('ladder').innerHTML=h;
+}
+S.$('sl').addEventListener('input',ladder);
+S.$('tBase').querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{ S.$('tBase').querySelectorAll('.tab').forEach(x=>x.setAttribute('aria-pressed','false')); b.setAttribute('aria-pressed','true'); base=+b.dataset.b; ladder(); }));
+ladder();
+
+/* алгоритм на примерах */
+const EX=[
+  {t:'5<sup>−3</sup>', s:[
+    {h:'5<sup>−3</sup>', n:'Основание 5, показатель −3.'},
+    {h:'= ('+fr(1,5)+')<sup>3</sup>', n:'Число, обратное 5, — это '+fr(1,5)+'. Показатель −3 меняем на противоположный: 3.'},
+    {h:'= '+fr('1 · 1 · 1','5 · 5 · 5'), n:'Возводим дробь в куб: числитель и знаменатель.'},
+    {h:'= '+fr(1,125)}]},
+  {t:'(−2)<sup>−5</sup>', s:[
+    {h:'(−2)<sup>−5</sup>', n:'Основание −2, показатель −5.'},
+    {h:'= (−'+fr(1,2)+')<sup>5</sup>', n:'Обратное к −2 число: −'+fr(1,2)+'. Новый показатель 5.'},
+    {h:'= −'+fr(1,32), n:'Показатель нечётный, основание отрицательное — ответ отрицательный. 2<sup>5</sup> = 32.'}]},
+  {t:'('+fr(2,3)+')<sup>−2</sup>', s:[
+    {h:'('+fr(2,3)+')<sup>−2</sup>', n:'Основание '+fr(2,3)+', показатель −2.'},
+    {h:'= ('+fr(3,2)+')<sup>2</sup>', n:'Обратное число — перевёрнутая дробь '+fr(3,2)+'. Новый показатель 2.'},
+    {h:'= '+fr('3 · 3','2 · 2'), n:'Возводим в квадрат.'},
+    {h:'= '+fr(9,4)+' = 2'+fr(1,4)}]},
+  {t:'0,1<sup>−3</sup>', s:[
+    {h:'0,1<sup>−3</sup>', n:'Основание 0,1 = '+fr(1,10)+', показатель −3.'},
+    {h:'= 10<sup>3</sup>', n:'Обратное к '+fr(1,10)+' число — 10. Новый показатель 3.'},
+    {h:'= 1000'}]}
+];
+S.tabsBoard(S.$('tEx'),S.$('bEx'),EX,e=>S.lines(e.s),e=>e.t);
+
+const PR=[
+  {t:'a^−3 · a^5', s:[{h:tx('a^−3 · a^5'), n:'Основания одинаковые — показатели складываем.'},{h:'= '+tx('a^{−3 + 5}'), n:'−3 + 5 = 2'},{h:'= '+tx('a^2')}]},
+  {t:'a^2 : a^7', s:[{h:tx('a^2 : a^7'), n:'Показатели вычитаем.'},{h:'= '+tx('a^{2 − 7}'), n:'2 − 7 = −5'},{h:'= '+tx('a^−5')+' = '+fr(1,tx('a^5'))}]},
+  {t:'x^4 : x^−3', s:[{h:tx('x^4 : x^−3'), n:'Показатели вычитаем, и вычитаем отрицательное число.'},{h:'= '+tx('x^{4 − (−3)}'), n:'4 − (−3) = 4 + 3 = 7'},{h:'= '+tx('x^7')}]},
+  {t:'(b^−2)^3', s:[{h:tx('(b^−2)^3'), n:'Степень в степень — показатели перемножаем.'},{h:'= '+tx('b^{−2 · 3}'), n:'−2 · 3 = −6'},{h:'= '+tx('b^−6')}]}
+];
+S.tabsBoard(S.$('tProp'),S.$('bProp'),PR,e=>S.lines(e.s),e=>tx(e.t));
+
+/* тест */
+S.quiz(S.$('quiz'),[
+  {q:'Чему равно <span class="m">12^0</span>?', opts:['0','1','12','не имеет смысла'], ok:1, why:'Любое число, не равное нулю, в нулевой степени равно 1.'},
+  {q:'Чему равно <span class="m">3^−2</span>?', opts:['−9','−6','1/9','9'], ok:2, why:'<span class="m">3^−2</span> = 1 : 3<sup>2</sup> = 1/9.'},
+  {q:'Какое из чисел отрицательное?', opts:['<span class="m">2^−5</span>','<span class="m">(−2)^−4</span>','<span class="m">(−2)^−3</span>','<span class="m">(−2)^0</span>'], ok:2, why:'<span class="m">(−2)^−3</span> = 1 : (−8) — отрицательное. Знак зависит от основания и чётности показателя, а не от минуса в показателе.'},
+  {q:'<span class="m">a^−6 · a^4 = </span>', opts:['<span class="m">a^−24</span>','<span class="m">a^−2</span>','<span class="m">a^10</span>','<span class="m">a^2</span>'], ok:1, why:'−6 + 4 = −2.'},
+  {q:'<span class="m">y^3 : y^−5 = </span>', opts:['<span class="m">y^−2</span>','<span class="m">y^8</span>','<span class="m">y^−8</span>','<span class="m">y^15</span>'], ok:1, why:'3 − (−5) = 8.'},
+  {q:'<span class="m">(0,5)^−1</span> = ', opts:['−0,5','0,5','2','−2'], ok:2, why:'0,5 = 1/2, обратное число 2.'}
+]);
+
+/* тренажёр */
+const L=()=>pick(['a','b','x','y','m','c']);
+const sg=n=>String(n).replace('-','−');
+const ex=(l,n)=>tx(l+'^'+sg(n));
+S.drill(S.$('trainer'),{modes:[['val','вычисли'],['mul','умножение'],['div','деление'],['pow','степень степени']], gen(mode){
+  if(mode==='val'){
+    const kind=ri(0,9);
+    if(kind===0){ const b=pick([7,-3,15,0.4,-1.5,100]); return {q:'<span class="ask">Вычисли:</span>', tpl:(b<0?'('+fmt(b)+')':fmt(b))+'<sup>0</sup> = {n}', ans:[1],
+      diag:v=>v[0]===0?'Нулевая степень любого числа (кроме нуля) равна 1, а не 0.':null,
+      steps:S.lines([{h:(b<0?'('+fmt(b)+')':fmt(b))+'<sup>0</sup>', n:'Основание не равно нулю, показатель 0.'},{h:'= 1', n:'По определению <span class="math"><i>a</i><sup>0</sup> = 1</span>.'}])}; }
+    if(kind<=5){ const b=pick([2,3,4,5,10,-2,-3,-5]), n=ri(1,b===2||b===-2?5:3); const d=Math.pow(Math.abs(b),n), neg=b<0&&n%2===1;
+      const bs=b<0?'('+fmt(b)+')':fmt(b);
+      return {q:'<span class="ask">Вычисли. Ответ запиши дробью:</span>', tpl:bs+'<sup>−'+n+'</sup> = {f}', ans:[neg?-1:1,d], frac:[0],
+        diag:v=>{ const x=v[0]/v[1]; if(Math.abs(x+(neg?-1:1)/d)<1e-12) return 'Проверь знак: минус в показателе не делает число отрицательным. Знак зависит от основания и чётности показателя.'; if(Math.abs(Math.abs(x)-d)<1e-9) return 'Ты не перевернул число: при отрицательном показателе получается дробь с единицей в числителе.'; return null; },
+        steps:S.lines([{h:bs+'<sup>−'+n+'</sup>', n:'Основание '+fmt(b)+', показатель −'+n+'.'},{h:'= '+fr(1,bs+'<sup>'+n+'</sup>'), n:'По определению: единица, делённая на степень с противоположным показателем.'},{h:'= '+(neg?'−':'')+fr(1,d), n:bs+'<sup>'+n+'</sup> = '+fmt(Math.pow(b,n))+'.'+(neg?' Основание отрицательное, показатель нечётный — знак минус.':'')}])}; }
+    // дробное основание
+    let p=ri(1,4), q=ri(2,5); while(gcdn(p,q)!==1||p===q){ p=ri(1,4); q=ri(2,5); }
+    const n=ri(1,2), num=Math.pow(q,n), den=Math.pow(p,n);
+    const base='('+fr(p,q)+')<sup>−'+n+'</sup>';
+    if(den===1) return {q:'<span class="ask">Вычисли:</span>', tpl:base+' = {n}', ans:[num],
+      steps:S.lines([{h:base, n:'Основание '+fr(p,q)+', показатель −'+n+'.'},{h:'= '+q+'<sup>'+n+'</sup>', n:'Переворачиваем дробь: '+fr(q,1)+' = '+q+'. Показатель меняем на '+n+'.'},{h:'= '+num}])};
+    return {q:'<span class="ask">Вычисли. Ответ запиши дробью:</span>', tpl:base+' = {f}', ans:[num,den], frac:[0],
+      diag:v=>Math.abs(v[0]/v[1]-den/num)<1e-12?'Дробь нужно перевернуть: при отрицательном показателе берут обратное число.':null,
+      steps:S.lines([{h:base, n:'Основание '+fr(p,q)+', показатель −'+n+'.'},{h:'= ('+fr(q,p)+')<sup>'+n+'</sup>', n:'Обратное число — перевёрнутая дробь. Новый показатель '+n+'.'},{h:'= '+fr(num,den), n:n===2?'Числитель и знаменатель возводим в квадрат.':''}])};
+  }
+  const l=L(); const nz=()=>{ let x=0; while(x===0) x=ri(-8,8); return x; };
+  if(mode==='mul'){ const a=nz(), b=nz()<0?-ri(1,8):ri(1,8); const s=a+b;
+    return {q:'<span class="ask">Запиши в виде степени (окошко — показатель):</span>', tpl:ex(l,a)+' · '+ex(l,b)+' = <i>'+l+'</i>{s}', ans:[s],
+      diag:v=>v[0]===-s?'Проверь знак при сложении показателей.':(v[0]===a*b?'При умножении показатели складывают, а не перемножают.':null),
+      steps:S.lines([{h:ex(l,a)+' · '+ex(l,b), n:'Основания одинаковые — показатели складываем.'},{h:'= '+tx(l+'^{'+sg(a)+' + '+(b<0?'('+sg(b)+')':b)+'}'), n:sg(a)+' + '+(b<0?'('+sg(b)+')':b)+' = '+sg(s)},{h:'= '+ex(l,s)+(s===0?' = 1':'')}])}; }
+  if(mode==='div'){ const a=nz(), b=nz(); const s=a-b;
+    return {q:'<span class="ask">Запиши в виде степени (окошко — показатель):</span>', tpl:ex(l,a)+' : '+ex(l,b)+' = <i>'+l+'</i>{s}', ans:[s],
+      diag:v=>v[0]===a+b?'При делении показатели вычитают. Вычесть отрицательное число — значит прибавить.':(v[0]===-s?'Проверь знак: из показателя делимого вычитаем показатель делителя.':null),
+      steps:S.lines([{h:ex(l,a)+' : '+ex(l,b), n:'Основания одинаковые — из показателя делимого вычитаем показатель делителя.'},{h:'= '+tx(l+'^{'+sg(a)+' − '+(b<0?'('+sg(b)+')':b)+'}'), n:b<0?'Вычесть отрицательное число — значит прибавить противоположное: '+sg(a)+' + '+(-b)+' = '+sg(s):sg(a)+' − '+b+' = '+sg(s)},{h:'= '+ex(l,s)+(s===0?' = 1':'')}])}; }
+  const a=nz(), b=nz(); const s=a*b;
+  return {q:'<span class="ask">Запиши в виде степени (окошко — показатель):</span>', tpl:'('+ex(l,a)+')<sup>'+sg(b)+'</sup> = <i>'+l+'</i>{s}', ans:[s],
+    diag:v=>v[0]===-s?'Проверь знак: минус на минус даёт плюс, минус на плюс — минус.':(v[0]===a+b?'Степень возводим в степень — показатели перемножают.':null),
+    steps:S.lines([{h:'('+ex(l,a)+')<sup>'+sg(b)+'</sup>', n:'Степень в степень — показатели перемножаем.'},{h:'= '+tx(l+'^{'+sg(a)+' · '+(b<0?'('+sg(b)+')':b)+'}'), n:sg(a)+' · '+(b<0?'('+sg(b)+')':b)+' = '+sg(s)},{h:'= '+ex(l,s)}])};
+}});
+})();
+</script>
+<script src="assets/nav.js?v=4"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>§ 6. Одночлен</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Unbounded:wght@500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=4">
+<style>
+.sort{display:flex;flex-wrap:wrap;gap:8px}
+.sort button{font:inherit;font-family:var(--f-math);font-size:1.15rem;border:1.5px solid var(--line);background:var(--paper);color:var(--ink);border-radius:10px;padding:8px 14px;cursor:pointer}
+.sort button.yes{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 12%,var(--paper))}
+.sort button.no{border-color:var(--bad);background:color-mix(in srgb,var(--bad) 10%,var(--paper));text-decoration:line-through;text-decoration-color:var(--bad)}
+.sortwhy{font-size:.95rem;min-height:3em}
+</style>
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <a class="brand" href="index.html"><span class="logo">x</span><span class="txt">Математика · 7 класс<small>I четверть</small></span></a>
+  <nav class="tnav" aria-label="Разделы сайта"><a href="index.html">Главная</a><a class="alg" href="index.html#algebra">Алгебра</a><a class="geo" href="index.html#geometry">Геометрия</a></nav>
+</div></header>
+
+<main class="wrap">
+<div class="page-head">
+  <div class="crumbs"><a href="index.html">Главная</a> › <a href="index.html#algebra">Алгебра</a> › § 6</div>
+  <div class="eyebrow">Алгебра · 7 класс · § 6 · уроки 22–23</div>
+  <h1>Одночлен</h1>
+  <p class="lede">Одночлен — самое простое выражение с буквами: только числа, переменные и их степени, соединённые умножением. Научимся узнавать одночлены, приводить их к стандартному виду и находить степень.</p>
+  <nav class="toc" aria-label="Разделы темы"><a href="#opredelenie">Определение</a><a href="#uznai">Узнай одночлен</a><a href="#standart">Стандартный вид</a><a href="#stepen">Степень</a><a href="#test">Тест</a><a href="#trenazher">Тренажёры</a><a href="#zadachi">Задачи</a></nav>
+</div>
+
+<section id="opredelenie">
+  <h2>Определение</h2>
+  <div class="rule"><span class="tag">ОПРЕДЕЛЕНИЕ</span>
+    <p><b>Одночленом</b> называется произведение чисел, переменных и натуральных степеней переменных.</p>
+  </div>
+  <div class="aside">
+    <div class="fact"><h3>Одночлены</h3><p><span class="m">2a^2b^3c</span>, &nbsp;<span class="m">−3,5a^2</span>, &nbsp;<span class="m">4x · 2xy</span>, &nbsp;<span class="m">18</span>, &nbsp;<span class="m">m</span>, &nbsp;<span class="m">k^4</span>.<br>Отдельное число и отдельная переменная — тоже одночлены.</p></div>
+    <div class="fact"><h3>Не одночлены</h3><p><span class="m">0,7x^2 + y</span> — есть сложение;<br><span class="m">5k : p</span> — деление на переменную;<br><span class="m">a^−2</span> — степень не натуральная.</p></div>
+  </div>
+</section>
+
+<section id="uznai">
+  <h2>Игра: узнай одночлен</h2>
+  <p>Нажимай на выражения. Одночлены станут зелёными, остальные зачеркнутся, а внизу появится объяснение.</p>
+  <div class="panel">
+    <div class="sort" id="sort"></div>
+    <div class="sortwhy" id="sortWhy" aria-live="polite"></div>
+  </div>
+</section>
+
+<section id="standart">
+  <h2>Стандартный вид и коэффициент</h2>
+  <div class="rule"><span class="tag">ОПРЕДЕЛЕНИЕ</span>
+    <p><b>Стандартным видом одночлена</b> называется запись в виде произведения числового множителя, записанного на первом месте, и степеней переменных с разными основаниями. Числовой множитель называется <b>коэффициентом</b> одночлена.</p>
+  </div>
+  <p>Чтобы привести одночлен к стандартному виду, перемножаем отдельно числа (синие) и отдельно одинаковые буквы — показатели складываем.</p>
+  <div class="tabs" id="tStd" role="group" aria-label="Примеры"></div>
+  <div id="bStd"></div>
+  <div class="aside">
+    <div class="fact"><h3>Коэффициент 1</h3><p><span class="m">a = 1 · a</span>, <span class="m">mn^4 = 1 · mn^4</span> — единицу не пишут.</p></div>
+    <div class="fact"><h3>Коэффициент −1</h3><p><span class="m">−x^2 = −1 · x^2</span>, <span class="m">−k^8p = −1 · k^8p</span> — пишут только минус.</p></div>
+  </div>
+</section>
+
+<section id="stepen">
+  <h2>Степень одночлена</h2>
+  <div class="rule"><span class="tag">ОПРЕДЕЛЕНИЕ</span>
+    <p><b>Степенью одночлена</b> с коэффициентом, отличным от нуля, называется сумма показателей степеней входящих в него переменных. Если переменных нет, степень равна нулю.</p>
+  </div>
+  <div class="board" style="gap:6px">
+    <div class="bl main"><span class="m">5a^2b^3c</span> <span class="note">→ 2 + 3 + 1 = </span><b class="redc">6</b></div>
+    <div class="bl main"><span class="m">5a^2</span> <span class="note">→ </span><b class="redc">2</b> &nbsp; <span class="m">5a</span> <span class="note">→ </span><b class="redc">1</b> &nbsp; <span class="m">5</span> <span class="note">→ </span><b class="redc">0</b></div>
+    <p>Не забывай: буква без показателя имеет показатель 1. У <span class="m">5xk^8</span> степень 1 + 8 = 9.</p>
+  </div>
+</section>
+
+<section id="test">
+  <h2>Тест</h2>
+  <div id="quiz"></div>
+</section>
+
+<section id="trenazher">
+  <h2>Тренажёр 1: стандартный вид</h2>
+  <p>Перемножь множители и запиши одночлен в стандартном виде.</p>
+  <div id="trainer"></div>
+  <h2>Тренажёр 2: коэффициент и степень</h2>
+  <p>Сначала приведи одночлен к стандартному виду в уме, потом впиши коэффициент и степень.</p>
+  <div id="drill"></div>
+</section>
+
+<section id="zadachi">
+  <h2>Задачи посложнее</h2>
+  <p>Сначала реши в тетради, потом открой решение и сверься.</p>
+  <div class="tasks">
+    <div class="hard"><div class="q"><b>1</b><span>Приведите к стандартному виду и найдите степень: <span class="m">−0,5a^2b · 4ab^3 · (−c)</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Числа: <span class="m">−0,5 · 4 · (−1) = 2</span> (у <span class="m">−c</span> коэффициент −1).</div>
+        <div><span class="st">Шаг 2.</span><span class="m">a^2 · a = a^3</span>.</div>
+        <div><span class="st">Шаг 3.</span><span class="m">b · b^3 = b^4</span>.</div>
+        <div><span class="st">Шаг 4.</span>Получили <span class="m">2a^3b^4c</span>.</div>
+        <div><span class="st">Шаг 5.</span>Степень: 3 + 4 + 1 = 8.</div>
+        <div class="ans">Ответ: <span class="m">2a^3b^4c</span>, степень 8.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>2</b><span>Запишите выражение для объёма прямоугольного параллелепипеда, в основании которого квадрат со стороной <i>a</i> см, а высота 4 см. Является ли оно одночленом? Какова его степень?</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Объём равен площади основания, умноженной на высоту: <span class="m">a^2 · 4</span>.</div>
+        <div><span class="st">Шаг 2.</span>Стандартный вид: <span class="m">4a^2</span> — одночлен с коэффициентом 4.</div>
+        <div><span class="st">Шаг 3.</span>Степень одночлена 2.</div>
+        <div class="ans">Ответ: <span class="m">4a^2</span>, одночлен второй степени.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>3</b><span>Найдите значение одночлена <span class="m">−3x^2y</span> при <span class="m">x = −2</span>, <span class="m">y = 0,5</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Подставляем: <span class="m">−3 · (−2)^2 · 0,5</span>.</div>
+        <div><span class="st">Шаг 2.</span><span class="m">(−2)^2 = 4</span>.</div>
+        <div><span class="st">Шаг 3.</span><span class="m">−3 · 4 = −12</span>.</div>
+        <div><span class="st">Шаг 4.</span><span class="m">−12 · 0,5 = −6</span>.</div>
+        <div class="ans">Ответ: −6.</div>
+      </div></details></div>
+  </div>
+</section>
+
+<nav class="pager" aria-label="Соседние темы"><a href="alg-05.html"><small>← Предыдущая тема</small>§ 5. Тождество</a><a class="next" href="alg-07.html"><small>Следующая тема →</small>§ 7. Действия с одночленами</a></nav>
+<footer class="foot">Алгебра, 7 класс, § 6. Примеры составлены по образцу заданий учебника.</footer>
+</main>
+
+<script src="assets/core.js?v=4"></script>
+<script src="assets/drill.js?v=4"></script>
+<script>
+(function(){
+const {tx,ri,pick,mono,mh,mp,mmul,deg,rmono} = S;
+const sg=n=>String(n).replace('-','−');
+
+/* игра */
+const ITEMS=[
+  ['−2,9x^3',1,'Произведение числа и натуральной степени переменной.'],
+  ['0,7x^2 + y',0,'Здесь есть сложение — это уже не одночлен.'],
+  ['4x · 2xy',1,'Только умножение чисел и переменных.'],
+  ['12a^2x^4 − 3c^3',0,'Есть вычитание.'],
+  ['m',1,'Одна переменная — тоже одночлен.'],
+  ['18',1,'Число — тоже одночлен.'],
+  ['5k : p',0,'Деление на переменную — не одночлен.'],
+  ['m^2 : 3',1,'Деление на число 3 — это умножение на 1/3. Одночлен.'],
+  ['a^−3',0,'Показатель −3 не натуральный — не одночлен.'],
+  ['−ab^2c',1,'Коэффициент −1, переменные в натуральных степенях.']
+];
+ITEMS.forEach(([e,ok,why])=>{ const b=document.createElement('button'); b.type='button'; b.innerHTML=tx(e); b.addEventListener('click',()=>{ b.classList.add(ok?'yes':'no'); S.$('sortWhy').innerHTML='<b>'+tx(e)+'</b> — '+(ok?'<span style="color:var(--ok);font-weight:600">одночлен.</span> ':'<span class="redc" style="font-weight:600">не одночлен.</span> ')+why; }); S.$('sort').appendChild(b); });
+
+/* стандартный вид по шагам */
+function stdSteps(F){ // F — массив одночленов-множителей
+  const prod=F.reduce((a,b)=>mmul(a,b),mono(1,{}));
+  const L=[...new Set(F.flatMap(m=>Object.keys(m.v)))].sort();
+  const nums=F.map(m=>S.pn?S.pn(m.c):m.c).join(' · ');
+  const letters=L.map((l,i)=>{ const ps=F.filter(m=>m.v[l]).map(m=>S.pw(l,m.v[l])); return '<span class="kt k'+((i+1)%4)+'">'+(ps.length>1?'('+ps.join(' · ')+')':ps[0])+'</span>'; }).join(' · ');
+  return S.lines([
+    {h:F.map((m,i)=>i?mp(m):mh(m)).join(' · '), n:'Одночлен не в стандартном виде: числа и одинаковые буквы стоят в разных местах.'},
+    {h:'= <span class="kt k0">('+nums+')</span> · '+letters, n:'Переставляем множители: сначала все числа, потом одинаковые буквы рядом.'},
+    {h:'= '+mh(prod), n:'Числа перемножаем: '+nums+' = '+sg(prod.c)+'. Показатели одинаковых букв складываем. Коэффициент '+sg(prod.c)+'.'}]);
+}
+const EXS=[[mono(4,{x:1}),mono(2,{x:1,y:1})],[mono(-2,{a:2,y:2}),mono(-5,{a:3,y:5})],[mono(3,{m:1}),mono(-1,{m:2,n:1}),mono(2,{n:3})]];
+S.tabsBoard(S.$('tStd'),S.$('bStd'),EXS,stdSteps,F=>F.map((m,i)=>i?mp(m):mh(m)).join(' · '));
+
+/* тест */
+S.quiz(S.$('quiz'),[
+  {q:'Какое выражение — одночлен?', opts:['<span class="m">3a + b</span>','<span class="m">−7a^2b</span>','<span class="m">x : y</span>','<span class="m">a − 1</span>'], ok:1, why:'Только произведение числа и степеней переменных.'},
+  {q:'Коэффициент одночлена <span class="m">−a^3b</span> равен', opts:['0','1','−1','3'], ok:2, why:'<span class="m">−a^3b = −1 · a^3b</span>.'},
+  {q:'Стандартный вид одночлена <span class="m">3a · (−2ab)</span>:', opts:['<span class="m">−6a^2b</span>','<span class="m">−6ab</span>','<span class="m">6a^2b</span>','<span class="m">a^2b − 6</span>'], ok:0, why:'3 · (−2) = −6, <span class="m">a · a = a^2</span>.'},
+  {q:'Степень одночлена <span class="m">7x^3y^2z</span>:', opts:['3','5','6','7'], ok:2, why:'3 + 2 + 1 = 6.'},
+  {q:'Степень одночлена <span class="m">25</span>:', opts:['0','1','2','25'], ok:0, why:'Переменных нет — степень 0.'}
+]);
+
+/* тренажёр 1 */
+S.trainer(S.$('trainer'),{kind:'poly', gen(){
+  const L=pick([['a','b'],['x','y'],['m','n'],['a','b','c']]);
+  const k=ri(2,3); const F=[];
+  for(let i=0;i<k;i++){ const v={}; L.forEach(l=>{ if(Math.random()<0.7) v[l]=ri(1,3); }); if(!Object.keys(v).length) v[L[0]]=1; F.push(mono(ri(1,i?5:6)*(Math.random()<0.4?-1:1),v)); }
+  const prod=F.reduce((a,b)=>mmul(a,b),mono(1,{}));
+  return {q:'<span class="ask">Запиши в стандартном виде:</span>'+F.map((m,i)=>i?mp(m):mh(m)).join(' · ')+' = ?', answer:[prod], steps:stdSteps(F)};
+}});
+
+/* тренажёр 2 */
+S.drill(S.$('drill'),{gen(){
+  const L=pick([['a','b'],['x','y'],['a','b','c'],['m','n','k']]);
+  const v={}; L.forEach(l=>{ if(Math.random()<0.8) v[l]=ri(1,5); }); if(!Object.keys(v).length) v[L[0]]=ri(1,4);
+  const m=mono(ri(1,9)*(Math.random()<0.4?-1:1)*(Math.random()<0.2?0:1)||-1,v);
+  const d=deg(m), parts=Object.keys(m.v).sort().map(l=>m.v[l]);
+  return {q:'<span class="ask">Одночлен '+mh(m)+'. Впиши коэффициент и степень:</span>', tpl:'коэффициент {n}, &nbsp;степень {n}', ans:[m.c,d],
+    diag:u=>u[0]===m.c&&u[1]!==d?'Коэффициент верный. Степень — сумма показателей всех букв (у буквы без показателя он равен 1).':(u[1]===d&&u[0]!==m.c?'Степень верная. Коэффициент — число впереди вместе со знаком.':null),
+    steps:S.lines([{h:mh(m), n:'Коэффициент — число на первом месте вместе со знаком: '+sg(m.c)+'.'},{h:'степень: '+parts.join(' + ')+' = '+d, n:'Складываем показатели всех переменных.'}])};
+}});
+})();
+</script>
+<script src="assets/nav.js?v=4"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>§ 9. Сложение и вычитание многочленов</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Unbounded:wght@500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=4">
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <a class="brand" href="index.html"><span class="logo">x</span><span class="txt">Математика · 7 класс<small>II четверть</small></span></a>
+  <nav class="tnav" aria-label="Разделы сайта"><a href="index.html">Главная</a><a class="alg" href="index.html#algebra">Алгебра</a><a class="geo" href="index.html#geometry">Геометрия</a></nav>
+</div></header>
+
+<main class="wrap">
+<div class="page-head">
+  <div class="crumbs"><a href="index.html">Главная</a> › <a href="index.html#algebra">Алгебра</a> › § 9</div>
+  <div class="eyebrow">Алгебра · 7 класс · § 9 · уроки 29–30</div>
+  <h1>Сложение и вычитание многочленов</h1>
+  <p class="lede">Чтобы сложить или вычесть многочлены, нужно раскрыть скобки и привести подобные члены. Главное — правильно поступить со знаками.</p>
+  <nav class="toc" aria-label="Разделы темы"><a href="#pravilo">Правило скобок</a><a href="#razbor">Разбор</a><a href="#oshibki">Ошибки</a><a href="#test">Тест</a><a href="#trenazher">Тренажёр</a><a href="#zadachi">Задачи</a></nav>
+</div>
+
+<section id="pravilo">
+  <h2>Как раскрывать скобки</h2>
+  <div class="aside">
+    <div class="rule"><span class="tag">ПЕРЕД СКОБКАМИ «+»</span>
+      <ol><li><b>1)</b><span>опускаем скобки и знак «+»;</span></li><li><b>2)</b><span>знаки в скобках <b>не меняем</b>.</span></li></ol>
+      <div class="scheme"><span class="m">a + (b − c) = a + b − c</span></div>
+    </div>
+    <div class="rule"><span class="tag redc">ПЕРЕД СКОБКАМИ «−»</span>
+      <ol><li><b>1)</b><span>опускаем скобки и знак «−»;</span></li><li><b>2)</b><span>знак <b>каждого</b> члена в скобках меняем на противоположный.</span></li></ol>
+      <div class="scheme"><span class="m">a − (b − c) = a − b + c</span></div>
+    </div>
+  </div>
+  <p>После раскрытия скобок приводим подобные члены. Чтобы найти сумму или разность многочленов, каждый многочлен берём в скобки.</p>
+</section>
+
+<section id="razbor">
+  <h2>Разбор по шагам</h2>
+  <p>Смотри, как меняются знаки после минуса: такие члены подсвечены красным.</p>
+  <div class="tabs" id="tEx" role="group" aria-label="Примеры"></div>
+  <div id="bEx"></div>
+  <div class="aside">
+    <div class="fact"><h3>Почему знаки меняются</h3><p>Вычесть многочлен — значит прибавить противоположный ему: <span class="m">−(b − c) = −b + c</span>. Каждый член умножается на −1.</p></div>
+    <div class="fact"><h3>Обратно: взять в скобки</h3><p>Если ставим «−» перед скобками, знаки внутри тоже меняем: <span class="m">a − b + c = a − (b − c)</span>. Проверить легко — раскрой скобки.</p></div>
+  </div>
+</section>
+
+<section id="oshibki">
+  <h2>Частые ошибки</h2>
+  <div class="mist">
+    <div class="mrow"><div class="what">Поменяли знак только у первого члена в скобках.</div><div class="bad"><span class="mark">✗</span><span class="m">x − (y − 3) = x − y − 3</span></div><div class="good"><span class="mark">✓</span><span class="m">x − (y − 3) = x − y + 3</span></div></div>
+    <div class="mrow"><div class="what">Поменяли знаки, хотя перед скобками «+».</div><div class="bad"><span class="mark">✗</span><span class="m">a + (b − 2) = a − b + 2</span></div><div class="good"><span class="mark">✓</span><span class="m">a + (b − 2) = a + b − 2</span></div></div>
+    <div class="mrow"><div class="what">Вычитаемое записали без скобок.</div><div class="bad"><span class="mark">✗</span><span class="m">3a − 2a + 5 = a + 5</span> вместо разности <span class="m">3a</span> и <span class="m">2a + 5</span></div><div class="good"><span class="mark">✓</span><span class="m">3a − (2a + 5) = a − 5</span></div></div>
+  </div>
+</section>
+
+<section id="test">
+  <h2>Тест</h2>
+  <div id="quiz"></div>
+</section>
+
+<section id="trenazher">
+  <h2>Тренажёр</h2>
+  <p>Раскрой скобки, приведи подобные и запиши ответ многочленом стандартного вида.</p>
+  <div id="trainer"></div>
+</section>
+
+<section id="zadachi">
+  <h2>Задачи посложнее</h2>
+  <div class="tasks">
+    <div class="hard"><div class="q"><b>1</b><span>Упростите выражение <span class="m">(2x^2 − 3x + 1) − (x^2 − 3x − 4) + (5 − x^2)</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Первые скобки (перед ними ничего нет): <span class="m">2x^2 − 3x + 1</span></div>
+        <div><span class="st">Шаг 2.</span>Перед вторыми скобками «−», знаки меняем: <span class="m">−x^2 + 3x + 4</span></div>
+        <div><span class="st">Шаг 3.</span>Перед третьими «+», знаки не меняем: <span class="m">+ 5 − x^2</span></div>
+        <div><span class="st">Шаг 4.</span><span class="m">2x^2 − x^2 − x^2 = 0</span></div>
+        <div><span class="st">Шаг 5.</span><span class="m">−3x + 3x = 0</span></div>
+        <div><span class="st">Шаг 6.</span><span class="m">1 + 4 + 5 = 10</span></div>
+        <div class="ans">Ответ: 10.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>2</b><span>Решите уравнение <span class="m">(5x − 3) − (2x + 6) = 12</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span><span class="m">5x − 3 − 2x − 6 = 12</span></div>
+        <div><span class="st">Шаг 2.</span><span class="m">5x − 2x = 3x</span>; <span class="m">−3 − 6 = −9</span></div>
+        <div><span class="st">Шаг 3.</span><span class="m">3x − 9 = 12</span></div>
+        <div><span class="st">Шаг 4.</span><span class="m">3x = 12 + 9 = 21</span></div>
+        <div><span class="st">Шаг 5.</span><span class="m">x = 21 : 3 = 7</span></div>
+        <div class="ans">Ответ: <span class="m">x = 7</span>.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>3</b><span>Найдите многочлен <i>P</i>, для которого <i>P</i> + <span class="m">(3a^2 − 2a) = 5a^2 + a − 4</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Неизвестное слагаемое = сумма − известное слагаемое: <i>P</i> = <span class="m">(5a^2 + a − 4) − (3a^2 − 2a)</span></div>
+        <div><span class="st">Шаг 2.</span><span class="m">5a^2 + a − 4 − 3a^2 + 2a</span></div>
+        <div><span class="st">Шаг 3.</span><span class="m">5a^2 − 3a^2 = 2a^2</span>; <span class="m">a + 2a = 3a</span></div>
+        <div class="ans">Ответ: <i>P</i> = <span class="m">2a^2 + 3a − 4</span>.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>4</b><span>Докажите, что сумма трёх последовательных натуральных чисел делится на 3.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Пусть числа <span class="m">n</span>, <span class="m">n + 1</span>, <span class="m">n + 2</span>.</div>
+        <div><span class="st">Шаг 2.</span>Сумма: <span class="m">n + (n + 1) + (n + 2) = n + n + 1 + n + 2</span></div>
+        <div><span class="st">Шаг 3.</span><span class="m">n + n + n = 3n</span>; <span class="m">1 + 2 = 3</span>. Сумма равна <span class="m">3n + 3</span>.</div>
+        <div><span class="st">Шаг 4.</span><span class="m">3n + 3 = 3(n + 1)</span> — это число, умноженное на 3.</div>
+        <div class="ans">Значит, сумма делится на 3.</div>
+      </div></details></div>
+  </div>
+</section>
+
+<nav class="pager" aria-label="Соседние темы"><a href="alg-08.html"><small>← Предыдущая тема</small>§ 8. Многочлен</a><a class="next" href="alg-10.html"><small>Следующая тема →</small>§ 10. Многочлен и одночлен</a></nav>
+<footer class="foot">Алгебра, 7 класс, § 9. Примеры составлены по образцу заданий учебника.</footer>
+</main>
+
+<script src="assets/core.js?v=4"></script>
+<script>
+(function(){
+const {T,mh,th,polyH,mono,pneg,pcomb,psort,ri,pick,rpoly,OP} = S;
+function exprH(A,B,sign){ return '('+polyH(A)+')'+OP(sign>0?'+':'−')+'('+B.map((t,i)=>'<span class="tm '+(sign<0?'kr':'')+'">'+th(t,i===0)+'</span>').join('')+')'; }
+function steps(A,B,sign){
+  const Bo = sign>0 ? B : pneg(B);
+  const open=[...A,...Bo];
+  const head='<div class="bl main">'+exprH(A,B,sign)+'</div>';
+  const openLine='<div class="bl main"><span class="eq">=</span>'+A.map((t,i)=>'<span class="tm">'+th(t,i===0)+'</span>').join('')+Bo.map(t=>'<span class="tm '+(sign<0?'on kr':'')+'">'+th(t,false)+'</span>').join('')+'</div>';
+  const flips = sign<0 ? '<ul class="plain">'+B.map((t,i)=>'<li><span class="math">'+(t.c<0?'−':'+')+S.body(t)+'</span> → <span class="math kr kt">'+(Bo[i].c<0?'−':'+')+S.body(Bo[i])+'</span></li>').join('')+'</ul>' : '';
+  const s0={html:head, note: sign<0 ? '<p>Перед вторыми скобками стоит <b class="redc">«−»</b>. Значит, у <b>каждого</b> члена в этих скобках знак поменяется.</p>' : '<p>Перед вторыми скобками стоит «+». Скобки просто опускаем, знаки не меняем.</p>', label:'Условие'};
+  const s1={html:head+openLine, note:'<div class="dhead">Раскрываем скобки</div>'+(sign<0?'<p>Знаки во вторых скобках поменялись:</p>'+flips:'<p>Все знаки остались такими же.</p>'), label:'Скобки'};
+  const rest=S.stepsCombine(open,{pre:head, lead:'<span class="eq">=</span>', intro:'<p>Скобки раскрыты. Теперь ищем подобные члены.</p>'}).slice(1);
+  return [s0,s1,...rest];
+}
+const EX=[[T('3x^2-2x+5'),T('x^2+4x-7'),1],[T('5a^2-3a+2'),T('2a^2+a-6'),-1],[T('4xy-3x+1'),T('-2xy+3x-5'),-1]];
+S.tabsBoard(S.$('tEx'),S.$('bEx'),EX,e=>steps(e[0],e[1],e[2]),e=>exprH(e[0],e[1],e[2]).replace(/class="[^"]*"/g,''));
+
+S.quiz(S.$('quiz'),[
+  {q:'Раскройте скобки: <span class="m">7 − (a − b + 2)</span>', opts:['<span class="m">7 − a − b + 2</span>','<span class="m">7 − a + b − 2</span>','<span class="m">7 + a − b − 2</span>','<span class="m">7 − a + b + 2</span>'], ok:1, why:'Перед скобками «−»: каждый знак меняется. <span class="m">a → −a</span>, <span class="m">−b → +b</span>, <span class="m">+2 → −2</span>.'},
+  {q:'Раскройте скобки: <span class="m">x + (−y + 4)</span>', opts:['<span class="m">x − y + 4</span>','<span class="m">x + y − 4</span>','<span class="m">x − y − 4</span>','<span class="m">−x − y + 4</span>'], ok:0, why:'Перед скобками «+», знаки не меняются.'},
+  {q:'Чему равна разность <span class="m">(4m + 3) − (4m − 3)</span>?', opts:['0','6','<span class="m">8m</span>','<span class="m">8m + 6</span>'], ok:1, why:'<span class="m">4m + 3 − 4m + 3 = 6</span>.'},
+  {q:'Какое выражение равно <span class="m">a − b − c</span>?', opts:['<span class="m">a − (b − c)</span>','<span class="m">a − (b + c)</span>','<span class="m">a + (b − c)</span>','<span class="m">a − (c − b)</span>'], ok:1, why:'Раскроем: <span class="m">a − (b + c) = a − b − c</span>.'}
+]);
+
+S.trainer(S.$('trainer'),{kind:'poly', modes:[['mix','Вперемешку'],['add','Сумма'],['sub','Разность']], gen(mode){
+  const sign = mode==='add'?1:(mode==='sub'?-1:(Math.random()<0.6?-1:1));
+  const L=pick([['x'],['a'],['b'],['x','y'],['m','n']]);
+  let A,B; for(let t=0;t<30;t++){ A=rpoly(L,ri(2,3),9,L.length>1?2:2,2); B=rpoly(L,ri(2,3),9,L.length>1?2:2,2); const shared=B.filter(b=>A.some(a=>S.mkey(a)===S.mkey(b))).length; if(shared>=1) break; }
+  const ans=psort(pcomb([...A,...(sign>0?B:pneg(B))]));
+  return {q:'('+polyH(A)+')'+OP(sign>0?'+':'−')+'('+polyH(B)+') = ?', answer:ans.length?ans:[mono(0,{})], steps:steps(A,B,sign), letters:L};
+}});
+})();
+</script>
+<script src="assets/nav.js?v=4"></script>
+</body>
+</html>

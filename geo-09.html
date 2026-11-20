@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>§ 9. Первый и второй признаки равенства треугольников</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Unbounded:wght@500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=4">
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <a class="brand" href="index.html"><span class="logo">x</span><span class="txt">Математика · 7 класс<small>I четверть</small></span></a>
+  <nav class="tnav" aria-label="Разделы сайта"><a href="index.html">Главная</a><a class="alg" href="index.html#algebra">Алгебра</a><a class="geo" href="index.html#geometry">Геометрия</a></nav>
+</div></header>
+
+<main class="wrap">
+<div class="page-head">
+  <div class="crumbs"><a href="index.html">Главная</a> › <a href="index.html#geometry">Геометрия</a> › § 9</div>
+  <div class="eyebrow">Геометрия · 7 класс · § 9 · уроки 12–13</div>
+  <h1>Первый и второй признаки равенства треугольников</h1>
+  <p class="lede">Чтобы доказать, что треугольники равны, не нужно сравнивать все шесть элементов. Достаточно трёх — правильно выбранных. Это и есть признаки равенства.</p>
+  <nav class="toc" aria-label="Разделы темы"><a href="#konstruktor">Конструктор</a><a href="#pervyi">Первый признак</a><a href="#vtoroi">Второй признак</a><a href="#oformlenie">Как оформлять</a><a href="#test">Тест</a><a href="#zadachi">Задачи</a></nav>
+</div>
+
+<section id="konstruktor">
+  <h2>Конструктор: две стороны и угол между ними</h2>
+  <p>Задай две стороны и угол между ними. Третья сторона и остальные углы получаются сами — их нельзя выбрать иначе. Значит, все треугольники с такими данными одинаковые.</p>
+  <div class="panel">
+    <div class="sliders s3"><label for="sb">сторона <i>AB</i> <b id="vb">5</b><input type="range" id="sb" min="3" max="7" step="0.5" value="5"></label><label for="sc">сторона <i>AC</i> <b id="vc">4</b><input type="range" id="sc" min="3" max="7" step="0.5" value="4"></label><label for="sa">∠<i>A</i> <b id="va">60°</b><input type="range" id="sa" min="30" max="140" step="5" value="60"></label></div>
+    <div class="gfig" id="kfig" style="border:0;padding:0"></div>
+    <div class="ginfo" id="kinfo"></div>
+  </div>
+</section>
+
+<section id="pervyi">
+  <h2>Первый признак (по двум сторонам и углу между ними)</h2>
+  <div class="thm"><span class="tag red">ТЕОРЕМА</span><p>Если две стороны и угол между ними одного треугольника соответственно равны двум сторонам и углу между ними другого треугольника, то такие треугольники равны.</p></div>
+  <div id="p1"></div>
+</section>
+
+<section id="vtoroi">
+  <h2>Второй признак (по стороне и двум прилежащим к ней углам)</h2>
+  <div class="thm"><span class="tag red">ТЕОРЕМА</span><p>Если сторона и два прилежащих к ней угла одного треугольника соответственно равны стороне и двум прилежащим к ней углам другого треугольника, то такие треугольники равны.</p></div>
+  <div id="p2"></div>
+</section>
+
+<section id="oformlenie">
+  <h2>Как оформлять решение</h2>
+  <div class="panel">
+    <p><b>Задача.</b> Отрезки <i>AC</i> и <i>BD</i> пересекаются в точке <i>O</i>, которая является серединой каждого из них. Докажите, что <span class="m">△AOB = △COD</span>.</p>
+    <div class="gfig" id="ofig" style="max-width:300px"></div>
+    <div class="sol" style="margin:0">
+      <div><span class="st">1)</span><span class="m">AO = OC</span> — по условию (<i>O</i> — середина <i>AC</i>).</div>
+      <div><span class="st">2)</span><span class="m">BO = OD</span> — по условию (<i>O</i> — середина <i>BD</i>).</div>
+      <div><span class="st">3)</span><span class="m">∠AOB = ∠COD</span> — как вертикальные.</div>
+      <div class="ans">Значит, △<i>AOB</i> = △<i>COD</i> по первому признаку (по двум сторонам и углу между ними).</div>
+    </div>
+  </div>
+</section>
+
+<section id="test">
+  <h2>Тест</h2>
+  <div id="quiz"></div>
+</section>
+
+<section id="zadachi">
+  <h2>Задачи с решениями</h2>
+  <div class="tasks">
+    <div class="hard"><div class="q"><b>1</b><span>Луч <i>AD</i> — биссектриса угла <i>A</i>. На сторонах угла отмечены точки <i>B</i> и <i>C</i>, <span class="m">AB = AC</span>. Докажите, что <span class="m">BD = CD</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Рассмотрим △<i>ABD</i> и △<i>ACD</i>.</div>
+        <div><span class="st">Шаг 2.</span><span class="m">AB = AC</span> — по условию.</div>
+        <div><span class="st">Шаг 3.</span><span class="m">∠BAD = ∠CAD</span> — <i>AD</i> биссектриса.</div>
+        <div><span class="st">Шаг 4.</span><i>AD</i> — общая сторона.</div>
+        <div><span class="st">Шаг 5.</span>△<i>ABD</i> = △<i>ACD</i> по первому признаку. В равных треугольниках соответствующие стороны равны: <span class="m">BD = CD</span>.</div>
+        <div class="ans">Что и требовалось доказать.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>2</b><span>На рисунке <span class="m">∠1 = ∠2</span>, <span class="m">∠3 = ∠4</span>. Докажите, что <span class="m">△ABC = △ADC</span>.</span><div class="qfig" id="f2" style="max-width:280px"></div></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span><i>AC</i> — общая сторона треугольников <i>ABC</i> и <i>ADC</i>.</div>
+        <div><span class="st">Шаг 2.</span>Углы, прилежащие к <i>AC</i>: ∠1 = ∠2 (при вершине <i>A</i>) и ∠3 = ∠4 (при вершине <i>C</i>) — по условию.</div>
+        <div class="ans">Значит, △<i>ABC</i> = △<i>ADC</i> по второму признаку (по стороне и двум прилежащим углам).</div>
+      </div></details></div>
+  </div>
+</section>
+
+<nav class="pager" aria-label="Соседние темы"><a href="geo-08.html"><small>← Предыдущая тема</small>§ 8. Треугольники</a><a class="next" href="geo-10.html"><small>Следующая тема →</small>§ 10. Высота, медиана, биссектриса</a></nav>
+<footer class="foot">Геометрия, 7 класс, § 9. Задачи составлены по образцу заданий учебника.</footer>
+</main>
+
+<script src="assets/core.js?v=4"></script>
+<script src="assets/geo.js?v=4"></script>
+<script>
+(function(){
+const {P,seg,path,poly,dot,lbl,away,ticks,arc,dist,angAt,centroid,tf,tf0,add,sub,mul,rot} = G;
+const D2R=Math.PI/180;
+
+/* конструктор */
+function kon(){ const b=+S.$('sb').value, c=+S.$('sc').value, a=+S.$('sa').value;
+  S.$('vb').textContent=String(b).replace('.',','); S.$('vc').textContent=String(c).replace('.',','); S.$('va').textContent=a+'°';
+  const k=28, A=P(60,190), B=add(A,P(b*k,0)), C=add(A,P(c*k*Math.cos(-a*D2R),c*k*Math.sin(-a*D2R))), O=centroid(A,B,C);
+  S.$('kfig').innerHTML=G.svg([400,210],'<g class="k0">'+poly([A,B,C],'')+'</g><g class="k0">'+seg(A,B,'c thick')+'</g><g class="k3">'+seg(A,C,'c thick')+'</g><g class="kr">'+arc(A,B,C,24,1,'')+'</g>'+seg(B,C,'dash')+away(A,O,'A')+away(B,O,'B')+away(C,O,'C'),'Треугольник по двум сторонам и углу');
+  const bc=dist(B,C)/k;
+  S.$('kinfo').innerHTML='<div>Получилось: <i>BC</i> = '+G.n(bc.toFixed(1).replace('.',','),'2.2em')+', ∠<i>B</i> = '+G.n(Math.round(angAt(B,A,C))+'°','2.4em')+', ∠<i>C</i> = '+G.n(Math.round(angAt(C,A,B))+'°','2.4em')+'</div>';
+}
+['sb','sc','sa'].forEach(id=>S.$(id).addEventListener('input',kon)); kon();
+
+/* доказательства наложением */
+function proofCfg(kind){
+  const A=P(40,200),B=P(170,200),C=P(80,95), cen=centroid(A,B,C), mv=q=>add(P(290,125),rot(sub(q,cen),-2.6)), A1=mv(A),B1=mv(B),C1=mv(C), O=centroid(A,B,C), O1=centroid(A1,B1,C1);
+  const mk=(X,Y,Z)=> kind===1 ? '<g class="k0">'+ticks(X,Y,1,'')+'</g><g class="k3">'+ticks(X,Z,2,'')+'</g><g class="kr">'+arc(X,Y,Z,20,1,'')+'</g>' : '<g class="k0">'+ticks(X,Y,1,'')+'</g><g class="kr">'+arc(X,Y,Z,20,1,'')+'</g><g class="k2">'+arc(Y,X,Z,18,2,'')+'</g>';
+  return {vb:[400,240],
+    given: kind===1 ? '<b>ДАНО</b> <i>AB</i> = <i>A</i>₁<i>B</i>₁, <i>AC</i> = <i>A</i>₁<i>C</i>₁, ∠<i>A</i> = ∠<i>A</i>₁. <b>ДОКАЗАТЬ</b> △<i>ABC</i> = △<i>A</i>₁<i>B</i>₁<i>C</i>₁.' : '<b>ДАНО</b> <i>AB</i> = <i>A</i>₁<i>B</i>₁, ∠<i>A</i> = ∠<i>A</i>₁, ∠<i>B</i> = ∠<i>B</i>₁. <b>ДОКАЗАТЬ</b> △<i>ABC</i> = △<i>A</i>₁<i>B</i>₁<i>C</i>₁.',
+    items:[
+      {s:0,h:'<g class="k0">'+poly([A,B,C],'')+'</g>'+path([A,B,C],'',true)+mk(A,B,C)+away(A,O,'A')+away(B,O,'B')+away(C,O,'C')},
+      {s:0,mv:'t',h:'<g class="k1">'+poly([A1,B1,C1],'strong')+path([A1,B1,C1],'c',true)+'</g>'+mk(A1,B1,C1)},
+      {s:0,e:1,h:'<g class="k1">'+away(A1,O1,'A₁',16,'c')+away(B1,O1,'B₁',16,'c')+away(C1,O1,'C₁',16,'c')+'</g>'},
+      {s:2,e:3,h:'<g class="kr">'+dot(B,'c')+G.ms(P(B.x+10,B.y+22),'B₁ = B')+'</g>'},
+      {s:3,h:'<g class="kr">'+dot(C,'c')+G.ms(P(C.x+44,C.y-4),'C₁ = C')+'</g>'}],
+    moves:{t:{0:tf0(A1),1:tf(A1,B1,A,B,false)}},
+    steps: kind===1 ? [
+      'Два треугольника; равные элементы отмечены одинаково.',
+      'Наложим △<i>A</i>₁<i>B</i>₁<i>C</i>₁ на △<i>ABC</i> так, чтобы вершина <i>A</i>₁ совместилась с <i>A</i>, сторона <i>A</i>₁<i>B</i>₁ легла на луч <i>AB</i>, а <i>C</i>₁ оказалась по ту же сторону от <i>AB</i>, что и <i>C</i>.',
+      'Так как <i>A</i>₁<i>B</i>₁ = <i>AB</i>, точка <i>B</i>₁ совместится с <i>B</i>.',
+      'Так как ∠<i>A</i>₁ = ∠<i>A</i>, луч <i>A</i>₁<i>C</i>₁ пойдёт по лучу <i>AC</i>; а так как <i>A</i>₁<i>C</i>₁ = <i>AC</i>, точка <i>C</i>₁ совместится с <i>C</i>.',
+      'Все три вершины совместились, значит, треугольники совместились полностью: △<i>ABC</i> = △<i>A</i>₁<i>B</i>₁<i>C</i>₁. Теорема доказана.']
+    : [
+      'Два треугольника; равные элементы отмечены одинаково.',
+      'Наложим △<i>A</i>₁<i>B</i>₁<i>C</i>₁ на △<i>ABC</i>: <i>A</i>₁ — на <i>A</i>, сторону <i>A</i>₁<i>B</i>₁ — на луч <i>AB</i>, <i>C</i>₁ — по ту же сторону, что и <i>C</i>.',
+      'Так как <i>A</i>₁<i>B</i>₁ = <i>AB</i>, точка <i>B</i>₁ совместится с <i>B</i>.',
+      'Так как ∠<i>A</i>₁ = ∠<i>A</i>, луч <i>A</i>₁<i>C</i>₁ пойдёт по лучу <i>AC</i>; так как ∠<i>B</i>₁ = ∠<i>B</i>, луч <i>B</i>₁<i>C</i>₁ пойдёт по лучу <i>BC</i>. Точка <i>C</i>₁ лежит на обоих лучах, значит, совпадает с их общей точкой <i>C</i>.',
+      'Треугольники совместились: △<i>ABC</i> = △<i>A</i>₁<i>B</i>₁<i>C</i>₁. Теорема доказана.']};
+}
+G.proof(S.$('p1'),proofCfg(1));
+G.proof(S.$('p2'),proofCfg(2));
+
+/* рисунки */
+(function(){ const A=P(30,150),C=P(250,150),B=P(170,40),D=P(110,260-110),O=P(140,150);
+  const A2=P(40,40),B2=P(240,40),C2=P(240,150),D2=P(40,150);
+  // вертикальные: AC и BD пересекаются в O
+  const a=P(40,40), c=P(240,150), b=P(220,40), d=P(60,150), o=G.mid(a,c);
+  S.$('ofig').innerHTML=G.svg([280,190],seg(a,c,'')+seg(b,d,'')+seg(a,b,'')+seg(c,d,'')+'<g class="k0">'+ticks(a,o,1,'')+ticks(o,c,1,'')+'</g><g class="k3">'+ticks(b,o,2,'')+ticks(o,d,2,'')+'</g>'+lbl(P(a.x-10,a.y-8),'A')+lbl(P(b.x+10,b.y-8),'B')+lbl(P(c.x+10,c.y+8),'C')+lbl(P(d.x-10,d.y+8),'D')+lbl(P(o.x,o.y+20),'O'));
+})();
+(function(){ const A=P(20,100),C=P(260,100),B=P(150,20),D=P(150,180);
+  S.$('f2').innerHTML=G.svg([280,200],path([A,B,C,D],'',true)+seg(A,C,'')+'<g class="k0">'+arc(A,B,C,26,1,'')+arc(A,C,D,30,1,'')+G.angText(A,B,C,42,'1')+G.angText(A,C,D,44,'2')+'</g><g class="k3">'+arc(C,A,B,26,2,'')+arc(C,D,A,30,2,'')+G.angText(C,A,B,44,'3')+G.angText(C,D,A,46,'4')+'</g>'+lbl(P(10,100),'A')+lbl(P(270,100),'C')+lbl(P(150,8),'B')+lbl(P(150,194),'D'));
+})();
+
+S.quiz(S.$('quiz'),[
+  {q:'В △<i>ABC</i> и △<i>KMN</i>: <i>AB</i> = <i>KM</i>, <i>AC</i> = <i>KN</i>, ∠<i>A</i> = ∠<i>K</i>. Треугольники равны по', opts:['первому признаку','второму признаку','не равны','нельзя сказать'], ok:0},
+  {q:'<i>AB</i> = <i>A</i>₁<i>B</i>₁, ∠<i>A</i> = ∠<i>A</i>₁, ∠<i>B</i> = ∠<i>B</i>₁. Треугольники равны по', opts:['первому признаку','второму признаку','не равны','нельзя сказать'], ok:1},
+  {q:'<i>AB</i> = <i>A</i>₁<i>B</i>₁, <i>BC</i> = <i>B</i>₁<i>C</i>₁, ∠<i>A</i> = ∠<i>A</i>₁. Можно ли применить первый признак?', opts:['да','нет'], ok:1, why:'Угол <i>A</i> не лежит между сторонами <i>AB</i> и <i>BC</i> — нужен угол <i>B</i>.'},
+  {q:'Отрезки пересекаются и делятся точкой пересечения пополам. Какой факт ещё нужен для равенства треугольников?', opts:['вертикальные углы равны','смежные углы — 180°','ничего — уже по второму признаку','нужен третий признак'], ok:0},
+  {q:'Для второго признака нужны', opts:['две стороны и угол между ними','сторона и два прилежащих к ней угла','три стороны','три угла'], ok:1}
+]);
+})();
+</script>
+<script src="assets/nav.js?v=4"></script>
+</body>
+</html>

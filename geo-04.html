@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>§ 4. Окружность и круг</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Unbounded:wght@500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=4">
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <a class="brand" href="index.html"><span class="logo">x</span><span class="txt">Математика · 7 класс<small>I четверть</small></span></a>
+  <nav class="tnav" aria-label="Разделы сайта"><a href="index.html">Главная</a><a class="alg" href="index.html#algebra">Алгебра</a><a class="geo" href="index.html#geometry">Геометрия</a></nav>
+</div></header>
+
+<main class="wrap">
+<div class="page-head">
+  <div class="crumbs"><a href="index.html">Главная</a> › <a href="index.html#geometry">Геометрия</a> › § 4</div>
+  <div class="eyebrow">Геометрия · 7 класс · § 4 · урок 5</div>
+  <h1>Окружность и круг</h1>
+  <p class="lede">Окружность — линия, все точки которой одинаково удалены от центра. Разберём её элементы: радиус, хорду, диаметр, дугу — и части круга: сектор и сегмент.</p>
+  <nav class="toc" aria-label="Разделы темы"><a href="#opredelenie">Определения</a><a href="#opyt">Опыт</a><a href="#krug">Круг</a><a href="#test">Тест</a><a href="#zadachi">Задачи</a></nav>
+</div>
+
+<section id="opredelenie">
+  <h2>Окружность и её элементы</h2>
+  <div class="rule"><span class="tag">ОПРЕДЕЛЕНИЯ</span>
+    <p><b>Окружностью</b> называется фигура, состоящая из всех точек плоскости, находящихся на данном расстоянии от данной точки — <b>центра</b>.</p>
+    <p><b>Радиус</b> — отрезок, соединяющий центр с точкой окружности. <b>Хорда</b> — отрезок, соединяющий две точки окружности. <b>Диаметр</b> — хорда, проходящая через центр.</p>
+    <p><b>Дуга</b> — часть окружности, ограниченная двумя её точками. Дуга, концы которой — концы диаметра, называется <b>полуокружностью</b>.</p>
+  </div>
+  <div class="aside">
+    <div class="fact"><h3>Диаметр = два радиуса</h3><p><span class="m">d = 2r</span>. Диаметр — самая длинная хорда окружности.</p></div>
+    <div class="fact"><h3>Центральный угол</h3><p>Угол с вершиной в центре окружности называется <b>центральным</b>. Например, ∠<i>POQ</i> на чертеже ниже.</p></div>
+  </div>
+</section>
+
+<section id="opyt">
+  <h2>Опыт: хорда и диаметр</h2>
+  <p>Двигай точки <i>P</i> и <i>Q</i> по окружности. Когда хорда проходит через центр, она становится диаметром — и это самая длинная хорда. Включай подсветку дуги, сектора и сегмента.</p>
+  <div id="exp"></div>
+  <div class="tabs" id="tShow" role="group" aria-label="Что подсветить"><button type="button" class="tab txt" data-s="arc" aria-pressed="true">Дуга</button><button type="button" class="tab txt" data-s="sector" aria-pressed="false">Сектор</button><button type="button" class="tab txt" data-s="segment" aria-pressed="false">Сегмент</button><button type="button" class="tab txt" data-s="none" aria-pressed="false">Ничего</button></div>
+</section>
+
+<section id="krug">
+  <h2>Круг и его части</h2>
+  <div class="rule"><span class="tag">ОПРЕДЕЛЕНИЯ</span>
+    <p><b>Кругом</b> называется часть плоскости, ограниченная окружностью (вместе с самой окружностью).</p>
+    <p><b>Сектор</b> — часть круга, ограниченная дугой и двумя радиусами. <b>Сегмент</b> — часть круга, ограниченная дугой и хордой, соединяющей концы дуги. <b>Полукруг</b> — часть круга, ограниченная полуокружностью и диаметром.</p>
+  </div>
+  <div class="grid3" id="parts"></div>
+  <div class="fact"><h3>Концентрические окружности</h3><p>Окружности разного радиуса с общим центром называются <b>концентрическими</b>. Часть плоскости между ними — <b>кольцо</b>.</p></div>
+</section>
+
+<section id="test">
+  <h2>Тест</h2>
+  <div id="quiz"></div>
+</section>
+
+<section id="zadachi">
+  <h2>Задачи с решениями</h2>
+  <div class="tasks">
+    <div class="hard"><div class="q"><b>1</b><span>Может ли хорда окружности радиуса 4 см иметь длину 10 см?</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Самая длинная хорда — диаметр: <span class="m">d = 2r = 2 · 4 = 8</span> см.</div>
+        <div><span class="st">Шаг 2.</span>10 см больше 8 см.</div>
+        <div class="ans">Ответ: не может.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>2</b><span>Радиусы двух концентрических окружностей 5 см и 8 см. Найдите ширину кольца между ними.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Проведём луч из центра. Он пересечёт окружности на расстояниях 5 см и 8 см от центра.</div>
+        <div><span class="st">Шаг 2.</span>Ширина кольца: <span class="m">8 − 5 = 3</span> см.</div>
+        <div class="ans">Ответ: 3 см.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>3</b><span><i>AB</i> — диаметр окружности с центром <i>O</i>, <span class="m">AB = 14</span> см. Точка <i>C</i> лежит на окружности. Найдите <i>OC</i>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span><i>OC</i> — радиус, так как соединяет центр с точкой окружности.</div>
+        <div><span class="st">Шаг 2.</span><span class="m">r = d : 2 = 14 : 2 = 7</span> см.</div>
+        <div class="ans">Ответ: 7 см.</div>
+      </div></details></div>
+  </div>
+</section>
+
+<nav class="pager" aria-label="Соседние темы"><a href="geo-03.html"><small>← Предыдущая тема</small>§ 3. Прямая, луч, отрезок</a><a class="next" href="geo-05.html"><small>Следующая тема →</small>§ 5. Угол. Виды углов</a></nav>
+<footer class="foot">Геометрия, 7 класс, § 4. Задачи составлены по образцу заданий учебника.</footer>
+</main>
+
+<script src="assets/core.js?v=4"></script>
+<script src="assets/geo.js?v=4"></script>
+<script>
+(function(){
+const {P,seg,dot,lbl,dist,add,sub,mul,unit,angAt} = G;
+const O=P(200,125), R=95;
+const onC=t=>P(O.x+R*Math.cos(t),O.y+R*Math.sin(t));
+const ang=p=>Math.atan2(p.y-O.y,p.x-O.x);
+function arcP(A,B,big){ let d=ang(B)-ang(A); while(d>Math.PI) d-=2*Math.PI; while(d<=-Math.PI) d+=2*Math.PI; const sw=d>0?1:0;
+  return 'M'+A.x.toFixed(1)+' '+A.y.toFixed(1)+'A'+R+' '+R+' 0 0 '+sw+' '+B.x.toFixed(1)+' '+B.y.toFixed(1); }
+let show='arc';
+const w=G.drag(S.$('exp'),{vb:[400,250], pts:{P:onC(-2.2),Q:onC(0.15)}, label:'Окружность с центром O, хорда PQ',
+  constrain:(n,p,pts)=>{ let t=ang(p); const other=pts[n==='P'?'Q':'P'], to=ang(other)+Math.PI; let d=t-to; while(d>Math.PI) d-=2*Math.PI; while(d<-Math.PI) d+=2*Math.PI; if(Math.abs(d)<0.07) t=to; return onC(t); },
+  draw:p=>{ const Pp=p.P, Q=p.Q, diam=Math.abs(angAt(O,Pp,Q)-180)<0.3; let o='';
+    if(show==='sector') o+='<g class="k2"><path class="fl strong" d="M'+O.x+' '+O.y+'L'+arcP(Pp,Q).slice(1)+'Z"/></g>';
+    if(show==='segment') o+='<g class="k3"><path class="fl strong" d="'+arcP(Pp,Q)+'Z"/></g>';
+    o+='<circle class="ln" cx="'+O.x+'" cy="'+O.y+'" r="'+R+'"/>';
+    if(show==='arc') o+='<g class="k2"><path class="ln c" style="stroke-width:5;opacity:.75" d="'+arcP(Pp,Q)+'"/></g>';
+    o+='<g class="k0">'+seg(O,Pp,'c')+'</g>';
+    if(!diam) o+='<g class="k0">'+seg(O,Q,'c dash')+'</g>';
+    o+='<g class="'+(diam?'kr':'k1')+'">'+seg(Pp,Q,'c thick')+'</g>';
+    o+=dot(O)+lbl(P(O.x-12,O.y-12),'O')+G.away(Pp,O,'P',18)+G.away(Q,O,'Q',18);
+    return o; },
+  info:p=>{ const Pp=p.P,Q=p.Q, diam=Math.abs(angAt(O,Pp,Q)-180)<0.3;
+    return '<div class="row"><span>радиус <i>OP</i> = '+G.n(G.cm(R),'2.2em')+' см</span><span>хорда <i>PQ</i> = '+G.n(G.cm(dist(Pp,Q)),'2.2em')+' см</span><span>∠<i>POQ</i> = '+G.n(G.deg(angAt(O,Pp,Q)),'2.4em')+'</span></div><div>'+G.swap(['<span class="chip">PQ — хорда. Она короче диаметра ('+G.cm(2*R)+' см)</span>','<span class="chip" style="--kc:var(--red)">PQ проходит через центр — это диаметр: PQ = 2 · OP</span>'],diam?1:0)+'</div>'; },
+  hint:'Когда Q почти напротив P, она «прилипает» — получается диаметр.'});
+S.$('tShow').querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{ S.$('tShow').querySelectorAll('.tab').forEach(x=>x.setAttribute('aria-pressed','false')); b.setAttribute('aria-pressed','true'); show=b.dataset.s; w.redraw(); }));
+
+/* части круга */
+const o=P(80,65), r=48, a=P(o.x+r*Math.cos(-2.3),o.y+r*Math.sin(-2.3)), b=P(o.x+r*Math.cos(-0.4),o.y+r*Math.sin(-0.4));
+const arc2=(A,B,sw)=>'A'+r+' '+r+' 0 0 '+sw+' '+B.x.toFixed(1)+' '+B.y.toFixed(1);
+const C='<circle class="ln thin" cx="'+o.x+'" cy="'+o.y+'" r="'+r+'"/>';
+const mk=(t,inner)=>'<div class="mini">'+G.svg([160,125],inner,t)+'<h3>'+t+'</h3></div>';
+S.$('parts').innerHTML=
+  mk('Сектор','<g class="k2"><path class="fl strong" d="M'+o.x+' '+o.y+'L'+a.x.toFixed(1)+' '+a.y.toFixed(1)+arc2(a,b,1)+'Z"/></g>'+C+seg(o,a,'')+seg(o,b,'')+dot(o))+
+  mk('Сегмент','<g class="k3"><path class="fl strong" d="M'+a.x.toFixed(1)+' '+a.y.toFixed(1)+arc2(a,b,1)+'Z"/></g>'+C+seg(a,b,'')+dot(o))+
+  mk('Полукруг','<g class="k0"><path class="fl strong" d="M'+(o.x-r)+' '+o.y+'A'+r+' '+r+' 0 0 1 '+(o.x+r)+' '+o.y+'Z"/></g>'+C+seg(P(o.x-r,o.y),P(o.x+r,o.y),'')+dot(o));
+
+S.quiz(S.$('quiz'),[
+  {q:'Радиус окружности 6 см. Диаметр равен', opts:['3 см','6 см','12 см','36 см'], ok:2, why:'<span class="m">d = 2r</span>.'},
+  {q:'Хорда, проходящая через центр, называется', opts:['радиусом','диаметром','дугой','сектором'], ok:1},
+  {q:'Часть круга, ограниченная дугой и двумя радиусами, — это', opts:['сегмент','сектор','полукруг','кольцо'], ok:1},
+  {q:'Какая хорда самая длинная?', opts:['любая','та, что ближе к центру','диаметр','все хорды равны'], ok:2},
+  {q:'Сколько радиусов можно провести в окружности?', opts:['один','два','четыре','бесконечно много'], ok:3, why:'К каждой точке окружности — свой радиус.'}
+]);
+})();
+</script>
+<script src="assets/nav.js?v=4"></script>
+</body>
+</html>

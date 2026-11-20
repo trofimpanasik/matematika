@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>§ 14. Серединный перпендикуляр</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Unbounded:wght@500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=4">
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <a class="brand" href="index.html"><span class="logo">x</span><span class="txt">Математика · 7 класс<small>II четверть</small></span></a>
+  <nav class="tnav" aria-label="Разделы сайта"><a href="index.html">Главная</a><a class="alg" href="index.html#algebra">Алгебра</a><a class="geo" href="index.html#geometry">Геометрия</a></nav>
+</div></header>
+
+<main class="wrap">
+<div class="page-head">
+  <div class="crumbs"><a href="index.html">Главная</a> › <a href="index.html#geometry">Геометрия</a> › § 14</div>
+  <div class="eyebrow">Геометрия · 7 класс · § 14 · уроки 22–23</div>
+  <h1>Серединный перпендикуляр к отрезку</h1>
+  <p class="lede">Прямая, которая проходит через середину отрезка перпендикулярно к нему. Каждая её точка одинаково удалена от концов отрезка — и других таких точек нет.</p>
+  <nav class="toc" aria-label="Разделы темы"><a href="#opredelenie">Определение</a><a href="#opyt">Опыт</a><a href="#teorema">Теорема</a><a href="#gmt">ГМТ</a><a href="#test">Тест</a><a href="#zadachi">Задачи</a></nav>
+</div>
+
+<section id="opredelenie">
+  <h2>Определение</h2>
+  <div class="rule"><span class="tag">ОПРЕДЕЛЕНИЕ</span><p><b>Серединный перпендикуляр к отрезку</b> — это прямая, проходящая через середину отрезка и перпендикулярная к нему.</p></div>
+  <div class="gfig" style="max-width:420px" id="defFig"></div>
+</section>
+
+<section id="opyt">
+  <h2>Опыт: где точки, равноудалённые от A и B</h2>
+  <p>Двигай точку <i>K</i> и следи за длинами <i>KA</i> и <i>KB</i>. Включи «след»: зелёным отмечаются места, где <i>KA</i> = <i>KB</i>, красным — где нет. Какая фигура получается из зелёных точек?</p>
+  <div id="exp"></div>
+  <div class="tabs"><button type="button" class="tab txt" id="btnTrail" aria-pressed="false">Оставлять след</button><button type="button" class="tab txt" id="btnLine" aria-pressed="false">Показать серединный перпендикуляр</button><button type="button" class="tab txt" id="btnClear">Стереть след</button></div>
+</section>
+
+<section id="teorema">
+  <h2>Теорема о серединном перпендикуляре</h2>
+  <div class="thm"><span class="tag red">ТЕОРЕМА</span>
+    <p>1) Каждая точка серединного перпендикуляра к отрезку равноудалена от концов этого отрезка.</p>
+    <p>2) Каждая точка, равноудалённая от концов отрезка, лежит на серединном перпендикуляре к нему.</p>
+  </div>
+  <p>В теореме два утверждения: прямое и обратное. Докажем каждое отдельно.</p>
+  <div id="p1"></div>
+  <div id="p2"></div>
+</section>
+
+<section id="gmt">
+  <h2>Геометрическое место точек</h2>
+  <div class="rule"><span class="tag">ОПРЕДЕЛЕНИЕ</span><p><b>Геометрическим местом точек</b> (ГМТ) плоскости называется множество всех точек плоскости, обладающих общим свойством.</p></div>
+  <div class="fact"><h3>Вывод из теоремы</h3><p>Серединный перпендикуляр к отрезку — это геометрическое место точек плоскости, равноудалённых от концов отрезка. Именно его рисовали зелёные точки в опыте.</p></div>
+</section>
+
+<section id="test">
+  <h2>Тест</h2>
+  <div id="quiz"></div>
+</section>
+
+<section id="zadachi">
+  <h2>Задачи с решениями</h2>
+  <div class="tasks">
+    <div class="hard"><div class="q"><b>1</b><div><span>Серединный перпендикуляр к стороне <i>AC</i> треугольника <i>ABC</i> пересекает сторону <i>BC</i> в точке <i>D</i>. <i>AB</i> = 6 см, <i>BC</i> = 10 см. Найдите периметр треугольника <i>ABD</i>.</span><div class="qfig" id="f1" style="max-width:300px"></div></div></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span><i>D</i> лежит на серединном перпендикуляре к <i>AC</i>, поэтому <i>DA</i> = <i>DC</i>.</div>
+        <div><span class="st">Шаг 2.</span><i>P</i>(<i>ABD</i>) = <i>AB</i> + <i>BD</i> + <i>DA</i> = <i>AB</i> + <i>BD</i> + <i>DC</i>.</div>
+        <div><span class="st">Шаг 3.</span><i>BD</i> + <i>DC</i> = <i>BC</i> = 10 см.</div>
+        <div><span class="st">Шаг 4.</span><i>P</i> = 6 + 10 = 16 (см).</div>
+        <div class="ans">Ответ: 16 см.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>2</b><span>Точка <i>K</i> лежит на серединном перпендикуляре к отрезку <i>AB</i>, ∠<i>KAB</i> = 50°. Найдите ∠<i>KBA</i>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>По теореме <i>KA</i> = <i>KB</i>, значит △<i>AKB</i> равнобедренный с основанием <i>AB</i>.</div>
+        <div><span class="st">Шаг 2.</span>Углы при основании равны: ∠<i>KBA</i> = ∠<i>KAB</i>.</div>
+        <div class="ans">Ответ: 50°.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>3</b><span>Точки <i>C</i> и <i>D</i> равноудалены от концов отрезка <i>AB</i>. Докажите, что прямая <i>CD</i> — серединный перпендикуляр к <i>AB</i>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span><i>CA</i> = <i>CB</i>, по теореме (часть 2) точка <i>C</i> лежит на серединном перпендикуляре <i>m</i> к <i>AB</i>.</div>
+        <div><span class="st">Шаг 2.</span><i>DA</i> = <i>DB</i>, значит и <i>D</i> лежит на <i>m</i>.</div>
+        <div><span class="st">Шаг 3.</span>Через две точки проходит только одна прямая, поэтому прямая <i>CD</i> совпадает с <i>m</i>.</div>
+        <div class="ans">Что и требовалось доказать.</div>
+      </div></details></div>
+  </div>
+</section>
+
+<nav class="pager" aria-label="Соседние темы"><a href="geo-13.html"><small>← Предыдущая тема</small>§ 13. Третий признак</a><a class="next" href="geo-kr2.html"><small>Следующая тема →</small>Подготовка к КР № 2</a></nav>
+<footer class="foot">Геометрия, 7 класс, § 14. Задачи составлены по образцу заданий учебника.</footer>
+</main>
+
+<script src="assets/core.js?v=4"></script>
+<script src="assets/geo.js?v=4"></script>
+<script>
+(function(){
+const {P,seg,line,path,poly,lbl,away,ticks,arc,right,dist,mid,centroid,tf,tf0,dot} = G;
+
+/* определение */
+(function(){ const A=P(80,120),B=P(320,120),M=mid(A,B),T=P(M.x,20),U=P(M.x,170);
+  S.$('defFig').innerHTML=G.svg([400,180],'<g class="kr">'+seg(T,U,'c')+'</g>'+seg(A,B,'')+dot(A)+dot(B)+'<g class="k0">'+ticks(A,M,1,'')+ticks(M,B,1,'')+'</g>'+right(M,B,T,10,'')+lbl(P(A.x-14,A.y),'A')+lbl(P(B.x+14,B.y),'B')+lbl(P(M.x+12,M.y+16),'M')+'<g class="kr">'+lbl(P(M.x+12,30),'m',0,0,'c')+'</g>');
+})();
+
+/* опыт */
+let trail=false, showM=false, dots=[];
+const A=P(110,190), B=P(290,190), M=mid(A,B);
+const w=G.drag(S.$('exp'),{vb:[400,250], pts:{K:P(160,70)}, label:'Точка K и отрезок AB',
+  constrain:(n,p)=>{ let x=p.x, y=Math.min(p.y,235); if(Math.abs(x-M.x)<6) x=M.x; return P(x,y); },
+  draw:p=>{ const K=p.K, eq=Math.abs(K.x-M.x)<0.5;
+    if(trail){ dots.push({x:K.x,y:K.y,e:eq}); if(dots.length>600) dots.shift(); }
+    let o=dots.map(d=>'<circle cx="'+d.x.toFixed(1)+'" cy="'+d.y.toFixed(1)+'" r="3" style="fill:var('+(d.e?'--ok':'--bad')+');opacity:.55"/>').join('');
+    if(showM||eq) o+='<g class="kr">'+seg(P(M.x,8),P(M.x,245),'c dash')+'</g>'+right(M,B,P(M.x,0),9,'');
+    o+=seg(A,B,'thick')+dot(A)+dot(B)+'<g class="k0">'+ticks(A,M,1,'')+ticks(M,B,1,'')+'</g>';
+    o+='<g class="'+(eq?'k1':'k3')+'">'+seg(K,A,'c')+seg(K,B,'c')+G.ms(P((K.x+A.x)/2-14,(K.y+A.y)/2),G.cm(dist(K,A)))+G.ms(P((K.x+B.x)/2+14,(K.y+B.y)/2),G.cm(dist(K,B)))+'</g>';
+    o+=lbl(P(A.x-14,A.y+4),'A')+lbl(P(B.x+14,B.y+4),'B')+lbl(P(K.x+14,K.y-10),'K');
+    return o; },
+  info:p=>{ const K=p.K, eq=Math.abs(K.x-M.x)<0.5; return '<div class="row"><span><i>KA</i> = '+G.n(G.cm(dist(K,A)))+' см</span><span><i>KB</i> = '+G.n(G.cm(dist(K,B)))+' см</span></div><div>'+G.swap(['<span class="chip">KA ≠ KB</span>','<span class="chip okc">KA = KB — точка K лежит на серединном перпендикуляре</span>'],eq?1:0)+'</div>'; },
+  hint:'Около середины отрезка точка «прилипает» к серединному перпендикуляру.'});
+S.$('btnTrail').addEventListener('click',e=>{ trail=!trail; e.currentTarget.setAttribute('aria-pressed',trail); });
+S.$('btnLine').addEventListener('click',e=>{ showM=!showM; e.currentTarget.setAttribute('aria-pressed',showM); w.redraw(); });
+S.$('btnClear').addEventListener('click',()=>{ dots=[]; const t=trail; trail=false; w.redraw(); trail=t; });
+
+/* доказательство 1 */
+(function(){ const A=P(70,200),B=P(290,200),M=mid(A,B),K=P(M.x,60),T=P(M.x,15),U=P(M.x,240);
+  G.proof(S.$('p1'),{vb:[360,250],title:'1) Точка на серединном перпендикуляре равноудалена от концов',given:'<b>ДАНО</b> <i>m</i> — серединный перпендикуляр к <i>AB</i>, <i>K</i> ∈ <i>m</i>. <b>ДОКАЗАТЬ</b> <i>KA</i> = <i>KB</i>.',
+    items:[
+      {s:0,h:'<g class="kr">'+seg(T,U,'c dash')+lbl(P(M.x+12,24),'m',0,0,'c')+'</g>'+seg(A,B,'')+dot(A)+dot(B)+dot(K)+lbl(P(A.x-14,A.y),'A')+lbl(P(B.x+14,B.y),'B')+lbl(P(M.x+12,M.y+16),'M')+lbl(P(K.x+14,K.y-8),'K')},
+      {s:1,h:seg(K,A,'')+seg(K,B,'')},
+      {s:1,h:'<g class="k1">'+poly([K,M,B],'')+'</g>'},
+      {s:1,mv:'f',h:'<g class="k0">'+poly([A,M,K],'strong')+'</g>'},
+      {s:2,h:seg(K,M,'thick')+right(M,B,K,11,'')},
+      {s:3,h:'<g class="k2">'+ticks(A,M,1,'')+ticks(M,B,1,'')+'</g>'},
+      {s:4,h:'<g class="kr">'+ticks(K,A,2,'')+ticks(K,B,2,'')+'</g>'}],
+    moves:{f:{0:tf0(M),4:tf(M,K,M,K,true)}},
+    steps:['Рассмотрим чертёж.','Проведём отрезки <i>KA</i> и <i>KB</i>. Получился треугольник <i>AKB</i>.','<i>KM</i> ⊥ <i>AB</i>, значит <i>KM</i> — высота треугольника <i>AKB</i>.','<i>AM</i> = <i>MB</i>, значит <i>KM</i> — ещё и медиана.','Высота является медианой — по признаку (§ 12) △<i>AKB</i> равнобедренный: <i>KA</i> = <i>KB</i>. Утверждение доказано.']});
+})();
+/* доказательство 2 */
+(function(){ const A=P(70,200),B=P(290,200),M=mid(A,B),K=P(M.x,55),T=P(M.x,10),U=P(M.x,240);
+  G.proof(S.$('p2'),{vb:[360,250],title:'2) Точка, равноудалённая от концов, лежит на серединном перпендикуляре',given:'<b>ДАНО</b> <i>KA</i> = <i>KB</i>. <b>ДОКАЗАТЬ</b> <i>K</i> лежит на серединном перпендикуляре к <i>AB</i>.',
+    items:[
+      {s:0,h:seg(A,B,'')+seg(K,A,'')+seg(K,B,'')+dot(A)+dot(B)+dot(K)+'<g class="kr">'+ticks(K,A,2,'')+ticks(K,B,2,'')+'</g>'+lbl(P(A.x-14,A.y),'A')+lbl(P(B.x+14,B.y),'B')+lbl(P(K.x+14,K.y-8),'K')},
+      {s:1,h:seg(K,M,'thick')+right(M,B,K,11,'')+lbl(P(M.x+12,M.y+16),'M')},
+      {s:2,h:'<g class="k2">'+ticks(A,M,1,'')+ticks(M,B,1,'')+'</g>'},
+      {s:3,h:'<g class="kr">'+seg(T,U,'c')+lbl(P(M.x+12,20),'m',0,0,'c')+'</g>'}],
+    steps:['Треугольник <i>AKB</i> равнобедренный, так как <i>KA</i> = <i>KB</i>.','Проведём в нём высоту <i>KM</i> к основанию <i>AB</i>.','По свойству равнобедренного треугольника высота к основанию является и медианой: <i>AM</i> = <i>MB</i>.','Прямая <i>KM</i> перпендикулярна <i>AB</i> и проходит через его середину — это серединный перпендикуляр <i>m</i>. Точка <i>K</i> лежит на нём. Утверждение доказано.']});
+})();
+
+S.quiz(S.$('quiz'),[
+  {q:'Точка <i>K</i> лежит на серединном перпендикуляре к отрезку <i>AB</i>, <i>KA</i> = 6 см. Найдите <i>KB</i>.', opts:['3 см','6 см','12 см','нельзя найти'], ok:1, why:'Каждая точка серединного перпендикуляра равноудалена от концов отрезка.'},
+  {q:'<i>KA</i> = 5 см, <i>KB</i> = 7 см. Лежит ли <i>K</i> на серединном перпендикуляре к <i>AB</i>?', opts:['да','нет','только если K — середина','нельзя сказать'], ok:1, why:'Точки серединного перпендикуляра равноудалены от <i>A</i> и <i>B</i>, а здесь расстояния разные.'},
+  {q:'Сколько существует точек, равноудалённых от концов отрезка?', opts:['одна — середина','две','бесконечно много','ни одной'], ok:2, why:'Это все точки серединного перпендикуляра.'},
+  {q:'Серединный перпендикуляр к стороне <i>AC</i> треугольника <i>ABC</i> пересекает <i>BC</i> в точке <i>D</i>. Какое равенство обязательно верно?', opts:['<i>AD</i> = <i>DC</i>','<i>AD</i> = <i>AB</i>','<i>BD</i> = <i>DC</i>','<i>AB</i> = <i>BC</i>'], ok:0, why:'<i>D</i> лежит на серединном перпендикуляре к <i>AC</i>.'}
+]);
+
+(function(){ const A=P(20,140),C=P(260,140),B=P(90,30),Mx=140,D=P(140,30+(140-90)/170*110),Mm=P(Mx,140),O=centroid(A,B,C);
+  S.$('f1').innerHTML=G.svg([290,165],path([A,B,C],'',true)+'<g class="kr">'+seg(P(Mx,15),P(Mx,158),'c dash')+'</g>'+seg(A,D,'')+right(Mm,C,D,9,'')+'<g class="k0">'+ticks(A,Mm,1,'')+ticks(Mm,C,1,'')+'</g>'+away(A,O,'A')+away(B,O,'B')+away(C,O,'C')+lbl(P(D.x+12,D.y-8),'D'));
+})();
+})();
+</script>
+<script src="assets/nav.js?v=4"></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>§ 7. Действия с одночленами</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Unbounded:wght@500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=4">
+<style>
+.sqw{max-width:320px}
+.sqw svg{width:100%;height:auto;display:block}
+.sqw rect.c{fill:color-mix(in srgb,var(--c0) 16%,transparent);stroke:var(--c0);stroke-width:1.5}
+.sqw text{font-family:var(--f-math);font-style:italic;font-size:13px;fill:var(--ink-2);text-anchor:middle;dominant-baseline:middle}
+.big{font-family:var(--f-math);font-size:clamp(1.15rem,4.4vw,1.5rem)}
+</style>
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <a class="brand" href="index.html"><span class="logo">x</span><span class="txt">Математика · 7 класс<small>I четверть</small></span></a>
+  <nav class="tnav" aria-label="Разделы сайта"><a href="index.html">Главная</a><a class="alg" href="index.html#algebra">Алгебра</a><a class="geo" href="index.html#geometry">Геометрия</a></nav>
+</div></header>
+
+<main class="wrap">
+<div class="page-head">
+  <div class="crumbs"><a href="index.html">Главная</a> › <a href="index.html#algebra">Алгебра</a> › § 7</div>
+  <div class="eyebrow">Алгебра · 7 класс · § 7 · уроки 24–26</div>
+  <h1>Действия с одночленами</h1>
+  <p class="lede">Одночлены, как и числа, можно умножать, делить, возводить в степень. А складывать и вычитать можно только подобные одночлены.</p>
+  <nav class="toc" aria-label="Разделы темы"><a href="#umnozhenie">Умножение</a><a href="#delenie">Деление</a><a href="#stepen">Степень</a><a href="#podobnye">Подобные</a><a href="#oshibki">Ошибки</a><a href="#test">Тест</a><a href="#trenazher">Тренажёр</a><a href="#zadachi">Задачи</a></nav>
+</div>
+
+<section id="umnozhenie">
+  <h2>Умножение одночленов</h2>
+  <div class="rule"><span class="tag">ПРАВИЛО</span>
+    <p>Чтобы умножить одночлены, нужно найти произведение:</p>
+    <ol>
+      <li><b>1)</b><span>коэффициентов одночленов;</span></li>
+      <li><b>2)</b><span>степеней с одинаковыми основаниями (показатели складываются);</span></li>
+      <li><b>3)</b><span>остальных переменных и их степеней.</span></li>
+    </ol>
+  </div>
+  <div class="tabs" id="tMul" role="group" aria-label="Примеры"></div>
+  <div id="bMul"></div>
+</section>
+
+<section id="delenie">
+  <h2>Деление одночленов</h2>
+  <div class="rule"><span class="tag">ПРАВИЛО</span>
+    <p>Чтобы разделить одночлен на одночлен, нужно:</p>
+    <ol>
+      <li><b>1)</b><span>разделить коэффициенты и записать частное коэффициентом результата;</span></li>
+      <li><b>2)</b><span>разделить степени с одинаковыми основаниями (показатели вычитаются) и записать их множителями результата.</span></li>
+    </ol>
+  </div>
+  <div class="tabs" id="tDiv" role="group" aria-label="Примеры"></div>
+  <div id="bDiv"></div>
+  <div class="warn"><h3>Частное не всегда одночлен</h3><p><span class="m">(2a^3b^4) : (a^2b) = 2ab^3</span> — одночлен. А <span class="m">(2a^3b^4) : (a^8b^5) = 2a^−5b^−1</span> — не одночлен: степени отрицательные.</p></div>
+</section>
+
+<section id="stepen">
+  <h2>Возведение одночлена в степень</h2>
+  <div class="rule"><span class="tag">ПРАВИЛО</span>
+    <p>Чтобы возвести одночлен в степень, нужно возвести в эту степень <b>каждый</b> множитель и результаты перемножить.</p>
+    <div class="scheme"><span class="m">(0,1a^6b^3)^2 = 0,01a^12b^6</span>; &nbsp; <span class="m">(−x^4y^2z)^3 = −x^12y^6z^3</span></div>
+  </div>
+  <p>Почему коэффициент тоже возводится в степень? Квадрат со стороной <span class="m">ka</span> состоит из маленьких квадратов со стороной <i>a</i>. Двигай ползунок.</p>
+  <div class="panel">
+    <div class="sliders s2"><label for="sk">коэффициент <i>k</i> <b id="vk">3</b><input type="range" id="sk" min="1" max="5" value="3"></label></div>
+    <div class="sqw" id="sq"></div>
+    <div class="big" id="sqOut" aria-live="polite"></div>
+  </div>
+</section>
+
+<section id="podobnye">
+  <h2>Подобные одночлены и их сложение</h2>
+  <div class="rule"><span class="tag">ОПРЕДЕЛЕНИЕ</span>
+    <p><b>Подобными</b> называются одночлены, которые в стандартном виде отличаются только коэффициентами (или совсем одинаковы).</p>
+  </div>
+  <div class="rule"><span class="tag">ПРАВИЛО</span>
+    <p>Складывать и вычитать можно только подобные одночлены: коэффициенты складываются, а переменные и их степени не меняются.</p>
+    <div class="scheme"><span class="m">−5x^4y + 8x^4y = (−5 + 8)x^4y = 3x^4y</span></div>
+  </div>
+  <div class="aside">
+    <div class="fact"><h3>Подобные</h3><p><span class="m">6x^5y^4</span> и <span class="m">−16x^5y^4</span><br><span class="m">2ab</span> и <span class="m">7ba</span> (порядок букв не важен)</p></div>
+    <div class="fact"><h3>Не подобные</h3><p><span class="m">0,4xy^2</span> и <span class="m">−1,6x^2y</span> — степени у букв разные<br><span class="m">3a</span> и <span class="m">3b</span> — разные буквы</p></div>
+  </div>
+</section>
+
+<section id="oshibki">
+  <h2>Частые ошибки</h2>
+  <div class="mist">
+    <div class="mrow"><div class="what">Не возвели коэффициент в степень.</div><div class="bad"><span class="mark">✗</span><span class="m">(3a^2)^2 = 3a^4</span></div><div class="good"><span class="mark">✓</span><span class="m">(3a^2)^2 = 9a^4</span></div></div>
+    <div class="mrow"><div class="what">Сложили показатели при сложении подобных.</div><div class="bad"><span class="mark">✗</span><span class="m">2x^3 + 5x^3 = 7x^6</span></div><div class="good"><span class="mark">✓</span><span class="m">2x^3 + 5x^3 = 7x^3</span></div></div>
+    <div class="mrow"><div class="what">Сложили не подобные одночлены.</div><div class="bad"><span class="mark">✗</span><span class="m">4a^2 + 3a = 7a^3</span></div><div class="good"><span class="mark">✓</span>так и остаётся <span class="m">4a^2 + 3a</span></div></div>
+    <div class="mrow"><div class="what">При умножении перемножили показатели.</div><div class="bad"><span class="mark">✗</span><span class="m">2x^2 · 3x^3 = 6x^6</span></div><div class="good"><span class="mark">✓</span><span class="m">2x^2 · 3x^3 = 6x^5</span></div></div>
+    <div class="mrow"><div class="what">Потеряли знак при возведении в нечётную степень.</div><div class="bad"><span class="mark">✗</span><span class="m">(−2b)^3 = 8b^3</span></div><div class="good"><span class="mark">✓</span><span class="m">(−2b)^3 = −8b^3</span></div></div>
+  </div>
+</section>
+
+<section id="test">
+  <h2>Тест</h2>
+  <div id="quiz"></div>
+</section>
+
+<section id="trenazher">
+  <h2>Тренажёр</h2>
+  <p>Выбери действие. Ответ — одночлен в стандартном виде.</p>
+  <div id="trainer"></div>
+</section>
+
+<section id="zadachi">
+  <h2>Задачи посложнее</h2>
+  <p>Сначала реши в тетради, потом открой решение и сверься.</p>
+  <div class="tasks">
+    <div class="hard"><div class="q"><b>1</b><span>Упростите: <span class="m">(−2a^2b)^3 · 3ab^2</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Степень: <span class="m">(−2)^3 = −8</span>, <span class="m">(a^2)^3 = a^6</span>, <span class="m">b^3</span>. Получили <span class="m">−8a^6b^3</span>.</div>
+        <div><span class="st">Шаг 2.</span>Умножаем: <span class="m">−8 · 3 = −24</span>.</div>
+        <div><span class="st">Шаг 3.</span><span class="m">a^6 · a = a^7</span>, <span class="m">b^3 · b^2 = b^5</span>.</div>
+        <div class="ans">Ответ: <span class="m">−24a^7b^5</span>.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>2</b><span>Представьте <span class="m">64x^6y^12</span> в виде квадрата одночлена и в виде куба одночлена.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Квадрат: <span class="m">64 = 8^2</span>, <span class="m">x^6 = (x^3)^2</span>, <span class="m">y^12 = (y^6)^2</span>. Значит, <span class="m">64x^6y^12 = (8x^3y^6)^2</span>.</div>
+        <div><span class="st">Шаг 2.</span>Куб: <span class="m">64 = 4^3</span>, <span class="m">x^6 = (x^2)^3</span>, <span class="m">y^12 = (y^4)^3</span>. Значит, <span class="m">64x^6y^12 = (4x^2y^4)^3</span>.</div>
+        <div class="ans">Ответ: <span class="m">(8x^3y^6)^2</span> и <span class="m">(4x^2y^4)^3</span>.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>3</b><span>Упростите: <span class="m">5x^2y − 3x^2y + 7xy^2 − 9x^2y</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Подобные <span class="m">5x^2y</span>, <span class="m">−3x^2y</span>, <span class="m">−9x^2y</span>: <span class="m">(5 − 3 − 9)x^2y = −7x^2y</span>.</div>
+        <div><span class="st">Шаг 2.</span><span class="m">7xy^2</span> не подобен им: степени у букв другие.</div>
+        <div class="ans">Ответ: <span class="m">−7x^2y + 7xy^2</span>.</div>
+      </div></details></div>
+  </div>
+</section>
+
+<nav class="pager" aria-label="Соседние темы"><a href="alg-06.html"><small>← Предыдущая тема</small>§ 6. Одночлен</a><a class="next" href="alg-08.html"><small>Следующая тема →</small>§ 8. Многочлен</a></nav>
+<footer class="foot">Алгебра, 7 класс, § 7. Примеры составлены по образцу заданий учебника.</footer>
+</main>
+
+<script src="assets/core.js?v=4"></script>
+<script src="assets/drill.js?v=4"></script>
+<script>
+(function(){
+const {ri,pick,mono,mh,mp,mmul,mdiv,mkey,whyRows,pw} = S;
+const sg=n=>String(n).replace('-','−');
+
+function mulSteps(A,B,op){
+  const R = op==='div'?mdiv(A,B):mmul(A,B), sym=op==='div'?' : ':' · ';
+  return [
+    {html:'<div class="bl main">'+(op==='div'?'('+mh(A)+')':mh(A))+sym+mp(B)+'</div>', note:'<p>'+(op==='div'?'Делим коэффициенты, а у одинаковых букв вычитаем показатели.':'Перемножаем коэффициенты, а у одинаковых букв складываем показатели.')+'</p>', label:'Пример'},
+    {html:'<div class="bl main">'+(op==='div'?'('+mh(A)+')':mh(A))+sym+mp(B)+'</div>', note:whyRows(A,B,R,op), label:'Разбор'},
+    {html:'<div class="bl main">'+(op==='div'?'('+mh(A)+')':mh(A))+sym+mp(B)+' = <b>'+mh(R)+'</b></div>', note:'<p>Результат — одночлен '+mh(R)+'.</p>', label:'Ответ'}];
+}
+const MUL=[[mono(2,{x:2,y:1}),mono(3,{x:3,y:2})],[mono(-2,{a:2,c:1,y:2}),mono(-5,{a:3,d:1,y:5})]];
+S.tabsBoard(S.$('tMul'),S.$('bMul'),MUL,([A,B])=>mulSteps(A,B,'mul'),([A,B])=>mh(A)+' · '+mp(B));
+const DIV=[[mono(15,{x:4,y:3}),mono(-3,{x:1,y:2})],[mono(100,{a:5,y:7}),mono(4,{a:2,y:6})]];
+S.tabsBoard(S.$('tDiv'),S.$('bDiv'),DIV,([A,B])=>mulSteps(A,B,'div'),([A,B])=>'('+mh(A)+') : '+mp(B));
+
+/* квадрат из квадратиков */
+function sq(){ const k=+S.$('sk').value; S.$('vk').textContent=k;
+  const s=240/k; let h='';
+  for(let i=0;i<k;i++) for(let j=0;j<k;j++) h+='<rect class="c" x="'+(20+i*s+2)+'" y="'+(20+j*s+2)+'" width="'+(s-4)+'" height="'+(s-4)+'" rx="4"/>';
+  for(let i=0;i<k;i++) h+='<text x="'+(20+i*s+s/2)+'" y="10">a</text>';
+  S.$('sq').innerHTML='<svg viewBox="0 0 280 270" role="img" aria-label="Квадрат со стороной '+k+'a из '+(k*k)+' маленьких квадратов">'+h+'</svg>';
+  S.$('sqOut').innerHTML='('+(k===1?'':k)+'<i>a</i>)<sup>2</sup> = '+(k===1?'':k+'<sup>2</sup> · ')+'<i>a</i><sup>2</sup> = '+(k*k===1?'':k*k)+'<i>a</i><sup>2</sup> <span class="note" style="font-family:var(--f-body);font-size:.6em">— '+(k*k)+' '+S.plural(k*k,['квадратик','квадратика','квадратиков'])+'</span>';
+}
+S.$('sk').addEventListener('input',sq); sq();
+
+/* тест */
+S.quiz(S.$('quiz'),[
+  {q:'<span class="m">−3a^2 · 4a^3 = </span>', opts:['<span class="m">−12a^5</span>','<span class="m">−12a^6</span>','<span class="m">12a^5</span>','<span class="m">a^5</span>'], ok:0, why:'−3 · 4 = −12, 2 + 3 = 5.'},
+  {q:'<span class="m">(2x^3)^4 = </span>', opts:['<span class="m">8x^12</span>','<span class="m">16x^7</span>','<span class="m">16x^12</span>','<span class="m">2x^12</span>'], ok:2, why:'<span class="m">2^4 = 16</span>, <span class="m">(x^3)^4 = x^12</span>.'},
+  {q:'<span class="m">(18m^6n^2) : (6m^2n^2) = </span>', opts:['<span class="m">3m^3</span>','<span class="m">3m^4</span>','<span class="m">12m^4</span>','<span class="m">3m^4n</span>'], ok:1, why:'18 : 6 = 3, <span class="m">m^6 : m^2 = m^4</span>, <span class="m">n^2</span> сокращается.'},
+  {q:'Какие одночлены подобны?', opts:['<span class="m">2x^2y</span> и <span class="m">2xy^2</span>','<span class="m">−ab</span> и <span class="m">4ba</span>','<span class="m">3a</span> и <span class="m">3a^2</span>','<span class="m">5x</span> и <span class="m">5y</span>'], ok:1, why:'<span class="m">ab</span> и <span class="m">ba</span> — одна и та же буквенная часть.'},
+  {q:'<span class="m">10b^2c^3 − 7b^2c^3 − 4b^2c^3 = </span>', opts:['<span class="m">−b^2c^3</span>','<span class="m">b^2c^3</span>','<span class="m">−1</span>','<span class="m">−b^6c^9</span>'], ok:0, why:'10 − 7 − 4 = −1.'}
+]);
+
+/* тренажёр */
+const L=()=>pick([['a','b'],['x','y'],['m','n'],['x']]);
+function rm(Ls,cmax,emax,minE){ const v={}; Ls.forEach(l=>{ v[l]=ri(minE||0,emax); }); if(!Object.values(v).some(e=>e)) v[Ls[0]]=1; return mono(ri(1,cmax)*(Math.random()<0.4?-1:1),v); }
+S.trainer(S.$('trainer'),{kind:'poly', modes:[['mul','умножение'],['div','деление'],['pow','степень'],['add','подобные']], gen(mode){
+  const Ls=L();
+  if(mode==='mul'){ const A=rm(Ls,7,4), B=rm(Ls,6,3); const R=mmul(A,B);
+    return {q:'<span class="ask">Умножь одночлены:</span>'+mh(A)+' · '+mp(B)+' = ?', answer:[R], steps:mulSteps(A,B,'mul')}; }
+  if(mode==='div'){ const B=rm(Ls,6,3), R=rm(Ls,8,3,0); const A=mmul(B,R);
+    return {q:'<span class="ask">Раздели одночлены:</span>('+mh(A)+') : '+mp(B)+' = ?', answer:[R], steps:mulSteps(A,B,'div')}; }
+  if(mode==='pow'){ const A=rm(Ls,3,3,1), n=ri(2,3); let R=mono(Math.pow(A.c,n),{}); Object.keys(A.v).forEach(l=>{ if(A.v[l]) R.v[l]=A.v[l]*n; });
+    const parts=[(A.c<0?'('+sg(A.c)+')':A.c)+'<sup>'+n+'</sup>'].concat(Object.keys(A.v).filter(l=>A.v[l]).sort().map(l=>'('+pw(l,A.v[l])+')<sup>'+n+'</sup>'));
+    return {q:'<span class="ask">Возведи в степень:</span>('+mh(A)+')<sup>'+n+'</sup> = ?', answer:[R], steps:S.lines([
+      {h:'('+mh(A)+')<sup>'+n+'</sup>', n:'Возводим в степень каждый множитель.'},
+      {h:'= '+parts.join(' · '), n:'Число в степень: '+(A.c<0?'('+sg(A.c)+')':A.c)+'<sup>'+n+'</sup> = '+sg(R.c)+'. У букв показатели умножаем на '+n+'.'},
+      {h:'= '+mh(R)}])}; }
+  const base=rm(Ls,1,3,1); base.c=1; const k=ri(2,4); const cs=[]; for(let i=0;i<k;i++){ let c=0; while(!c) c=ri(-9,9); cs.push(c); }
+  let s=cs.reduce((a,b)=>a+b,0); if(s===0){ cs[0]+=1; s=1; if(cs[0]===0){ cs[0]=2; s=2; } }
+  s=cs.reduce((a,b)=>a+b,0);
+  const terms=cs.map(c=>mono(c,base.v)), R=mono(s,base.v);
+  const body=mh(mono(1,base.v));
+  return {q:'<span class="ask">Приведи подобные:</span>'+S.polyH(terms)+' = ?', answer:[R], steps:S.lines([
+    {h:S.polyH(terms), n:'Все одночлены подобны: у них одинаковая буквенная часть '+body+'.'},
+    {h:'= ('+cs.map((c,i)=>i?(c<0?' − '+(-c):' + '+c):sg(c)).join('')+')'+body, n:'Складываем коэффициенты, буквенную часть переписываем.'},
+    {h:'= '+mh(R)}])};
+}});
+})();
+</script>
+<script src="assets/nav.js?v=4"></script>
+</body>
+</html>

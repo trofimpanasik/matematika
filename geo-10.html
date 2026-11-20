@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>§ 10. Высота, медиана и биссектриса треугольника</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Unbounded:wght@500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=4">
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <a class="brand" href="index.html"><span class="logo">x</span><span class="txt">Математика · 7 класс<small>I четверть</small></span></a>
+  <nav class="tnav" aria-label="Разделы сайта"><a href="index.html">Главная</a><a class="alg" href="index.html#algebra">Алгебра</a><a class="geo" href="index.html#geometry">Геометрия</a></nav>
+</div></header>
+
+<main class="wrap">
+<div class="page-head">
+  <div class="crumbs"><a href="index.html">Главная</a> › <a href="index.html#geometry">Геометрия</a> › § 10</div>
+  <div class="eyebrow">Геометрия · 7 класс · § 10 · уроки 14–15</div>
+  <h1>Высота, медиана и биссектриса треугольника</h1>
+  <p class="lede">Три важных отрезка, которые проводят из вершины треугольника. Их легко перепутать — разберём, чем они отличаются, и посмотрим на них на подвижном чертеже.</p>
+  <nav class="toc" aria-label="Разделы темы"><a href="#opredeleniya">Определения</a><a href="#opyt">Опыт</a><a href="#vse">Из всех вершин</a><a href="#test">Тест</a><a href="#zadachi">Задачи</a></nav>
+</div>
+
+<section id="opredeleniya">
+  <h2>Определения</h2>
+  <div class="grid3">
+    <div class="rule k0"><span class="tag" style="color:var(--c0)">ВЫСОТА</span><p><b>Высотой</b> треугольника называется перпендикуляр, проведённый из вершины к прямой, содержащей противолежащую сторону.</p></div>
+    <div class="rule k1"><span class="tag" style="color:var(--c1)">МЕДИАНА</span><p><b>Медианой</b> треугольника называется отрезок, соединяющий вершину с серединой противолежащей стороны.</p></div>
+    <div class="rule kr"><span class="tag" style="color:var(--red)">БИССЕКТРИСА</span><p><b>Биссектрисой</b> треугольника называется отрезок биссектрисы угла треугольника от вершины до точки противолежащей стороны.</p></div>
+  </div>
+  <div class="warn"><h3>Как запомнить</h3><p><b>Медиана</b> делит <b>сторону</b> пополам (как мышка, которая бегает по углам и находит середину стороны). <b>Биссектриса</b> делит пополам <b>угол</b>. <b>Высота</b> образует со стороной <b>прямой угол</b>.</p></div>
+</section>
+
+<section id="opyt">
+  <h2>Опыт: двигай вершину <i>B</i></h2>
+  <p>Включай и выключай отрезки кнопками. Посмотри, что происходит с высотой, когда угол <i>A</i> или <i>C</i> становится тупым, — она выходит за пределы треугольника.</p>
+  <div class="tabs" id="tShow" role="group" aria-label="Какие отрезки показывать"><button type="button" class="tab txt" data-k="h" aria-pressed="true">Высота</button><button type="button" class="tab txt" data-k="m" aria-pressed="true">Медиана</button><button type="button" class="tab txt" data-k="b" aria-pressed="true">Биссектриса</button></div>
+  <div id="exp"></div>
+</section>
+
+<section id="vse">
+  <h2>У треугольника три высоты, три медианы, три биссектрисы</h2>
+  <p>Из каждой вершины можно провести по одной высоте, медиане и биссектрисе. Выбери вид отрезков — и двигай вершины. Заметь: три медианы всегда пересекаются в одной точке, три биссектрисы — тоже. Это мы докажем в старших классах.</p>
+  <div class="tabs" id="tAll" role="group" aria-label="Вид отрезков"><button type="button" class="tab txt" data-k="m" aria-pressed="true">Медианы</button><button type="button" class="tab txt" data-k="b" aria-pressed="false">Биссектрисы</button><button type="button" class="tab txt" data-k="h" aria-pressed="false">Высоты</button></div>
+  <div id="exp2"></div>
+</section>
+
+<section id="test">
+  <h2>Тест</h2>
+  <div id="quiz"></div>
+</section>
+
+<section id="zadachi">
+  <h2>Задачи с решениями</h2>
+  <div class="tasks">
+    <div class="hard"><div class="q"><b>1</b><span><i>BM</i> — медиана треугольника <i>ABC</i>, <span class="m">AC = 18</span> см. Найдите <i>AM</i>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Медиана соединяет вершину с серединой противолежащей стороны: <i>M</i> — середина <i>AC</i>.</div>
+        <div><span class="st">Шаг 2.</span><span class="m">AM = 18 : 2 = 9</span> см.</div>
+        <div class="ans">Ответ: 9 см.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>2</b><span><i>AD</i> — биссектриса треугольника <i>ABC</i>, <span class="m">∠BAD = 34°</span>. Найдите ∠<i>BAC</i>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Биссектриса делит угол пополам: <span class="m">∠BAC = 2 · ∠BAD</span>.</div>
+        <div><span class="st">Шаг 2.</span><span class="m">2 · 34° = 68°</span>.</div>
+        <div class="ans">Ответ: 68°.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>3</b><span><i>BM</i> — медиана треугольника <i>ABC</i>. Периметр △<i>ABM</i> на 4 см больше периметра △<i>CBM</i>. Найдите <span class="m">AB − BC</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span><span class="math"><i>P</i><sub><i>ABM</i></sub> = <i>AB</i> + <i>BM</i> + <i>AM</i></span>, <span class="math"><i>P</i><sub><i>CBM</i></sub> = <i>BC</i> + <i>BM</i> + <i>CM</i></span>.</div>
+        <div><span class="st">Шаг 2.</span><i>BM</i> — общая, <span class="m">AM = CM</span> (медиана). Значит, разность периметров равна <span class="m">AB − BC</span>.</div>
+        <div class="ans">Ответ: 4 см.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>4</b><span><i>BH</i> — высота треугольника <i>ABC</i>, <span class="m">∠ABH = 25°</span>. Найдите ∠<i>BAH</i>, если известно, что сумма острых углов прямоугольного треугольника равна 90°.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span><i>BH</i> ⊥ <i>AC</i>, значит △<i>ABH</i> прямоугольный, ∠<i>H</i> = 90°.</div>
+        <div><span class="st">Шаг 2.</span>Острые углы: <span class="m">∠BAH + ∠ABH = 90°</span>.</div>
+        <div><span class="st">Шаг 3.</span><span class="m">∠BAH = 90° − 25° = 65°</span>.</div>
+        <div class="ans">Ответ: 65°.</div>
+      </div></details></div>
+  </div>
+</section>
+
+<nav class="pager" aria-label="Соседние темы"><a href="geo-09.html"><small>← Предыдущая тема</small>§ 9. Первый и второй признаки</a><a class="next" href="geo-11.html"><small>Следующая тема →</small>§ 11. Равнобедренный треугольник</a></nav>
+<footer class="foot">Геометрия, 7 класс, § 10. Задачи составлены по образцу заданий учебника.</footer>
+</main>
+
+<script src="assets/core.js?v=4"></script>
+<script src="assets/geo.js?v=4"></script>
+<script>
+(function(){
+const {P,seg,line,path,poly,dot,lbl,away,ticks,arc,right,dist,mid,foot,angAt,centroid,add,sub,mul,unit,inter} = G;
+/* точка биссектрисы на противолежащей стороне: делит её в отношении прилежащих сторон */
+const bisF=(V,X,Y)=>{ const a=dist(V,X), b=dist(V,Y); return add(X,mul(sub(Y,X),a/(a+b))); };
+
+const show={h:true,m:true,b:true};
+const A=P(70,205), C=P(330,205);
+const w=G.drag(S.$('exp'),{vb:[400,240], pts:{B:P(150,50)}, label:'Треугольник ABC: высота, медиана, биссектриса из вершины B',
+  constrain:(n,p)=>P(p.x,Math.min(p.y,180)),
+  draw:p=>{ const B=p.B, O=centroid(A,B,C), H=foot(B,A,C), M=mid(A,C), L=bisF(B,A,C), out=H.x<A.x||H.x>C.x;
+    let o='<g class="k0">'+poly([A,B,C],'')+'</g>';
+    if(show.h && out) o+=seg(H.x<A.x?H:C,H.x<A.x?A:H,'dash');
+    o+=path([A,B,C],'thick',true);
+    if(show.h) o+='<g class="k0">'+seg(B,H,'c thick')+right(H,H.x<=A.x?C:A,B,10,'')+dot(H,'c')+lbl(P(H.x,H.y+18),'H',0,0,'c')+'</g>';
+    if(show.m) o+='<g class="k1">'+seg(B,M,'c thick')+ticks(A,M,1,'')+ticks(M,C,1,'')+dot(M,'c')+lbl(P(M.x,M.y+18),'M',0,0,'c')+'</g>';
+    if(show.b) o+='<g class="kr">'+seg(B,L,'c thick')+arc(B,A,L,26,1,'')+arc(B,L,C,30,1,'')+dot(L,'c')+lbl(P(L.x,L.y+18),'L',0,0,'c')+'</g>';
+    o+=away(A,O,'A')+away(C,O,'C')+lbl(P(B.x+12,B.y-12),'B');
+    return o; },
+  info:p=>{ const B=p.B, H=foot(B,A,C), out=H.x<A.x-0.5||H.x>C.x+0.5, M=mid(A,C), L=bisF(B,A,C);
+    return '<div class="row">'+(show.h?'<span class="kt k0">высота <i>BH</i> = '+G.n(G.cm(dist(B,H)))+'</span>':'')+(show.m?'<span class="kt k1">медиана <i>BM</i> = '+G.n(G.cm(dist(B,M)))+'</span>':'')+(show.b?'<span class="kt kr">биссектриса <i>BL</i> = '+G.n(G.cm(dist(B,L)))+'</span>':'')+'</div><div>'+G.swap(['<span class="chip">Высота внутри треугольника</span>','<span class="chip" style="--kc:var(--c0)">Угол при основании тупой — высота вне треугольника, её основание на продолжении стороны</span>'],out?1:0)+'</div>'; }});
+S.$('tShow').querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{ const k=b.dataset.k; show[k]=!show[k]; b.setAttribute('aria-pressed',show[k]); w.redraw(); }));
+
+/* все три */
+let kind='m';
+const w2=G.drag(S.$('exp2'),{vb:[400,240], pts:{A:P(60,200),B:P(170,40),C:P(340,190)}, label:'Треугольник с тремя отрезками одного вида',
+  draw:p=>{ const {A,B,C}=p, O=centroid(A,B,C), cls={m:'k1',b:'kr',h:'k0'}[kind];
+    let o='<g class="k0">'+poly([A,B,C],'')+'</g>'+path([A,B,C],'thick',true)+'<g class="'+cls+'">';
+    [[A,B,C],[B,C,A],[C,A,B]].forEach(([V,X,Y])=>{
+      if(kind==='m') o+=seg(V,mid(X,Y),'c');
+      else if(kind==='b') o+=seg(V,bisF(V,X,Y),'c');
+      else { const H=foot(V,X,Y); o+=seg(V,H,'c')+line(X,Y,'dash'); }
+    });
+    if(kind!=='h'){ const I=kind==='m'?O:inter(A,bisF(A,B,C),B,bisF(B,C,A)); if(I) o+=dot(I,'c'); }
+    else { const I=inter(A,foot(A,B,C),B,foot(B,C,A)); if(I && I.x>-50 && I.x<450 && I.y>-50 && I.y<300) o+=dot(I,'c'); }
+    o+='</g>'+away(A,O,'A')+away(B,O,'B')+away(C,O,'C');
+    return o; }});
+S.$('tAll').querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{ S.$('tAll').querySelectorAll('.tab').forEach(x=>x.setAttribute('aria-pressed','false')); b.setAttribute('aria-pressed','true'); kind=b.dataset.k; w2.redraw(); }));
+
+S.quiz(S.$('quiz'),[
+  {q:'Отрезок из вершины к середине противолежащей стороны — это', opts:['высота','медиана','биссектриса','средняя линия'], ok:1},
+  {q:'Какой отрезок делит угол треугольника пополам?', opts:['высота','медиана','биссектриса','диагональ'], ok:2},
+  {q:'Высота может лежать вне треугольника, если треугольник', opts:['остроугольный','тупоугольный','равносторонний','любой'], ok:1},
+  {q:'Сколько медиан у треугольника?', opts:['1','2','3','6'], ok:2},
+  {q:'<i>BH</i> — высота △<i>ABC</i>. Чему равен ∠<i>BHC</i>?', opts:['45°','90°','180°','зависит от треугольника'], ok:1}
+]);
+})();
+</script>
+<script src="assets/nav.js?v=4"></script>
+</body>
+</html>

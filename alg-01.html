@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>§ 1. Степень с натуральным показателем</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Unbounded:wght@500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=4">
+<style>
+.tiles{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-family:var(--f-math);font-size:1.25rem;min-height:3.2em}
+.tl{display:inline-flex;align-items:center;justify-content:center;width:1.9em;height:1.9em;border-radius:8px;font-style:italic;font-weight:700;color:var(--kc);background:color-mix(in srgb,var(--kc) 14%,transparent);border:1.5px solid var(--kc);transition:opacity .3s,transform .3s}
+.tl.gone{opacity:.25;text-decoration:line-through;text-decoration-color:var(--red);transform:scale(.88)}
+.grp{display:inline-flex;gap:4px;padding:4px;border-radius:10px;border:1.5px dashed var(--line)}
+.tres{font-family:var(--f-math);font-size:clamp(1.15rem,4.4vw,1.5rem);min-height:1.6em}
+</style>
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <a class="brand" href="index.html"><span class="logo">x</span><span class="txt">Математика · 7 класс<small>I четверть</small></span></a>
+  <nav class="tnav" aria-label="Разделы сайта"><a href="index.html">Главная</a><a class="alg" href="index.html#algebra">Алгебра</a><a class="geo" href="index.html#geometry">Геометрия</a></nav>
+</div></header>
+
+<main class="wrap">
+<div class="page-head">
+  <div class="crumbs"><a href="index.html">Главная</a> › <a href="index.html#algebra">Алгебра</a> › § 1</div>
+  <div class="eyebrow">Алгебра · 7 класс · § 1 · уроки 1–4</div>
+  <h1>Степень с натуральным показателем и её свойства</h1>
+  <p class="lede">Степень — короткая запись произведения одинаковых множителей. Разберём, как её вычислять, и пять свойств, которые позволяют считать со степенями, не раскрывая их.</p>
+  <nav class="toc" aria-label="Разделы темы"><a href="#opredelenie">Определение</a><a href="#znak">Знак степени</a><a href="#svoistva">Свойства</a><a href="#model">Модель из плиток</a><a href="#oshibki">Ошибки</a><a href="#test">Тест</a><a href="#trenazher">Тренажёр</a><a href="#zadachi">Задачи</a></nav>
+</div>
+
+<section id="opredelenie">
+  <h2>Что такое степень</h2>
+  <div class="rule"><span class="tag">ОПРЕДЕЛЕНИЕ</span>
+    <p><b>Степенью числа <i>a</i> с натуральным показателем <i>n</i></b>, большим 1, называется произведение <i>n</i> множителей, каждый из которых равен <i>a</i>. Если <i>n</i> = 1, то <span class="m">a^1 = a</span>.</p>
+    <div class="scheme"><span class="m">a^n = a · a · … · a</span> &nbsp;(<i>n</i> множителей)</div>
+  </div>
+  <p>В записи <span class="m">a^n</span> число <i>a</i> — <b>основание</b> степени, <i>n</i> — <b>показатель</b>. Показатель говорит, сколько раз основание взято множителем. Нажимай «Дальше».</p>
+  <div id="bDef"></div>
+</section>
+
+<section id="znak">
+  <h2>Знак степени</h2>
+  <div class="aside">
+    <div class="fact"><h3>Положительное основание</h3><p>Любая степень положительного числа положительна: <span class="m">3^4 = 81</span>, <span class="m">0,5^3 = 0,125</span>.</p></div>
+    <div class="fact"><h3>Ноль</h3><p><span class="m">0^n = 0</span> при любом натуральном <i>n</i>: <span class="m">0^5 = 0</span>.</p></div>
+    <div class="fact"><h3>Отрицательное основание, чётный показатель</h3><p>Минусы разбиваются на пары, и результат <b>положительный</b>: <span class="m">(−2)^4 = 16</span>.</p></div>
+    <div class="fact"><h3>Отрицательное основание, нечётный показатель</h3><p>Один минус остаётся без пары, результат <b>отрицательный</b>: <span class="m">(−2)^3 = −8</span>.</p></div>
+  </div>
+  <div class="warn"><h3>Скобки важны</h3><p><span class="m">(−3)^2 = (−3) · (−3) = 9</span>, а <span class="m">−3^2 = −(3 · 3) = −9</span>. Без скобок в степень возводится только 3, а минус ставится перед результатом.</p></div>
+</section>
+
+<section id="svoistva">
+  <h2>Пять свойств степени</h2>
+  <div class="rule"><span class="tag">СВОЙСТВА</span>
+    <ol>
+      <li><b>1)</b><span><span class="m">a^n · a^m = a^{n+m}</span> — при умножении степеней с одинаковыми основаниями показатели <b>складываются</b>;</span></li>
+      <li><b>2)</b><span><span class="m">a^n : a^m = a^{n−m}</span> (<span class="m">a ≠ 0</span>, <span class="m">n > m</span>) — при делении показатели <b>вычитаются</b>;</span></li>
+      <li><b>3)</b><span><span class="m">(a^n)^m = a^{nm}</span> — при возведении степени в степень показатели <b>перемножаются</b>;</span></li>
+      <li><b>4)</b><span><span class="m">(ab)^n = a^n · b^n</span> — степень произведения равна произведению степеней;</span></li>
+      <li><b>5)</b><span><span class="m">(a : b)^n = a^n : b^n</span> (<span class="m">b ≠ 0</span>) — степень частного равна частному степеней.</span></li>
+    </ol>
+  </div>
+  <p>Почему так? Распишем степени через множители. Выбери свойство:</p>
+  <div class="tabs" id="tProp" role="group" aria-label="Свойства"></div>
+  <div id="bProp"></div>
+</section>
+
+<section id="model">
+  <h2>Модель из плиток</h2>
+  <p>Каждая плитка — один множитель <i>a</i>. Выбери действие и двигай ползунки: видно, почему показатели складываются, вычитаются или перемножаются.</p>
+  <div class="panel">
+    <div class="tabs" id="tMode" role="group" aria-label="Действие"><button type="button" class="tab txt" data-m="mul" aria-pressed="true">Умножение</button><button type="button" class="tab txt" data-m="div" aria-pressed="false">Деление</button><button type="button" class="tab txt" data-m="pow" aria-pressed="false">Степень степени</button></div>
+    <div class="sliders s2"><label for="sn">первый показатель <b id="vn">3</b><input type="range" id="sn" min="1" max="6" value="3"></label><label for="sm">второй показатель <b id="vm">2</b><input type="range" id="sm" min="1" max="5" value="2"></label></div>
+    <div class="tres" id="mExpr" aria-live="polite"></div>
+    <div class="tiles" id="mTiles" aria-hidden="true"></div>
+    <div class="tres" id="mRes"></div>
+  </div>
+</section>
+
+<section id="oshibki">
+  <h2>Частые ошибки</h2>
+  <div class="mist">
+    <div class="mrow"><div class="what">Перемножили показатели при умножении. Их нужно складывать.</div><div class="bad"><span class="mark">✗</span><span class="m">a^3 · a^4 = a^12</span></div><div class="good"><span class="mark">✓</span><span class="m">a^3 · a^4 = a^7</span></div></div>
+    <div class="mrow"><div class="what">Перемножили основания. Основание остаётся прежним.</div><div class="bad"><span class="mark">✗</span><span class="m">2^3 · 2^4 = 4^7</span></div><div class="good"><span class="mark">✓</span><span class="m">2^3 · 2^4 = 2^7</span></div></div>
+    <div class="mrow"><div class="what">Сложили показатели при возведении степени в степень.</div><div class="bad"><span class="mark">✗</span><span class="m">(x^3)^4 = x^7</span></div><div class="good"><span class="mark">✓</span><span class="m">(x^3)^4 = x^12</span></div></div>
+    <div class="mrow"><div class="what">Разделили показатели при делении.</div><div class="bad"><span class="mark">✗</span><span class="m">b^8 : b^2 = b^4</span></div><div class="good"><span class="mark">✓</span><span class="m">b^8 : b^2 = b^6</span></div></div>
+    <div class="mrow"><div class="what">Умножили основание на показатель.</div><div class="bad"><span class="mark">✗</span><span class="m">5^2 = 10</span></div><div class="good"><span class="mark">✓</span><span class="m">5^2 = 5 · 5 = 25</span></div></div>
+    <div class="mrow"><div class="what">Потеряли скобки: минус не возводится в степень.</div><div class="bad"><span class="mark">✗</span><span class="m">−2^4 = 16</span></div><div class="good"><span class="mark">✓</span><span class="m">−2^4 = −16</span></div></div>
+  </div>
+</section>
+
+<section id="test">
+  <h2>Тест</h2>
+  <div id="quiz"></div>
+</section>
+
+<section id="trenazher">
+  <h2>Тренажёр</h2>
+  <p>Впиши ответ в окошко. В режимах со степенями окошко стоит сверху, на месте показателя.</p>
+  <div id="trainer"></div>
+</section>
+
+<section id="zadachi">
+  <h2>Задачи посложнее</h2>
+  <p>Сначала реши в тетради, потом открой решение и сверься.</p>
+  <div class="tasks">
+    <div class="hard"><div class="q"><b>1</b><span>Вычислите: <span class="m">2^10 : 2^7 · 2^2</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Действия выполняем по порядку, слева направо. Деление: <span class="m">2^10 : 2^7 = 2^{10−7} = 2^3</span>.</div>
+        <div><span class="st">Шаг 2.</span>Умножение: <span class="m">2^3 · 2^2 = 2^{3+2} = 2^5</span>.</div>
+        <div><span class="st">Шаг 3.</span><span class="m">2^5 = 2 · 2 · 2 · 2 · 2 = 32</span>.</div>
+        <div class="ans">Ответ: 32.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>2</b><span>Упростите: <span class="m">(x^3)^4 · x^2 : x^10</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Степень степени: <span class="m">(x^3)^4 = x^{3·4} = x^12</span>.</div>
+        <div><span class="st">Шаг 2.</span>Умножение: <span class="m">x^12 · x^2 = x^14</span>.</div>
+        <div><span class="st">Шаг 3.</span>Деление: <span class="m">x^14 : x^10 = x^4</span>.</div>
+        <div class="ans">Ответ: <span class="m">x^4</span>.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>3</b><span>Вычислите: <span class="m">4^5 · 2^3 : 8^4</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Основания разные. Запишем всё как степени двойки: <span class="m">4 = 2^2</span>, <span class="m">8 = 2^3</span>.</div>
+        <div><span class="st">Шаг 2.</span><span class="m">4^5 = (2^2)^5 = 2^10</span>.</div>
+        <div><span class="st">Шаг 3.</span><span class="m">8^4 = (2^3)^4 = 2^12</span>.</div>
+        <div><span class="st">Шаг 4.</span><span class="m">2^10 · 2^3 = 2^13</span>.</div>
+        <div><span class="st">Шаг 5.</span><span class="m">2^13 : 2^12 = 2^1 = 2</span>.</div>
+        <div class="ans">Ответ: 2.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>4</b><span>Вычислите удобным способом: <span class="m">0,25^7 · 4^7</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Показатели одинаковые, поэтому по свойству 4 основания можно перемножить: <span class="m">0,25^7 · 4^7 = (0,25 · 4)^7</span>.</div>
+        <div><span class="st">Шаг 2.</span><span class="m">0,25 · 4 = 1</span>.</div>
+        <div><span class="st">Шаг 3.</span><span class="m">1^7 = 1</span>.</div>
+        <div class="ans">Ответ: 1.</div>
+      </div></details></div>
+  </div>
+</section>
+
+<nav class="pager" aria-label="Соседние темы"><a class="next" href="alg-02.html"><small>Следующая тема →</small>§ 2. Степень с целым показателем</a></nav>
+<footer class="foot">Алгебра, 7 класс, § 1. Примеры составлены по образцу заданий учебника.</footer>
+</main>
+
+<script src="assets/core.js?v=4"></script>
+<script src="assets/drill.js?v=4"></script>
+<script>
+(function(){
+const {tx,fmt,pn,ri,pick} = S;
+const T = (a,k)=>'<span class="tm k'+k+' on">'+a+'</span>';
+
+/* определение по шагам */
+S.board(S.$('bDef')).load([
+  {html:'<div class="bl main">'+tx('2^5')+'</div>', note:'<p>Основание 2, показатель 5. Значит, двойку берём множителем пять раз.</p>', label:'Запись'},
+  {html:'<div class="bl main">'+tx('2^5')+' = '+[1,2,3,4,5].map(i=>T('2',0)).join(' · ')+'</div>', note:'<p>Пишем пять двоек через знак умножения.</p>'},
+  {html:'<div class="bl main">'+tx('2^5')+' = 2 · 2 · 2 · 2 · 2</div><div class="bl">= '+T('4',1)+' · 2 · 2 · 2</div>', note:'<p>Перемножаем по порядку: 2 · 2 = 4.</p>'},
+  {html:'<div class="bl main">'+tx('2^5')+' = 2 · 2 · 2 · 2 · 2</div><div class="bl">= 4 · 2 · 2 · 2</div><div class="bl">= '+T('8',1)+' · 2 · 2</div>', note:'<p>4 · 2 = 8.</p>'},
+  {html:'<div class="bl main">'+tx('2^5')+' = 2 · 2 · 2 · 2 · 2</div><div class="bl">= 4 · 2 · 2 · 2</div><div class="bl">= 8 · 2 · 2</div><div class="bl">= '+T('16',1)+' · 2</div>', note:'<p>8 · 2 = 16.</p>'},
+  {html:'<div class="bl main">'+tx('2^5')+' = 2 · 2 · 2 · 2 · 2</div><div class="bl">= 4 · 2 · 2 · 2</div><div class="bl">= 8 · 2 · 2</div><div class="bl">= 16 · 2</div><div class="bl res">= 32</div>', note:'<p>16 · 2 = 32. Значение степени <span class="math">'+tx('2^5')+'</span> равно 32. Заметь: это не 2 · 5 = 10!</p>', label:'Ответ'}
+]);
+
+/* свойства по шагам */
+const A=(n,k)=>Array.from({length:n},()=>'<span class="kt k'+k+'"><i>a</i></span>').join(' · ');
+const PROPS=[
+  {t:'a^3 · a^2', s:[
+    {h:tx('a^3 · a^2'), n:'Два множителя-степени с одинаковым основанием <i>a</i>.'},
+    {h:'= ('+A(3,0)+') · ('+A(2,1)+')', n:'Распишем: <span class="math">'+tx('a^3')+'</span> — три множителя <i>a</i>, <span class="math">'+tx('a^2')+'</span> — два.'},
+    {h:'= '+A(3,0)+' · '+A(2,1), n:'Скобки не нужны: все множители просто стоят подряд.'},
+    {h:'= '+tx('a^5'), n:'Всего множителей 3 + 2 = 5. Показатели <b>сложились</b>.'}]},
+  {t:'a^5 : a^2', s:[
+    {h:tx('a^5 : a^2'), n:'Делим степени с одинаковым основанием (<span class="math"><i>a</i> ≠ 0</span>).'},
+    {h:'= '+S.fr(A(5,0),A(2,1)), n:'Запишем деление дробью и распишем множители.'},
+    {h:'= '+S.fr('<span class="strike">'+A(2,0)+'</span> · '+A(3,0),'<span class="strike">'+A(2,1)+'</span>'), n:'Сокращаем два множителя <i>a</i> сверху и снизу.'},
+    {h:'= '+tx('a^3'), n:'Осталось 5 − 2 = 3 множителя. Показатели <b>вычлись</b>.'}]},
+  {t:'(a^2)^3', s:[
+    {h:tx('(a^2)^3'), n:'Степень <span class="math">'+tx('a^2')+'</span> возводим в куб.'},
+    {h:'= '+tx('a^2')+' · '+tx('a^2')+' · '+tx('a^2'), n:'По определению: три множителя <span class="math">'+tx('a^2')+'</span>.'},
+    {h:'= ('+A(2,0)+') · ('+A(2,1)+') · ('+A(2,2)+')', n:'В каждом по два множителя <i>a</i>.'},
+    {h:'= '+tx('a^6'), n:'Всего 2 · 3 = 6 множителей. Показатели <b>перемножились</b>.'}]},
+  {t:'(ab)^3', s:[
+    {h:tx('(ab)^3'), n:'В степень возводится произведение <i>ab</i>.'},
+    {h:'= '+tx('ab · ab · ab'), n:'Три множителя <i>ab</i>.'},
+    {h:'= '+['a','a','a'].map(x=>'<span class="kt k0"><i>a</i></span>').join(' · ')+' · '+['b','b','b'].map(x=>'<span class="kt k1"><i>b</i></span>').join(' · '), n:'Переставим множители: сначала все <i>a</i>, потом все <i>b</i>.'},
+    {h:'= '+tx('a^3b^3'), n:'В степень возводится <b>каждый</b> множитель.'}]},
+  {t:'(a : b)^3', s:[
+    {h:tx('(a : b)^3')+' = '+S.fr('<i>a</i>','<i>b</i>')+'<sup>3</sup>', n:'В степень возводится частное (<span class="math"><i>b</i> ≠ 0</span>).'},
+    {h:'= '+S.fr('<i>a</i>','<i>b</i>')+' · '+S.fr('<i>a</i>','<i>b</i>')+' · '+S.fr('<i>a</i>','<i>b</i>'), n:'Три одинаковых множителя.'},
+    {h:'= '+S.fr(tx('a · a · a'),tx('b · b · b')), n:'Дроби перемножаем: числитель на числитель, знаменатель на знаменатель.'},
+    {h:'= '+S.fr(tx('a^3'),tx('b^3')), n:'В степень возводятся и делимое, и делитель.'}]}
+];
+S.tabsBoard(S.$('tProp'),S.$('bProp'),PROPS,p=>S.lines(p.s),p=>tx(p.t));
+
+/* модель из плиток */
+let mode='mul';
+function model(){
+  const n=+S.$('sn').value, m=+S.$('sm').value; S.$('vn').textContent=n; S.$('vm').textContent=m;
+  const tile=k=>'<span class="tl k'+k+'">a</span>';
+  let tiles='', expr='', res='';
+  if(mode==='mul'){ tiles='<span class="grp">'+Array(n).fill(tile(0)).join('')+'</span><span>·</span><span class="grp">'+Array(m).fill(tile(1)).join('')+'</span>';
+    expr=tx('a^'+n+' · a^'+m); res='= '+tx('a^{'+n+' + '+m+'}')+' = '+tx('a^'+(n+m))+' <span class="note">— всего '+(n+m)+' плиток</span>'; }
+  else if(mode==='div'){ const mm=Math.min(m,n);
+    tiles='<span class="grp">'+Array.from({length:n},(_,i)=>'<span class="tl k0'+(i<mm?' gone':'')+'">a</span>').join('')+'</span><span>:</span><span class="grp">'+Array.from({length:m},(_,i)=>'<span class="tl k1'+(i<mm?' gone':'')+'">a</span>').join('')+'</span>';
+    expr=tx('a^'+n+' : a^'+m);
+    res = m<n ? '= '+tx('a^{'+n+' − '+m+'}')+' = '+tx('a^'+(n-m))+' <span class="note">— сократили '+m+' пар плиток</span>'
+              : (m===n ? '= 1 <span class="note">— сократились все плитки</span>' : '<span class="note">Показатель делимого меньше — в § 1 так не делим. Это будет в § 2.</span>'); }
+  else { tiles=Array.from({length:m},(_,j)=>'<span class="grp">'+Array(n).fill(tile(j%4)).join('')+'</span>').join('');
+    expr=tx('(a^'+n+')^'+m); res='= '+tx('a^{'+n+' · '+m+'}')+' = '+tx('a^'+(n*m))+' <span class="note">— '+m+' '+S.plural(m,['группа','группы','групп'])+' по '+n+'</span>'; }
+  S.$('mTiles').innerHTML=tiles; S.$('mExpr').innerHTML=expr; S.$('mRes').innerHTML=res;
+}
+['sn','sm'].forEach(id=>S.$(id).addEventListener('input',model));
+S.$('tMode').querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{ S.$('tMode').querySelectorAll('.tab').forEach(x=>x.setAttribute('aria-pressed','false')); b.setAttribute('aria-pressed','true'); mode=b.dataset.m; model(); }));
+model();
+
+/* тест */
+S.quiz(S.$('quiz'),[
+  {q:'Чему равно <span class="m">3^4</span>?', opts:['12','81','64','7'], ok:1, why:'<span class="m">3 · 3 · 3 · 3 = 81</span>.'},
+  {q:'Какой знак у числа <span class="m">(−5)^7</span>?', opts:['плюс','минус','это ноль','зависит от числа'], ok:1, why:'Отрицательное основание, нечётный показатель — результат отрицательный.'},
+  {q:'<span class="m">x^5 · x^3 = </span>', opts:['<span class="m">x^15</span>','<span class="m">x^8</span>','<span class="m">x^2</span>','<span class="m">2x^8</span>'], ok:1, why:'Показатели складываем: 5 + 3 = 8.'},
+  {q:'<span class="m">(y^4)^5 = </span>', opts:['<span class="m">y^9</span>','<span class="m">y^20</span>','<span class="m">y^45</span>','<span class="m">y^1</span>'], ok:1, why:'Показатели перемножаем: 4 · 5 = 20.'},
+  {q:'<span class="m">c^12 : c^4 = </span>', opts:['<span class="m">c^3</span>','<span class="m">c^8</span>','<span class="m">c^16</span>','<span class="m">c^48</span>'], ok:1, why:'Показатели вычитаем: 12 − 4 = 8.'},
+  {q:'<span class="m">(2a)^3 = </span>', opts:['<span class="m">2a^3</span>','<span class="m">6a^3</span>','<span class="m">8a^3</span>','<span class="m">8a</span>'], ok:2, why:'В степень возводится каждый множитель: <span class="m">2^3 · a^3 = 8a^3</span>.'},
+  {q:'Чему равно <span class="m">−2^4</span>?', opts:['16','−16','−8','8'], ok:1, why:'Без скобок в степень возводится только 2: <span class="m">−(2^4) = −16</span>.'}
+]);
+
+/* тренажёр */
+const L=()=>pick(['a','b','x','y','m','c']);
+const SUP='⁰¹²³⁴⁵⁶⁷⁸⁹';
+S.drill(S.$('trainer'),{modes:[['mul','умножение'],['div','деление'],['pow','степень степени'],['val','вычисли']], gen(mode){
+  const l=L();
+  if(mode==='mul'){ const n=ri(2,9), m=ri(2,9);
+    return {q:'<span class="ask">Запиши в виде степени:</span>', tpl:tx(l+'^'+n+' · '+l+'^'+m)+' = <i>'+l+'</i>{s}', ans:[n+m],
+      diag:v=>v[0]===n*m?'Ты перемножил показатели. При умножении степеней показатели складывают.':null,
+      steps:S.lines([{h:tx(l+'^'+n+' · '+l+'^'+m), n:'Основания одинаковые. Значит, основание оставляем, а показатели складываем.'},{h:'= '+tx(l+'^{'+n+' + '+m+'}'), n:n+' + '+m+' = '+(n+m)},{h:'= '+tx(l+'^'+(n+m))}])}; }
+  if(mode==='div'){ const m=ri(2,7), n=m+ri(1,8);
+    return {q:'<span class="ask">Запиши в виде степени:</span>', tpl:tx(l+'^'+n+' : '+l+'^'+m)+' = <i>'+l+'</i>{s}', ans:[n-m],
+      diag:v=>(n%m===0&&v[0]===n/m)?'Ты разделил показатели. При делении степеней показатели вычитают.':null,
+      steps:S.lines([{h:tx(l+'^'+n+' : '+l+'^'+m), n:'Основания одинаковые. Основание оставляем, из показателя делимого вычитаем показатель делителя.'},{h:'= '+tx(l+'^{'+n+' − '+m+'}'), n:n+' − '+m+' = '+(n-m)},{h:'= '+tx(l+'^'+(n-m))}])}; }
+  if(mode==='pow'){ const n=ri(2,6), m=ri(2,5);
+    return {q:'<span class="ask">Запиши в виде степени:</span>', tpl:tx('('+l+'^'+n+')^'+m)+' = <i>'+l+'</i>{s}', ans:[n*m],
+      diag:v=>v[0]===n+m?'Ты сложил показатели. При возведении степени в степень показатели перемножают.':null,
+      steps:S.lines([{h:tx('('+l+'^'+n+')^'+m), n:'Степень возводим в степень. Основание оставляем, показатели перемножаем.'},{h:'= '+tx(l+'^{'+n+' · '+m+'}'), n:n+' · '+m+' = '+(n*m)},{h:'= '+tx(l+'^'+(n*m))}])}; }
+  const pool=[[2,ri(2,6)],[3,ri(2,4)],[-2,ri(2,6)],[-3,ri(2,4)],[5,ri(2,3)],[-1,ri(3,9)],[10,ri(2,5)],[0.5,ri(2,3)],[-0.2,ri(2,3)],[4,ri(2,3)]];
+  const [b,n]=pick(pool); const val=Math.round(Math.pow(b,n)*1e9)/1e9;
+  const bs=b<0?'('+fmt(b)+')':fmt(b);
+  const mulLine=Array(n).fill(bs).join(' · ');
+  const signNote = b<0 ? (n%2===0?'Основание отрицательное, показатель чётный — ответ положительный.':'Основание отрицательное, показатель нечётный — ответ отрицательный.') : 'Основание положительное — ответ положительный.';
+  return {q:'<span class="ask">Вычисли:</span>', tpl:bs+'<sup>'+n+'</sup> = {n}', ans:[val],
+    diag:v=>Math.abs(v[0]+val)<1e-9?'Проверь знак. '+signNote:(Math.abs(v[0]-b*n)<1e-9?'Основание нужно не умножить на показатель, а взять множителем '+n+' раза.':null),
+    steps:S.lines([{h:bs+'<sup>'+n+'</sup>', n:'Берём '+bs+' множителем '+n+' '+S.plural(n,['раз','раза','раз'])+'.'},{h:'= '+mulLine, n:signNote},{h:'= '+fmt(val)}])};
+}});
+})();
+</script>
+<script src="assets/nav.js?v=4"></script>
+</body>
+</html>

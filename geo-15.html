@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>§ 15. Признаки параллельности прямых</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Unbounded:wght@500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=4">
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <a class="brand" href="index.html"><span class="logo">x</span><span class="txt">Математика · 7 класс<small>II четверть</small></span></a>
+  <nav class="tnav" aria-label="Разделы сайта"><a href="index.html">Главная</a><a class="alg" href="index.html#algebra">Алгебра</a><a class="geo" href="index.html#geometry">Геометрия</a></nav>
+</div></header>
+
+<main class="wrap">
+<div class="page-head">
+  <div class="crumbs"><a href="index.html">Главная</a> › <a href="index.html#geometry">Геометрия</a> › § 15</div>
+  <div class="eyebrow">Геометрия · 7 класс · § 15 · уроки 27–30</div>
+  <h1>Признаки параллельности прямых</h1>
+  <p class="lede">Когда две прямые пересекает третья, получается восемь углов. По некоторым парам этих углов можно узнать, параллельны ли прямые.</p>
+  <nav class="toc" aria-label="Разделы темы"><a href="#napomnim">Напомним</a><a href="#ugly">Пары углов</a><a href="#priznaki">Признаки</a><a href="#dokazatelstvo">Доказательства</a><a href="#test">Тест</a><a href="#zadachi">Задачи</a></nav>
+</div>
+
+<section id="napomnim">
+  <h2>Напомним</h2>
+  <div class="aside">
+    <div class="fact"><h3>Параллельные прямые</h3><p>Две прямые на плоскости называются параллельными, если они не пересекаются. Запись: <i>a</i> ∥ <i>b</i>. Отрезки и лучи параллельны, если лежат на параллельных прямых.</p></div>
+    <div class="fact"><h3>Уже знаем</h3><p>Две прямые, перпендикулярные третьей, параллельны. Так с помощью чертёжного треугольника проводят параллельные прямые.</p></div>
+  </div>
+</section>
+
+<section id="ugly">
+  <h2>Пары углов при секущей</h2>
+  <p>Прямые <i>a</i> и <i>b</i> пересекает <b>секущая</b> <i>c</i>. Нажимай на кнопки: каждое нажатие показывает следующую пару. Ползунком поворачивай прямую <i>b</i> и смотри, когда углы пары станут равными.</p>
+  <div class="gfig" id="angFig"></div>
+  <div class="tabs" id="pairBtns">
+    <button type="button" class="tab txt" data-t="x" aria-pressed="true">Накрест лежащие</button>
+    <button type="button" class="tab txt" data-t="s" aria-pressed="false">Соответственные</button>
+    <button type="button" class="tab txt" data-t="o" aria-pressed="false">Односторонние</button>
+  </div>
+  <div class="panel">
+    <div class="sliders s2"><label for="tilt">наклон прямой <i>b</i> <span id="vtilt" style="display:inline-block;min-width:2.6em;text-align:right;font-variant-numeric:tabular-nums">8°</span><input type="range" id="tilt" min="-20" max="20" value="8"></label><div class="ginfo" id="angInfo" aria-live="polite"></div></div>
+  </div>
+  <div class="aside">
+    <div class="fact"><h3>Накрест лежащие</h3><p>По разные стороны от секущей. Внутренние: ∠3 и ∠5, ∠4 и ∠6. Внешние: ∠2 и ∠8, ∠1 и ∠7.</p></div>
+    <div class="fact"><h3>Соответственные</h3><p>Стоят «на одном и том же месте» у двух прямых: ∠1 и ∠5, ∠2 и ∠6, ∠3 и ∠7, ∠4 и ∠8.</p></div>
+    <div class="fact"><h3>Односторонние</h3><p>По одну сторону от секущей. Внутренние: ∠3 и ∠6, ∠4 и ∠5. Внешние: ∠2 и ∠7, ∠1 и ∠8.</p></div>
+    <div class="fact"><h3>Внутренние и внешние</h3><p>Внутренние углы лежат между прямыми <i>a</i> и <i>b</i>, внешние — снаружи.</p></div>
+  </div>
+</section>
+
+<section id="priznaki">
+  <h2>Три признака параллельности</h2>
+  <div class="thm"><span class="tag red">ПРИЗНАК 1</span><p>Если при пересечении двух прямых секущей внутренние накрест лежащие углы равны, то прямые параллельны.</p></div>
+  <div class="thm"><span class="tag red">ПРИЗНАК 2</span><p>Если при пересечении двух прямых секущей соответственные углы равны, то прямые параллельны.</p></div>
+  <div class="thm"><span class="tag red">ПРИЗНАК 3</span><p>Если при пересечении двух прямых секущей сумма внутренних односторонних углов равна 180°, то прямые параллельны.</p></div>
+</section>
+
+<section id="dokazatelstvo">
+  <h2>Доказательства</h2>
+  <p>Главное — доказательство первого признака. Остальные два сводятся к нему.</p>
+  <div id="p1"></div>
+  <div id="p2"></div>
+  <div id="p3"></div>
+</section>
+
+<section id="test">
+  <h2>Тест</h2>
+  <div id="quiz"></div>
+</section>
+
+<section id="zadachi">
+  <h2>Задачи с решениями</h2>
+  <div class="tasks">
+    <div class="hard"><div class="q"><b>1</b><span>Прямые <i>a</i> и <i>b</i> пересечены секущей. Внутренние односторонние углы равны 47° и 133°. Параллельны ли прямые <i>a</i> и <i>b</i>?</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Сумма внутренних односторонних углов: 47° + 133° = 180°.</div>
+        <div><span class="st">Шаг 2.</span>По признаку 3 прямые параллельны.</div>
+        <div class="ans">Ответ: да, <i>a</i> ∥ <i>b</i>.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>2</b><span>Один из внутренних односторонних углов в 4 раза больше другого. Какими должны быть эти углы, чтобы прямые были параллельны?</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Пусть меньший угол <i>x</i>, больший 4<i>x</i>.</div>
+        <div><span class="st">Шаг 2.</span>Для параллельности нужно <i>x</i> + 4<i>x</i> = 180°.</div>
+        <div><span class="st">Шаг 3.</span>5<i>x</i> = 180°, <i>x</i> = 36°.</div>
+        <div><span class="st">Шаг 4.</span>4 · 36° = 144°.</div>
+        <div class="ans">Ответ: 36° и 144°.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>3</b><div><span>Отрезки <i>AB</i> и <i>CD</i> пересекаются в точке <i>O</i>, которая является серединой каждого из них. Докажите, что <i>AC</i> ∥ <i>BD</i>.</span><div class="qfig" id="f3" style="max-width:280px"></div></div></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Рассмотрим △<i>AOC</i> и △<i>BOD</i>: <i>AO</i> = <i>OB</i>, <i>CO</i> = <i>OD</i>, ∠<i>AOC</i> = ∠<i>BOD</i> (вертикальные).</div>
+        <div><span class="st">Шаг 2.</span>Треугольники равны по I признаку, значит ∠<i>CAO</i> = ∠<i>DBO</i>.</div>
+        <div><span class="st">Шаг 3.</span>Это внутренние накрест лежащие углы при прямых <i>AC</i>, <i>BD</i> и секущей <i>AB</i>.</div>
+        <div class="ans">По признаку 1 <i>AC</i> ∥ <i>BD</i>.</div>
+      </div></details></div>
+  </div>
+</section>
+
+<nav class="pager" aria-label="Соседние темы"><a href="geo-kr2.html"><small>← Предыдущая тема</small>Подготовка к КР № 2</a><a class="next" href="geo-16.html"><small>Следующая тема →</small>§ 16. Аксиома параллельных</a></nav>
+<footer class="foot">Геометрия, 7 класс, § 15. Задачи составлены по образцу заданий учебника.</footer>
+</main>
+
+<script src="assets/core.js?v=4"></script>
+<script src="assets/geo.js?v=4"></script>
+<script>
+(function(){
+const {P,add,sub,mul,unit,seg,line,path,poly,lbl,away,ticks,arc,right,wedge,inter,angAt,mid,tf,tf0,dot,centroid} = G;
+
+/* ---------- секущая и 8 углов ---------- */
+function scene(tdeg, ya, yb){
+  ya=ya||80; yb=yb||200;
+  const t=tdeg*Math.PI/180, Q1=P(150,0), Q2=P(270,280);
+  const Pb=P(210,yb), rb=P(Math.cos(t),Math.sin(t));
+  const Ia=inter(Q1,Q2,P(0,ya),P(1,ya)), Ib=inter(Q1,Q2,Pb,add(Pb,rb));
+  const cu=unit(sub(Q1,Q2)), cd=mul(cu,-1), ra=P(1,0), la=P(-1,0), lb=mul(rb,-1);
+  const ang={1:[Ia,cu,ra],2:[Ia,la,cu],3:[Ia,la,cd],4:[Ia,cd,ra],5:[Ib,cu,rb],6:[Ib,lb,cu],7:[Ib,lb,cd],8:[Ib,cd,rb]};
+  const val=k=>{ const [V,d1,d2]=ang[k]; return angAt(V,add(V,d1),add(V,d2)); };
+  return {Q1,Q2,Pb,rb,Ia,Ib,ang,val,ya,yb};
+}
+const PAIRS={x:[[3,5],[4,6],[2,8],[1,7]], s:[[1,5],[2,6],[3,7],[4,8]], o:[[3,6],[4,5],[2,7],[1,8]]};
+const NAMES={x:['внутренние накрест лежащие','внутренние накрест лежащие','внешние накрест лежащие','внешние накрест лежащие'], s:['соответственные','соответственные','соответственные','соответственные'], o:['внутренние односторонние','внутренние односторонние','внешние односторонние','внешние односторонние']};
+function drawScene(sc, hi, opt){
+  opt=opt||{};
+  const {Q1,Q2,Pb,rb,Ia,Ib,ang}=sc;
+  const par=Math.abs(sc.rb.y)<1e-6;
+  let o='';
+  (hi||[]).forEach((k,i)=>{ const [V,d1,d2]=ang[k]; o+='<g class="'+(opt.colors?opt.colors[i]:'k2')+'">'+wedge(V,add(V,d1),add(V,d2),30,'strong')+arc(V,add(V,d1),add(V,d2),30,1,'')+'</g>'; });
+  o+=line(P(0,sc.ya),P(1,sc.ya),par&&opt.par?'thick':'')+'<g class="'+(par&&opt.par?'k1':'')+'">'+line(Pb,add(Pb,rb),par&&opt.par?'c thick':'')+'</g>';
+  o+='<g class="kr">'+seg(Q1,Q2,'c')+'</g>';
+  if(opt.nums!==false) for(let k=1;k<=8;k++){ const [V,d1,d2]=ang[k]; const u=unit(add(d1,d2)); o+=G.ms(add(V,mul(u,44)),String(k),(hi||[]).includes(k)?'':''); }
+  o+=lbl(P(392,sc.ya-10),'a')+lbl(add(Pb,mul(rb,185)),'b',0,-10)+'<g class="kr">'+lbl(P(Q1.x-12,14),'c',0,0,'c')+'</g>';
+  return o;
+}
+let ptype='x', pidx=0;
+function upd(){
+  const t=+S.$('tilt').value; S.$('vtilt').textContent=t+'°';
+  const sc=scene(t), pr=PAIRS[ptype][pidx], par=t===0;
+  S.$('angFig').innerHTML=G.svg([400,280],drawScene(sc,pr,{par:true}),'Две прямые и секущая');
+  const v1=Math.round(sc.val(pr[0])), v2=Math.round(sc.val(pr[1]));
+  const rel = ptype==='o' ? '∠'+pr[0]+' + ∠'+pr[1]+' = '+G.n(v1+v2,'1.9em')+'°' : (v1===v2?'∠'+pr[0]+' = ∠'+pr[1]:'∠'+pr[0]+' ≠ ∠'+pr[1]);
+  S.$('angInfo').innerHTML='<div><b>Пара '+(pidx+1)+' из 4:</b> '+NAMES[ptype][pidx]+'</div><div class="row"><span>∠'+pr[0]+' = '+G.n(v1,'1.9em')+'°</span><span>∠'+pr[1]+' = '+G.n(v2,'1.9em')+'°</span><span>'+rel+'</span></div>'+
+    '<div>'+G.swap(['<span class="chip">прямые a и b пересекаются</span>','<span class="chip okc">a ∥ b</span>'],par?1:0)+'</div>';
+}
+S.$('tilt').addEventListener('input',upd);
+S.$('pairBtns').querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{
+  if(ptype===b.dataset.t) pidx=(pidx+1)%4; else { ptype=b.dataset.t; pidx=0; }
+  S.$('pairBtns').querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b)); upd(); }));
+upd();
+
+/* ---------- доказательство признака 1 ---------- */
+(function(){
+  const A=P(130,70), B=P(270,210), M=mid(A,B), K=P(200,210), N=P(200,70), R=P(400,70), L=P(0,210);
+  G.proof(S.$('p1'),{vb:[400,260],title:'Признак 1: внутренние накрест лежащие углы равны',given:'<b>ДАНО</b> <i>a</i>, <i>b</i>, секущая <i>AB</i>, ∠1 = ∠2. <b>ДОКАЗАТЬ</b> <i>a</i> ∥ <i>b</i>.',
+    items:[
+      {s:0,h:line(A,R,'')+line(B,L,'')+'<g class="kr">'+line(A,B,'c')+'</g>'+dot(A)+dot(B)+lbl(P(A.x-12,A.y-12),'A')+lbl(P(B.x+12,B.y+14),'B')+lbl(P(388,58),'a')+lbl(P(388,198),'b')},
+      {s:0,h:'<g class="k3">'+arc(A,B,R,24,1,'')+arc(B,A,L,24,1,'')+'</g>'+G.angText(A,B,R,36,'1','k3')+G.angText(B,A,L,36,'2','k3')},
+      {s:1,h:dot(M)+'<g class="k0">'+ticks(A,M,1,'')+ticks(M,B,1,'')+'</g>'+lbl(P(M.x+14,M.y-4),'M')},
+      {s:2,h:seg(M,K,'')+right(K,B,M,10,'')+lbl(P(K.x,K.y+16),'K')},
+      {s:3,h:seg(N,M,'')+'<g class="k2">'+ticks(A,N,2,'')+ticks(K,B,2,'')+'</g>'+lbl(P(N.x,N.y-14),'N')},
+      {s:4,h:'<g class="k0">'+poly([A,N,M],'')+'</g>'},
+      {s:4,e:6,mv:'r',h:'<g class="k1">'+poly([B,K,M],'strong')+'</g>'},
+      {s:5,h:right(N,A,M,10,'')+seg(P(200,10),P(200,250),'dash')},
+      {s:6,h:'<g class="k1">'+line(A,R,'c thick')+line(B,L,'c thick')+'</g>'}],
+    moves:{r:{0:tf0(M),4:tf(B,K,A,N,false)}},
+    steps:['Прямые <i>a</i> и <i>b</i>, секущая <i>AB</i>, внутренние накрест лежащие углы 1 и 2 равны.',
+      'Отметим середину <i>M</i> отрезка <i>AB</i>.',
+      'Опустим из <i>M</i> перпендикуляр <i>MK</i> на прямую <i>b</i>.',
+      'Отложим на прямой <i>a</i> отрезок <i>AN</i> = <i>BK</i> и проведём <i>NM</i>.',
+      '△<i>BKM</i> = △<i>ANM</i> по двум сторонам и углу между ними: <i>BM</i> = <i>AM</i>, <i>BK</i> = <i>AN</i>, ∠<i>MBK</i> = ∠<i>MAN</i> (это ∠2 и ∠1). Поворот вокруг <i>M</i> совмещает их.',
+      'Отсюда ∠<i>ANM</i> = ∠<i>BKM</i> = 90° и ∠<i>AMN</i> = ∠<i>BMK</i>. Значит, угол <i>NMK</i> развёрнутый: точки <i>N</i>, <i>M</i>, <i>K</i> лежат на одной прямой.',
+      'Прямые <i>a</i> и <i>b</i> перпендикулярны прямой <i>NK</i>, значит <i>a</i> ∥ <i>b</i>. Признак доказан.']});
+})();
+/* ---------- признаки 2 и 3 ---------- */
+function shortProof(el,title,given,hiSteps,steps){
+  const sc=scene(0,70,200);
+  const items=[{s:0,h:drawScene(sc,[],{nums:false})}];
+  hiSteps.forEach(([s,k,cls,txt,e])=>{ const [V,d1,d2]=sc.ang[k]; items.push({s,e,h:'<g class="'+cls+'">'+wedge(V,add(V,d1),add(V,d2),28,'strong')+arc(V,add(V,d1),add(V,d2),28,1,'')+'</g>'+G.angText(V,add(V,d1),add(V,d2),44,txt,cls)}); });
+  G.proof(el,{vb:[400,280],title,given,items,steps});
+}
+shortProof(S.$('p2'),'Признак 2: соответственные углы равны','<b>ДАНО</b> ∠1 = ∠2 (соответственные). <b>ДОКАЗАТЬ</b> <i>a</i> ∥ <i>b</i>.',
+  [[0,1,'k3','1'],[0,5,'k3','2'],[1,3,'k0','3']],
+  ['Соответственные углы 1 и 2 равны по условию.','∠1 = ∠3 как вертикальные.','Значит, ∠3 = ∠2. Но ∠3 и ∠2 — внутренние накрест лежащие.','По признаку 1 <i>a</i> ∥ <i>b</i>. Признак доказан.']);
+shortProof(S.$('p3'),'Признак 3: сумма односторонних углов 180°','<b>ДАНО</b> ∠1 + ∠2 = 180° (внутренние односторонние). <b>ДОКАЗАТЬ</b> <i>a</i> ∥ <i>b</i>.',
+  [[0,4,'k3','1'],[0,5,'k1','2'],[1,3,'k0','3']],
+  ['Внутренние односторонние углы 1 и 2 в сумме дают 180°.','∠1 + ∠3 = 180°, так как они смежные.','Значит, ∠3 = ∠2. А ∠3 и ∠2 — внутренние накрест лежащие.','По признаку 1 <i>a</i> ∥ <i>b</i>. Признак доказан.']);
+
+/* ---------- тест ---------- */
+const qfig=(i,j,t)=>G.svg([400,280],drawScene(scene(t==null?8:t),[i,j],{colors:['k3','k1']}),'Пара углов');
+const kinds=['накрест лежащие','соответственные','односторонние','вертикальные'];
+S.quiz(S.$('quiz'),[
+  {fig:qfig(3,5), q:'Как называются углы 3 и 5?', opts:kinds, ok:0, why:'Между прямыми и по разные стороны от секущей — внутренние накрест лежащие.'},
+  {fig:qfig(2,6), q:'Как называются углы 2 и 6?', opts:kinds, ok:1, why:'Оба над своей прямой и слева от секущей — соответственные.'},
+  {fig:qfig(4,5), q:'Как называются углы 4 и 5?', opts:kinds, ok:2, why:'Между прямыми и по одну сторону от секущей — внутренние односторонние.'},
+  {fig:qfig(1,3), q:'Как называются углы 1 и 3?', opts:kinds, ok:3, why:'Они при одной вершине, стороны одного — продолжения сторон другого.'},
+  {q:'При секущей ∠3 = 65° и ∠5 = 65° (внутренние накрест лежащие). Параллельны ли прямые?', opts:['да','нет','нельзя сказать'], ok:0, why:'Признак 1.'},
+  {q:'Внутренние односторонние углы равны 110° и 80°. Параллельны ли прямые?', opts:['да','нет','нельзя сказать'], ok:1, why:'110° + 80° = 190°, а не 180°.'}
+]);
+
+(function(){ const O=P(140,90),A=P(40,40),B=P(240,140),C=P(60,150),D=P(220,30);
+  S.$('f3').innerHTML=G.svg([280,180],seg(A,B,'')+seg(C,D,'')+'<g class="k1">'+seg(A,C,'c')+seg(B,D,'c')+'</g>'+'<g class="kr">'+ticks(A,O,1,'')+ticks(O,B,1,'')+'</g><g class="k0">'+ticks(C,O,2,'')+ticks(O,D,2,'')+'</g>'+dot(O)+lbl(P(A.x-12,A.y-6),'A')+lbl(P(B.x+12,B.y+6),'B')+lbl(P(C.x-12,C.y+8),'C')+lbl(P(D.x+12,D.y-6),'D')+lbl(P(O.x+14,O.y+12),'O'));
+})();
+})();
+</script>
+<script src="assets/nav.js?v=4"></script>
+</body>
+</html>

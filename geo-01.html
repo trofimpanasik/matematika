@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>§ 1–2. Повторение и предмет геометрии</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Unbounded:wght@500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=4">
+<style>
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+@media (max-width:640px){ .grid4{grid-template-columns:repeat(2,minmax(0,1fr))} }
+.cls{display:flex;flex-direction:column;gap:10px}
+.cl{border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:12px 14px;display:flex;flex-direction:column;gap:8px}
+.cl .opts{display:flex;flex-wrap:wrap;gap:6px}
+.cl .opts button{font:inherit;font-size:.9rem;border:1.5px solid var(--line);background:var(--paper);color:var(--ink);border-radius:8px;padding:5px 12px;cursor:pointer}
+.cl .opts button.right{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 12%,var(--paper))}
+.cl .opts button.wrong{border-color:var(--bad);background:color-mix(in srgb,var(--bad) 10%,var(--paper))}
+.cl .w{font-size:.9rem;color:var(--ink-2)}
+</style>
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <a class="brand" href="index.html"><span class="logo">x</span><span class="txt">Математика · 7 класс<small>I четверть</small></span></a>
+  <nav class="tnav" aria-label="Разделы сайта"><a href="index.html">Главная</a><a class="alg" href="index.html#algebra">Алгебра</a><a class="geo" href="index.html#geometry">Геометрия</a></nav>
+</div></header>
+
+<main class="wrap">
+<div class="page-head">
+  <div class="crumbs"><a href="index.html">Главная</a> › <a href="index.html#geometry">Геометрия</a> › § 1–2</div>
+  <div class="eyebrow">Геометрия · 7 класс · § 1–2 · уроки 1–2</div>
+  <h1>Повторение и предмет геометрии</h1>
+  <p class="lede">Вспомним фигуры, знакомые с 5–6 классов, и разберёмся, чем занимается геометрия: что такое равные фигуры и чем определение отличается от аксиомы и теоремы.</p>
+  <nav class="toc" aria-label="Разделы темы"><a href="#figury">Фигуры</a><a href="#predmet">Предмет геометрии</a><a href="#ravnye">Равные фигуры</a><a href="#oat">Определения, аксиомы, теоремы</a><a href="#igra">Игра</a><a href="#test">Тест</a></nav>
+</div>
+
+<section id="figury">
+  <h2>Фигуры, которые мы уже знаем</h2>
+  <div class="grid4" id="figs"></div>
+  <div class="aside">
+    <div class="fact"><h3>Виды углов</h3><p>Острый — меньше 90°, прямой — 90°, тупой — больше 90°, но меньше 180°, развёрнутый — 180°.</p></div>
+    <div class="fact"><h3>Две прямые на плоскости</h3><p>Пересекаются (одна общая точка) или не пересекаются — тогда они <b>параллельны</b>: <span class="m">a ∥ b</span>. Если при пересечении образуется прямой угол, прямые <b>перпендикулярны</b>: <span class="m">a ⊥ b</span>.</p></div>
+  </div>
+</section>
+
+<section id="predmet">
+  <h2>Предмет геометрии</h2>
+  <p><b>Геометрия</b> — наука о свойствах геометрических фигур. Слово переводится с греческого как «землемерие»: первые знания о фигурах люди получали, измеряя участки земли.</p>
+  <div class="aside">
+    <div class="fact"><h3>Планиметрия</h3><p>Изучает фигуры на плоскости: треугольники, окружности, многоугольники. Ею мы будем заниматься в 7–9 классах.</p></div>
+    <div class="fact"><h3>Стереометрия</h3><p>Изучает фигуры в пространстве: куб, шар, пирамиду. Её изучают в старших классах.</p></div>
+  </div>
+</section>
+
+<section id="ravnye">
+  <h2>Равные фигуры</h2>
+  <div class="rule"><span class="tag">ОПРЕДЕЛЕНИЕ</span>
+    <p>Геометрические фигуры называются <b>равными</b>, если их можно совместить наложением.</p>
+  </div>
+  <p>Посмотри, как один треугольник накладывается на другой: его сдвигают, поворачивают, а иногда и переворачивают. Нажимай «Дальше».</p>
+  <div id="pEq"></div>
+</section>
+
+<section id="oat">
+  <h2>Определения, аксиомы, теоремы</h2>
+  <div class="rule"><span class="tag">ОПРЕДЕЛЕНИЕ</span>
+    <p><b>Определение</b> объясняет, что представляет собой фигура. Обычно в нём есть слово «называется» или «это».</p>
+    <p class="note">Отрезком называется часть прямой, ограниченная двумя точками.</p>
+  </div>
+  <div class="rule"><span class="tag">АКСИОМА</span>
+    <p><b>Аксиомами</b> называются утверждения об основных свойствах фигур, которые принимаются <b>без доказательства</b>.</p>
+    <p class="note">Через любые две точки проходит прямая, и притом только одна.</p>
+  </div>
+  <div class="thm"><span class="tag red">ТЕОРЕМА</span>
+    <p><b>Теоремами</b> называются верные утверждения, справедливость которых устанавливается <b>доказательством</b> — цепочкой рассуждений, опирающихся на аксиомы и ранее доказанные теоремы.</p>
+    <p class="note">Сумма углов треугольника равна 180°.</p>
+  </div>
+</section>
+
+<section id="igra">
+  <h2>Игра: что это — определение, аксиома или теорема?</h2>
+  <div class="cls" id="cls"></div>
+</section>
+
+<section id="test">
+  <h2>Тест</h2>
+  <div id="quiz"></div>
+</section>
+
+<section id="zadachi">
+  <h2>Задачи с решениями</h2>
+  <div class="tasks">
+    <div class="hard"><div class="q"><b>1</b><span>На прямой отмечены 4 точки. Сколько отрезков с концами в этих точках получилось?</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Назовём точки <i>A</i>, <i>B</i>, <i>C</i>, <i>D</i>. Из точки <i>A</i> выходят отрезки <i>AB</i>, <i>AC</i>, <i>AD</i> — три.</div>
+        <div><span class="st">Шаг 2.</span>Из <i>B</i> — новые <i>BC</i>, <i>BD</i> (<i>BA</i> уже посчитан) — два.</div>
+        <div><span class="st">Шаг 3.</span>Из <i>C</i> — новый <i>CD</i> — один.</div>
+        <div><span class="st">Шаг 4.</span>3 + 2 + 1 = 6.</div>
+        <div class="ans">Ответ: 6 отрезков.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>2</b><span>Сколько прямых можно провести через 3 точки, не лежащие на одной прямой? Проводить можно только через две из них.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>По аксиоме через каждые две точки проходит ровно одна прямая.</div>
+        <div><span class="st">Шаг 2.</span>Пары точек: <i>AB</i>, <i>AC</i>, <i>BC</i> — три пары.</div>
+        <div class="ans">Ответ: 3 прямые.</div>
+      </div></details></div>
+  </div>
+</section>
+
+<nav class="pager" aria-label="Соседние темы"><a class="next" href="geo-03.html"><small>Следующая тема →</small>§ 3. Прямая, луч, отрезок, ломаная</a></nav>
+<footer class="foot">Геометрия, 7 класс, § 1–2. Задачи составлены по образцу заданий учебника.</footer>
+</main>
+
+<script src="assets/core.js?v=4"></script>
+<script src="assets/geo.js?v=4"></script>
+<script>
+(function(){
+const {P,seg,line,ray,path,poly,dot,lbl,tri,arc,right,wedge,tf,tf0,centroid} = G;
+const card=(t,svg)=>'<div class="mini">'+G.svg([160,100],svg,t)+'<h3>'+t+'</h3></div>';
+S.$('figs').innerHTML=[
+  card('Точка',dot(P(80,50))+lbl(P(92,40),'A')),
+  card('Прямая',line(P(20,70),P(140,30),'')+lbl(P(130,20),'a')),
+  card('Луч',ray(P(25,70),P(140,40),'',120)+dot(P(25,70))+lbl(P(20,84),'O')),
+  card('Отрезок',seg(P(25,70),P(135,35),'')+dot(P(25,70))+dot(P(135,35))+lbl(P(18,82),'A')+lbl(P(146,28),'B')),
+  card('Угол','<g class="k0">'+wedge(P(40,80),P(140,80),P(110,20),26,'')+'</g>'+seg(P(40,80),P(145,80),'')+seg(P(40,80),P(112,16),'')+dot(P(40,80))),
+  card('Треугольник',path([P(20,85),P(140,85),P(70,15)],'',true)),
+  card('Прямоугольник',path([P(25,25),P(135,25),P(135,80),P(25,80)],'',true)+right(P(25,80),P(135,80),P(25,25),9,'')),
+  card('Окружность','<circle cx="80" cy="50" r="38" class="ln"/>'+dot(P(80,50))+seg(P(80,50),P(118,50),'thin')+lbl(P(99,40),'r'))
+].join('');
+
+/* равные фигуры */
+(function(){ const A=P(60,200),B=P(170,200),C=P(90,110), cen=centroid(A,B,C), th=2.5, mv=p=>G.add(P(300,110),G.rot(G.sub(p,cen),th)), A2=mv(A),B2=mv(B),C2=mv(C);
+  // второй треугольник — тот же, перевёрнутый и повёрнутый
+  G.proof(S.$('pEq'),{vb:[400,240],title:'Совмещение наложением',
+    items:[
+      {s:0,h:'<g class="k0">'+poly([A,B,C],'')+path([A,B,C],'c',true)+'</g>'+lbl(P(110,225),'F₁',0,0,'c')},
+      {s:0,mv:'f',h:'<g class="k1">'+poly([A2,B2,C2],'strong')+path([A2,B2,C2],'c',true)+'</g>'},
+      {s:0,e:1,h:'<g class="k1">'+lbl(P(300,190),'F₂',0,0,'c')+'</g>'},
+      {s:3,h:'<g class="k1">'+G.ms(P(115,95),'фигуры совпали')+'</g>'}],
+    moves:{f:{0:tf0(A2),1:'translate(-90px,20px) rotate(0deg) scale(1,1) translate(0px,0px)',2:tf(A2,B2,A,B,false),3:tf(A2,B2,A,B,false)}},
+    steps:['Две фигуры: <i>F</i>₁ и <i>F</i>₂. Равны ли они? Проверим наложением.','Сдвигаем фигуру <i>F</i>₂ ближе к <i>F</i>₁.','Поворачиваем <i>F</i>₂ так, чтобы одна сторона легла на соответствующую сторону <i>F</i>₁.','Фигуры совместились полностью — значит, они <b>равны</b>: <i>F</i>₁ = <i>F</i>₂.']});
+})();
+
+/* игра */
+const ST=[
+  ['Через любые две точки проходит прямая, и притом только одна.',1,'Это основное свойство прямой, его принимают без доказательства.'],
+  ['Отрезком называется часть прямой, ограниченная двумя точками.',0,'Объясняет, что такое отрезок, и содержит слово «называется».'],
+  ['Сумма углов треугольника равна 180°.',2,'Это утверждение доказывают (в § 19).'],
+  ['Равносторонний треугольник — это треугольник, у которого все стороны равны.',0,'Объясняет, какой треугольник называют равносторонним («это»).'],
+  ['Вертикальные углы равны.',2,'Это свойство доказывается в § 6.'],
+  ['Каждый отрезок имеет определённую длину, большую нуля.',1,'Аксиома измерения отрезков — принимается без доказательства.'],
+  ['Прямым называется угол, равный 90°.',0,'Объясняет, какой угол прямой.']
+];
+const NAMES=['определение','аксиома','теорема'];
+S.$('cls').innerHTML=ST.map((s,i)=>'<div class="cl" data-i="'+i+'"><div>'+(i+1)+'. '+s[0]+'</div><div class="opts">'+NAMES.map((n,j)=>'<button type="button" data-j="'+j+'">'+n+'</button>').join('')+'</div><div class="w" aria-live="polite"></div></div>').join('');
+S.$('cls').querySelectorAll('.cl').forEach(el=>{ const s=ST[+el.dataset.i]; el.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{
+  const j=+b.dataset.j; el.querySelectorAll('button').forEach(x=>{ x.classList.remove('right','wrong'); if(+x.dataset.j===s[1]) x.classList.add(j===s[1]?'right':''); });
+  if(j!==s[1]) b.classList.add('wrong'); else b.classList.add('right');
+  el.querySelector('.w').innerHTML=(j===s[1]?'<b style="color:var(--ok)">Верно.</b> ':'<b class="redc">Неверно, это '+NAMES[s[1]]+'.</b> ')+s[2];
+})); });
+
+/* тест */
+S.quiz(S.$('quiz'),[
+  {q:'Какие фигуры называются равными?', opts:['у которых равны площади','которые можно совместить наложением','у которых одинаковое число сторон','которые похожи по форме'], ok:1, why:'Это определение равных фигур.'},
+  {q:'Утверждение, которое принимается без доказательства, — это', opts:['теорема','определение','аксиома','следствие'], ok:2},
+  {q:'Сколько прямых можно провести через две точки?', opts:['ни одной','одну','две','бесконечно много'], ok:1, why:'Аксиома прямой.'},
+  {q:'Раздел геометрии о фигурах на плоскости называется', opts:['стереометрия','планиметрия','тригонометрия','алгебра'], ok:1},
+  {q:'Угол 120° — это угол', opts:['острый','прямой','тупой','развёрнутый'], ok:2, why:'Больше 90°, но меньше 180°.'}
+]);
+})();
+</script>
+<script src="assets/nav.js?v=4"></script>
+</body>
+</html>

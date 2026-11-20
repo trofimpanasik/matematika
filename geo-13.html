@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>§ 13. Третий признак равенства треугольников</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Unbounded:wght@500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=4">
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <a class="brand" href="index.html"><span class="logo">x</span><span class="txt">Математика · 7 класс<small>II четверть</small></span></a>
+  <nav class="tnav" aria-label="Разделы сайта"><a href="index.html">Главная</a><a class="alg" href="index.html#algebra">Алгебра</a><a class="geo" href="index.html#geometry">Геометрия</a></nav>
+</div></header>
+
+<main class="wrap">
+<div class="page-head">
+  <div class="crumbs"><a href="index.html">Главная</a> › <a href="index.html#geometry">Геометрия</a> › § 13</div>
+  <div class="eyebrow">Геометрия · 7 класс · § 13 · уроки 20–21</div>
+  <h1>Третий признак равенства треугольников</h1>
+  <p class="lede">Треугольники равны, если у них соответственно равны три стороны. Углы при этом сравнивать не нужно — они окажутся равными сами.</p>
+  <nav class="toc" aria-label="Разделы темы"><a href="#teorema">Теорема</a><a href="#dokazatelstvo">Доказательство</a><a href="#zhestkost">Жёсткость</a><a href="#sravnenie">Три признака</a><a href="#test">Тест</a><a href="#zadachi">Задачи</a></nav>
+</div>
+
+<section id="teorema">
+  <h2>Теорема</h2>
+  <div class="thm"><span class="tag red">ТРЕТИЙ ПРИЗНАК</span><p>Если три стороны одного треугольника соответственно равны трём сторонам другого треугольника, то такие треугольники равны.</p></div>
+  <p>Говорят, что три стороны задают треугольник <b>однозначно</b>: из трёх палочек данной длины можно сложить только один треугольник.</p>
+</section>
+
+<section id="dokazatelstvo">
+  <h2>Доказательство</h2>
+  <p>Равные стороны отмечены одинаковым числом чёрточек. Нажимай «Дальше»: второй треугольник переедет и перевернётся.</p>
+  <div id="proof"></div>
+</section>
+
+<section id="zhestkost">
+  <h2>Почему треугольник жёсткий</h2>
+  <p>Подвигай красные точки. У четырёхугольника длины сторон не меняются, а форма меняется. У треугольника с теми же сторонами форма остаётся прежней — он может только повернуться.</p>
+  <div class="aside">
+    <div id="quad"></div>
+    <div id="tri"></div>
+  </div>
+  <p class="note">Поэтому в мостах, кранах и крышах так много треугольников: их нельзя «сложить», не сломав.</p>
+</section>
+
+<section id="sravnenie">
+  <h2>Три признака равенства</h2>
+  <div class="grid3" id="cards"></div>
+</section>
+
+<section id="test">
+  <h2>Тест: по какому признаку?</h2>
+  <div id="quiz"></div>
+</section>
+
+<section id="zadachi">
+  <h2>Задачи с решениями</h2>
+  <div class="tasks">
+    <div class="hard"><div class="q"><b>1</b><div><span>Точки <i>B</i> и <i>D</i> лежат по разные стороны от прямой <i>AC</i>, <i>AB</i> = <i>AD</i>, <i>CB</i> = <i>CD</i>. Докажите, что ∠<i>ABC</i> = ∠<i>ADC</i>.</span><div class="qfig" id="f1" style="max-width:260px"></div></div></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Рассмотрим △<i>ABC</i> и △<i>ADC</i>.</div>
+        <div><span class="st">Шаг 2.</span><i>AB</i> = <i>AD</i> и <i>CB</i> = <i>CD</i> по условию, <i>AC</i> — общая сторона.</div>
+        <div><span class="st">Шаг 3.</span>△<i>ABC</i> = △<i>ADC</i> по трём сторонам (III признак).</div>
+        <div><span class="st">Шаг 4.</span>В равных треугольниках против равных сторон лежат равные углы: против <i>AC</i> лежат ∠<i>ABC</i> и ∠<i>ADC</i>.</div>
+        <div class="ans">Значит, ∠<i>ABC</i> = ∠<i>ADC</i>.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>2</b><div><span>В четырёхугольнике <i>ABCD</i> <i>AB</i> = <i>CD</i> и <i>BC</i> = <i>AD</i>. Докажите, что ∠<i>B</i> = ∠<i>D</i>.</span><div class="qfig" id="f2" style="max-width:280px"></div></div></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Проведём диагональ <i>AC</i>. Рассмотрим △<i>ABC</i> и △<i>CDA</i>.</div>
+        <div><span class="st">Шаг 2.</span><i>AB</i> = <i>CD</i>, <i>BC</i> = <i>DA</i> по условию, <i>AC</i> — общая.</div>
+        <div><span class="st">Шаг 3.</span>△<i>ABC</i> = △<i>CDA</i> по III признаку.</div>
+        <div><span class="st">Шаг 4.</span>∠<i>B</i> и ∠<i>D</i> лежат против общей стороны <i>AC</i>, они соответственные.</div>
+        <div class="ans">Значит, ∠<i>B</i> = ∠<i>D</i>.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>3</b><span>Периметр равнобедренного треугольника 30 см, основание 8 см. Равен ли он треугольнику со сторонами 11 см, 11 см и 8 см?</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Сумма боковых сторон: 30 − 8 = 22 (см).</div>
+        <div><span class="st">Шаг 2.</span>Боковые стороны равны: 22 : 2 = 11 (см).</div>
+        <div><span class="st">Шаг 3.</span>Стороны первого треугольника 11, 11 и 8 см — соответственно равны сторонам второго.</div>
+        <div class="ans">Ответ: да, треугольники равны по III признаку.</div>
+      </div></details></div>
+  </div>
+</section>
+
+<nav class="pager" aria-label="Соседние темы"><a href="geo-12.html"><small>← Предыдущая тема</small>§ 12. Признаки равнобедренного</a><a class="next" href="geo-14.html"><small>Следующая тема →</small>§ 14. Серединный перпендикуляр</a></nav>
+<footer class="foot">Геометрия, 7 класс, § 13. Задачи составлены по образцу заданий учебника.</footer>
+</main>
+
+<script src="assets/core.js?v=4"></script>
+<script src="assets/geo.js?v=4"></script>
+<script>
+(function(){
+const {P,add,sub,mul,rot,seg,path,poly,lbl,away,ticks,arc,dist,mid,centroid,reflect,unit,perp,angAt,tf,tf0} = G;
+
+/* ---------- доказательство ---------- */
+(function(){
+  const A=P(50,140), C=P(200,140), B=P(100,50), B2=reflect(B,A,C), O=centroid(A,B,C);
+  const A1=P(285,100), f=Math.PI/6, m=X=>add(A1,rot(sub(X,A),f));
+  const C1=m(C), B1=m(B), O1=centroid(A1,B1,C1);
+  const tickset=(a,b,c)=>'<g class="kr">'+ticks(a,b,1,'')+'</g><g class="k0">'+ticks(b,c,2,'')+'</g><g class="k2">'+ticks(a,c,3,'')+'</g>';
+  G.proof(S.$('proof'),{vb:[440,270],given:'<b>ДАНО</b> <i>AB</i> = <i>A₁B₁</i>, <i>BC</i> = <i>B₁C₁</i>, <i>AC</i> = <i>A₁C₁</i>. <b>ДОКАЗАТЬ</b> △<i>ABC</i> = △<i>A₁B₁C₁</i>.',
+    items:[
+      {s:0,h:'<g class="k0">'+poly([A,B,C],'')+'</g>'+path([A,B,C],'',true)+tickset(A,B,C)+away(A,O,'A')+away(B,O,'B')+away(C,O,'C')},
+      {s:0,mv:'t',h:'<g class="k1">'+poly([A1,B1,C1],'strong')+'</g>'+path([A1,B1,C1],'',true)+tickset(A1,B1,C1)},
+      {s:0,e:1,h:away(A1,O1,'A₁')+away(B1,O1,'B₁')+away(C1,O1,'C₁')},
+      {s:1,h:lbl(P(B2.x,B2.y+18),'B₂')},
+      {s:2,h:seg(B,B2,'dash')},
+      {s:3,h:'<g class="k3">'+poly([A,B,B2],'')+arc(B,A,B2,24,1,'')+arc(B2,A,B,24,1,'')+'</g>'+G.angText(B,A,B2,36,'1','k3')+G.angText(B2,A,B,36,'2','k3')},
+      {s:4,h:'<g class="k2">'+arc(B,C,B2,30,2,'')+arc(B2,C,B,30,2,'')+'</g>'+G.angText(B,C,B2,48,'3','k2')+G.angText(B2,C,B,48,'4','k2')},
+      {s:5,h:'<g class="kp">'+arc(B,A,C,14,1,'')+arc(B2,A,C,14,1,'')+'</g>'},
+      {s:6,h:'<g class="kp">'+path([A,B,C],'c thick',true)+'</g>'}
+    ],
+    moves:{t:{0:tf0(A1),1:tf(A1,C1,A,C,true)}},
+    steps:['Рассмотрим треугольники <i>ABC</i> и <i>A₁B₁C₁</i>.',
+      'Приложим △<i>A₁B₁C₁</i> к △<i>ABC</i> так, чтобы равные стороны <i>A₁C₁</i> и <i>AC</i> совпали, а вершины <i>B₁</i> и <i>B</i> оказались по разные стороны от прямой <i>AC</i>. Вершина <i>B₁</i> займёт положение <i>B₂</i>.',
+      'Проведём отрезок <i>BB₂</i>.',
+      '<i>AB</i> = <i>AB₂</i>, значит △<i>ABB₂</i> равнобедренный и ∠1 = ∠2 (углы при основании).',
+      '<i>CB</i> = <i>CB₂</i>, значит △<i>CBB₂</i> равнобедренный и ∠3 = ∠4.',
+      'Тогда ∠<i>ABC</i> = ∠1 + ∠3 = ∠2 + ∠4 = ∠<i>AB₂C</i>.',
+      '△<i>ABC</i> = △<i>AB₂C</i> по двум сторонам и углу между ними (I признак). А △<i>AB₂C</i> — это △<i>A₁B₁C₁</i>. Теорема доказана.']});
+})();
+
+/* ---------- жёсткость ---------- */
+function cc(P0,r0,P1,r1){ const d=dist(P0,P1); if(d>r0+r1||d<Math.abs(r0-r1)||d===0) return null; const a=(r0*r0-r1*r1+d*d)/(2*d), h=Math.sqrt(Math.max(0,r0*r0-a*a)); const u=unit(sub(P1,P0)), M=add(P0,mul(u,a)), q=perp(u); return [add(M,mul(q,h)),sub(M,mul(q,h))]; }
+(function(){
+  const A=P(40,190), B=P(220,190), rAD=100, rDC=130, rBC=100; let lastC=null;
+  const solveC=D=>{ const s=cc(D,rDC,B,rBC); if(!s) return lastC; const c=s[0].y<s[1].y?s[0]:s[1]; lastC=c; return c; };
+  G.drag(S.$('quad'),{vb:[260,220],label:'Шарнирный четырёхугольник',pts:{D:add(A,mul(unit(P(0.45,-1)),rAD))},
+    constrain:(n,p)=>{ let D=add(A,mul(unit(sub(p,A)),rAD)); if(D.y>A.y-15) return null; if(!cc(D,rDC,B,rBC)) return null; return D; },
+    draw:p=>{ const D=p.D, C=solveC(D), O=centroid(A,B,C,D); return '<g class="k0">'+poly([A,B,C,D],'')+'</g>'+path([A,B,C,D],'',true)+'<g class="k3">'+arc(A,B,D,22,1,'')+'</g>'+away(A,O,'A')+away(B,O,'B')+away(C,O,'C')+away(D,O,'D'); },
+    info:p=>{ const C=solveC(p.D); return '<div><b>Четырёхугольник</b>: стороны те же, ∠<i>A</i> = <span class="chip k3" style="--kc:var(--c3)">'+G.n(G.deg(angAt(A,B,p.D)),'2.2em')+'</span></div>'; }});
+})();
+(function(){
+  const A=P(40,180), B0=P(220,180), C0=P(110,60), r=dist(A,B0);
+  G.drag(S.$('tri'),{vb:[260,220],label:'Треугольник с теми же сторонами',pts:{B:B0},
+    constrain:(n,p)=>{ const B=add(A,mul(unit(sub(p,A)),r)); if(B.y>205||B.x<A.x+20) return null; const t=Math.atan2(B.y-A.y,B.x-A.x); const C=add(A,rot(sub(C0,A),t)); if(C.y<12||C.x>250||C.x<10) return null; return B; },
+    draw:p=>{ const t=Math.atan2(p.B.y-A.y,p.B.x-A.x), C=add(A,rot(sub(C0,A),t)), O=centroid(A,p.B,C); return '<g class="k1">'+poly([A,p.B,C],'')+'</g>'+path([A,p.B,C],'',true)+'<g class="k3">'+arc(A,p.B,C,22,1,'')+'</g>'+away(A,O,'A')+away(p.B,O,'B')+away(C,O,'C'); },
+    info:p=>{ const t=Math.atan2(p.B.y-A.y,p.B.x-A.x), C=add(A,rot(sub(C0,A),t)); return '<div><b>Треугольник</b>: стороны те же, ∠<i>A</i> = <span class="chip k3" style="--kc:var(--c3)">'+G.n(G.deg(angAt(A,p.B,C)),'2.2em')+'</span> — не меняется</div>'; }});
+})();
+
+/* ---------- пары треугольников с отметками ---------- */
+function pair(spec){
+  const T1=[P(25,115),P(75,25),P(150,115)], T2=[P(305,115),P(255,25),P(180,115)];
+  const one=(T,names)=>{ const O=centroid(...T); let o='<g class="k0">'+poly(T,'')+'</g>'+path(T,'',true);
+    (spec.s||[]).forEach(([i,j,n])=>{ o+='<g class="'+['','kr','k0','k2'][n]+'">'+ticks(T[i],T[j],n,'')+'</g>'; });
+    (spec.a||[]).forEach(([v,n])=>{ const o1=T[(v+1)%3], o2=T[(v+2)%3]; o+='<g class="'+['','k3','k1'][n]+'">'+arc(T[v],o1,o2,18,n,'')+'</g>'; });
+    if(names) T.forEach((p,i)=>{ o+=away(p,O,names[i],14); });
+    return o; };
+  return G.svg([330,140],one(T1,spec.n1||['A','B','C'])+one(T2,spec.n2||['A₁','B₁','C₁']),'Два треугольника');
+}
+const I={s:[[0,1,1],[0,2,2]],a:[[0,1]]}, II={s:[[0,2,1]],a:[[0,1],[2,2]]}, III={s:[[0,1,1],[1,2,2],[0,2,3]]};
+S.$('cards').innerHTML=
+  '<div class="mini">'+pair(I)+'<h3>I признак</h3><p>По двум сторонам и углу <b>между ними</b>.</p></div>'+
+  '<div class="mini">'+pair(II)+'<h3>II признак</h3><p>По стороне и двум <b>прилежащим</b> к ней углам.</p></div>'+
+  '<div class="mini">'+pair(III)+'<h3>III признак</h3><p>По трём сторонам.</p></div>';
+const opts=['I признак','II признак','III признак','данных недостаточно'];
+S.quiz(S.$('quiz'),[
+  {fig:pair(III), q:'По какому признаку равны треугольники?', opts, ok:2, why:'Отмечены три пары равных сторон.'},
+  {fig:pair(I), q:'По какому признаку равны треугольники?', opts, ok:0, why:'Две стороны и угол <b>между ними</b>.'},
+  {fig:pair(II), q:'По какому признаку равны треугольники?', opts, ok:1, why:'Сторона и два прилежащих к ней угла.'},
+  {fig:pair({s:[[0,1,1],[1,2,2]],a:[[0,1]]}), q:'По какому признаку равны треугольники?', opts, ok:3, why:'Угол <i>A</i> не лежит между отмеченными сторонами <i>AB</i> и <i>BC</i>. Ни один признак не подходит.'},
+  {fig:pair({s:[[0,1,1],[0,2,2]]}), q:'Отмечены только две пары сторон. Что ещё нужно, чтобы применить III признак?', opts:['равенство углов <i>A</i> и <i>A₁</i>','равенство сторон <i>BC</i> и <i>B₁C₁</i>','равенство углов <i>B</i> и <i>B₁</i>','ничего'], ok:1, why:'Для третьего признака нужны все три пары сторон.'},
+  {q:'Стороны одного треугольника 5, 7 и 9 см, другого — 9, 5 и 7 см. Равны ли треугольники?', opts:['да, по III признаку','нет','только если равны углы','нельзя сказать'], ok:0, why:'Набор сторон один и тот же, порядок записи не важен.'}
+]);
+
+/* ---------- чертежи к задачам ---------- */
+(function(){ const A=P(30,90),C=P(230,90),B=P(120,20),D=P(120,160),O=P(120,90);
+  S.$('f1').innerHTML=G.svg([260,180],path([A,B,C,D],'',true)+seg(A,C,'')+'<g class="kr">'+ticks(A,B,1,'')+ticks(A,D,1,'')+'</g><g class="k0">'+ticks(C,B,2,'')+ticks(C,D,2,'')+'</g>'+away(A,O,'A')+away(B,O,'B')+away(C,O,'C')+away(D,O,'D'));
+  const a=P(30,130),b=P(80,30),c=P(250,30),d=P(200,130),o=P(140,80);
+  S.$('f2').innerHTML=G.svg([280,160],path([a,b,c,d],'',true)+seg(a,c,'dash')+'<g class="kr">'+ticks(a,b,1,'')+ticks(c,d,1,'')+'</g><g class="k0">'+ticks(b,c,2,'')+ticks(a,d,2,'')+'</g>'+away(a,o,'A')+away(b,o,'B')+away(c,o,'C')+away(d,o,'D'));
+})();
+})();
+</script>
+<script src="assets/nav.js?v=4"></script>
+</body>
+</html>

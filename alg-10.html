@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>§ 10. Многочлен и одночлен</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Unbounded:wght@500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=4">
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <a class="brand" href="index.html"><span class="logo">x</span><span class="txt">Математика · 7 класс<small>II четверть</small></span></a>
+  <nav class="tnav" aria-label="Разделы сайта"><a href="index.html">Главная</a><a class="alg" href="index.html#algebra">Алгебра</a><a class="geo" href="index.html#geometry">Геометрия</a></nav>
+</div></header>
+
+<main class="wrap">
+<div class="page-head">
+  <div class="crumbs"><a href="index.html">Главная</a> › <a href="index.html#algebra">Алгебра</a> › § 10</div>
+  <div class="eyebrow">Алгебра · 7 класс · § 10 · уроки 31–32</div>
+  <h1>Умножение и деление многочлена на одночлен</h1>
+  <p class="lede">Оба действия устроены одинаково: одночлен по очереди «встречается» с каждым членом многочлена.</p>
+  <nav class="toc" aria-label="Разделы темы"><a href="#umnozhenie">Умножение</a><a href="#pochemu">Почему так</a><a href="#delenie">Деление</a><a href="#oshibki">Ошибки</a><a href="#trenazher">Тренажёр</a><a href="#zadachi">Задачи</a></nav>
+</div>
+
+<section id="umnozhenie">
+  <h2>Умножение одночлена на многочлен</h2>
+  <div class="rule"><span class="tag">ПРАВИЛО</span>
+    <p>Чтобы умножить одночлен на многочлен, нужно:</p>
+    <ol><li><b>1)</b><span>умножить одночлен на <u>каждый</u> член многочлена;</span></li><li><b>2)</b><span>полученные произведения сложить.</span></li></ol>
+    <div class="scheme"><span class="m">2a(a^2 + 3a − 1) = 2a · a^2 + 2a · 3a − 2a · 1 = 2a^3 + 6a^2 − 2a</span></div>
+  </div>
+  <p>Член многочлена берётся <b>вместе со своим знаком</b>. В многочлене <span class="m">4x − 7y</span> второй член равен <span class="m">−7y</span>, поэтому умножать надо на <span class="m">−7y</span>.</p>
+  <div class="tabs" id="mulTabs" role="group" aria-label="Примеры на умножение"></div>
+  <div id="mulBoard"></div>
+  <div class="aside">
+    <div class="fact"><h3>Сколько членов получится?</h3><p>Столько же, сколько в многочлене: одночлен умножается на каждый член, и подобных среди произведений не появляется.</p></div>
+    <div class="fact"><h3>Какая будет степень?</h3><p>Степени складываются: <span class="m">3x^2 · (x^4 − 2x + 1)</span> имеет степень 2 + 4 = 6, старший член <span class="m">3x^6</span>.</p></div>
+  </div>
+</section>
+
+<section id="pochemu">
+  <h2>Почему это работает</h2>
+  <p>Это распределительный закон <span class="m">a(b + c + d) = ab + ac + ad</span>. Прямоугольник высотой <i class="m">a</i> разбит на три куска: площадь всего прямоугольника равна сумме площадей кусков. Подвигай ползунки.</p>
+  <div class="panel">
+    <div class="svgbox" style="max-width:520px"><svg id="areaSvg" viewBox="0 0 404 166" role="img" aria-label="Прямоугольник, разбитый на три части"></svg></div>
+    <div class="sliders">
+      <label for="ra">высота <span><b class="redc">a</b> = <span id="va">3</span></span><input type="range" id="ra" min="1" max="5" value="3"></label>
+      <label for="rb">кусок <span><b class="k0 kt">b</b> = <span id="vb">2</span></span><input type="range" id="rb" min="1" max="5" value="2"></label>
+      <label for="rc">кусок <span><b class="k1 kt">c</b> = <span id="vc">4</span></span><input type="range" id="rc" min="1" max="5" value="4"></label>
+      <label for="rd">кусок <span><b class="k2 kt">d</b> = <span id="vd">1</span></span><input type="range" id="rd" min="1" max="5" value="1"></label>
+    </div>
+    <div class="out" id="areaOut"></div>
+  </div>
+</section>
+
+<section id="delenie">
+  <h2>Деление многочлена на одночлен</h2>
+  <p>Деление обратно умножению. Мы получили <span class="m">2x^2 · (2x^2 − 3x + 4) = 4x^4 − 6x^3 + 8x^2</span>. Значит, <span class="m">(4x^4 − 6x^3 + 8x^2) : (2x^2) = 2x^2 − 3x + 4</span>: каждый член разделился на <span class="m">2x^2</span> отдельно.</p>
+  <div class="rule"><span class="tag">ПРАВИЛО</span>
+    <p>Чтобы разделить многочлен на одночлен, нужно:</p>
+    <ol><li><b>1)</b><span>разделить <u>каждый</u> член многочлена на этот одночлен;</span></li><li><b>2)</b><span>полученные частные сложить.</span></li></ol>
+    <div class="scheme"><span class="m">(4x^4 − 6x^3 + 8x^2) : (2x^2) = 2x^2 − 3x + 4</span></div>
+  </div>
+  <p>При делении одночленов числа делятся, а показатели одинаковых букв <b>вычитаются</b>: <span class="m">x^7 : x^3 = x^4</span>, потому что 7 − 3 = 4.</p>
+  <div class="tabs" id="divTabs" role="group" aria-label="Примеры на деление"></div>
+  <div id="divBoard"></div>
+  <div class="aside">
+    <div class="fact"><h3>Проверка умножением</h3><p>Умножь ответ на делитель — должен получиться исходный многочлен.</p></div>
+    <div class="warn"><h3>Частное не всегда многочлен</h3><p><span class="m">(4x^3 + 2x) : x^2</span>: <span class="m">2x : x^2</span> одночленом не будет. В наших заданиях каждый член делится нацело.</p></div>
+  </div>
+</section>
+
+<section id="oshibki">
+  <h2>Частые ошибки</h2>
+  <div class="mist">
+    <div class="mrow"><div class="what">Умножили не на все члены.</div><div class="bad"><span class="mark">✗</span><span class="m">3x(x + 2) = 3x^2 + 2</span></div><div class="good"><span class="mark">✓</span><span class="m">3x(x + 2) = 3x^2 + 6x</span></div></div>
+    <div class="mrow"><div class="what">Потеряли знак: минус на минус даёт плюс.</div><div class="bad"><span class="mark">✗</span><span class="m">−2a(a − 4) = −2a^2 − 8a</span></div><div class="good"><span class="mark">✓</span><span class="m">−2a(a − 4) = −2a^2 + 8a</span></div></div>
+    <div class="mrow"><div class="what">Написали 0 вместо 1, когда член делится сам на себя.</div><div class="bad"><span class="mark">✗</span><span class="m">(5x^2 + x) : x = 5x</span></div><div class="good"><span class="mark">✓</span><span class="m">(5x^2 + x) : x = 5x + 1</span></div></div>
+    <div class="mrow"><div class="what">Показатели перемножили, а надо сложить.</div><div class="bad"><span class="mark">✗</span><span class="m">x^2 · x^3 = x^6</span></div><div class="good"><span class="mark">✓</span><span class="m">x^2 · x^3 = x^5</span></div></div>
+    <div class="mrow"><div class="what">Показатели разделили, а надо вычесть.</div><div class="bad"><span class="mark">✗</span><span class="m">x^6 : x^2 = x^3</span></div><div class="good"><span class="mark">✓</span><span class="m">x^6 : x^2 = x^4</span></div></div>
+  </div>
+</section>
+
+<section id="trenazher">
+  <h2>Тренажёр</h2>
+  <p>Каждый раз новый пример. Впиши ответ многочленом стандартного вида. Если не получается, открой пошаговое решение.</p>
+  <div id="trainer"></div>
+</section>
+
+<section id="zadachi">
+  <h2>Задачи посложнее</h2>
+  <div class="tasks">
+    <div class="hard"><div class="q"><b>1</b><span>Упростите выражение <span class="m">2a(a − 3) − a(2a + 1)</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span><span class="m">2a(a − 3) = 2a^2 − 6a</span></div>
+        <div><span class="st">Шаг 2.</span><span class="m">a(2a + 1) = 2a^2 + a</span></div>
+        <div><span class="st">Шаг 3.</span><span class="m">(2a^2 − 6a) − (2a^2 + a) = 2a^2 − 6a − 2a^2 − a</span></div>
+        <div><span class="st">Шаг 4.</span><span class="m">2a^2 − 2a^2 = 0</span>; <span class="m">−6a − a = −7a</span></div>
+        <div class="ans">Ответ: <span class="m">−7a</span>.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>2</b><span>Упростите выражение <span class="m">(10x^3 − 5x^2) : (5x^2) + (3 − 2x)</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span><span class="m">10x^3 : (5x^2) = 2x</span></div>
+        <div><span class="st">Шаг 2.</span><span class="m">−5x^2 : (5x^2) = −1</span></div>
+        <div><span class="st">Шаг 3.</span><span class="m">2x − 1 + 3 − 2x</span></div>
+        <div><span class="st">Шаг 4.</span><span class="m">2x − 2x = 0</span>; <span class="m">−1 + 3 = 2</span></div>
+        <div class="ans">Ответ: 2.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>3</b><span>Решите уравнение <span class="m">x(x + 4) − x(x − 2) = 18</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span><span class="m">x(x + 4) = x^2 + 4x</span></div>
+        <div><span class="st">Шаг 2.</span><span class="m">x(x − 2) = x^2 − 2x</span></div>
+        <div><span class="st">Шаг 3.</span><span class="m">x^2 + 4x − x^2 + 2x = 18</span></div>
+        <div><span class="st">Шаг 4.</span><span class="m">6x = 18</span></div>
+        <div><span class="st">Шаг 5.</span><span class="m">x = 18 : 6 = 3</span></div>
+        <div class="ans">Ответ: <span class="m">x = 3</span>.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>4</b><span>Найдите значение выражения <span class="m">(6a^3b − 9a^2b^2) : (3a^2b) + 3b</span> при <span class="m">a = 7</span>, <span class="m">b = −5</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span><span class="m">6a^3b : (3a^2b) = 2a</span></div>
+        <div><span class="st">Шаг 2.</span><span class="m">−9a^2b^2 : (3a^2b) = −3b</span></div>
+        <div><span class="st">Шаг 3.</span><span class="m">2a − 3b + 3b = 2a</span>. Значение <i class="m">b</i> не нужно.</div>
+        <div><span class="st">Шаг 4.</span><span class="m">2 · 7 = 14</span></div>
+        <div class="ans">Ответ: 14.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>5</b><span>Докажите, что значение выражения <span class="m">(12y^4 − 8y^3) : (4y^2) − y(3y − 2)</span> не зависит от <i class="m">y</i> (<span class="m">y ≠ 0</span>).</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span><span class="m">12y^4 : (4y^2) = 3y^2</span></div>
+        <div><span class="st">Шаг 2.</span><span class="m">−8y^3 : (4y^2) = −2y</span></div>
+        <div><span class="st">Шаг 3.</span><span class="m">y(3y − 2) = 3y^2 − 2y</span></div>
+        <div><span class="st">Шаг 4.</span><span class="m">3y^2 − 2y − 3y^2 + 2y</span></div>
+        <div><span class="st">Шаг 5.</span><span class="m">3y^2 − 3y^2 = 0</span>; <span class="m">−2y + 2y = 0</span></div>
+        <div class="ans">Значение равно 0 при любом <span class="m">y ≠ 0</span>.</div>
+      </div></details></div>
+  </div>
+</section>
+
+<nav class="pager" aria-label="Соседние темы"><a href="alg-09.html"><small>← Предыдущая тема</small>§ 9. Сложение и вычитание</a><a class="next" href="alg-11.html"><small>Следующая тема →</small>§ 11. Умножение многочленов</a></nav>
+<footer class="foot">Алгебра, 7 класс, § 10. Примеры составлены по образцу заданий учебника.</footer>
+</main>
+
+<script src="assets/core.js?v=4"></script>
+<script>
+(function(){
+const {T,T1,mmul,ri,pick,rmono,rpoly} = S;
+const ex=(op,M,P,side)=>({op,M:T1(M),P:P.map(T1),side});
+const MUL=[ex('mul','2a',['a^2','3a','-1']),ex('mul','4xy',['3x','-5y']),ex('mul','-3b',['2a^2b','-ab','4a']),ex('mul','3x^3',['5x^2','-2x','7'],'right')];
+const DIV=[ex('div','x',['5x^3','-x^2','x']),ex('div','3x^2',['6x^4','-9x^3','3x^2']),ex('div','2a',['8a^3b^2','-4a^2b','2a']),ex('div','-6m^3n^3',['12m^5n^3','-18m^4n^4','6m^3n^3'])];
+const lab=t=>S.monoPolyExpr(t).replace(/class="(?!op")[^"]*"/g,'');
+S.tabsBoard(S.$('mulTabs'),S.$('mulBoard'),MUL,S.stepsMonoPoly,lab);
+S.tabsBoard(S.$('divTabs'),S.$('divBoard'),DIV,S.stepsMonoPoly,lab);
+
+function area(){
+  const g=id=>+S.$(id).value, a=g('ra'), segs=[g('rb'),g('rc'),g('rd')], names=['b','c','d'];
+  ['a','b','c','d'].forEach((n,i)=>{ S.$('v'+n).textContent = i===0?a:segs[i-1]; });
+  const s=24, ox=34, oy=32, H=a*s; let x=ox, out='';
+  segs.forEach((w,i)=>{ const ww=w*s;
+    out+='<g class="k'+i+'"><rect class="blk" x="'+x+'" y="'+oy+'" width="'+ww+'" height="'+H+'"/>';
+    for(let cx=1;cx<w;cx++) out+='<line class="cell" x1="'+(x+cx*s)+'" y1="'+oy+'" x2="'+(x+cx*s)+'" y2="'+(oy+H)+'"/>';
+    for(let cy=1;cy<a;cy++) out+='<line class="cell" x1="'+x+'" y1="'+(oy+cy*s)+'" x2="'+(x+ww)+'" y2="'+(oy+cy*s)+'"/>';
+    out+='<rect class="blk" x="'+x+'" y="'+oy+'" width="'+ww+'" height="'+H+'" style="fill:none"/><text class="svlbl" x="'+(x+ww/2)+'" y="'+(oy-10)+'">'+names[i]+'</text><text class="svin" x="'+(x+ww/2)+'" y="'+(oy+H/2+5)+'">'+(a*w)+'</text></g>';
+    x+=ww; });
+  out+='<text class="svlbl kr" x="'+(ox-16)+'" y="'+(oy+H/2+6)+'">a</text>';
+  S.$('areaSvg').innerHTML=out;
+  const [b,c,d]=segs, sum=b+c+d, tot=a*sum, K=(i,t)=>'<span class="k'+i+' kt">'+t+'</span>';
+  S.$('areaOut').innerHTML=
+    '<div><span class="cap2">Весь прямоугольник</span><i>a</i>(<i>b</i> + <i>c</i> + <i>d</i>) = '+a+' · ('+b+' + '+c+' + '+d+') = '+a+' · '+sum+' = <b>'+tot+'</b></div>'+
+    '<div><span class="cap2">Сумма кусков</span>'+K(0,'<i>ab</i>')+' + '+K(1,'<i>ac</i>')+' + '+K(2,'<i>ad</i>')+' = '+K(0,a*b)+' + '+K(1,a*c)+' + '+K(2,a*d)+' = <b>'+tot+'</b></div>'+
+    '<div><span class="cap2">Обратный ход — деление: по площадям кусков и высоте находим длины</span>('+K(0,a*b)+' + '+K(1,a*c)+' + '+K(2,a*d)+') : '+a+' = '+K(0,b)+' + '+K(1,c)+' + '+K(2,d)+'</div>';
+}
+['ra','rb','rc','rd'].forEach(id=>S.$(id).addEventListener('input',area)); area();
+
+const SETS=[['x'],['a'],['y'],['x','y'],['a','b'],['m','n']];
+S.trainer(S.$('trainer'),{kind:'poly', modes:[['mix','Вперемешку'],['mul','Умножение'],['div','Деление']], gen(mode){
+  const op = mode==='mix' ? (Math.random()<0.5?'mul':'div') : mode;
+  const L=pick(SETS), two=L.length>1;
+  let task, answer;
+  if(op==='mul'){ const M=rmono(L,5,2,0.35,1), P=rpoly(L,ri(2,3),8,two?2:3,3); task={op,M,P,side:Math.random()<0.2?'right':'left'}; answer=P.map(p=>mmul(M,p)); }
+  else { const M=rmono(L,4,2,0.35,1), Q=rpoly(L,ri(2,3),6,2,3); task={op,M,P:Q.map(q=>mmul(q,M))}; answer=Q; }
+  return {q:S.monoPolyExpr(task).replace(/class="(?!op"|src")[^"]*"/g,'')+' = ?', answer, steps:S.stepsMonoPoly(task), letters:L};
+}});
+})();
+</script>
+<script src="assets/nav.js?v=4"></script>
+</body>
+</html>

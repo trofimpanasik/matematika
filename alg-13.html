@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>§ 13. Разность квадратов</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Unbounded:wght@500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=4">
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <a class="brand" href="index.html"><span class="logo">x</span><span class="txt">Математика · 7 класс<small>II четверть</small></span></a>
+  <nav class="tnav" aria-label="Разделы сайта"><a href="index.html">Главная</a><a class="alg" href="index.html#algebra">Алгебра</a><a class="geo" href="index.html#geometry">Геометрия</a></nav>
+</div></header>
+
+<main class="wrap">
+<div class="page-head">
+  <div class="crumbs"><a href="index.html">Главная</a> › <a href="index.html#algebra">Алгебра</a> › § 13</div>
+  <div class="eyebrow">Алгебра · 7 класс · § 13 · уроки 40–43</div>
+  <h1>Произведение суммы и разности двух выражений</h1>
+  <p class="lede">Если перемножить сумму и разность одних и тех же выражений, средние члены сократятся и останется разность квадратов.</p>
+  <nav class="toc" aria-label="Разделы темы"><a href="#formula">Формула</a><a href="#pochemu">Почему так</a><a href="#razbor">Разбор</a><a href="#schet">Быстрый счёт</a><a href="#oshibki">Ошибки</a><a href="#test">Тест</a><a href="#trenazher">Тренажёр</a><a href="#zadachi">Задачи</a></nav>
+</div>
+
+<section id="formula">
+  <h2>Формула</h2>
+  <div class="rule"><span class="tag">РАЗНОСТЬ КВАДРАТОВ</span>
+    <div class="formula"><span class="m">(a − b)(a + b) = a^2 − b^2</span></div>
+    <p>Произведение разности двух выражений и их суммы равно разности квадратов этих выражений.</p>
+  </div>
+  <p>Проверим умножением: <span class="m">(a − b)(a + b) = a^2 + ab − ab − b^2 = a^2 − b^2</span>. Члены <span class="m">ab</span> и <span class="m">−ab</span> взаимно уничтожаются.</p>
+  <div class="fact"><h3>И в обратную сторону</h3><p>Разность квадратов раскладывается на множители: <span class="m">a^2 − b^2 = (a − b)(a + b)</span>. Например, <span class="m">x^2 − 49 = (x − 7)(x + 7)</span>.</p></div>
+</section>
+
+<section id="pochemu">
+  <h2>Почему так: разрежем и переложим</h2>
+  <p>Нажимай «Дальше» и смотри, как из квадрата без уголка получается прямоугольник.</p>
+  <div id="pDiff"></div>
+</section>
+
+<section id="razbor">
+  <h2>Разбор по шагам</h2>
+  <div class="tabs" id="tEx" role="group" aria-label="Примеры"></div>
+  <div id="bEx"></div>
+</section>
+
+<section id="schet">
+  <h2>Быстрый счёт</h2>
+  <p>Если два числа одинаково отстоят от круглого числа, их произведение считается в уме. Подвигай ползунки.</p>
+  <div class="panel">
+    <div class="sliders s2">
+      <label for="cn">круглое число <span><b style="font-style:normal" id="vcn">50</b></span><input type="range" id="cn" min="2" max="10" value="5"></label>
+      <label for="cd">отступ <span><b style="font-style:normal" id="vcd">1</b></span><input type="range" id="cd" min="1" max="9" value="1"></label>
+    </div>
+    <div class="out" id="calcOut"></div>
+  </div>
+</section>
+
+<section id="oshibki">
+  <h2>Частые ошибки</h2>
+  <div class="mist">
+    <div class="mrow"><div class="what">Поставили «+» между квадратами.</div><div class="bad"><span class="mark">✗</span><span class="m">(a − b)(a + b) = a^2 + b^2</span></div><div class="good"><span class="mark">✓</span><span class="m">a^2 − b^2</span></div></div>
+    <div class="mrow"><div class="what">Перепутали с квадратом разности.</div><div class="bad"><span class="mark">✗</span><span class="m">(x − 3)(x + 3) = x^2 − 6x + 9</span></div><div class="good"><span class="mark">✓</span><span class="m">x^2 − 9</span></div></div>
+    <div class="mrow"><div class="what">Не возвели в квадрат коэффициент.</div><div class="bad"><span class="mark">✗</span><span class="m">(3x − 1)(3x + 1) = 3x^2 − 1</span></div><div class="good"><span class="mark">✓</span><span class="m">9x^2 − 1</span></div></div>
+    <div class="mrow"><div class="what">Применили формулу к разным выражениям.</div><div class="bad"><span class="mark">✗</span><span class="m">(x − 2)(x + 3) = x^2 − 9</span></div><div class="good"><span class="mark">✓</span>здесь формулы нет: <span class="m">x^2 + x − 6</span></div></div>
+  </div>
+</section>
+
+<section id="test">
+  <h2>Тест</h2>
+  <div id="quiz"></div>
+</section>
+
+<section id="trenazher">
+  <h2>Тренажёр</h2>
+  <p>Перемножь по формуле и запиши ответ многочленом.</p>
+  <div id="trainer"></div>
+</section>
+
+<section id="zadachi">
+  <h2>Задачи посложнее</h2>
+  <div class="tasks">
+    <div class="hard"><div class="q"><b>1</b><span>Упростите выражение <span class="m">(x − 3)(x + 3) − (x − 2)^2</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span><span class="m">(x − 3)(x + 3) = x^2 − 9</span></div>
+        <div><span class="st">Шаг 2.</span><span class="m">(x − 2)^2 = x^2 − 4x + 4</span></div>
+        <div><span class="st">Шаг 3.</span><span class="m">x^2 − 9 − (x^2 − 4x + 4) = x^2 − 9 − x^2 + 4x − 4</span></div>
+        <div><span class="st">Шаг 4.</span><span class="m">x^2 − x^2 = 0</span>; <span class="m">−9 − 4 = −13</span></div>
+        <div class="ans">Ответ: <span class="m">4x − 13</span>.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>2</b><span>Решите уравнение <span class="m">(x + 4)(x − 4) − x(x − 2) = 8</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span><span class="m">(x + 4)(x − 4) = x^2 − 16</span></div>
+        <div><span class="st">Шаг 2.</span><span class="m">x(x − 2) = x^2 − 2x</span></div>
+        <div><span class="st">Шаг 3.</span><span class="m">x^2 − 16 − x^2 + 2x = 8</span></div>
+        <div><span class="st">Шаг 4.</span><span class="m">2x − 16 = 8</span>, <span class="m">2x = 24</span></div>
+        <div><span class="st">Шаг 5.</span><span class="m">x = 12</span></div>
+        <div class="ans">Ответ: <span class="m">x = 12</span>.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>3</b><span>Вычислите удобным способом: <span class="m">37^2 − 13^2</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span><span class="m">37^2 − 13^2 = (37 − 13)(37 + 13)</span></div>
+        <div><span class="st">Шаг 2.</span><span class="m">37 − 13 = 24</span>; <span class="m">37 + 13 = 50</span></div>
+        <div><span class="st">Шаг 3.</span><span class="m">24 · 50 = 1200</span></div>
+        <div class="ans">Ответ: 1200.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>4</b><span>Разложите на множители: <span class="m">49a^2 − 25</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span><span class="m">49a^2 = (7a)^2</span>; <span class="m">25 = 5^2</span></div>
+        <div><span class="st">Шаг 2.</span><span class="m">(7a)^2 − 5^2 = (7a − 5)(7a + 5)</span></div>
+        <div class="ans">Ответ: <span class="m">(7a − 5)(7a + 5)</span>.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>5</b><span>Докажите, что при любом натуральном <i class="m">n</i> значение выражения <span class="m">(n + 1)^2 − (n − 1)^2</span> делится на 4.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Это разность квадратов: <span class="m">((n + 1) − (n − 1))((n + 1) + (n − 1))</span></div>
+        <div><span class="st">Шаг 2.</span><span class="m">(n + 1) − (n − 1) = 2</span>; <span class="m">(n + 1) + (n − 1) = 2n</span></div>
+        <div><span class="st">Шаг 3.</span><span class="m">2 · 2n = 4n</span></div>
+        <div class="ans"><span class="m">4n</span> делится на 4 при любом <i class="m">n</i>.</div>
+      </div></details></div>
+  </div>
+</section>
+
+<nav class="pager" aria-label="Соседние темы"><a href="alg-12.html"><small>← Предыдущая тема</small>§ 12. Квадрат суммы и разности</a><a class="next" href="alg-14.html"><small>Следующая тема →</small>§ 14. Разложение на множители</a></nav>
+<footer class="foot">Алгебра, 7 класс, § 13. Примеры составлены по образцу заданий учебника.</footer>
+</main>
+
+<script src="assets/core.js?v=4"></script>
+<script src="assets/geo.js?v=4"></script>
+<script>
+(function(){
+const {T1,mono,mmul,ri,pick,sgn,mh} = S;
+const {P,seg,poly,lbl} = G;
+const sup2='<tspan dy="-7" font-size="11">2</tspan>';
+(function(){
+  const x0=40,y0=40,a=200,b=80,c=a-b;
+  const rect=(x,y,w,h)=>[P(x,y),P(x+w,y),P(x+w,y+h),P(x,y+h)];
+  const p1=P(x0,y0+c), p2=P(x0+c,y0+c);
+  const items=[
+    {s:0,h:'<g class="k0">'+poly(rect(x0,y0,a,c),'strong')+'</g>'},
+    {s:0,h:G.path(rect(x0,y0,a,c),'',true)},
+    {s:0,e:2,mv:'pc',h:'<g class="k0">'+poly(rect(x0,y0+c,c,b),'strong')+'</g>'},
+    {s:2,mv:'pc',h:'<g class="k1">'+poly(rect(x0,y0+c,c,b),'strong')+'</g>'},
+    {s:0,mv:'pc',h:G.path(rect(x0,y0+c,c,b),'',true)},
+    {s:0,e:1,h:'<g class="k0">'+poly(rect(x0+c,y0+c,b,b),'strong')+G.path(rect(x0+c,y0+c,b,b),'',true)+'</g>'},
+    {s:1,e:2,h:'<g class="kr">'+poly(rect(x0+c,y0+c,b,b),'strong')+G.path(rect(x0+c,y0+c,b,b),'c dash',true)+lbl(P(x0+c+b/2,y0+c+b/2),'b'+sup2,0,0,'c')+'</g>'},
+    {s:0,e:3,h:lbl(P(x0+a/2,y0-14),'a')+lbl(P(x0-16,y0+a/2),'a')},
+    {s:1,e:3,h:lbl(P(x0+c+b/2,y0+a+16),'b')+lbl(P(x0+a+14,y0+c+b/2),'b')},
+    {s:4,h:'<g class="kp">'+G.path(rect(x0,y0,a+b,c),'c thick',true)+'</g>'+lbl(P(x0+(a+b)/2,y0-14),'a + b')+lbl(P(x0+a+b+30,y0+c/2),'a − b')+lbl(P(x0+a/2,y0+c/2),'a',0,0)+lbl(P(x0+a+b/2,y0+c/2),'b',0,0)}
+  ];
+  G.proof(S.$('pDiff'),{vb:[360,280],items,moves:{pc:{0:G.tf0(p1),3:G.tf(p1,p2,P(x0+a+b,y0),P(x0+a+b,y0+c),false)}},steps:[
+    'Квадрат со стороной <i>a</i>. Его площадь <span class="m">a^2</span>.',
+    'Вырежем из угла квадрат со стороной <i>b</i> (красный). Останется фигура площадью <span class="m">a^2 − b^2</span>.',
+    'Разрежем оставшуюся фигуру на два прямоугольника: синий (<i>a</i> на <span class="m">a − b</span>) и зелёный.',
+    'Повернём зелёный прямоугольник и приложим его справа к синему.',
+    'Получился прямоугольник со сторонами <span class="m">a + b</span> и <span class="m">a − b</span>. Площадь не изменилась: <span class="m">a^2 − b^2 = (a − b)(a + b)</span>.'
+  ]});
+})();
+
+const EX=[[T1('x'),T1('4'),0],[T1('3a'),T1('2b'),1],[T1('2x'),T1('7'),0],[T1('5'),T1('m^2'),1]];
+S.tabsBoard(S.$('tEx'),S.$('bEx'),EX,e=>S.stepsDiffSq(e[0],e[1],e[2]),e=>{ const f1='('+mh(e[0])+' − '+mh(e[1])+')', f2='('+mh(e[0])+' + '+mh(e[1])+')'; return e[2]?f2+f1:f1+f2; });
+
+function calc(){
+  const n=+S.$('cn').value*10, d=+S.$('cd').value; S.$('vcn').textContent=n; S.$('vcd').textContent=d;
+  S.$('calcOut').innerHTML='<div><span class="cap2">Пример</span>'+(n-d)+' · '+(n+d)+'</div>'+
+    '<div><span class="cap2">По формуле</span>= ('+n+' − '+d+')('+n+' + '+d+') = '+n+'<sup>2</sup> − '+d+'<sup>2</sup></div>'+
+    '<div><span class="cap2">Считаем</span>= '+(n*n)+' − '+(d*d)+' = <b>'+(n*n-d*d)+'</b></div>';
+}
+['cn','cd'].forEach(id=>S.$(id).addEventListener('input',calc)); calc();
+
+S.quiz(S.$('quiz'),[
+  {q:'Чему равно <span class="m">(m − 6)(m + 6)</span>?', opts:['<span class="m">m^2 − 36</span>','<span class="m">m^2 + 36</span>','<span class="m">m^2 − 12m + 36</span>','<span class="m">m^2 − 6</span>'], ok:0, why:'Квадрат первого минус квадрат второго: <span class="m">m^2 − 36</span>.'},
+  {q:'Чему равно <span class="m">(2a + 5b)(2a − 5b)</span>?', opts:['<span class="m">2a^2 − 5b^2</span>','<span class="m">4a^2 − 25b^2</span>','<span class="m">4a^2 + 25b^2</span>','<span class="m">4a^2 − 10b^2</span>'], ok:1, why:'<span class="m">(2a)^2 − (5b)^2 = 4a^2 − 25b^2</span>.'},
+  {q:'Какое произведение равно <span class="m">x^2 − 81</span>?', opts:['<span class="m">(x − 9)^2</span>','<span class="m">(x − 81)(x + 1)</span>','<span class="m">(x − 9)(x + 9)</span>','<span class="m">(x − 3)(x + 27)</span>'], ok:2, why:'<span class="m">81 = 9^2</span>, значит <span class="m">x^2 − 9^2 = (x − 9)(x + 9)</span>.'},
+  {q:'Сколько будет <span class="m">29 · 31</span>?', opts:['899','901','909','961'], ok:0, why:'<span class="m">(30 − 1)(30 + 1) = 900 − 1 = 899</span>.'},
+  {q:'К какому произведению формула разности квадратов <b>не</b> подходит?', opts:['<span class="m">(y − 1)(y + 1)</span>','<span class="m">(4 + c)(4 − c)</span>','<span class="m">(x − 2)(2 + x)</span>','<span class="m">(a − b)(b + a^2)</span>'], ok:3, why:'Во второй скобке <span class="m">a^2</span>, а не <i>a</i>: выражения разные.'}
+]);
+
+S.trainer(S.$('trainer'),{kind:'poly', gen(){
+  const L=pick([['x'],['a'],['m'],['y'],['x','y'],['a','b'],['c']]);
+  const a=mono(ri(1,6),{[L[0]]:Math.random()<0.25?2:1});
+  let b=L.length>1 ? mono(ri(1,6),{[L[1]]:1}) : mono(ri(1,9),{});
+  const order=Math.random()<0.5?1:0;
+  const A2=mmul(a,a), B2=mmul(b,b);
+  const f1='('+mh(a)+' − '+mh(b)+')', f2='('+mh(a)+' + '+mh(b)+')';
+  return {q:(order?f2+f1:f1+f2)+' = ?', answer:[A2,mono(-B2.c,B2.v)], steps:S.stepsDiffSq(a,b,order), letters:L};
+}});
+})();
+</script>
+<script src="assets/nav.js?v=4"></script>
+</body>
+</html>

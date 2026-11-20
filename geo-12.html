@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>§ 12. Признаки равнобедренного треугольника</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Unbounded:wght@500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=4">
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <a class="brand" href="index.html"><span class="logo">x</span><span class="txt">Математика · 7 класс<small>II четверть</small></span></a>
+  <nav class="tnav" aria-label="Разделы сайта"><a href="index.html">Главная</a><a class="alg" href="index.html#algebra">Алгебра</a><a class="geo" href="index.html#geometry">Геометрия</a></nav>
+</div></header>
+
+<main class="wrap">
+<div class="page-head">
+  <div class="crumbs"><a href="index.html">Главная</a> › <a href="index.html#geometry">Геометрия</a> › § 12</div>
+  <div class="eyebrow">Геометрия · 7 класс · § 12 · уроки 18–19</div>
+  <h1>Признаки равнобедренного треугольника</h1>
+  <p class="lede">Как узнать, что треугольник равнобедренный, не измеряя сторон? Достаточно, чтобы совпали два из трёх отрезков, проведённых из одной вершины: высота, медиана, биссектриса.</p>
+  <nav class="toc" aria-label="Разделы темы"><a href="#povtor">Повторим</a><a href="#opyt">Опыт</a><a href="#teoremy">Теоремы</a><a href="#test">Тест</a><a href="#zadachi">Задачи</a></nav>
+</div>
+
+<section id="povtor">
+  <h2>Повторим</h2>
+  <div class="aside">
+    <div class="fact"><h3>Свойства равнобедренного треугольника</h3><p>Углы при основании равны. Биссектриса, проведённая к основанию, является и медианой, и высотой.</p></div>
+    <div class="fact"><h3>Признак, который мы уже знаем</h3><p>Если в треугольнике два угла равны, то треугольник равнобедренный.</p></div>
+  </div>
+</section>
+
+<section id="opyt">
+  <h2>Опыт: когда отрезки совпадают</h2>
+  <p>Из вершины <i>B</i> проведены высота <b class="redc">BH</b>, медиана <b class="k0 kt">BM</b> и биссектриса <b class="k1 kt">BL</b>. Двигай вершину <i>B</i>. Найди положение, при котором все три отрезка сольются в один.</p>
+  <div id="exp"></div>
+</section>
+
+<section id="teoremy">
+  <h2>Три новых признака</h2>
+  <div class="thm"><span class="tag red">ТЕОРЕМА 1</span><p>Если в треугольнике высота является медианой, то треугольник равнобедренный.</p></div>
+  <div id="p1"></div>
+  <div class="thm"><span class="tag red">ТЕОРЕМА 2</span><p>Если в треугольнике высота является биссектрисой, то треугольник равнобедренный.</p></div>
+  <div id="p2"></div>
+  <div class="thm"><span class="tag red">ТЕОРЕМА 3</span><p>Если в треугольнике медиана является биссектрисой, то треугольник равнобедренный.</p></div>
+  <div id="p3"></div>
+  <div class="warn"><h3>Приём «продлить медиану»</h3><p>В доказательстве теоремы 3 медиану продлили на её длину за середину стороны. Этот приём часто помогает в задачах: появляются два равных треугольника.</p></div>
+  <div class="rule"><span class="tag">ИТОГ</span><p>Если из одной вершины треугольника совпадают <b>любые два</b> из трёх отрезков — высота, медиана, биссектриса, — то треугольник равнобедренный. Тогда совпадает и третий.</p></div>
+</section>
+
+<section id="test">
+  <h2>Тест</h2>
+  <div id="quiz"></div>
+</section>
+
+<section id="zadachi">
+  <h2>Задачи с решениями</h2>
+  <div class="tasks">
+    <div class="hard"><div class="q"><b>1</b><span>В треугольнике <i>ABC</i> медиана <i>BM</i> перпендикулярна стороне <i>AC</i>, <i>AB</i> = 7 см, <i>AC</i> = 10 см. Найдите периметр треугольника.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span><i>BM</i> — медиана и высота (так как <i>BM</i> ⊥ <i>AC</i>).</div>
+        <div><span class="st">Шаг 2.</span>По теореме 1 треугольник равнобедренный: <i>BC</i> = <i>AB</i> = 7 см.</div>
+        <div><span class="st">Шаг 3.</span><i>P</i> = 7 + 7 + 10 = 24 (см).</div>
+        <div class="ans">Ответ: 24 см.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>2</b><span>В треугольнике <i>KLN</i> биссектриса <i>LD</i> является высотой, ∠<i>K</i> = 64°. Найдите ∠<i>N</i>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span><i>LD</i> — биссектриса и высота, по теореме 2 треугольник <i>KLN</i> равнобедренный: <i>LK</i> = <i>LN</i>.</div>
+        <div><span class="st">Шаг 2.</span>Основание — <i>KN</i>, углы при основании равны: ∠<i>N</i> = ∠<i>K</i>.</div>
+        <div class="ans">Ответ: 64°.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>3</b><span>В треугольнике <i>ABC</i> проведена медиана <i>BM</i>, и ∠<i>ABM</i> = ∠<i>CBM</i>. Докажите, что ∠<i>A</i> = ∠<i>C</i>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span><i>BM</i> — медиана (по условию) и биссектриса (так как ∠<i>ABM</i> = ∠<i>CBM</i>).</div>
+        <div><span class="st">Шаг 2.</span>По теореме 3 треугольник <i>ABC</i> равнобедренный с основанием <i>AC</i>.</div>
+        <div><span class="st">Шаг 3.</span>Углы при основании равнобедренного треугольника равны: ∠<i>A</i> = ∠<i>C</i>.</div>
+        <div class="ans">Что и требовалось доказать.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>4</b><span>Периметр треугольника <i>ABC</i> равен 44 см. Медиана <i>AK</i> перпендикулярна стороне <i>BC</i>, а <i>BC</i> на 4 см меньше <i>AB</i>. Найдите стороны треугольника.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span><i>AK</i> — медиана и высота, значит △<i>ABC</i> равнобедренный: <i>AB</i> = <i>AC</i>.</div>
+        <div><span class="st">Шаг 2.</span>Пусть <i>BC</i> = <i>x</i> см, тогда <i>AB</i> = <i>AC</i> = <i>x</i> + 4.</div>
+        <div><span class="st">Шаг 3.</span><i>x</i> + (<i>x</i> + 4) + (<i>x</i> + 4) = 44, то есть 3<i>x</i> + 8 = 44.</div>
+        <div><span class="st">Шаг 4.</span>3<i>x</i> = 36, <i>x</i> = 12.</div>
+        <div><span class="st">Шаг 5.</span><i>AB</i> = <i>AC</i> = 12 + 4 = 16.</div>
+        <div class="ans">Ответ: <i>BC</i> = 12 см, <i>AB</i> = <i>AC</i> = 16 см.</div>
+      </div></details></div>
+  </div>
+</section>
+
+<nav class="pager" aria-label="Соседние темы"><a href="geo-11.html"><small>← Предыдущая тема</small>§ 11. Равнобедренный треугольник</a><a class="next" href="geo-13.html"><small>Следующая тема →</small>§ 13. Третий признак равенства</a></nav>
+<footer class="foot">Геометрия, 7 класс, § 12. Задачи составлены по образцу заданий учебника.</footer>
+</main>
+
+<script src="assets/core.js?v=4"></script>
+<script src="assets/geo.js?v=4"></script>
+<script>
+(function(){
+const {P,seg,path,poly,lbl,away,ticks,arc,right,dist,mid,foot,lerp,centroid,tf,tf0} = G;
+
+/* ---------- опыт ---------- */
+const A=P(60,230), C=P(340,230);
+G.drag(S.$('exp'),{vb:[400,270], pts:{B:P(140,60)}, label:'Треугольник с высотой, медианой и биссектрисой',
+  constrain:(n,p)=>{ let x=Math.max(A.x+25,Math.min(C.x-25,p.x)), y=Math.max(28,Math.min(195,p.y)); const mx=(A.x+C.x)/2; if(Math.abs(x-mx)<7) x=mx; return P(x,y); },
+  draw:(p)=>{ const B=p.B, H=P(B.x,A.y), M=mid(A,C), ab=dist(A,B), bc=dist(B,C), L=lerp(A,C,ab/(ab+bc)), O=centroid(A,B,C);
+    const same = Math.abs(B.x-M.x)<0.5;
+    let o=path([A,B,C],'',true);
+    o+='<g class="k0">'+ticks(A,M,1,'')+ticks(M,C,1,'')+seg(B,M,'c')+'</g>';
+    o+='<g class="k1">'+seg(B,L,'c')+arc(B,A,L,26,1,'')+arc(B,L,C,30,1,'')+'</g>';
+    o+='<g class="kr">'+seg(B,H,'c dash')+right(H,C,B,10,'')+'</g>';
+    if(same){ o+='<g class="kp">'+seg(B,H,'c thick')+'</g>'+ticks(A,B,2,'')+ticks(B,C,2,''); }
+    o+=away(A,O,'A')+away(B,O,'B')+away(C,O,'C');
+    if(same) o+=lbl(P(H.x,H.y+20),'H = M = L',0,0,'up');
+    else { const ys=[H,M,L].sort((u,v)=>u.x-v.x); const names=new Map([[H,'H'],[M,'M'],[L,'L']]); ys.forEach((q,i)=>{ o+='<g class="'+(q===H?'kr':q===M?'k0':'k1')+'">'+lbl(P(q.x,q.y+18+(i%2)*14),names.get(q),0,0,'c')+'</g>'; }); }
+    return o; },
+  info:(p)=>{ const B=p.B, ab=dist(A,B), bc=dist(B,C), same=Math.abs(B.x-(A.x+C.x)/2)<0.5;
+    return '<div class="row"><span><i>AB</i> = '+G.n(G.cm(ab))+' см</span><span><i>BC</i> = '+G.n(G.cm(bc))+' см</span></div><div>'+G.swap([
+        '<span class="chip">Отрезки разные — треугольник не равнобедренный</span>',
+        '<span class="chip okc">Высота, медиана и биссектриса совпали: AB = BC, треугольник равнобедренный</span>'],same?1:0)+'</div>'; },
+  hint:'Совет: веди точку <i>B</i> к середине основания — там она «прилипнет».'});
+
+/* ---------- общие точки для доказательств 1 и 2 ---------- */
+const a=P(60,210), c=P(300,210), b=P(180,40), h=P(180,210), O=centroid(a,b,c);
+const base=[{s:0,h:path([a,b,c],'',true)+seg(b,h,'')+away(a,O,'A')+away(b,O,'B')+away(c,O,'C')+lbl(P(h.x,h.y+18),'H')}];
+const fills=[{s:1,h:'<g class="k1">'+poly([c,b,h],'')+'</g>'},{s:1,mv:'f',h:'<g class="k0">'+poly([a,b,h],'strong')+'</g>'}];
+G.proof(S.$('p1'),{vb:[360,250],given:'<b>ДАНО</b> <i>BH</i> — высота и медиана △<i>ABC</i>. <b>ДОКАЗАТЬ</b> <i>AB</i> = <i>BC</i>.',
+  items:[...base,...fills,
+    {s:2,h:'<g class="kr">'+seg(b,h,'c thick')+'</g>'},
+    {s:3,h:right(h,a,b,11,'')+right(h,c,b,11,'')},
+    {s:4,h:'<g class="k2">'+ticks(a,h,1,'')+ticks(h,c,1,'')+'</g>'},
+    {s:6,h:'<g class="kr">'+ticks(a,b,2,'')+ticks(b,c,2,'')+'</g>'}],
+  moves:{f:{0:tf0(h),5:tf(h,b,h,b,true)}},
+  steps:['Рассмотрим чертёж.','Рассмотрим треугольники <i>ABH</i> и <i>CBH</i>.','Сторона <i>BH</i> у них общая.','∠<i>AHB</i> = ∠<i>CHB</i> = 90°, так как <i>BH</i> — высота.','<i>AH</i> = <i>HC</i>, так как <i>BH</i> — медиана.','△<i>ABH</i> = △<i>CBH</i> по двум сторонам и углу между ними (I признак). Перегнём чертёж по <i>BH</i> — треугольники совпали.','Из равенства треугольников <i>AB</i> = <i>BC</i>. Треугольник равнобедренный. Теорема доказана.']});
+G.proof(S.$('p2'),{vb:[360,250],given:'<b>ДАНО</b> <i>BH</i> — высота и биссектриса △<i>ABC</i>. <b>ДОКАЗАТЬ</b> <i>AB</i> = <i>BC</i>.',
+  items:[...base,...fills,
+    {s:2,h:'<g class="kr">'+seg(b,h,'c thick')+'</g>'},
+    {s:3,h:right(h,a,b,11,'')+right(h,c,b,11,'')},
+    {s:4,h:'<g class="k2">'+arc(b,a,h,28,1,'')+arc(b,h,c,28,1,'')+'</g>'},
+    {s:6,h:'<g class="kr">'+ticks(a,b,2,'')+ticks(b,c,2,'')+'</g>'}],
+  moves:{f:{0:tf0(h),5:tf(h,b,h,b,true)}},
+  steps:['Рассмотрим чертёж.','Рассмотрим треугольники <i>ABH</i> и <i>CBH</i>.','Сторона <i>BH</i> у них общая.','∠<i>AHB</i> = ∠<i>CHB</i> = 90°, так как <i>BH</i> — высота.','∠<i>ABH</i> = ∠<i>CBH</i>, так как <i>BH</i> — биссектриса.','△<i>ABH</i> = △<i>CBH</i> по стороне и двум прилежащим к ней углам (II признак). Перегнём чертёж по <i>BH</i> — треугольники совпали.','Из равенства треугольников <i>AB</i> = <i>BC</i>. Теорема доказана.']});
+
+/* ---------- теорема 3: продление медианы ---------- */
+(function(){
+  const A=P(50,160), C=P(310,160), B=P(150,40), M=mid(A,C), B1=P(2*M.x-B.x,2*M.y-B.y), O=centroid(A,B,C);
+  G.proof(S.$('p3'),{vb:[360,300],given:'<b>ДАНО</b> <i>BM</i> — медиана и биссектриса △<i>ABC</i>. <b>ДОКАЗАТЬ</b> <i>AB</i> = <i>BC</i>.',
+    items:[
+      {s:0,h:path([A,B,C],'',true)+seg(B,M,'')+away(A,O,'A')+away(B,O,'B')+away(C,O,'C')+lbl(P(M.x+12,M.y+14),'M')},
+      {s:0,h:'<g class="k0">'+ticks(A,M,1,'')+ticks(M,C,1,'')+'</g><g class="k1">'+arc(B,A,M,26,1,'')+arc(B,M,C,26,1,'')+'</g>'},
+      {s:1,h:seg(M,B1,'')+'<g class="k2">'+ticks(B,M,2,'')+ticks(M,B1,2,'')+'</g>'+lbl(P(B1.x,B1.y+16),'B₁')},
+      {s:2,h:seg(A,B1,'')},
+      {s:2,h:'<g class="k0">'+poly([A,M,B1],'')+'</g><g class="k3">'+arc(M,A,B1,16,1,'')+arc(M,C,B,16,1,'')+'</g>'},
+      {s:2,mv:'r',h:'<g class="k1">'+poly([C,M,B],'strong')+'</g>'},
+      {s:3,h:'<g class="k1">'+arc(B1,A,M,26,1,'')+'</g><g class="kr">'+ticks(A,B1,3,'')+ticks(B,C,3,'')+'</g>'},
+      {s:4,h:'<g class="kp">'+path([A,B,B1],'c thick',true)+'</g>'},
+      {s:5,h:'<g class="kr">'+ticks(A,B,3,'')+'</g>'}],
+    moves:{r:{0:tf0(M),3:tf(C,B,A,B1,false)}},
+    steps:['Рассмотрим чертёж: <i>AM</i> = <i>MC</i>, ∠<i>ABM</i> = ∠<i>CBM</i>.',
+      'Продлим медиану <i>BM</i> за точку <i>M</i> на её длину: <i>MB₁</i> = <i>BM</i>.',
+      'Проведём <i>AB₁</i>. Сравним △<i>AMB₁</i> и △<i>CMB</i>: <i>MB₁</i> = <i>MB</i>, <i>AM</i> = <i>MC</i>, ∠<i>AMB₁</i> = ∠<i>CMB</i> как вертикальные.',
+      'Треугольники равны по двум сторонам и углу между ними (повернём △<i>CMB</i> вокруг <i>M</i>). Значит, <i>AB₁</i> = <i>BC</i> и ∠<i>AB₁M</i> = ∠<i>CBM</i>.',
+      'Но ∠<i>CBM</i> = ∠<i>ABM</i> (биссектриса). Значит, в △<i>ABB₁</i> два угла равны: ∠<i>AB₁B</i> = ∠<i>ABB₁</i>. Он равнобедренный: <i>AB</i> = <i>AB₁</i>.',
+      'Итак, <i>AB</i> = <i>AB₁</i> = <i>BC</i>. Теорема доказана.']});
+})();
+
+/* ---------- тест ---------- */
+function triFig(marks){ const A=P(40,150),B=P(150,25),C=P(260,150),H=P(150,150),O=centroid(A,B,C);
+  return G.svg([300,175],path([A,B,C],'',true)+seg(B,H,'')+(marks||'')+away(A,O,'A')+away(B,O,'B')+away(C,O,'C')+lbl(P(150,166),'H'),'Чертёж к вопросу'); }
+const qA=P(40,150),qB=P(150,25),qC=P(260,150),qH=P(150,150);
+S.quiz(S.$('quiz'),[
+  {q:'В треугольнике медиана является высотой. Какой это треугольник?', opts:['равнобедренный','прямоугольный','любой','такого не бывает'], ok:0, why:'Это теорема 1.'},
+  {fig:triFig(right(qH,qC,qB,10,'')+'<g class="k1">'+arc(qB,qA,qH,24,1,'')+arc(qB,qH,qC,24,1,'')+'</g>'), q:'На чертеже <i>BH</i> ⊥ <i>AC</i> и ∠<i>ABH</i> = ∠<i>CBH</i>. Что можно сказать о сторонах <i>AB</i> и <i>BC</i>?', opts:['<i>AB</i> > <i>BC</i>','<i>AB</i> = <i>BC</i>','<i>AB</i> < <i>BC</i>','ничего'], ok:1, why:'Высота является биссектрисой — по теореме 2 треугольник равнобедренный.'},
+  {q:'В треугольнике <i>KLM</i> биссектриса <i>LN</i> является медианой, <i>KL</i> = 9 см. Найдите <i>LM</i>.', opts:['4,5 см','9 см','18 см','нельзя найти'], ok:1, why:'По теореме 3 треугольник равнобедренный: <i>LM</i> = <i>KL</i> = 9 см.'},
+  {q:'Что из этого <b>не</b> является признаком равнобедренного треугольника?', opts:['два угла равны','медиана является высотой','медиана является биссектрисой','в треугольнике проведена высота'], ok:3, why:'Высоту можно провести в любом треугольнике.'},
+  {fig:triFig(right(qH,qC,qB,10,'')+'<g class="k0">'+ticks(qA,qH,1,'')+ticks(qH,qC,1,'')+'</g>'), q:'На чертеже <i>BH</i> ⊥ <i>AC</i>, <i>AH</i> = <i>HC</i>, ∠<i>A</i> = 52°. Найдите ∠<i>C</i>.', opts:['38°','52°','76°','104°'], ok:1, why:'Треугольник равнобедренный (теорема 1), углы при основании равны.'}
+]);
+})();
+</script>
+<script src="assets/nav.js?v=4"></script>
+</body>
+</html>

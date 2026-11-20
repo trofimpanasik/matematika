@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>§ 12. Квадрат суммы и разности</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Unbounded:wght@500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=4">
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <a class="brand" href="index.html"><span class="logo">x</span><span class="txt">Математика · 7 класс<small>II четверть</small></span></a>
+  <nav class="tnav" aria-label="Разделы сайта"><a href="index.html">Главная</a><a class="alg" href="index.html#algebra">Алгебра</a><a class="geo" href="index.html#geometry">Геометрия</a></nav>
+</div></header>
+
+<main class="wrap">
+<div class="page-head">
+  <div class="crumbs"><a href="index.html">Главная</a> › <a href="index.html#algebra">Алгебра</a> › § 12</div>
+  <div class="eyebrow">Алгебра · 7 класс · § 12 · уроки 36–39</div>
+  <h1>Квадрат суммы и квадрат разности</h1>
+  <p class="lede">Две формулы сокращённого умножения. С ними возводить двучлен в квадрат можно сразу, без перемножения скобок.</p>
+  <nav class="toc" aria-label="Разделы темы"><a href="#formuly">Формулы</a><a href="#pochemu">Почему так</a><a href="#razbor">Разбор</a><a href="#schet">Быстрый счёт</a><a href="#oshibki">Ошибки</a><a href="#test">Тест</a><a href="#trenazher">Тренажёр</a><a href="#zadachi">Задачи</a></nav>
+</div>
+
+<section id="formuly">
+  <h2>Формулы</h2>
+  <div class="aside">
+    <div class="rule"><span class="tag">КВАДРАТ СУММЫ</span>
+      <div class="formula"><span class="m">(a + b)^2 = a^2 + 2ab + b^2</span></div>
+      <p>Квадрат суммы двух выражений равен квадрату первого выражения <b>плюс</b> удвоенное произведение первого и второго плюс квадрат второго.</p>
+    </div>
+    <div class="rule"><span class="tag">КВАДРАТ РАЗНОСТИ</span>
+      <div class="formula"><span class="m">(a − b)^2 = a^2 − 2ab + b^2</span></div>
+      <p>Квадрат разности двух выражений равен квадрату первого выражения <b>минус</b> удвоенное произведение первого и второго плюс квадрат второго.</p>
+    </div>
+  </div>
+  <p>Формулы можно получить умножением: <span class="m">(a + b)^2 = (a + b)(a + b) = a^2 + ab + ab + b^2 = a^2 + 2ab + b^2</span>. Отсюда и «удвоенное» произведение: <span class="m">ab</span> получается дважды.</p>
+</section>
+
+<section id="pochemu">
+  <h2>Почему так: доказательство на квадрате</h2>
+  <p>Нажимай «Дальше»: квадрат будет разрезаться на части.</p>
+  <div id="pSum"></div>
+  <div id="pDiff"></div>
+</section>
+
+<section id="razbor">
+  <h2>Разбор по шагам</h2>
+  <p>Сначала найди, что здесь «первое выражение», а что «второе». Они подсвечены разными цветами.</p>
+  <div class="tabs" id="tEx" role="group" aria-label="Примеры"></div>
+  <div id="bEx"></div>
+</section>
+
+<section id="schet">
+  <h2>Быстрый счёт</h2>
+  <div class="aside">
+    <div class="fact"><h3>Квадрат числа около круглого</h3><p><span class="m">51^2 = (50 + 1)^2 = 2500 + 100 + 1 = 2601</span></p><p><span class="m">99^2 = (100 − 1)^2 = 10000 − 200 + 1 = 9801</span></p></div>
+    <div class="fact"><h3>Свернуть в квадрат</h3><p>Формулы читаются и справа налево: <span class="m">x^2 + 6x + 9 = (x + 3)^2</span>, потому что <span class="m">9 = 3^2</span> и <span class="m">6x = 2 · x · 3</span>.</p></div>
+  </div>
+</section>
+
+<section id="oshibki">
+  <h2>Частые ошибки</h2>
+  <div class="mist">
+    <div class="mrow"><div class="what">Забыли удвоенное произведение.</div><div class="bad"><span class="mark">✗</span><span class="m">(a + b)^2 = a^2 + b^2</span></div><div class="good"><span class="mark">✓</span><span class="m">(a + b)^2 = a^2 + 2ab + b^2</span></div></div>
+    <div class="mrow"><div class="what">Поставили минус перед квадратом второго.</div><div class="bad"><span class="mark">✗</span><span class="m">(x − 3)^2 = x^2 − 6x − 9</span></div><div class="good"><span class="mark">✓</span><span class="m">(x − 3)^2 = x^2 − 6x + 9</span></div></div>
+    <div class="mrow"><div class="what">Не возвели в квадрат коэффициент.</div><div class="bad"><span class="mark">✗</span><span class="m">(2x)^2 = 2x^2</span></div><div class="good"><span class="mark">✓</span><span class="m">(2x)^2 = 4x^2</span></div></div>
+    <div class="mrow"><div class="what">Не удвоили произведение.</div><div class="bad"><span class="mark">✗</span><span class="m">(m + 5)^2 = m^2 + 5m + 25</span></div><div class="good"><span class="mark">✓</span><span class="m">(m + 5)^2 = m^2 + 10m + 25</span></div></div>
+  </div>
+</section>
+
+<section id="test">
+  <h2>Тест</h2>
+  <div id="quiz"></div>
+</section>
+
+<section id="trenazher">
+  <h2>Тренажёр</h2>
+  <p>Раскрой скобки по формуле и запиши ответ многочленом.</p>
+  <div id="trainer"></div>
+</section>
+
+<section id="zadachi">
+  <h2>Задачи посложнее</h2>
+  <div class="tasks">
+    <div class="hard"><div class="q"><b>1</b><span>Упростите выражение <span class="m">(x + 5)^2 − (x − 5)^2</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span><span class="m">(x + 5)^2 = x^2 + 10x + 25</span></div>
+        <div><span class="st">Шаг 2.</span><span class="m">(x − 5)^2 = x^2 − 10x + 25</span></div>
+        <div><span class="st">Шаг 3.</span><span class="m">x^2 + 10x + 25 − x^2 + 10x − 25</span></div>
+        <div><span class="st">Шаг 4.</span><span class="m">x^2 − x^2 = 0</span>; <span class="m">10x + 10x = 20x</span>; <span class="m">25 − 25 = 0</span></div>
+        <div class="ans">Ответ: <span class="m">20x</span>.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>2</b><span>Решите уравнение <span class="m">(x − 3)^2 − x^2 = 15</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span><span class="m">(x − 3)^2 = x^2 − 6x + 9</span></div>
+        <div><span class="st">Шаг 2.</span><span class="m">x^2 − 6x + 9 − x^2 = 15</span></div>
+        <div><span class="st">Шаг 3.</span><span class="m">−6x + 9 = 15</span></div>
+        <div><span class="st">Шаг 4.</span><span class="m">−6x = 6</span></div>
+        <div><span class="st">Шаг 5.</span><span class="m">x = 6 : (−6) = −1</span></div>
+        <div class="ans">Ответ: <span class="m">x = −1</span>.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>3</b><span>Вычислите удобным способом: <span class="m">102^2</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span><span class="m">102 = 100 + 2</span></div>
+        <div><span class="st">Шаг 2.</span><span class="m">(100 + 2)^2 = 100^2 + 2 · 100 · 2 + 2^2</span></div>
+        <div><span class="st">Шаг 3.</span><span class="m">10000 + 400 + 4 = 10404</span></div>
+        <div class="ans">Ответ: 10 404.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>4</b><span>Представьте в виде квадрата двучлена: <span class="m">9a^2 − 12ab + 4b^2</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span><span class="m">9a^2 = (3a)^2</span> — квадрат первого выражения.</div>
+        <div><span class="st">Шаг 2.</span><span class="m">4b^2 = (2b)^2</span> — квадрат второго выражения.</div>
+        <div><span class="st">Шаг 3.</span>Проверяем удвоенное произведение: <span class="m">2 · 3a · 2b = 12ab</span>. Совпало, перед ним «−».</div>
+        <div class="ans">Ответ: <span class="m">(3a − 2b)^2</span>.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>5</b><span>Докажите, что выражение <span class="m">a^2 − 4a + 5</span> положительно при любом <i class="m">a</i>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span><span class="m">5 = 4 + 1</span>, поэтому <span class="m">a^2 − 4a + 5 = a^2 − 4a + 4 + 1</span></div>
+        <div><span class="st">Шаг 2.</span><span class="m">a^2 − 4a + 4 = (a − 2)^2</span></div>
+        <div><span class="st">Шаг 3.</span>Выражение равно <span class="m">(a − 2)^2 + 1</span>.</div>
+        <div><span class="st">Шаг 4.</span>Квадрат не бывает отрицательным: <span class="m">(a − 2)^2 ≥ 0</span>. Значит, сумма не меньше 1.</div>
+        <div class="ans">Выражение всегда больше нуля.</div>
+      </div></details></div>
+  </div>
+</section>
+
+<nav class="pager" aria-label="Соседние темы"><a href="alg-11.html"><small>← Предыдущая тема</small>§ 11. Умножение многочленов</a><a class="next" href="alg-13.html"><small>Следующая тема →</small>§ 13. Разность квадратов</a></nav>
+<footer class="foot">Алгебра, 7 класс, § 12. Примеры составлены по образцу заданий учебника.</footer>
+</main>
+
+<script src="assets/core.js?v=4"></script>
+<script src="assets/geo.js?v=4"></script>
+<script>
+(function(){
+const {T1,mono,mmul,polyH,ri,pick,sgn} = S;
+const {P,seg,poly,lbl} = G;
+const sup2='<tspan dy="-7" font-size="11">2</tspan>';
+/* (a + b)² */
+(function(){
+  const x0=70,y0=36,a=150,b=80,s=a+b;
+  const A=P(x0,y0),B=P(x0+s,y0),C=P(x0+s,y0+s),D=P(x0,y0+s);
+  const rect=(x,y,w,h)=>[P(x,y),P(x+w,y),P(x+w,y+h),P(x,y+h)];
+  const items=[
+    {s:0,h:G.path([A,B,C,D],'',true)},
+    {s:0,h:lbl(P(x0+a/2,y0-14),'a')+lbl(P(x0+a+b/2,y0-14),'b')+lbl(P(x0-16,y0+a/2),'a')+lbl(P(x0-16,y0+a+b/2),'b')},
+    {s:1,h:seg(P(x0+a,y0),P(x0+a,y0+s),'dash')+seg(P(x0,y0+a),P(x0+s,y0+a),'dash')},
+    {s:1,h:'<g class="k0">'+poly(rect(x0,y0,a,a),'strong')+lbl(P(x0+a/2,y0+a/2),'a'+sup2,0,0,'c')+'</g>'},
+    {s:2,h:'<g class="k2">'+poly(rect(x0+a,y0,b,a),'strong')+lbl(P(x0+a+b/2,y0+a/2),'ab',0,0,'c')+'</g>'},
+    {s:3,h:'<g class="k2">'+poly(rect(x0,y0+a,a,b),'strong')+lbl(P(x0+a/2,y0+a+b/2),'ab',0,0,'c')+'</g>'},
+    {s:4,h:'<g class="k1">'+poly(rect(x0+a,y0+a,b,b),'strong')+lbl(P(x0+a+b/2,y0+a+b/2),'b'+sup2,0,0,'c')+'</g>'}
+  ];
+  G.proof(S.$('pSum'),{vb:[330,290],title:'Квадрат суммы',items,steps:[
+    'Квадрат со стороной <span class="m">a + b</span>. Его площадь равна <span class="m">(a + b)^2</span>.',
+    'Разрежем каждую сторону на части <i>a</i> и <i>b</i>. Левый верхний квадрат имеет площадь <span class="m">a^2</span>.',
+    'Справа прямоугольник со сторонами <i>b</i> и <i>a</i>: площадь <span class="m">ab</span>.',
+    'Снизу ещё один такой же прямоугольник: снова <span class="m">ab</span>.',
+    'В углу квадрат со стороной <i>b</i>: площадь <span class="m">b^2</span>.',
+    'Площадь всего квадрата равна сумме площадей частей: <span class="m">(a + b)^2 = a^2 + 2ab + b^2</span>.'
+  ]});
+})();
+/* (a − b)² */
+(function(){
+  const x0=70,y0=36,a=220,b=70,c=a-b;
+  const rect=(x,y,w,h)=>[P(x,y),P(x+w,y),P(x+w,y+h),P(x,y+h)];
+  const items=[
+    {s:0,h:G.path(rect(x0,y0,a,a),'',true)},
+    {s:0,e:1,h:lbl(P(x0+a/2,y0-14),'a')+lbl(P(x0-16,y0+a/2),'a')},
+    {s:1,h:seg(P(x0+c,y0),P(x0+c,y0+a),'dash')+seg(P(x0,y0+c),P(x0+a,y0+c),'dash')},
+    {s:1,h:lbl(P(x0+c/2,y0-14),'a − b')+lbl(P(x0+c+b/2,y0-14),'b')+lbl(P(x0-24,y0+c/2),'a − b')+lbl(P(x0-16,y0+c+b/2),'b')},
+    {s:1,h:'<g class="k0">'+poly(rect(x0,y0,c,c),'strong')+lbl(P(x0+c/2,y0+c/2),'(a − b)'+sup2,0,0,'c')+'</g>'},
+    {s:2,h:'<g class="kr">'+poly(rect(x0+c,y0,b,a))+lbl(P(x0+c+b/2,y0+c/2),'ab',0,0,'c')+'</g>'},
+    {s:3,h:'<g class="kr">'+poly(rect(x0,y0+c,a,b))+lbl(P(x0+c/2,y0+c+b/2),'ab',0,0,'c')+'</g>'},
+    {s:3,h:'<g class="k1">'+G.path(rect(x0+c,y0+c,b,b),'c thick',true)+lbl(P(x0+c+b/2,y0+c+b/2),'b'+sup2,0,0,'c')+'</g>'}
+  ];
+  G.proof(S.$('pDiff'),{vb:[330,290],title:'Квадрат разности',items,steps:[
+    'Квадрат со стороной <i>a</i>, его площадь <span class="m">a^2</span>.',
+    'Отложим на сторонах отрезки <i>b</i>. Нам нужна площадь синего квадрата со стороной <span class="m">a − b</span>.',
+    'Отрежем полосу справа: <i>b</i> на <i>a</i>, площадь <span class="m">ab</span>. Вычитаем её.',
+    'Отрежем полосу снизу — тоже <span class="m">ab</span>. Угловой квадрат <span class="m">b^2</span> попал в обе полосы: мы вычли его дважды.',
+    'Поэтому один раз <span class="m">b^2</span> возвращаем: <span class="m">(a − b)^2 = a^2 − 2ab + b^2</span>.'
+  ]});
+})();
+
+const EX=[[T1('x'),T1('3'),1],[T1('2a'),T1('5'),-1],[T1('3m'),T1('2n'),1],[T1('4'),T1('y'),-1],[T1('a^2'),T1('3'),-1]];
+S.tabsBoard(S.$('tEx'),S.$('bEx'),EX,e=>S.stepsSquare(e[0],e[1],e[2]),e=>'('+S.mh(e[0])+(e[2]>0?' + ':' − ')+S.mh(e[1])+')<sup>2</sup>');
+
+S.quiz(S.$('quiz'),[
+  {q:'Чему равно <span class="m">(x + 4)^2</span>?', opts:['<span class="m">x^2 + 16</span>','<span class="m">x^2 + 4x + 16</span>','<span class="m">x^2 + 8x + 16</span>','<span class="m">x^2 + 8x + 8</span>'], ok:2, why:'<span class="m">x^2 + 2 · x · 4 + 4^2 = x^2 + 8x + 16</span>.'},
+  {q:'Чему равно <span class="m">(3a − 1)^2</span>?', opts:['<span class="m">9a^2 − 6a + 1</span>','<span class="m">9a^2 − 6a − 1</span>','<span class="m">3a^2 − 6a + 1</span>','<span class="m">9a^2 − 3a + 1</span>'], ok:0, why:'<span class="m">(3a)^2 − 2 · 3a · 1 + 1^2 = 9a^2 − 6a + 1</span>.'},
+  {q:'Какой многочлен равен <span class="m">(y − 5)^2</span>?', opts:['<span class="m">y^2 − 25</span>','<span class="m">y^2 − 10y + 25</span>','<span class="m">y^2 + 10y + 25</span>','<span class="m">y^2 − 10y − 25</span>'], ok:1, why:'Квадрат второго всегда с плюсом: <span class="m">+25</span>.'},
+  {q:'Какой квадрат двучлена равен <span class="m">x^2 − 14x + 49</span>?', opts:['<span class="m">(x − 7)^2</span>','<span class="m">(x + 7)^2</span>','<span class="m">(x − 14)^2</span>','<span class="m">(x − 49)^2</span>'], ok:0, why:'<span class="m">49 = 7^2</span>, <span class="m">14x = 2 · x · 7</span>, перед ним минус.'},
+  {q:'Удобно ли считать <span class="m">49^2</span> как <span class="m">(50 − 1)^2</span>? Чему это равно?', opts:['2401','2499','2501','2399'], ok:0, why:'<span class="m">2500 − 100 + 1 = 2401</span>.'}
+]);
+
+S.trainer(S.$('trainer'),{kind:'poly', modes:[['mix','Вперемешку'],['p','Квадрат суммы'],['m','Квадрат разности']], gen(mode){
+  const sign = mode==='p'?1:(mode==='m'?-1:sgn(0.5));
+  const L=pick([['x'],['a'],['m'],['y'],['x','y'],['a','b']]);
+  const a=mono(ri(1,5),{[L[0]]:Math.random()<0.2?2:1});
+  const b=L.length>1 ? mono(ri(1,5),{[L[1]]:1}) : mono(ri(1,9),{});
+  const A2=mmul(a,a), AB=mmul(mono(2*sign,{}),mmul(a,b)), B2=mmul(b,b);
+  return {q:'('+S.mh(a)+(sign>0?' + ':' − ')+S.mh(b)+')<sup>2</sup> = ?', answer:[A2,AB,B2], steps:S.stepsSquare(a,b,sign), letters:L};
+}});
+})();
+</script>
+<script src="assets/nav.js?v=4"></script>
+</body>
+</html>

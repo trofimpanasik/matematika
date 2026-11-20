@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>§ 8. Многочлен</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Unbounded:wght@500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=4">
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <a class="brand" href="index.html"><span class="logo">x</span><span class="txt">Математика · 7 класс<small>II четверть</small></span></a>
+  <nav class="tnav" aria-label="Разделы сайта"><a href="index.html">Главная</a><a class="alg" href="index.html#algebra">Алгебра</a><a class="geo" href="index.html#geometry">Геометрия</a></nav>
+</div></header>
+
+<main class="wrap">
+<div class="page-head">
+  <div class="crumbs"><a href="index.html">Главная</a> › <a href="index.html#algebra">Алгебра</a> › § 8</div>
+  <div class="eyebrow">Алгебра · 7 класс · § 8 · уроки 27–28</div>
+  <h1>Многочлен</h1>
+  <p class="lede">Многочлен — это несколько одночленов, соединённых знаками «+» и «−». Научимся находить его члены, приводить подобные, записывать в стандартном виде и находить степень.</p>
+  <nav class="toc" aria-label="Разделы темы"><a href="#chleny">Члены</a><a href="#podobnye">Подобные</a><a href="#standart">Стандартный вид и степень</a><a href="#znachenie">Значение</a><a href="#oshibki">Ошибки</a><a href="#test">Тест</a><a href="#trenazher">Тренажёр</a><a href="#zadachi">Задачи</a></nav>
+</div>
+
+<section id="chleny">
+  <h2>Что такое многочлен</h2>
+  <div class="rule"><span class="tag">ОПРЕДЕЛЕНИЕ</span>
+    <p><b>Многочленом</b> называется сумма одночленов. Одночлены, из которых состоит многочлен, называются его <b>членами</b>.</p>
+  </div>
+  <p>Чтобы увидеть члены, мысленно поставь перед каждым одночленом знак «+»: <span class="m">a − b = a + (−b)</span>. Поэтому <b>знак стоит перед членом и принадлежит ему</b>. Нажимай «Дальше».</p>
+  <div id="bTerms"></div>
+  <div class="aside">
+    <div class="fact"><h3>Двучлен и трёхчлен</h3><p>Многочлен из двух членов — <b>двучлен</b>: <span class="m">5x^2 + 2y^3</span>. Из трёх — <b>трёхчлен</b>: <span class="m">a^2 − ab + b^2</span>.</p></div>
+    <div class="fact"><h3>Одночлен — тоже многочлен</h3><p>Одночлен считается многочленом, который состоит из одного члена. Например, <span class="m">7xy^2</span>.</p></div>
+  </div>
+</section>
+
+<section id="podobnye">
+  <h2>Приведение подобных членов</h2>
+  <p>Подобные члены имеют одинаковую буквенную часть: одни и те же буквы в одних и тех же степенях. Например, <span class="m">5a^2</span> и <span class="m">−2a^2</span> подобны, а <span class="m">5a^2</span> и <span class="m">5a</span> нет.</p>
+  <div class="rule"><span class="tag">ПРАВИЛО</span>
+    <p>Чтобы привести подобные члены многочлена, нужно:</p>
+    <ol>
+      <li><b>1)</b><span>найти подобные члены и подчеркнуть их одинаково;</span></li>
+      <li><b>2)</b><span>сложить их коэффициенты, а буквенную часть переписать без изменений.</span></li>
+    </ol>
+    <div class="scheme"><span class="m">5a^2 − 3a + 2a^2 = (5 + 2)a^2 − 3a = 7a^2 − 3a</span></div>
+  </div>
+  <div class="tabs" id="tCombine" role="group" aria-label="Примеры"></div>
+  <div id="bCombine"></div>
+</section>
+
+<section id="standart">
+  <h2>Стандартный вид и степень многочлена</h2>
+  <div class="rule"><span class="tag">ОПРЕДЕЛЕНИЯ</span>
+    <p><b>Многочлен стандартного вида</b> — это многочлен, у которого каждый член записан в стандартном виде и среди членов нет подобных.</p>
+    <p><b>Степень многочлена</b> стандартного вида — наибольшая из степеней его членов.</p>
+  </div>
+  <p>Степень члена — сумма показателей всех его букв. Посмотри на маленькие значки над членами:</p>
+  <div class="board" style="gap:6px">
+    <div class="bl main" style="white-space:normal;line-height:2.4"><span class="m">4x^3y</span><span class="badge k0" style="--kc:var(--c0)">4</span><span class="op">−</span><span class="m">2x^2</span><span class="badge">2</span><span class="op">+</span><span class="m">xy^4</span><span class="badge k1" style="--kc:var(--red)">5</span><span class="op">−</span><span class="m">7</span><span class="badge">0</span></div>
+    <p>Степени членов: 3 + 1 = 4; 2; 1 + 4 = 5; у числа степень 0. Наибольшая — <b class="redc">5</b>, значит, это многочлен пятой степени.</p>
+  </div>
+  <div class="warn"><h3>Сначала приведи подобные</h3><p>Степень ищут только у многочлена стандартного вида. У <span class="m">x^4 + 3x − x^4</span> степень не 4: после приведения подобных остаётся <span class="m">3x</span>, степень 1.</p></div>
+</section>
+
+<section id="znachenie">
+  <h2>Значение многочлена</h2>
+  <p>Сначала приведи многочлен к стандартному виду, потом подставляй число. Так считать гораздо меньше.</p>
+  <div class="panel">
+    <p>Найдём значение многочлена <span class="m">3a^2 − 2a + 5 − 3a^2 + 4a</span> при <span class="m">a = 7</span>.</p>
+    <div class="sol" style="margin:0">
+      <div><span class="st">Шаг 1.</span><span class="m">3a^2 − 3a^2 = 0</span></div>
+      <div><span class="st">Шаг 2.</span><span class="m">−2a + 4a = 2a</span></div>
+      <div><span class="st">Шаг 3.</span>Многочлен равен <span class="m">2a + 5</span>.</div>
+      <div><span class="st">Шаг 4.</span><span class="m">2 · 7 + 5 = 14 + 5 = 19</span></div>
+      <div class="ans">Ответ: 19.</div>
+    </div>
+  </div>
+</section>
+
+<section id="oshibki">
+  <h2>Частые ошибки</h2>
+  <div class="mist">
+    <div class="mrow"><div class="what">Сложили показатели степеней. При сложении подобных буквенная часть не меняется.</div><div class="bad"><span class="mark">✗</span><span class="m">3x^2 + 2x^2 = 5x^4</span></div><div class="good"><span class="mark">✓</span><span class="m">3x^2 + 2x^2 = 5x^2</span></div></div>
+    <div class="mrow"><div class="what">Сложили неподобные члены.</div><div class="bad"><span class="mark">✗</span><span class="m">2x^2 + 3x = 5x^3</span></div><div class="good"><span class="mark">✓</span><span class="m">2x^2 + 3x</span> — так и остаётся</div></div>
+    <div class="mrow"><div class="what">Потеряли знак члена.</div><div class="bad"><span class="mark">✗</span><span class="m">5a − 3b − 2a = 7a − 3b</span></div><div class="good"><span class="mark">✓</span><span class="m">5a − 3b − 2a = 3a − 3b</span></div></div>
+    <div class="mrow"><div class="what">Нашли степень, не приведя подобные.</div><div class="bad"><span class="mark">✗</span>степень <span class="m">x^4 + 3x − x^4</span> равна 4</div><div class="good"><span class="mark">✓</span>это <span class="m">3x</span>, степень 1</div></div>
+  </div>
+</section>
+
+<section id="test">
+  <h2>Тест</h2>
+  <div id="quiz"></div>
+</section>
+
+<section id="trenazher">
+  <h2>Тренажёр: приведи подобные</h2>
+  <p>Запиши многочлен в стандартном виде: приведи подобные и расставь члены по убыванию степеней (порядок проверка не учитывает).</p>
+  <div id="trainer"></div>
+</section>
+
+<section id="zadachi">
+  <h2>Задачи посложнее</h2>
+  <p>Сначала реши в тетради, потом открой решение и сверься.</p>
+  <div class="tasks">
+    <div class="hard"><div class="q"><b>1</b><span>Приведите многочлен к стандартному виду и найдите его степень: <span class="m">3x^2y − 4xy + 2x^2y − x^2y + 6xy</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Подобные <span class="m">3x^2y</span>, <span class="m">2x^2y</span>, <span class="m">−x^2y</span>: <span class="m">(3 + 2 − 1)x^2y = 4x^2y</span></div>
+        <div><span class="st">Шаг 2.</span>Подобные <span class="m">−4xy</span> и <span class="m">6xy</span>: <span class="m">(−4 + 6)xy = 2xy</span></div>
+        <div><span class="st">Шаг 3.</span>Многочлен: <span class="m">4x^2y + 2xy</span></div>
+        <div><span class="st">Шаг 4.</span>Степени членов: 2 + 1 = 3 и 1 + 1 = 2. Наибольшая 3.</div>
+        <div class="ans">Ответ: <span class="m">4x^2y + 2xy</span>, степень 3.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>2</b><span>Найдите значение многочлена <span class="m">5m^2 − 3m + 4 − 5m^2 + 8m</span> при <span class="m">m = −3</span>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span><span class="m">5m^2 − 5m^2 = 0</span></div>
+        <div><span class="st">Шаг 2.</span><span class="m">−3m + 8m = 5m</span></div>
+        <div><span class="st">Шаг 3.</span>Многочлен равен <span class="m">5m + 4</span>.</div>
+        <div><span class="st">Шаг 4.</span><span class="m">5 · (−3) = −15</span></div>
+        <div><span class="st">Шаг 5.</span><span class="m">−15 + 4 = −11</span></div>
+        <div class="ans">Ответ: −11.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>3</b><span>При каком значении <i class="m">a</i> значение многочлена <span class="m">2a^2 + 3a − 2a^2 + a − 8</span> равно нулю?</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span><span class="m">2a^2 − 2a^2 = 0</span></div>
+        <div><span class="st">Шаг 2.</span><span class="m">3a + a = 4a</span></div>
+        <div><span class="st">Шаг 3.</span>Многочлен равен <span class="m">4a − 8</span>. Решаем уравнение <span class="m">4a − 8 = 0</span>.</div>
+        <div><span class="st">Шаг 4.</span><span class="m">4a = 8</span></div>
+        <div><span class="st">Шаг 5.</span><span class="m">a = 8 : 4 = 2</span></div>
+        <div class="ans">Ответ: при <span class="m">a = 2</span>.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>4</b><span>Докажите, что многочлен <span class="m">x^2 + 4 − 3x^2 + 2x^2 + 1</span> при любом <i class="m">x</i> принимает одно и то же значение.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Подобные <span class="m">x^2</span>, <span class="m">−3x^2</span>, <span class="m">2x^2</span>: <span class="m">(1 − 3 + 2)x^2 = 0</span></div>
+        <div><span class="st">Шаг 2.</span><span class="m">4 + 1 = 5</span></div>
+        <div><span class="st">Шаг 3.</span>Многочлен равен 5, в нём нет буквы <i class="m">x</i>.</div>
+        <div class="ans">Ответ: при любом <i class="m">x</i> значение равно 5.</div>
+      </div></details></div>
+  </div>
+</section>
+
+<nav class="pager" aria-label="Соседние темы"><a href="alg-07.html"><small>← Предыдущая тема</small>§ 7. Действия с одночленами</a><a class="next" href="alg-09.html"><small>Следующая тема →</small>§ 9. Сложение и вычитание многочленов</a></nav>
+<footer class="foot">Алгебра, 7 класс, § 8. Примеры составлены по образцу заданий учебника.</footer>
+</main>
+
+<script src="assets/core.js?v=4"></script>
+<script>
+(function(){
+const {T,T1,mh,th,polyH,mono,mkey,pcomb,psort,deg,ri,pick,sgn,rpoly} = S;
+/* члены многочлена по шагам */
+const P0=T('3x^3-2xy^2+y-2');
+const steps=[];
+for(let k=0;k<=P0.length+1;k++){
+  const line=P0.map((t,i)=>'<span class="tm k'+(i%4)+' '+(k>P0.length?'done':(i===k-1?'on':(i<k-1?'done':'')))+'">'+th(t,i===0)+'</span>').join('');
+  let note;
+  if(k===0) note='<p>В этом многочлене четыре члена. Найдём каждый вместе с его знаком.</p>';
+  else if(k<=P0.length){ const t=P0[k-1]; note='<div class="dhead">Член '+k+'</div><div class="deq k'+((k-1)%4)+'"><span class="strong">'+mh(t)+'</span></div><p>'+(t.c<0?'Перед ним стоит «−», поэтому член отрицательный.':(k===1?'Перед первым членом знака нет — значит, он положительный.':'Перед ним стоит «+».'))+(Object.keys(t.v).length?'':' Это число — тоже одночлен.')+'</p>'; }
+  else note='<p>Члены многочлена: '+P0.map((t,i)=>'<span class="math k'+(i%4)+' kt">'+mh(t)+'</span>').join(', ')+'. Многочлен — их сумма: <span class="math">'+P0.map((t,i)=>(i?' + ':'')+(t.c<0?'('+mh(t)+')':mh(t))).join('')+'</span>.</p>';
+  steps.push({html:'<div class="bl main">'+line+'</div>', note, label:k===0?'Начало':(k>P0.length?'Итог':'Член '+k+' из '+P0.length)});
+}
+S.board(S.$('bTerms')).load(steps);
+
+/* приведение подобных */
+const EX=['5a^2-3a+2a^2+7-a-4','4x^2y-3xy+2xy-x^2y+5','6b^2-2b+3-6b^2+5b'].map(T);
+S.tabsBoard(S.$('tCombine'),S.$('bCombine'),EX,P=>S.stepsCombine(P),P=>polyH(P));
+
+/* тест */
+S.quiz(S.$('quiz'),[
+  {q:'Сколько членов в многочлене <span class="m">2x^3 − x + 5 − y</span>?', opts:['2','3','4','5'], ok:2, why:'Члены: <span class="m">2x^3</span>, <span class="m">−x</span>, <span class="m">5</span>, <span class="m">−y</span> — четыре.'},
+  {q:'Какой из многочленов — трёхчлен?', opts:['<span class="m">a^2 − b^2</span>','<span class="m">a^2 − 2ab + b^2</span>','<span class="m">3abc</span>','<span class="m">a + b − c + 1</span>'], ok:1, why:'В <span class="m">a^2 − 2ab + b^2</span> ровно три члена.'},
+  {q:'Какая степень у многочлена <span class="m">3x^2y^3 − 4x^4 + 1</span>?', opts:['2','4','5','6'], ok:2, why:'Степени членов: 2 + 3 = 5, 4 и 0. Наибольшая — 5.'},
+  {q:'Какие члены подобны?', opts:['<span class="m">3ab^2</span> и <span class="m">3a^2b</span>','<span class="m">−5xy</span> и <span class="m">2yx</span>','<span class="m">4x^2</span> и <span class="m">4x</span>','<span class="m">7m</span> и <span class="m">7n</span>'], ok:1, why:'<span class="m">yx</span> и <span class="m">xy</span> — одна и та же буквенная часть, порядок множителей не важен.'},
+  {q:'Чему равна сумма <span class="m">4x^3 − 7x^3 + x^3</span>?', opts:['<span class="m">−2x^3</span>','<span class="m">−3x^3</span>','<span class="m">−2x^9</span>','<span class="m">12x^3</span>'], ok:0, why:'<span class="m">(4 − 7 + 1)x^3 = −2x^3</span>. Показатель не меняется.'},
+  {q:'Какая степень у многочлена <span class="m">x^5 + 2x − x^5 + 3</span>?', opts:['5','10','1','0'], ok:2, why:'После приведения подобных остаётся <span class="m">2x + 3</span>, степень 1.'}
+]);
+
+/* тренажёр: разбиваем члены на подобные части и перемешиваем */
+function split(c){ for(let t=0;t<50;t++){ const a=ri(-9,9); if(a!==0 && a!==c) return [a,c-a]; } return [c+1,-1]; }
+S.trainer(S.$('trainer'),{kind:'poly', gen(){
+  const L=pick([['x'],['a'],['y'],['x','y'],['a','b']]);
+  const Q=rpoly(L,ri(2,3),9,L.length>1?2:3,3);
+  let parts=[];
+  Q.forEach((m,i)=>{ if(i<2||Math.random()<0.5){ const [a,b]=split(m.c); parts.push(mono(a,m.v),mono(b,m.v)); } else parts.push(m); });
+  if(Math.random()<0.5){ const z=S.rmono(L,6,2,0,1); if(!Q.some(q=>mkey(q)===mkey(z))) parts.push(z,mono(-z.c,z.v)); }
+  parts=parts.sort(()=>Math.random()-0.5);
+  const ans=psort(pcomb(parts));
+  return {q:'<span class="ask">Приведи подобные:</span>'+polyH(parts)+' = ?', answer:ans, steps:S.stepsCombine(parts)};
+}});
+})();
+</script>
+<script src="assets/nav.js?v=4"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>§ 3. Прямая, луч, отрезок, ломаная</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Unbounded:wght@500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=4">
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <a class="brand" href="index.html"><span class="logo">x</span><span class="txt">Математика · 7 класс<small>I четверть</small></span></a>
+  <nav class="tnav" aria-label="Разделы сайта"><a href="index.html">Главная</a><a class="alg" href="index.html#algebra">Алгебра</a><a class="geo" href="index.html#geometry">Геометрия</a></nav>
+</div></header>
+
+<main class="wrap">
+<div class="page-head">
+  <div class="crumbs"><a href="index.html">Главная</a> › <a href="index.html#geometry">Геометрия</a> › § 3</div>
+  <div class="eyebrow">Геометрия · 7 класс · § 3 · уроки 3–4</div>
+  <h1>Прямая. Луч. Отрезок. Ломаная</h1>
+  <p class="lede">Основные фигуры планиметрии и их свойства: аксиома прямой, лучи и отрезки, измерение отрезков, ломаные и многоугольники.</p>
+  <nav class="toc" aria-label="Разделы темы"><a href="#pryamaya">Прямая</a><a href="#luch">Луч</a><a href="#otrezok">Отрезок</a><a href="#lomanaya">Ломаная</a><a href="#test">Тест</a><a href="#zadachi">Задачи</a></nav>
+</div>
+
+<section id="pryamaya">
+  <h2>Прямая</h2>
+  <div class="rule"><span class="tag">АКСИОМА ПРЯМОЙ</span>
+    <p>Через любые две точки проходит прямая, и притом только одна.</p>
+  </div>
+  <p>Отсюда следует: две различные прямые имеют <b>не более одной</b> общей точки. Если бы общих точек было две, через них прошли бы две прямые — а по аксиоме это невозможно. Двигай точку <i>C</i>: лежит ли она на прямой <i>AB</i>?</p>
+  <div id="exp1"></div>
+</section>
+
+<section id="luch">
+  <h2>Луч</h2>
+  <div class="rule"><span class="tag">ОПРЕДЕЛЕНИЕ</span>
+    <p>Точка <i>O</i> разбивает прямую на две части. Каждая часть вместе с точкой <i>O</i> называется <b>лучом</b>, точка <i>O</i> — <b>началом луча</b>. Два луча с общим началом, лежащие на одной прямой, называются <b>дополнительными</b>.</p>
+  </div>
+  <div class="gfig" style="max-width:460px" id="rayFig"></div>
+  <p class="note">Луч бесконечен в одну сторону. Его называют по началу и ещё одной точке: луч <i>OA</i> (начало всегда пишут первым).</p>
+</section>
+
+<section id="otrezok">
+  <h2>Отрезок и его длина</h2>
+  <div class="rule"><span class="tag">ОПРЕДЕЛЕНИЯ</span>
+    <p><b>Отрезком</b> называется часть прямой, ограниченная двумя точками — <b>концами</b> отрезка.</p>
+    <p>Два отрезка называются <b>равными</b>, если их можно совместить наложением. <b>Серединой отрезка</b> называется точка, которая делит его на два равных отрезка.</p>
+  </div>
+  <div class="rule"><span class="tag">АКСИОМА ИЗМЕРЕНИЯ ОТРЕЗКОВ</span>
+    <p>Каждый отрезок имеет определённую длину, большую нуля. Если точка <i>C</i> лежит на отрезке <i>AB</i>, то <span class="m">AC + CB = AB</span>.</p>
+  </div>
+  <p>Двигай точку <i>C</i> по отрезку: части меняются, а их сумма — нет. Около середины точка «прилипает».</p>
+  <div id="exp2"></div>
+</section>
+
+<section id="lomanaya">
+  <h2>Ломаная и многоугольник</h2>
+  <div class="rule"><span class="tag">ОПРЕДЕЛЕНИЯ</span>
+    <p><b>Ломаная</b> — фигура из отрезков (<b>звеньев</b>), где конец каждого звена — начало следующего, а соседние звенья не лежат на одной прямой. <b>Длина ломаной</b> — сумма длин её звеньев.</p>
+    <p>Ломаная <b>замкнутая</b>, если её концы совпадают; <b>простая</b> — если она не имеет самопересечений. Простая замкнутая ломаная называется <b>многоугольником</b>, сумма длин его сторон — <b>периметром</b>.</p>
+  </div>
+  <p>Двигай вершины ломаной. Кнопкой можно её замкнуть.</p>
+  <div id="exp3"></div>
+  <div class="tabs"><button type="button" class="tab txt" id="bClose" aria-pressed="false">Замкнуть ломаную</button></div>
+</section>
+
+<section id="test">
+  <h2>Тест</h2>
+  <div id="quiz"></div>
+</section>
+
+<section id="zadachi">
+  <h2>Задачи с решениями</h2>
+  <div class="tasks">
+    <div class="hard"><div class="q"><b>1</b><span>Точка <i>C</i> лежит на отрезке <i>AB</i> длиной 12 см, <span class="m">AC = 2CB</span>. Найдите <i>AC</i> и <i>CB</i>.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Пусть <span class="m">CB = x</span> см, тогда <span class="m">AC = 2x</span> см.</div>
+        <div><span class="st">Шаг 2.</span>По аксиоме измерения: <span class="m">AC + CB = AB</span>, то есть <span class="m">2x + x = 12</span>.</div>
+        <div><span class="st">Шаг 3.</span><span class="m">3x = 12</span>, <span class="m">x = 4</span>.</div>
+        <div class="ans">Ответ: <i>CB</i> = 4 см, <i>AC</i> = 8 см.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>2</b><span>Точки <i>A</i>, <i>B</i>, <i>C</i> лежат на одной прямой, <span class="m">AB = 7</span> см, <span class="m">BC = 3</span> см. Найдите <i>AC</i>. Рассмотрите все случаи.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Если <i>C</i> лежит между <i>A</i> и <i>B</i>: <span class="m">AC = AB − BC = 7 − 3 = 4</span> см.</div>
+        <div><span class="st">Шаг 2.</span>Если <i>B</i> лежит между <i>A</i> и <i>C</i>: <span class="m">AC = AB + BC = 7 + 3 = 10</span> см.</div>
+        <div><span class="st">Шаг 3.</span><i>A</i> между <i>B</i> и <i>C</i> быть не может: тогда <span class="m">BC > AB</span>, а 3 &lt; 7.</div>
+        <div class="ans">Ответ: 4 см или 10 см.</div>
+      </div></details></div>
+    <div class="hard"><div class="q"><b>3</b><span>Периметр треугольника 24 см, две стороны 7 см и 9 см. Найдите третью сторону.</span></div>
+      <details><summary>Показать решение</summary><div class="sol">
+        <div><span class="st">Шаг 1.</span>Периметр — сумма всех сторон: <span class="m">7 + 9 + x = 24</span>.</div>
+        <div><span class="st">Шаг 2.</span><span class="m">16 + x = 24</span>, <span class="m">x = 8</span>.</div>
+        <div class="ans">Ответ: 8 см.</div>
+      </div></details></div>
+  </div>
+</section>
+
+<nav class="pager" aria-label="Соседние темы"><a href="geo-01.html"><small>← Предыдущая тема</small>§ 1–2. Повторение</a><a class="next" href="geo-04.html"><small>Следующая тема →</small>§ 4. Окружность и круг</a></nav>
+<footer class="foot">Геометрия, 7 класс, § 3. Задачи составлены по образцу заданий учебника.</footer>
+</main>
+
+<script src="assets/core.js?v=4"></script>
+<script src="assets/geo.js?v=4"></script>
+<script>
+(function(){
+const {P,seg,line,ray,path,dot,lbl,ticks,dist,mid,foot,unit,sub,add,mul} = G;
+
+/* точка на прямой */
+const A=P(70,170), B=P(300,80);
+G.drag(S.$('exp1'),{vb:[400,240], pts:{C:P(220,170)}, label:'Прямая AB и точка C',
+  constrain:(n,p)=>{ const F=foot(p,A,B); return dist(p,F)<10?F:p; },
+  draw:p=>{ const C=p.C, F=foot(C,A,B), on=dist(C,F)<0.5;
+    let o='<g class="'+(on?'k1':'k0')+'">'+line(A,B,'c')+'</g>';
+    if(!on) o+='<g class="k3">'+line(A,C,'c dash')+'</g>';
+    o+=dot(A)+dot(B)+lbl(P(A.x-6,A.y+18),'A')+lbl(P(B.x+4,B.y-16),'B')+lbl(P(C.x+12,C.y-12),'C');
+    return o; },
+  info:p=>{ const C=p.C, on=dist(C,foot(C,A,B))<0.5;
+    return '<div>'+G.swap(['<span class="chip" style="--kc:var(--c3)">C не лежит на прямой AB. Прямая AC — другая прямая; у прямых AB и AC одна общая точка — A.</span>','<span class="chip okc">Точки A, B, C лежат на одной прямой</span>'],on?1:0)+'</div>'; },
+  hint:'Около прямой точка «прилипает» к ней.'});
+
+/* лучи */
+(function(){ const O=P(200,70), L=P(40,70), R=P(360,70);
+  S.$('rayFig').innerHTML=G.svg([400,120],'<g class="k0">'+seg(O,P(395,70),'c thick')+'</g><g class="k2">'+seg(O,P(5,70),'c thick')+'</g>'+dot(O)+dot(P(320,70))+dot(P(80,70))+lbl(P(200,52),'O')+lbl(P(320,52),'A')+lbl(P(80,52),'B')+'<g class="k0">'+G.ms(P(300,100),'луч OA')+'</g><g class="k2">'+G.ms(P(100,100),'луч OB')+'</g>','Дополнительные лучи OA и OB');
+})();
+
+/* отрезок */
+(function(){ const A=P(50,120), B=P(350,120), M=mid(A,B);
+  G.drag(S.$('exp2'),{vb:[400,180], pts:{C:P(150,120)}, label:'Отрезок AB и точка C на нём',
+    constrain:(n,p)=>{ let x=Math.max(A.x+12,Math.min(B.x-12,p.x)); if(Math.abs(x-M.x)<6) x=M.x; return P(x,120); },
+    draw:p=>{ const C=p.C, isM=Math.abs(C.x-M.x)<0.5;
+      return '<g class="k0">'+seg(A,C,'c thick')+'</g><g class="k1">'+seg(C,B,'c thick')+'</g>'+(isM?'<g class="kr">'+ticks(A,C,1,'')+ticks(C,B,1,'')+'</g>':'')+dot(A)+dot(B)+dot(C)+lbl(P(A.x,A.y-18),'A')+lbl(P(B.x,B.y-18),'B')+lbl(P(C.x,C.y-18),'C')+
+        '<g class="k0">'+G.ms(P((A.x+C.x)/2,150),G.cm(dist(A,C))+' см')+'</g><g class="k1">'+G.ms(P((C.x+B.x)/2,150),G.cm(dist(C,B))+' см')+'</g>'; },
+    info:p=>{ const C=p.C, a=dist(A,C), b=dist(C,B), isM=Math.abs(C.x-M.x)<0.5;
+      return '<div><i>AC</i> + <i>CB</i> = '+G.n(G.cm(a),'2.2em')+' + '+G.n(G.cm(b),'2.2em')+' = <b>'+G.cm(a+b)+'</b> см = <i>AB</i></div><div>'+G.swap(['<span class="chip">C — не середина</span>','<span class="chip okc">C — середина отрезка: AC = CB</span>'],isM?1:0)+'</div>'; }});
+})();
+
+/* ломаная */
+let closed=false;
+const w=G.drag(S.$('exp3'),{vb:[400,250], pts:{A:P(50,190),B:P(120,60),C:P(230,150),D:P(340,50)}, label:'Ломаная ABCD',
+  draw:p=>{ const V=[p.A,p.B,p.C,p.D]; let o='';
+    const segs=V.slice(0,-1).map((v,i)=>[v,V[i+1]]); if(closed) segs.push([p.D,p.A]);
+    segs.forEach(([a,b],i)=>{ o+='<g class="k'+(i%4)+'">'+seg(a,b,'c thick')+G.ms(add(mid(a,b),mul(G.perp(unit(sub(b,a))),14)),G.cm(dist(a,b)))+'</g>'; });
+    if(closed) o+='<g class="k0">'+G.poly(V,'')+'</g>';
+    ['A','B','C','D'].forEach(k=>{ o+=lbl(P(p[k].x+14,p[k].y-12),k); });
+    return o; },
+  info:p=>{ const V=[p.A,p.B,p.C,p.D]; let L=0; for(let i=0;i<3;i++) L+=dist(V[i],V[i+1]); if(closed) L+=dist(p.D,p.A);
+    return '<div>'+(closed?'Периметр':'Длина ломаной')+' = '+G.n(G.cm(L),'2.6em')+' см</div>'; },
+  hint:'Длина ломаной — сумма длин всех звеньев.'});
+S.$('bClose').addEventListener('click',e=>{ closed=!closed; e.currentTarget.setAttribute('aria-pressed',closed); e.currentTarget.textContent=closed?'Разомкнуть ломаную':'Замкнуть ломаную'; w.redraw(); });
+
+S.quiz(S.$('quiz'),[
+  {q:'Сколько общих точек может быть у двух различных прямых?', opts:['ни одной или одна','ровно две','бесконечно много','всегда одна'], ok:0, why:'Если бы общих точек было две, через них прошли бы две прямые — противоречие с аксиомой.'},
+  {q:'Точка <i>C</i> лежит на отрезке <i>AB</i>, <i>AC</i> = 5 см, <i>CB</i> = 3 см. <i>AB</i> = ', opts:['2 см','8 см','15 см','5 см'], ok:1, why:'<i>AC</i> + <i>CB</i> = <i>AB</i>.'},
+  {q:'Как называется простая замкнутая ломаная?', opts:['луч','многоугольник','отрезок','прямая'], ok:1},
+  {q:'<i>M</i> — середина отрезка <i>AB</i>, <i>AM</i> = 4,5 см. <i>AB</i> = ', opts:['4,5 см','9 см','2,25 см','13,5 см'], ok:1, why:'<i>AB</i> = 2 · <i>AM</i>.'},
+  {q:'Ломаная из 4 звеньев по 3 см. Её длина:', opts:['7 см','12 см','3 см','9 см'], ok:1, why:'4 · 3 = 12.'}
+]);
+})();
+</script>
+<script src="assets/nav.js?v=4"></script>
+</body>
+</html>
